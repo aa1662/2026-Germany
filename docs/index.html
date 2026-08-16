@@ -3,256 +3,264 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="2026年德國南部冬季15天自駕之旅行程規劃，包含哈修塔特、符茲堡、海德堡、科爾馬、加米許等精選景點">
-  <title>2026 德國南部冬季 15 天自駕之旅</title>
+  <meta name="description" content="2026年德國南部冬季15天自駕之旅與深度圖文遊記，涵蓋哈修塔特、符茲堡、海德堡、科爾馬、加米許與新天鵝堡。">
+  <title>2026 德國南部冬季 15 天自駕之旅 ✕ 沉浸式圖文遊記</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;900&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="vendor/glightbox/glightbox.min.css">
 </head>
 <body>
-  <!-- 導覽列 -->
-  <nav class="navbar">
+  <!-- 頂部玻璃擬態導覽列 -->
+  <nav class="site-nav">
     <div class="container">
-      <a href="index.html" class="navbar-brand">🇩🇪 2026 德國冬季之旅</a>
-      <ul class="navbar-menu">
+      <a href="index.html" class="brand-link">
+        <span>🇩🇪 2026 德南冬旅誌</span>
+        <span class="brand-badge">Travel OS</span>
+      </a>
+      <ul class="nav-links">
         <li><a href="index.html" class="active">首頁</a></li>
-        <li><a href="#timeline">行程總覽</a></li>
-        <li><a href="day-01.html">每日行程</a></li>
-        <li class="dropdown">
-          <a href="#">城市指南 ▾</a>
-          <ul class="dropdown-menu">
-            <li><a href="guide-hallstatt.html">哈修塔特區</a></li>
-            <li><a href="guide-wurzburg.html">符茲堡區</a></li>
-            <li><a href="guide-heidelberg.html">海德堡區</a></li>
-            <li><a href="guide-colmar.html">科爾馬區</a></li>
-            <li><a href="guide-garmisch.html">加米許區</a></li>
-          </ul>
-        </li>
+        <li><a href="#timeline">15天行程</a></li>
+        <li><a href="#hubs">五大基地</a></li>
+        <li><a href="blog/day-02-blog.html">精選遊記</a></li>
       </ul>
-      <button class="navbar-share" title="分享此行程">📤 分享</button>
-      <button class="navbar-toggle" aria-label="選單" aria-expanded="false">☰</button>
+      <button class="nav-share-btn btn-share"><span>📤 分享</span></button>
     </div>
   </nav>
 
-  <!-- Hero 區域 -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>2026 德國南部冬季 15 天自駕之旅</h1>
-      <p class="hero-dates">📅 2026/1/26 (一) — 2/9 (日)</p>
-      <p class="hero-subtitle">哈修塔特 → 符茲堡 → 海德堡 → 科爾馬 → 加米許 → 慕尼黑</p>
-    </div>
-  </section>
+  <main class="container">
+    <!-- Hero Bento 區域 -->
+    <section class="hero-bento">
+      <div class="hero-banner">
+        <div class="hero-badge-group">
+          <span class="badge badge-gold">❄️ 2026 冬季跨國自駕</span>
+          <span class="badge badge-glass">📅 1/26 (一) — 2/9 (日)</span>
+          <span class="badge badge-glass">🚗 德・奧・法・瑞 四國環線</span>
+        </div>
+        <h1 class="hero-title">白雪、古堡與酒鄉微醺的 15 天旅程</h1>
+        <p class="hero-subtitle">
+          從阿爾卑斯湖畔的哈修塔特，走過羅曼蒂克大道的符茲堡、海德堡，穿越亞爾薩斯的科爾馬童話木屋，最終登上楚格峰頂與新天鵝堡。這是一本真實記錄旅人心情與實戰避坑的自駕手記。
+        </p>
+      </div>
+    </section>
 
-  <!-- 15 天時間軸 -->
-  <section class="timeline" id="timeline">
-    <div class="container">
-      <h2>📍 15 天行程總覽</h2>
-      <div class="timeline-grid">
+    <!-- Bento 核心數據與特色展示 -->
+    <section class="bento-grid">
+      <!-- 統計 1: 天數與國家 -->
+      <div class="bento-card bento-col-4">
+        <span class="badge badge-alpine">🌍 跨國版圖</span>
+        <h3 style="font-size: 1.8rem; margin: 0.75rem 0 0.25rem; color: var(--primary);">15 天 ✕ 4 國</h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">德國巴伐利亞・奧地利薩爾斯堡・法國亞爾薩斯・瑞士巴塞爾</p>
+      </div>
+
+      <!-- 統計 2: 五大基地自駕 -->
+      <div class="bento-card bento-col-4">
+        <span class="badge badge-forest">🏨 定點漫遊</span>
+        <h3 style="font-size: 1.8rem; margin: 0.75rem 0 0.25rem; color: var(--primary);">5 大精選住宿基地</h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">深度探索湖區、法蘭肯酒鄉、內卡河畔、童話小鎮與雪山溫泉</p>
+      </div>
+
+      <!-- 統計 3: 實戰避坑與發音 -->
+      <div class="bento-card bento-col-4">
+        <span class="badge badge-wine">🔊 實戰 Travel OS</span>
+        <h3 style="font-size: 1.8rem; margin: 0.75rem 0 0.25rem; color: var(--primary);">德法語發音 ✕ 避坑</h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">內建點餐真人語音朗讀、P+R 停車座標與冬季雪胎法規檢核</p>
+      </div>
+    </section>
+
+    <!-- 五大基地探索 (Hubs) -->
+    <section id="hubs" style="margin: 3rem 0 1.5rem;">
+      <h2 style="font-family: var(--font-heading); font-size: 1.8rem; color: var(--primary); margin-bottom: 1.25rem;">
+        🏰 五大漫遊住宿基地 (Bases)
+      </h2>
+      <div class="bento-grid">
+        <div class="bento-card bento-col-4" style="background: linear-gradient(180deg, #fff 0%, #f0f9ff 100%);">
+          <span class="badge badge-alpine">Day 1 - 3</span>
+          <h3 style="margin: 0.5rem 0; color: var(--primary);">哈修塔特 & 薩爾斯堡</h3>
+          <p style="font-size: 0.9rem; color: var(--text-sub);">湖畔晨曦、人骨屋、茜茜公主皇家午茶與莫札特故鄉。</p>
+          <div style="margin-top: 1rem;"><a href="blog/day-02-blog.html" class="badge badge-gold" style="text-decoration: none;">📖 閱讀深度遊記 →</a></div>
+        </div>
+
+        <div class="bento-card bento-col-4" style="background: linear-gradient(180deg, #fff 0%, #fefce8 100%);">
+          <span class="badge badge-gold">Day 3 - 7</span>
+          <h3 style="margin: 0.5rem 0; color: var(--primary);">符茲堡 & 羅曼蒂克大道</h3>
+          <p style="font-size: 0.9rem; color: var(--text-sub);">世界遺產主教宮、舊美茵橋舉杯白葡萄酒、班堡煙燻啤酒、羅騰堡童話。</p>
+          <div style="margin-top: 1rem;"><a href="guide-wurzburg.html" class="badge badge-gold" style="text-decoration: none;">📖 查看區域指南 →</a></div>
+        </div>
+
+        <div class="bento-card bento-col-4" style="background: linear-gradient(180deg, #fff 0%, #fdf2f8 100%);">
+          <span class="badge badge-wine">Day 7 - 10</span>
+          <h3 style="margin: 0.5rem 0; color: var(--primary);">海德堡 & 內卡河畔</h3>
+          <p style="font-size: 0.9rem; color: var(--text-sub);">海德堡城堡廢墟、哲學家小徑夜景、法蘭克福現代金融天際線。</p>
+          <div style="margin-top: 1rem;"><a href="guide-heidelberg.html" class="badge badge-gold" style="text-decoration: none;">📖 查看區域指南 →</a></div>
+        </div>
+
+        <div class="bento-card bento-col-6" style="background: linear-gradient(180deg, #fff 0%, #fef2f2 100%);">
+          <span class="badge badge-trap">Day 10 - 12 (法國 🇫🇷 & 瑞士 🇨🇭)</span>
+          <h3 style="margin: 0.5rem 0; color: var(--primary);">科爾馬、埃吉桑姆 & 巴塞爾</h3>
+          <p style="font-size: 0.9rem; color: var(--text-sub);">霍爾的移動城堡原型小鎮、同心圓最美村莊、火焰烤餅與巴塞爾國際清算銀行朝聖。</p>
+          <div style="margin-top: 1rem;"><a href="guide-colmar.html" class="badge badge-gold" style="text-decoration: none;">📖 查看區域指南 →</a></div>
+        </div>
+
+        <div class="bento-card bento-col-6" style="background: linear-gradient(180deg, #fff 0%, #f0fdf4 100%);">
+          <span class="badge badge-forest">Day 12 - 15 (阿爾卑斯頂峰 🏔️)</span>
+          <h3 style="margin: 0.5rem 0; color: var(--primary);">加米許、新天鵝堡 & 楚格峰</h3>
+          <p style="font-size: 0.9rem; color: var(--text-sub);">帕特納赫冬季冰瀑、雪山溫泉山莊、新天鵝堡冬雪回憶與德國第一高峰。</p>
+          <div style="margin-top: 1rem;"><a href="guide-garmisch.html" class="badge badge-gold" style="text-decoration: none;">📖 查看區域指南 →</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 15 天行程時間軸 (Timeline) -->
+    <section id="timeline" style="margin: 3rem 0 2rem;">
+      <h2 style="font-family: var(--font-heading); font-size: 1.8rem; color: var(--primary); margin-bottom: 1.25rem;">
+        📍 15 天自駕時間軸 (Timeline)
+      </h2>
+      <div class="bento-grid">
         <!-- Day 1 -->
-        <div class="timeline-card" data-href="day-01.html">
-          <span class="timeline-day">Day 1</span>
-          <p class="timeline-date">1/26 (一)</p>
-          <p class="timeline-city">慕尼黑 → 薩爾斯堡 → 哈修塔特</p>
-          <p class="timeline-theme">抵達 & 移動</p>
-          <span class="timeline-badge">🚗 長途駕駛</span>
-          <span class="timeline-badge hotel">🏨 住宿：哈修塔特</span>
+        <div class="timeline-card bento-col-4" data-href="day-01.html">
+          <div class="timeline-day-tag">Day 01 · 1/26 (一)</div>
+          <div class="timeline-city-title">慕尼黑 → 薩爾斯堡 → 哈修塔特</div>
+          <div class="timeline-theme-desc">機場取車長途自駕、莫札特故鄉漫遊、夜宿哈修塔特湖區。</div>
+          <div><span class="badge badge-alpine">🚗 長途自駕</span> <span class="badge badge-gold">🏨 宿：哈修塔特</span></div>
         </div>
+
         <!-- Day 2 -->
-        <div class="timeline-card" data-href="day-02.html">
-          <span class="timeline-day">Day 2</span>
-          <p class="timeline-date">1/27 (二)</p>
-          <p class="timeline-city">哈修塔特 + 巴德伊舍</p>
-          <p class="timeline-theme">湖畔小鎮漫遊</p>
-          <span class="timeline-badge hotel">🏨 住宿：哈修塔特</span>
+        <div class="timeline-card bento-col-4" data-href="blog/day-02-blog.html" style="border-color: var(--accent); background: #fffcf2;">
+          <div class="timeline-day-tag" style="color: var(--accent-hover);">Day 02 · 1/27 (二) ★ 精選遊記</div>
+          <div class="timeline-city-title">哈修塔特湖畔漫遊 + 巴德伊舍</div>
+          <div class="timeline-theme-desc">湖畔經典機位、十二年心境對照、茜茜公主皇家午茶。</div>
+          <div><span class="badge badge-gold">📝 旗艦深度網誌</span> <span class="badge badge-gold">🏨 宿：哈修塔特</span></div>
         </div>
+
         <!-- Day 3 -->
-        <div class="timeline-card" data-href="day-03.html">
-          <span class="timeline-day">Day 3</span>
-          <p class="timeline-date">1/28 (三)</p>
-          <p class="timeline-city">哈修塔特 → Ingolstadt → 符茲堡</p>
-          <p class="timeline-theme">轉移日 + 購物</p>
-          <span class="timeline-badge">🚗 長途駕駛</span>
-          <span class="timeline-badge hotel">🏨 住宿：符茲堡</span>
+        <div class="timeline-card bento-col-4" data-href="day-03.html">
+          <div class="timeline-day-tag">Day 03 · 1/28 (三)</div>
+          <div class="timeline-city-title">哈修塔特 → 暢貨中心 → 符茲堡</div>
+          <div class="timeline-theme-desc">阿爾卑斯公路轉移、Ingolstadt Village 購物補給、夜宿符茲堡。</div>
+          <div><span class="badge badge-alpine">🚗 跨國轉移</span> <span class="badge badge-gold">🏨 宿：符茲堡</span></div>
         </div>
+
         <!-- Day 4 -->
-        <div class="timeline-card" data-href="day-04.html">
-          <span class="timeline-day">Day 4</span>
-          <p class="timeline-date">1/29 (四)</p>
-          <p class="timeline-city">班堡</p>
-          <p class="timeline-theme">世界遺產 & 煙燻啤酒</p>
-          <span class="timeline-badge train">🚂 火車日</span>
-          <span class="timeline-badge hotel">🏨 住宿：符茲堡</span>
+        <div class="timeline-card bento-col-4" data-href="day-04.html">
+          <div class="timeline-day-tag">Day 04 · 1/29 (四)</div>
+          <div class="timeline-city-title">班堡 (Bamberg) 世界遺產巡禮</div>
+          <div class="timeline-theme-desc">河島市政廳、小威尼斯水岸、品嚐數百年傳奇煙燻啤酒 (Rauchbier)。</div>
+          <div><span class="badge badge-wine">🚂 火車一日遊</span> <span class="badge badge-gold">🏨 宿：符茲堡</span></div>
         </div>
+
         <!-- Day 5 -->
-        <div class="timeline-card" data-href="day-05.html">
-          <span class="timeline-day">Day 5</span>
-          <p class="timeline-date">1/30 (五)</p>
-          <p class="timeline-city">紐倫堡</p>
-          <p class="timeline-theme">皇帝堡 & 香腸</p>
-          <span class="timeline-badge train">🚂 火車日</span>
-          <span class="timeline-badge hotel">🏨 住宿：符茲堡</span>
+        <div class="timeline-card bento-col-4" data-href="day-05.html">
+          <div class="timeline-day-tag">Day 05 · 1/30 (五)</div>
+          <div class="timeline-city-title">紐倫堡 (Nürnberg) 皇帝堡與工藝</div>
+          <div class="timeline-theme-desc">登上皇帝堡俯瞰紅瓦老城、品嚐紐倫堡小香腸、玩具之都漫步。</div>
+          <div><span class="badge badge-wine">🚂 火車一日遊</span> <span class="badge badge-gold">🏨 宿：符茲堡</span></div>
         </div>
+
         <!-- Day 6 -->
-        <div class="timeline-card" data-href="day-06.html">
-          <span class="timeline-day">Day 6</span>
-          <p class="timeline-date">1/31 (六)</p>
-          <p class="timeline-city">羅騰堡</p>
-          <p class="timeline-theme">中世紀童話小鎮</p>
-          <span class="timeline-badge hotel">🏨 住宿：符茲堡</span>
+        <div class="timeline-card bento-col-4" data-href="day-06.html">
+          <div class="timeline-day-tag">Day 06 · 1/31 (六)</div>
+          <div class="timeline-city-title">羅騰堡 (Rothenburg) 中世紀童話</div>
+          <div class="timeline-theme-desc">普連萊小廣場經典機位、環城古城牆漫步、品嚐雪球糕點。</div>
+          <div><span class="badge badge-gold">🚗 羅曼蒂克大道</span> <span class="badge badge-gold">🏨 宿：符茲堡</span></div>
         </div>
+
         <!-- Day 7 -->
-        <div class="timeline-card" data-href="day-07.html">
-          <span class="timeline-day">Day 7</span>
-          <p class="timeline-date">2/1 (日)</p>
-          <p class="timeline-city">符茲堡 → 海德堡</p>
-          <p class="timeline-theme">主教宮 & 轉移</p>
-          <span class="timeline-badge hotel">🏨 住宿：海德堡</span>
+        <div class="timeline-card bento-col-4" data-href="day-07.html">
+          <div class="timeline-day-tag">Day 07 · 2/1 (日)</div>
+          <div class="timeline-city-title">符茲堡主教宮 → 海德堡</div>
+          <div class="timeline-theme-desc">參觀世界最大濕壁畫主教宮、舊美茵橋舉杯白葡萄酒，轉移至海德堡。</div>
+          <div><span class="badge badge-alpine">🚗 自駕轉移</span> <span class="badge badge-gold">🏨 宿：海德堡</span></div>
         </div>
+
         <!-- Day 8 -->
-        <div class="timeline-card" data-href="day-08.html">
-          <span class="timeline-day">Day 8</span>
-          <p class="timeline-date">2/2 (一)</p>
-          <p class="timeline-city">海德堡</p>
-          <p class="timeline-theme">浪漫大學城</p>
-          <span class="timeline-badge hotel">🏨 住宿：海德堡</span>
+        <div class="timeline-card bento-col-4" data-href="day-08.html">
+          <div class="timeline-day-tag">Day 08 · 2/2 (一)</div>
+          <div class="timeline-city-title">海德堡 (Heidelberg) 浪漫古城</div>
+          <div class="timeline-theme-desc">海德堡城堡廢墟、大酒桶、哲學家小徑俯瞰內卡河夜景。</div>
+          <div><span class="badge badge-wine">🚶 老城漫遊</span> <span class="badge badge-gold">🏨 宿：海德堡</span></div>
         </div>
+
         <!-- Day 9 -->
-        <div class="timeline-card" data-href="day-09.html">
-          <span class="timeline-day">Day 9</span>
-          <p class="timeline-date">2/3 (二)</p>
-          <p class="timeline-city">哈瑙 + 法蘭克福</p>
-          <p class="timeline-theme">格林兄弟故鄉</p>
-          <span class="timeline-badge hotel">🏨 住宿：海德堡</span>
+        <div class="timeline-card bento-col-4" data-href="day-09.html">
+          <div class="timeline-day-tag">Day 09 · 2/3 (二)</div>
+          <div class="timeline-city-title">哈瑙童話起點 + 法蘭克福天際線</div>
+          <div class="timeline-theme-desc">格林兄弟故鄉哈瑙、法蘭克福羅馬廣場與摩天大樓群。</div>
+          <div><span class="badge badge-alpine">🚗 近郊一日</span> <span class="badge badge-gold">🏨 宿：海德堡</span></div>
         </div>
+
         <!-- Day 10 -->
-        <div class="timeline-card special" data-href="day-10.html">
-          <span class="timeline-day">Day 10</span>
-          <p class="timeline-date">2/4 (三)</p>
-          <p class="timeline-city">史派爾 → 🇫🇷 科爾馬</p>
-          <p class="timeline-theme">跨境亞爾薩斯</p>
-          <span class="timeline-badge">🌍 跨境</span>
-          <span class="timeline-badge hotel">🏨 住宿：科爾馬</span>
+        <div class="timeline-card bento-col-4" data-href="day-10.html">
+          <div class="timeline-day-tag">Day 10 · 2/4 (三) 🇫🇷 法國境內</div>
+          <div class="timeline-city-title">海德堡 → 法國科爾馬 (Colmar)</div>
+          <div class="timeline-theme-desc">跨越萊茵河進入亞爾薩斯、小威尼斯運河夜景、品嚐火焰烤餅。</div>
+          <div><span class="badge badge-wine">🚗 跨國自駕</span> <span class="badge badge-gold">🏨 宿：科爾馬</span></div>
         </div>
+
         <!-- Day 11 -->
-        <div class="timeline-card" data-href="day-11.html">
-          <span class="timeline-day">Day 11</span>
-          <p class="timeline-date">2/5 (四)</p>
-          <p class="timeline-city">科爾馬 + 埃吉桑姆</p>
-          <p class="timeline-theme">小威尼斯 & 酒鄉</p>
-          <span class="timeline-badge hotel">🏨 住宿：科爾馬</span>
+        <div class="timeline-card bento-col-4" data-href="day-11.html">
+          <div class="timeline-day-tag">Day 11 · 2/5 (四) 🇨🇭 瑞士境內</div>
+          <div class="timeline-city-title">埃吉桑姆童話村 + 瑞士巴塞爾</div>
+          <div class="timeline-theme-desc">法國最美同心圓村莊、國際清算銀行 (BIS) 朝聖、三國交界巡禮。</div>
+          <div><span class="badge badge-alpine">🚗 三國邊界自駕</span> <span class="badge badge-gold">🏨 宿：科爾馬</span></div>
         </div>
+
         <!-- Day 12 -->
-        <div class="timeline-card" data-href="day-12.html">
-          <span class="timeline-day">Day 12</span>
-          <p class="timeline-date">2/6 (五)</p>
-          <p class="timeline-city">蒂蒂湖 → 加米許</p>
-          <p class="timeline-theme">黑森林 & 咕咕鐘</p>
-          <span class="timeline-badge">🚗 長途駕駛</span>
-          <span class="timeline-badge hotel">🏨 住宿：加米許</span>
+        <div class="timeline-card bento-col-4" data-href="day-12.html">
+          <div class="timeline-day-tag">Day 12 · 2/6 (五)</div>
+          <div class="timeline-city-title">科爾馬 → 蒂蒂湖 → 加米許</div>
+          <div class="timeline-theme-desc">黑森林公路、蒂蒂湖雪景、轉移至阿爾卑斯加米許山莊。</div>
+          <div><span class="badge badge-forest">🚗 長途自駕</span> <span class="badge badge-gold">🏨 宿：加米許</span></div>
         </div>
+
         <!-- Day 13 -->
-        <div class="timeline-card" data-href="day-13.html">
-          <span class="timeline-day">Day 13</span>
-          <p class="timeline-date">2/7 (六)</p>
-          <p class="timeline-city">新天鵝堡 + 帕特納赫峽谷</p>
-          <p class="timeline-theme">童話城堡 & 冰瀑</p>
-          <span class="timeline-badge hotel">🏨 住宿：加米許</span>
+        <div class="timeline-card bento-col-4" data-href="day-13.html">
+          <div class="timeline-day-tag">Day 13 · 2/7 (六)</div>
+          <div class="timeline-city-title">楚格峰 (Zugspitze) + 帕特納赫冰瀑</div>
+          <div class="timeline-theme-desc">登頂德國最高峰眺望四國雪山、徒步穿梭冬季冰瀑奇景峽谷。</div>
+          <div><span class="badge badge-alpine">🏔️ 阿爾卑斯之巔</span> <span class="badge badge-gold">🏨 宿：加米許</span></div>
         </div>
+
         <!-- Day 14 -->
-        <div class="timeline-card" data-href="day-14.html">
-          <span class="timeline-day">Day 14</span>
-          <p class="timeline-date">2/8 (日)</p>
-          <p class="timeline-city">楚格峰 / 艾布湖 → 慕尼黑</p>
-          <p class="timeline-theme">德國最高峰 & 還車</p>
-          <span class="timeline-badge hotel">🏨 住宿：慕尼黑機場</span>
+        <div class="timeline-card bento-col-4" data-href="day-14.html">
+          <div class="timeline-day-tag">Day 14 · 2/8 (日)</div>
+          <div class="timeline-city-title">新天鵝堡 (Neuschwanstein) 回憶之旅</div>
+          <div class="timeline-theme-desc">童話雪山城堡、馬車巡禮、兩代人的回憶與傳承。</div>
+          <div><span class="badge badge-gold">🏰 經典城堡</span> <span class="badge badge-gold">🏨 宿：加米許/慕尼黑</span></div>
         </div>
+
         <!-- Day 15 -->
-        <div class="timeline-card" data-href="day-15.html">
-          <span class="timeline-day">Day 15</span>
-          <p class="timeline-date">2/9 (一)</p>
-          <p class="timeline-city">慕尼黑機場</p>
-          <p class="timeline-theme">返程</p>
-          <span class="timeline-badge">✈️ 返國</span>
+        <div class="timeline-card bento-col-4" data-href="day-15.html">
+          <div class="timeline-day-tag">Day 15 · 2/9 (一)</div>
+          <div class="timeline-city-title">慕尼黑市區巡禮 → 機場返程</div>
+          <div class="timeline-theme-desc">瑪利亞廣場、榖物市場最後採買、機場還車踏上歸途。</div>
+          <div><span class="badge badge-alpine">✈️ 滿載而歸</span> <span class="badge badge-gold">🏨 返台航班</span></div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- 緊急聯絡資訊 -->
-  <section class="emergency-section" id="emergency">
-    <div class="container">
-      <h2>🆘 德奧法 24 小時緊急聯絡懶人包</h2>
+  <!-- 手機底部 App-Like 導覽列 -->
+  <div class="mobile-dock">
+    <a href="index.html" class="dock-item active">
+      <span class="dock-icon">🏠</span>
+      <span>首頁</span>
+    </a>
+    <a href="#timeline" class="dock-item">
+      <span class="dock-icon">📅</span>
+      <span>行程</span>
+    </a>
+    <a href="blog/day-02-blog.html" class="dock-item">
+      <span class="dock-icon">📖</span>
+      <span>遊記</span>
+    </a>
+    <a href="javascript:void(0)" class="dock-item btn-share">
+      <span class="dock-icon">📤</span>
+      <span>分享</span>
+    </a>
+  </div>
 
-      <!-- 1. 富邦產險 -->
-      <div class="emergency-block">
-        <h3>1. 富邦產險：海外急難救助專線</h3>
-        <p>當遇到重大傷病、需安排就醫、護照遺失或法律協助時，請優先聯繫保險公司的 24 小時支援中心。</p>
-        <div class="emergency-highlight">
-          <p><strong>📞 急難救助電話：</strong><a href="tel:+886223268815">+886-2-2326-8815</a></p>
-          <p><strong>服務內容：</strong>醫療諮詢、安排住院、協助行李或證件遺失、法律推薦</p>
-        </div>
-        <p class="tip">💡 撥打時請準備好您的身分證字號（或保單號碼），以便客服快速核對您的投保權益。</p>
-      </div>
-
-      <!-- 2. 歐盟當地救災與警察系統 -->
-      <div class="emergency-block">
-        <h3>2. 歐盟當地救災與警察系統</h3>
-        <p>這三個國家撥打 <strong>112</strong> 都是通用的（救護車/消防/警察），但在德國與奧地利有更細分的傳統號碼：</p>
-        <div class="info-table-wrapper">
-          <table class="info-table">
-            <thead>
-              <tr><th>國家</th><th>報警 (Police)</th><th>救護/消防</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>🇩🇪 德國</td><td>110</td><td>112</td></tr>
-              <tr><td>🇦🇹 奧地利</td><td>133</td><td>144</td></tr>
-              <tr><td>🇫🇷 法國</td><td>17</td><td>15 (醫) / 18 (消)</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- 3. 台灣駐外館處 -->
-      <div class="emergency-block">
-        <h3>3. 台灣駐外館處：國人急難求助專線</h3>
-        <p>這是最後的防線，主要處理護照損毀/遺失、遭逮捕或遭遇重大事故。</p>
-        <div class="info-table-wrapper">
-          <table class="info-table">
-            <thead>
-              <tr><th>地區</th><th>辦事處</th><th>緊急電話</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>🇩🇪 德國（巴伐利亞邦/加米許）</td><td>駐慕尼黑辦事處</td><td><a href="tel:+491713898611">+49-171-389-8611</a></td></tr>
-              <tr><td>🇦🇹 奧地利（全境/哈修塔特）</td><td>駐奧地利代表處</td><td><a href="tel:+436643450455">+43-664-345-0455</a></td></tr>
-              <tr><td>🇫🇷 法國（亞爾薩斯/科爾馬）</td><td>駐法國代表處</td><td><a href="tel:+33615113099">+33-6-15-11-30-99</a></td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- 應變小提醒 -->
-      <div class="emergency-block">
-        <h3>🩺 應變小提醒</h3>
-        <ul class="tip-list">
-          <li><strong>就醫證明：</strong>富邦旅平險申請理賠時，必須有醫院診斷證明書與收據正本。在德國或奧地利就醫時，務必跟醫生索取正式的診斷書 (Arztliches Attest)。</li>
-          <li><strong>撥號方式：</strong>使用台灣手機漫遊時，請務必加上國碼（+49 德國, +43 奧地利, +33 法國, +886 台灣）。</li>
-          <li><strong>網路通話備案：</strong>如果手機漫遊通話不便，可透過 Skype 或其他網路通訊撥打國際電話回台灣。</li>
-          <li><strong>證件備份：</strong>建議將護照、駕照、保單、身分證各拍一張照片存在雲端。萬一正本遺失，聯繫辦事處或保險公司時，提供照片能大幅縮短查驗時間。</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- 頁尾 -->
-  <footer class="footer">
-    <div class="container">
-      <p>2026 德國南部冬季自駕之旅 | 個人旅遊規劃</p>
-      <p class="mt-1">最後更新：2025-12-03</p>
-    </div>
-  </footer>
-
-  <script src="js/main.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
-
