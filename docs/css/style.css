@@ -438,7 +438,8 @@ button {
 
 .featured-img-wrap {
   width: 100%;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 4 / 5;
+  max-height: 380px;
   overflow: hidden;
   position: relative;
   background: #e2e8f0;
@@ -448,8 +449,14 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center center;
   transition: transform 0.4s ease;
 }
+
+/* Image Focus Utilities */
+.focus-top { object-position: center 15% !important; }
+.focus-center { object-position: center center !important; }
+.focus-bottom { object-position: center 85% !important; }
 
 .featured-card:hover .featured-img-wrap img {
   transform: scale(1.06);
