@@ -1,0 +1,1937 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+
+<head>
+
+<META content='48608da9da10d731' name='y_key'/>
+<meta content='qejonzGHhgepU0If1w1_731G5_BjjWPf7dkUyGvcb_4' name='google-site-verification'/>
+<meta content='IE=IE7; IE=IE8; IE=IE9; IE=IE10; IE=edge; chrome=1' http-equiv='X-UA-Compatible'/>
+
+    <b:include data='blog' name='all-head-content'/>
+<!-- 將文章標題放在部落格名稱前面 -->
+    <b:if cond='data:blog.pageType == &quot;index&quot;'>
+        <title><data:blog.title/></title>
+    <b:else/>
+        <title><data:blog.pageName/> - <data:blog.title/></title>
+    </b:if>
+
+    <b:skin><![CDATA[/*
+ * Blogger Template Style
+ *
+ * Sand Dollar
+ * by Jason Sutter
+ * Updated by Blogger Team
+ */
+
+/* Variable definitions
+   ====================
+   <Variable name="textcolor" description="Text Color"
+             type="color" default="#000" value="#000000">
+
+   <Variable name="bgcolor" description="Page Background Color"
+             type="color" default="#f6f6f6" value="#f6f6f6">
+
+   <Variable name="pagetitlecolor" description="Blog Title Color"
+             type="color" default="#F5DEB3" value="#ffffff">
+
+   <Variable name="pagetitlebgcolor" description="Blog Title Background Color"
+             type="color" default="#DE7008" value="#f6f6f6">
+
+  <Variable name="descriptionColor" description="Blog Description Color"
+            type="color" default="#9E5205"  value="#04519e"/>
+
+   <Variable name="descbgcolor" description="Description Background Color"
+             type="color" default="#F5E39e" value="#f6f6f6">
+
+   <Variable name="titlecolor" description="Post Title Color"
+             type="color" default="#9E5205" value="#444444">
+
+   <Variable name="datecolor" description="Date Header Color"
+             type="color" default="#777777" value="#777777">
+
+   <Variable name="footercolor" description="Post Footer Color"
+             type="color" default="#444444" value="#444444">
+
+   <Variable name="linkcolor" description="Link Color"
+             type="color" default="#DE7008" value="#777777">
+
+   <Variable name="footerlinkcolor" description="Post Footer Link Color"
+             type="color" default="#968a0a" value="#29024f">
+
+   <Variable name="visitedlinkcolor" description="Visited Link Color"
+             type="color" default="#DE7008" value="#000000">
+
+   <Variable name="sidebarcolor" description="Sidebar Title Color"
+             type="color" default="#B8A80D" value="#777777">
+
+   <Variable name="sidebarlinkcolor" description="Sidebar Link Color"
+             type="color" default="#999999" value="#999999">
+
+   <Variable name="bordercolor" description="Border Color"
+             type="color" default="#e0ad12" value="#283b4f">
+
+   <Variable name="bodyfont" description="Text Font"
+             type="font"
+             default="normal normal 100% 'Trebuchet MS',Trebuchet,Verdana,Sans-Serif" value="normal normal 126% 微軟正黑體,Verdana, sans-serif">
+
+   <Variable name="headerfont" description="Sidebar Title Font"
+             type="font"
+             default="normal bold 150% 微軟正黑體,Verdana,Sans-serif" value="normal bold 110% Verdana,Sans-serif">
+
+   <Variable name="dateHeaderFont" description="Date Header Font"
+             type="font"
+             default="normal bold 105% 'Trebuchet MS',Trebuchet,Verdana,Sans-serif" value="normal bold 105% &#39;Trebuchet MS&#39;,Trebuchet,Verdana,Sans-serif">
+
+   <Variable name="pagetitlefont" description="Blog Title Font"
+             type="font" default="normal bold 300% 微軟正黑體,Verdana,Sans-Serif" value="italic bold 262% Georgia, Utopia, &#39;Palatino Linotype&#39;, Palatino, serif;">
+
+   <Variable name="titlefont" description="Post Title Font"
+             type="font" default="normal bold 160% 微軟正黑體,Verdana,Sans-Serif" value="normal bold 160% 微軟正黑體, Verdana,Sans-Serif">
+   <Variable name="startSide" description="Start side in blog language"
+             type="automatic" default="left">
+   <Variable name="endSide" description="End side in blog language"
+             type="automatic" default="right">
+*/
+
+body {
+  margin:0px;
+  padding:0px;
+  background:$bgcolor;
+  color:$textcolor;
+  font-size: small;
+}
+
+#outer-wrapper {
+  font:$bodyfont;
+}
+			
+a {
+ color:$linkcolor;
+} 
+			
+a:hover {
+ color:$titlecolor;
+} 
+
+a img { 
+  border-width: 0;
+}
+
+.shadow {
+float: left;
+width: auto;
+background: url(http://sites.google.com/site/blogtools2ch/img/fuzzy_shadow.png) no-repeat bottom right;
+}
+.shadow div {
+background: url(http://sites.google.com/site/blogtools2ch/img/fuzzy_shadow1.png) no-repeat right top;
+}
+.shadow div a {
+background: url(http://sites.google.com/site/blogtools2ch/img/fuzzy_shadow2.png) no-repeat left bottom;
+padding: 0 6px 6px 0;
+display: block;
+}
+.shadow img {
+background-color: #fff;
+color: #000;
+border: 1px solid #999;
+padding: 4px;
+vertical-align: bottom;
+}
+
+
+/* ---- 隱藏導覽列1/2 navBar ---- */
+.navbar {
+    position: fixed; /* 黏在上方 */
+    width: 100%;
+    height: 28px;
+    left: 0px; 
+    z-index: 99; /* 圖層順序設成 99 避免被其他物件蓋住 */
+}
+.navbar div {
+    display: none;
+}
+                
+#content-wrapper {
+  padding-top: 0;
+  padding-$endSide: 1em;
+  padding-bottom: 0;
+  padding-$startSide: 1em;
+}
+
+@media all  {
+  div#main {
+    float:$endSide;
+    width:80%;
+    padding-top:30px;
+    padding-$endSide:0;
+    padding-bottom:10px;
+    padding-$startSide:1em;
+    border-$startSide:dotted 1px $bordercolor;
+    word-wrap: break-word; /* fix for long text breaking sidebar float in IE */
+    overflow: hidden;     /* fix for long non-text content breaking IE sidebar float */
+  } 			  
+  div#sidebar {
+    margin-top:20px;
+    margin-$endSide:0px;
+    margin-bottom:0px;
+    margin-$startSide:0;
+    padding:0px;
+    text-align:$startSide; 
+    float: $startSide;
+    width: 18%;
+    word-wrap: break-word; /* fix for long text breaking sidebar float in IE */
+    overflow: hidden;     /* fix for long non-text content breaking IE sidebar float */
+  } 
+} 
+                        
+@media handheld  {
+  div#main {
+   float:none;
+   width:90%; 
+ } 
+  
+  div#sidebar {
+    padding-top:30px;
+    padding-$endSide:7%;
+    padding-bottom:10px;
+    padding-$startSide:3%;
+  }                          
+}
+                        
+#header { 
+  padding-top:0px;
+  padding-$endSide:0px;
+  padding-bottom:0px;
+  padding-$startSide:0px;
+  margin-top:0px;
+  margin-$endSide:0px;
+  margin-bottom:0px;
+  margin-$startSide:0px;
+  border-bottom:dotted 1px $bordercolor;
+  background:$descbgcolor;
+}
+						
+h1 a:link  {
+ text-decoration:none;
+ color:$pagetitlecolor
+} 
+			
+h1 a:visited  {
+  text-decoration:none;
+  color:$pagetitlecolor
+} 
+
+h1,h2,h3 {
+  margin: 0;
+}
+
+h1 { 
+  padding-top:25px;
+  padding-$endSide:0px;
+  padding-bottom:10px;
+  padding-$startSide:5%;
+  color:$pagetitlecolor;
+  background:$pagetitlebgcolor;
+  font:$pagetitlefont;
+  letter-spacing:-2px; 
+} 
+			
+h3.post-title { 
+  color:$titlecolor;
+  font:$titlefont;
+  letter-spacing:-1px;
+}
+
+h3.post-title a,
+h3.post-title a:visited { 
+  color: $titlecolor;
+}
+ 			
+h2.date-header  {
+  margin-top:10px;
+  margin-$endSide:0px;
+  margin-bottom:0px;
+  margin-$startSide:0px;
+  color:$datecolor;
+  font: $dateHeaderFont;
+}
+			
+h4 {
+ color:#aa0033; 
+} 
+						
+#sidebar h2 { 
+  color:$sidebarcolor;
+  margin:0px; 
+  padding:0px;
+  font:$headerfont;
+}
+
+#sidebar .widget {
+  margin-top:0px;
+  margin-$endSide:0px;
+  margin-bottom:33px;
+  margin-$startSide:0px;
+  padding-top:0px;
+  padding-$endSide:0px;
+  padding-bottom:0px;
+  padding-$startSide:0px;
+  font-size:90%; 
+} 
+
+#sidebar ul {
+  list-style-type:none;
+  padding-$startSide: 0;
+  margin-top: 0;
+}
+
+#sidebar li {
+  margin-top:0px;
+  margin-$endSide:0px;
+  margin-bottom:0px;
+  margin-$startSide:0px;
+  padding-top:0px;
+  padding-$endSide:0px;
+  padding-bottom:0px;
+  padding-$startSide:0px;
+  list-style-type:none;
+  font-size:95%; 
+} 
+
+.description {
+  padding:0px;
+  margin-top:7px;
+  margin-$endSide:12%;
+  margin-bottom:7px;
+  margin-$startSide:5%;
+  color:$descriptionColor;
+  background:transparent;
+  font:bold 100% Verdana,Sans-Serif;
+}
+
+ .post {
+  margin-top:0px;
+  margin-$endSide:0px;
+  margin-bottom:30px;
+  margin-$startSide:0px;
+} 
+			
+.post strong {
+  color:$textcolor;
+  font-weight:bold; 
+} 
+
+pre,code {
+ color:$sidebarlinkcolor;
+} 
+
+strike {
+ color:$sidebarlinkcolor;
+} 
+
+.post-footer  {
+  padding:0px;
+  margin:0px;
+  color:$footercolor;
+  font-size:80%; 
+} 
+.post-footer a {
+  border:none;
+  color:$footerlinkcolor;
+  text-decoration:none; 
+} 
+
+.post-footer a:hover {
+  text-decoration:underline; 
+} 
+
+#comments {
+  padding:0px;
+  font-size:110%;
+  font-weight:bold;
+}
+
+.comment-author { 
+  margin-top: 10px;
+ }
+
+.comment-body {
+  font-size:100%;
+  font-weight:normal;
+  color:black; 
+} 
+
+.comment-footer {
+  padding-bottom:20px;
+  color:$footercolor;
+  font-size:80%;
+  font-weight:normal;
+  display:inline;
+  margin-$endSide:10px 
+} 
+
+.deleted-comment  {
+  font-style:italic;
+  color:gray; 
+} 
+
+.comment-link  {
+  margin-$startSide:.6em;
+} 
+
+.profile-textblock { 
+  clear: both;
+  margin-$startSide: 0;
+}
+
+.profile-img { 
+  float: $startSide;
+  margin-top: 0;
+  margin-$endSide: 5px;
+  margin-bottom: 5px;
+  margin-$startSide: 0;
+  border: 2px solid $pagetitlebgcolor;
+}
+
+#sidebar a:link  {
+  color:$sidebarlinkcolor;
+  text-decoration:none; 
+}    
+
+#sidebar a:active  {
+  color:#ff0000;
+  text-decoration:none; 
+}     
+
+#sidebar a:visited  {
+  color:sidebarlinkcolor;
+  text-decoration:none; 
+} 
+
+#sidebar a:hover {
+  color:$sidebarcolor;
+  text-decoration:none; 
+} 
+
+.feed-links {
+  clear: both;
+  line-height: 2.5em;
+}
+
+#blog-pager-newer-link {
+  float: $startSide;
+ }
+  
+#blog-pager-older-link {
+  float: $endSide;
+}
+ 
+#blog-pager {   
+  text-align: center; 
+}
+
+.clear { 
+  clear: both;
+}
+
+.widget-content { 
+  margin-top: 0.5em;
+}
+
+/** Tweaks for layout editor preview */
+
+body#layout #outer-wrapper { 
+  margin-top: 0;
+}
+
+body#layout #main,
+body#layout #sidebar { 
+  margin-top: 10px;
+  padding-top: 0;
+}
+]]></b:skin>
+  </head>
+
+  <body>
+  <b:section class='navbar' id='navbar' maxwidgets='1' showaddelement='no'>
+    <b:widget id='Navbar1' locked='true' title='導覽列' type='Navbar'>
+      <b:includable id='main'>&lt;script type=&quot;text/javascript&quot;&gt;
+    function setAttributeOnload(object, attribute, val) {
+      if(window.addEventListener) {
+        window.addEventListener(&#39;load&#39;,
+          function(){ object[attribute] = val; }, false);
+      } else {
+        window.attachEvent(&#39;onload&#39;, function(){ object[attribute] = val; });
+      }
+    }
+  &lt;/script&gt;
+&lt;div id=&quot;navbar-iframe-container&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://apis.google.com/js/platform.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+      gapi.load(&quot;gapi.iframes:gapi.iframes.style.bubble&quot;, function() {
+        if (gapi.iframes &amp;&amp; gapi.iframes.getContext) {
+          gapi.iframes.getContext().openChild({
+              url: &#39;https://draft.blogger.com/navbar/4607056439025976501?origin\x3dhttps://draft.blogger.com&#39;,
+              where: document.getElementById(&quot;navbar-iframe-container&quot;),
+              id: &quot;navbar-iframe&quot;
+          });
+        }
+      });
+    &lt;/script&gt;&lt;script type=&quot;text/javascript&quot;&gt;
+(function() {
+var script = document.createElement(&#39;script&#39;);
+script.type = &#39;text/javascript&#39;;
+script.src = &#39;//pagead2.googlesyndication.com/pagead/js/google_top_exp.js&#39;;
+var head = document.getElementsByTagName(&#39;head&#39;)[0];
+if (head) {
+head.appendChild(script);
+}})();
+&lt;/script&gt;
+</b:includable>
+    </b:widget>
+  </b:section>
+
+  <div id='outer-wrapper'><div id='wrap2'>
+
+    <!-- skip links for text browsers -->
+    <span id='skiplinks' style='display:none;'>
+      <a href='#main'>skip to main </a> |
+      <a href='#sidebar'>skip to sidebar</a>
+    </span>
+
+    <div id='header-wrapper'>
+      <b:section class='header' id='header' maxwidgets='1' showaddelement='no'>
+        <b:widget id='Header1' locked='true' title='CH@PhotoDiary (標頭)' type='Header'>
+          <b:widget-settings>
+            <b:widget-setting name='displayUrl'>http://pic.pimg.tw/aa1662/1322148628-2450694210.png</b:widget-setting>
+            <b:widget-setting name='displayHeight'>300</b:widget-setting>
+            <b:widget-setting name='sectionWidth'>1903</b:widget-setting>
+            <b:widget-setting name='useImage'>true</b:widget-setting>
+            <b:widget-setting name='shrinkToFit'>false</b:widget-setting>
+            <b:widget-setting name='imagePlacement'>BEHIND</b:widget-setting>
+            <b:widget-setting name='displayWidth'>1280</b:widget-setting>
+          </b:widget-settings>
+          <b:includable id='main'>
+
+  <b:if cond='data:useImage'>
+    <b:if cond='data:imagePlacement == &quot;BEHIND&quot;'>
+      <!--
+      Show image as background to text. You can't really calculate the width
+      reliably in JS because margins are not taken into account by any of
+      clientWidth, offsetWidth or scrollWidth, so we don't force a minimum
+      width if the user is using shrink to fit.
+      This results in a margin-width's worth of pixels being cropped. If the
+      user is not using shrink to fit then we expand the header.
+      -->
+      <b:if cond='data:mobile'>
+        <div id='header-inner'>
+          <div class='titlewrapper' style='background: transparent'>
+            <h1 class='title' style='background: transparent; border-width: 0px'>
+              <b:include name='title'/>
+            </h1>
+          </div>
+          <b:include name='description'/>
+        </div>
+      <b:else/>
+        <div expr:style='&quot;background-image: url(\&quot;&quot; + data:sourceUrl + &quot;\&quot;); &quot;                      + &quot;background-position: &quot;                      + data:backgroundPositionStyleStr + &quot;; &quot;                      + data:widthStyleStr                      + &quot;min-height: &quot; + data:height                      + &quot;_height: &quot; + data:height                      + &quot;background-repeat: no-repeat; &quot;' id='header-inner'>
+          <div class='titlewrapper' style='background: transparent'>
+            <h1 class='title' style='background: transparent; border-width: 0px'>
+              <b:include name='title'/>
+            </h1>
+          </div>
+          <b:include name='description'/>
+        </div>
+      </b:if>
+    <b:else/>
+      <!--Show the image only-->
+      <div id='header-inner'>
+        <a expr:href='data:blog.homepageUrl' style='display: block'>
+          <img expr:alt='data:title' expr:height='data:height' expr:id='data:widget.instanceId + &quot;_headerimg&quot;' expr:src='data:sourceUrl' expr:width='data:width' style='display: block'/>
+        </a>
+        <!--Show the description-->
+        <b:if cond='data:imagePlacement == &quot;BEFORE_DESCRIPTION&quot;'>
+          <b:include name='description'/>
+        </b:if>
+      </div>
+    </b:if>
+  <b:else/>
+    <!--No header image -->
+    <div id='header-inner'>
+      <div class='titlewrapper'>
+        <h1 class='title'>
+          <b:include name='title'/>
+        </h1>
+      </div>
+      <b:include name='description'/>
+    </div>
+  </b:if>
+</b:includable>
+          <b:includable id='description'>
+  <div class='descriptionwrapper'>
+    <p class='description'><span><data:description/></span></p>
+  </div>
+</b:includable>
+          <b:includable id='title'>
+  <b:tag cond='data:blog.url != data:blog.homepageUrl' expr:href='data:blog.homepageUrl' name='a'>
+    <data:title/>
+  </b:tag>
+</b:includable>
+        </b:widget>
+      </b:section>
+    </div>
+ 
+    <div id='content-wrapper'>
+
+      <div id='crosscol-wrapper' style='text-align:center'>
+        <b:section class='crosscol' id='crosscol'/>
+      </div>
+
+      <div id='main-wrapper'>
+        <b:section class='main' id='main' showaddelement='no'>
+          <b:widget id='Blog1' locked='true' title='網誌文章' type='Blog'>
+            <b:widget-settings>
+              <b:widget-setting name='showDateHeader'>false</b:widget-setting>
+              <b:widget-setting name='style.textcolor'>#ffffff</b:widget-setting>
+              <b:widget-setting name='showShareButtons'>true</b:widget-setting>
+              <b:widget-setting name='showCommentLink'>true</b:widget-setting>
+              <b:widget-setting name='style.urlcolor'>#ffffff</b:widget-setting>
+              <b:widget-setting name='postLocationLabel'>undefined</b:widget-setting>
+              <b:widget-setting name='showAuthor'>false</b:widget-setting>
+              <b:widget-setting name='style.linkcolor'>#ffffff</b:widget-setting>
+              <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+              <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+              <b:widget-setting name='reactionsLabel'/>
+              <b:widget-setting name='showAuthorProfile'>false</b:widget-setting>
+              <b:widget-setting name='style.layout'>728x90</b:widget-setting>
+              <b:widget-setting name='showLabels'>false</b:widget-setting>
+              <b:widget-setting name='showLocation'>false</b:widget-setting>
+              <b:widget-setting name='showTimestamp'>false</b:widget-setting>
+              <b:widget-setting name='postsPerAd'>1</b:widget-setting>
+              <b:widget-setting name='showBacklinks'>false</b:widget-setting>
+              <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+              <b:widget-setting name='showInlineAds'>true</b:widget-setting>
+              <b:widget-setting name='showReactions'>false</b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main' var='top'>
+  <!-- posts -->
+  <div class='blog-posts hfeed'>
+
+    <b:include data='top' name='status-message'/>
+
+    <data:defaultAdStart/>
+    <b:loop values='data:posts' var='post'>
+      <b:if cond='data:post.isDateStart'>
+        <b:if cond='data:post.isFirstPost == &quot;false&quot;'>
+          &lt;/div&gt;&lt;/div&gt;
+        </b:if>
+      </b:if>
+      <b:if cond='data:post.isDateStart'>
+        &lt;div class=&quot;date-outer&quot;&gt;
+      </b:if>
+      <b:if cond='data:post.dateHeader'>
+        <h2 class='date-header'><span><data:post.dateHeader/></span></h2>
+      </b:if>
+      <b:if cond='data:post.isDateStart'>
+        &lt;div class=&quot;date-posts&quot;&gt;
+      </b:if>
+      <div class='post-outer'>
+<!-- 控制讓Lable及Archive頁面只顯示標題, 要改這裡 -->
+      <b:include data='post' name='post'/>
+      <b:if cond='data:blog.pageType == &quot;static_page&quot;'>
+        <b:include data='post' name='comments'/>
+      </b:if>
+      <b:if cond='data:blog.pageType == &quot;item&quot;'>
+        <b:include data='post' name='comments'/>
+      </b:if>
+      </div>
+      <b:if cond='data:post.includeAd'>
+        <b:if cond='data:post.isFirstPost'>
+          <data:defaultAdEnd/>
+        <b:else/>
+          <data:adEnd/>
+        </b:if>
+        <div class='inline-ad'>
+          <data:adCode/>
+        </div>
+        <data:adStart/>
+      </b:if>
+      <b:if cond='data:post.trackLatency'>
+        <data:post.latencyJs/>
+      </b:if>
+    </b:loop>
+    <b:if cond='data:numPosts != 0'>
+      &lt;/div&gt;&lt;/div&gt;
+    </b:if>
+    <data:adEnd/>
+  </div>
+
+  <!-- navigation -->
+  <b:include name='nextprev'/>
+
+  <!-- feed links -->
+  <b:include name='feedLinks'/>
+
+  <b:if cond='data:top.showStars'>
+    <script src='//www.google.com/jsapi' type='text/javascript'/>
+    <script type='text/javascript'>
+      google.load(&quot;annotations&quot;, &quot;1&quot;, {&quot;locale&quot;: &quot;<data:top.languageCode/>&quot;});
+      function initialize() {
+        google.annotations.setApplicationId(<data:top.blogspotReviews/>);
+        google.annotations.createAll();
+        google.annotations.fetch();
+      }
+      google.setOnLoadCallback(initialize);
+    </script>
+  </b:if>
+</b:includable>
+            <b:includable id='backlinkDeleteIcon' var='backlink'/>
+            <b:includable id='backlinks' var='post'/>
+            <b:includable id='comment-form' var='post'>
+  <div class='comment-form'>
+    <a name='comment-form'/>
+    <h4 id='comment-post-message'><data:postCommentMsg/></h4>
+    <p><data:blogCommentMessage/></p>
+    <data:blogTeamBlogMessage/>
+    <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
+    <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' frameborder='0' height='230' id='comment-editor' name='comment-editor' src='' width='100%'/>
+    <data:post.friendConnectJs/>
+    <data:post.cmtfpIframe/>
+    <script type='text/javascript'>
+      BLOG_CMT_createIframe(&#39;<data:post.appRpcRelayPath/>&#39;, &#39;<data:post.communityId/>&#39;);
+    </script>
+  </div>
+</b:includable>
+            <b:includable id='commentDeleteIcon' var='comment'>
+  <span expr:class='&quot;item-control &quot; + data:comment.adminClass'>
+    <a class='comment-delete' expr:href='data:comment.deleteUrl' expr:title='data:top.deleteCommentMsg'>
+      <img src='//www.blogger.com/img/icon_delete13.gif'/>
+    </a>
+  </span>
+</b:includable>
+            <b:includable id='comment_count_picker' var='post'>
+  <a class='comment-link' expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'>
+    <data:post.commentLabelFull/>:
+  </a>
+</b:includable>
+            <b:includable id='comment_picker' var='post'>
+  <b:if cond='data:post.showThreadedComments'>
+    <b:include data='post' name='threaded_comments'/>
+  <b:else/>
+    <b:include data='post' name='comments'/>
+  </b:if>
+</b:includable>
+            <b:includable id='comments' var='post'>
+  <div class='comments' id='comments'>
+    <a name='comments'/>
+    <b:if cond='data:post.allowComments'>
+      <h4><data:post.commentLabelFull/>:</h4>
+
+      <b:if cond='data:post.commentPagingRequired'>
+        <span class='paging-control-container'>
+          <b:if cond='data:post.hasOlderLinks'>
+            <a expr:class='data:post.oldLinkClass' expr:href='data:post.oldestLinkUrl'><data:post.oldestLinkText/></a>
+              &#160;
+            <a expr:class='data:post.oldLinkClass' expr:href='data:post.olderLinkUrl'><data:post.olderLinkText/></a>
+              &#160;
+          </b:if>
+
+          <data:post.commentRangeText/>
+
+          <b:if cond='data:post.hasNewerLinks'>
+            &#160;
+            <a expr:class='data:post.newLinkClass' expr:href='data:post.newerLinkUrl'><data:post.newerLinkText/></a>
+            &#160;
+            <a expr:class='data:post.newLinkClass' expr:href='data:post.newestLinkUrl'><data:post.newestLinkText/></a>
+          </b:if>
+        </span>
+      </b:if>
+
+      <div expr:id='data:widget.instanceId + &quot;_comments-block-wrapper&quot;'>
+        <dl expr:class='data:post.avatarIndentClass' id='comments-block'>
+          <b:loop values='data:post.comments' var='comment'>
+            <dt expr:class='&quot;comment-author &quot; + data:comment.authorClass' expr:id='data:comment.anchorName'>
+              <b:if cond='data:comment.favicon'>
+                <img expr:src='data:comment.favicon' height='16px' style='margin-bottom:-2px;' width='16px'/>
+              </b:if>
+              <a expr:name='data:comment.anchorName'/>
+              <b:if cond='data:blog.enabledCommentProfileImages'>
+                <data:comment.authorAvatarImage/>
+              </b:if>
+              <b:if cond='data:comment.authorUrl'>
+                <a expr:href='data:comment.authorUrl' rel='nofollow'><data:comment.author/></a>
+              <b:else/>
+                <data:comment.author/>
+              </b:if>
+              <data:commentPostedByMsg/>
+            </dt>
+            <dd class='comment-body' expr:id='data:widget.instanceId + data:comment.cmtBodyIdPostfix'>
+              <b:if cond='data:comment.isDeleted'>
+                <span class='deleted-comment'><data:comment.body/></span>
+              <b:else/>
+                <p>
+                  <data:comment.body/>
+                </p>
+              </b:if>
+            </dd>
+            <dd class='comment-footer'>
+              <span class='comment-timestamp'>
+                <a expr:href='data:comment.url' title='comment permalink'>
+                  <data:comment.timestamp/>
+                </a>
+                <b:include data='comment' name='commentDeleteIcon'/>
+              </span>
+            </dd>
+          </b:loop>
+        </dl>
+      </div>
+
+      <b:if cond='data:post.commentPagingRequired'>
+        <span class='paging-control-container'>
+          <a expr:class='data:post.oldLinkClass' expr:href='data:post.oldestLinkUrl'>
+            <data:post.oldestLinkText/>
+          </a>
+          <a expr:class='data:post.oldLinkClass' expr:href='data:post.olderLinkUrl'>
+            <data:post.olderLinkText/>
+          </a>
+          &#160;
+          <data:post.commentRangeText/>
+          &#160;
+          <a expr:class='data:post.newLinkClass' expr:href='data:post.newerLinkUrl'>
+            <data:post.newerLinkText/>
+          </a>
+          <a expr:class='data:post.newLinkClass' expr:href='data:post.newestLinkUrl'>
+            <data:post.newestLinkText/>
+          </a>
+        </span>
+      </b:if>
+
+      <p class='comment-footer'>
+        <b:if cond='data:post.embedCommentForm'>
+          <b:if cond='data:post.allowNewComments'>
+            <b:include data='post' name='comment-form'/>
+          <b:else/>
+            <data:post.noNewCommentsText/>
+          </b:if>
+        <b:elseif cond='data:post.allowComments'/>
+          <a expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'><data:postCommentMsg/></a>
+        </b:if>
+      </p>
+    </b:if>
+    <b:if cond='data:showCmtPopup'>
+      <div id='comment-popup'>
+        <iframe allowtransparency='true' frameborder='0' id='comment-actions' name='comment-actions' scrolling='no'>
+        </iframe>
+      </div>
+    </b:if>
+
+  </div>
+</b:includable>
+            <b:includable id='feedLinks'>
+  <b:if cond='data:blog.pageType != &quot;item&quot;'> <!-- Blog feed links -->
+    <b:if cond='data:feedLinks'>
+      <div class='blog-feeds'>
+        <b:include data='feedLinks' name='feedLinksBody'/>
+      </div>
+    </b:if>
+
+  <b:else/> <!--Post feed links -->
+    <div class='post-feeds'>
+      <b:loop values='data:posts' var='post'>
+        <b:include cond='data:post.allowComments and data:post.feedLinks' data='post.feedLinks' name='feedLinksBody'/>
+      </b:loop>
+    </div>
+  </b:if>
+</b:includable>
+            <b:includable id='feedLinksBody' var='links'>
+  <div class='feed-links'>
+  <data:feedLinksMsg/>
+  <b:loop values='data:links' var='f'>
+     <a class='feed-link' expr:href='data:f.url' expr:type='data:f.mimeType' target='_blank'><data:f.name/> (<data:f.feedType/>)</a>
+  </b:loop>
+  </div>
+</b:includable>
+            <b:includable id='iframe_comments' var='post'>
+  <!-- G+ comments, no longer available. The includable is retained for backwards-compatibility. -->
+</b:includable>
+            <b:includable id='mobile-index-post' var='post'>
+  <div class='mobile-date-outer date-outer'>
+    <b:if cond='data:post.dateHeader'>
+      <div class='date-header'>
+        <span><data:post.dateHeader/></span>
+      </div>
+    </b:if>
+
+    <div class='mobile-post-outer'>
+      <a expr:href='data:post.url'>
+        <h3 class='mobile-index-title entry-title' itemprop='name'>
+          <data:post.title/>
+        </h3>
+
+        <div class='mobile-index-arrow'>&amp;rsaquo;</div>
+
+        <div class='mobile-index-contents'>
+          <b:if cond='data:post.thumbnailUrl'>
+            <div class='mobile-index-thumbnail'>
+              <div class='Image'>
+                <img expr:src='data:post.thumbnailUrl'/>
+              </div>
+            </div>
+          </b:if>
+
+          <div class='post-body'>
+            <b:if cond='data:post.snippet'><data:post.snippet/></b:if>
+          </div>
+        </div>
+
+        <div style='clear: both;'/>
+      </a>
+
+      <div class='mobile-index-comment'>
+        <b:include cond='data:blog.pageType != &quot;static_page&quot;                          and data:post.allowComments                          and data:post.numComments != 0' data='post' name='comment_count_picker'/>
+      </div>
+    </div>
+  </div>
+</b:includable>
+            <b:includable id='mobile-main' var='top'>
+    <!-- posts -->
+    <div class='blog-posts hfeed'>
+
+      <b:include data='top' name='status-message'/>
+
+      <b:if cond='data:blog.pageType == &quot;index&quot;'>
+        <b:loop values='data:posts' var='post'>
+          <b:include data='post' name='mobile-index-post'/>
+        </b:loop>
+      <b:else/>
+        <b:loop values='data:posts' var='post'>
+          <b:include data='post' name='mobile-post'/>
+        </b:loop>
+      </b:if>
+    </div>
+
+   <b:include name='mobile-nextprev'/>
+</b:includable>
+            <b:includable id='mobile-nextprev'>
+  <div class='blog-pager' id='blog-pager'>
+    <b:if cond='data:newerPageUrl'>
+      <div class='mobile-link-button' id='blog-pager-newer-link'>
+      <a class='blog-pager-newer-link' expr:href='data:newerPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-newer-link&quot;' expr:title='data:newerPageTitle'>&amp;lsaquo;</a>
+      </div>
+    </b:if>
+
+    <b:if cond='data:olderPageUrl'>
+      <div class='mobile-link-button' id='blog-pager-older-link'>
+      <a class='blog-pager-older-link' expr:href='data:olderPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-older-link&quot;' expr:title='data:olderPageTitle'>&amp;rsaquo;</a>
+      </div>
+    </b:if>
+
+    <div class='mobile-link-button' id='blog-pager-home-link'>
+    <a class='home-link' expr:href='data:blog.homepageUrl'><data:homeMsg/></a>
+    </div>
+
+    <div class='mobile-desktop-link'>
+      <a class='home-link' expr:href='data:desktopLinkUrl'><data:desktopLinkMsg/></a>
+    </div>
+
+  </div>
+  <div class='clear'/>
+</b:includable>
+            <b:includable id='mobile-post' var='post'>
+  <div class='date-outer'>
+    <b:if cond='data:post.dateHeader'>
+      <h2 class='date-header'><span><data:post.dateHeader/></span></h2>
+    </b:if>
+    <div class='date-posts'>
+      <div class='post-outer'>
+
+        <div class='post hentry uncustomized-post-template' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
+          <b:if cond='data:post.thumbnailUrl'>
+            <meta expr:content='data:post.thumbnailUrl' itemprop='image_url'/>
+          </b:if>
+          <meta expr:content='data:blog.blogId' itemprop='blogId'/>
+          <meta expr:content='data:post.id' itemprop='postId'/>
+
+          <a expr:name='data:post.id'/>
+          <b:if cond='data:post.title'>
+            <h3 class='post-title entry-title' itemprop='name'>
+              <b:if cond='data:post.link'>
+                <a expr:href='data:post.link'><data:post.title/></a>
+              <b:elseif cond='data:post.url and data:blog.url != data:post.url'/>
+                <a expr:href='data:post.url'><data:post.title/></a>
+              <b:else/>
+                <data:post.title/>
+              </b:if>
+            </h3>
+          </b:if>
+
+          <div class='post-header'>
+            <div class='post-header-line-1'/>
+          </div>
+
+          <div class='post-body entry-content' expr:id='&quot;post-body-&quot; + data:post.id' itemprop='articleBody'>
+            <data:post.body/>
+            <div style='clear: both;'/> <!-- clear for photos floats -->
+          </div>
+
+          <div class='post-footer'>
+            <div class='post-footer-line post-footer-line-1'>
+              <span class='post-author vcard'>
+                <b:if cond='data:top.showAuthor'>
+                  <b:if cond='data:post.authorProfileUrl'>
+                    <span class='fn' itemprop='author' itemscope='itemscope' itemtype='http://schema.org/Person'>
+                      <meta expr:content='data:post.authorProfileUrl' itemprop='url'/>
+                      <a expr:href='data:post.authorProfileUrl' rel='author' title='author profile'>
+                        <span itemprop='name'><data:post.author/></span>
+                      </a>
+                    </span>
+                  <b:else/>
+                    <span class='fn' itemprop='author' itemscope='itemscope' itemtype='http://schema.org/Person'>
+                      <span itemprop='name'><data:post.author/></span>
+                    </span>
+                  </b:if>
+                </b:if>
+              </span>
+
+              <span class='post-timestamp'>
+                <b:if cond='data:top.showTimestamp'>
+                  <data:top.timestampLabel/>
+                  <b:if cond='data:post.url'>
+                    <meta expr:content='data:post.url.canonical' itemprop='url'/>
+                    <a class='timestamp-link' expr:href='data:post.url' rel='bookmark' title='permanent link'><abbr class='published' expr:title='data:post.timestampISO8601' itemprop='datePublished'><data:post.timestamp/></abbr></a>
+                  </b:if>
+                </b:if>
+              </span>
+
+              <span class='post-comment-link'>
+                <b:include cond='data:blog.pageType not in {&quot;item&quot;,&quot;static_page&quot;}                                  and data:post.allowComments' data='post' name='comment_count_picker'/>
+              </span>
+            </div>
+
+            <div class='post-footer-line post-footer-line-2'>
+              <b:if cond='data:top.showMobileShare'>
+                <div class='mobile-link-button goog-inline-block' id='mobile-share-button'>
+                  <a href='javascript:void(0);'><data:shareMsg/></a>
+                </div>
+              </b:if>
+            </div>
+
+          </div>
+        </div>
+
+        <b:include cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}' data='post' name='comment_picker'/>
+      </div>
+    </div>
+  </div>
+</b:includable>
+            <b:includable id='nextprev'>
+  <div class='blog-pager' id='blog-pager'>
+    <b:if cond='data:newerPageUrl'>
+      <span id='blog-pager-newer-link'>
+      <a class='blog-pager-newer-link' expr:href='data:newerPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-newer-link&quot;' expr:title='data:newerPageTitle'><data:newerPageTitle/></a>
+      </span>
+    </b:if>
+
+    <b:if cond='data:olderPageUrl'>
+      <span id='blog-pager-older-link'>
+      <a class='blog-pager-older-link' expr:href='data:olderPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-older-link&quot;' expr:title='data:olderPageTitle'><data:olderPageTitle/></a>
+      </span>
+    </b:if>
+
+    <a class='home-link' expr:href='data:blog.homepageUrl'><data:homeMsg/></a>
+
+  </div>
+  <div class='clear'/>
+</b:includable>
+            <b:includable id='post' var='post'>
+  <div class='post hentry'>
+    <a expr:name='data:post.id'/>
+    <b:if cond='data:post.title'>
+      <h3 class='post-title entry-title'>
+     <b:if cond='data:post.link'>
+       <a expr:href='data:post.link'><data:post.title/></a>
+     <b:else/>
+        <b:if cond='data:post.url'>
+          <a expr:href='data:post.url'><data:post.title/></a>
+        <b:else/>
+          <data:post.title/>
+        </b:if>
+     </b:if>
+      </h3>
+    </b:if>
+
+    <div class='post-header-line-1'/>
+
+    <div class='post-body entry-content'>
+      <data:post.body/>
+
+      <div style='clear: both;'/> <!-- clear for photos floats -->
+    </div>
+  
+    <b:if cond='data:post.hasJumpLink'>
+      <div class='jump-link'>
+        <a expr:href='data:post.url + &quot;#more&quot;' expr:title='data:post.title'><data:post.jumpText/></a>  
+      </div>
+    </b:if>
+    
+    <div class='post-footer'>
+
+<div align='right'>
+
+<table><tr>
+<td>
+<a href='http://www.facebook.com/sharer.php' name='fb_share' type='button_count'>分享</a><script src='http://static.ak.fbcdn.net/connect.php/js/FB.Share' type='text/javascript'/>
+</td>
+</tr></table>
+</div>
+
+    <div class='post-footer-line post-footer-line-1'><span class='post-author vcard'>
+        <b:if cond='data:top.showAuthor'>
+          <data:top.authorLabel/>
+          <span class='fn'><data:post.author/></span>
+        </b:if>
+      </span> <span class='post-timestamp'>
+        <b:if cond='data:top.showTimestamp'>
+          <data:top.timestampLabel/>
+        <b:if cond='data:post.url'>
+          <a class='timestamp-link' expr:href='data:post.url' rel='bookmark' title='permanent link'><abbr class='published' expr:title='data:post.timestampISO8601'><data:post.timestamp/></abbr></a>
+        </b:if>
+        </b:if>
+      </span> <span class='post-comment-link'>
+        <b:if cond='data:blog.pageType != &quot;item&quot;'>
+          <b:if cond='data:post.allowComments'>
+            <a class='comment-link' expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'><b:if cond='data:post.numComments == 1'>1 <data:top.commentLabel/><b:else/><data:post.numComments/> <data:top.commentLabelPlural/></b:if></a>
+          </b:if>
+        </b:if>
+      </span> <span class='post-icons'>
+        <!-- email post links -->
+        <b:if cond='data:post.emailPostUrl'>
+          <span class='item-action'>
+          <a expr:href='data:post.emailPostUrl' expr:title='data:top.emailPostMsg'>
+              <img alt='' class='icon-action' height='13' src='http://www.blogger.com/img/icon18_email.gif' width='18'/>
+          </a>
+          </span>
+        </b:if>
+
+        <!-- quickedit pencil -->
+        <b:include data='post' name='postQuickEdit'/>
+      </span> </div>
+
+      <div class='post-footer-line post-footer-line-2'>
+<!-- 顯示星號評等 -->
+<span class='star-ratings'>
+<b:if cond='data:top.showStars'>
+<div expr:g:background-color='data:backgroundColor' expr:g:text-color='data:textColor' expr:g:url='data:post.absoluteUrl' g:height='42' g:type='RatingPanel' g:width='180'/>
+</b:if>
+</span>
+<span class='post-labels'>
+        <b:if cond='data:post.labels'>
+          <data:postLabelsLabel/>
+          <b:loop values='data:post.labels' var='label'>
+            <a expr:href='data:label.url' rel='tag'><data:label.name/></a><b:if cond='data:label.isLast != &quot;true&quot;'>,</b:if>
+          </b:loop>
+        </b:if>
+      </span> </div>
+
+      <div class='post-footer-line post-footer-line-3'/>
+    </div>
+  </div>
+</b:includable>
+            <b:includable id='postQuickEdit' var='post'>
+  <b:if cond='data:post.editUrl'>
+    <span expr:class='&quot;item-control &quot; + data:post.adminClass'>
+      <a expr:href='data:post.editUrl' expr:title='data:top.editPostMsg'>
+        <img alt='' class='icon-action' height='18' src='https://resources.blogblog.com/img/icon18_edit_allbkg.gif' width='18'/>
+      </a>
+    </span>
+  </b:if>
+</b:includable>
+            <b:includable id='shareButtons' var='post'>
+  <b:if cond='data:post.sharePostUrl'>
+      <a class='share-button sb-email' expr:href='data:post.sharePostUrl + &quot;&amp;target=email&quot;' expr:title='data:top.emailThisMsg' target='_blank'>
+        <span class='share-button-link-text'><data:top.emailThisMsg/></span></a>
+      <a class='share-button sb-blog' expr:href='data:post.sharePostUrl + &quot;&amp;target=blog&quot;' expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=270,width=475\&quot;); return false;&quot;' expr:title='data:top.blogThisMsg' target='_blank'>
+        <span class='share-button-link-text'><data:top.blogThisMsg/></span></a>
+      <a class='share-button sb-twitter' expr:href='data:post.sharePostUrl + &quot;&amp;target=twitter&quot;' expr:title='data:top.shareToTwitterMsg' target='_blank'>
+        <span class='share-button-link-text'><data:top.shareToTwitterMsg/></span></a>
+      <a class='share-button sb-facebook' expr:href='data:post.sharePostUrl + &quot;&amp;target=facebook&quot;' expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=430,width=640\&quot;); return false;&quot;' expr:title='data:top.shareToFacebookMsg' target='_blank'>
+        <span class='share-button-link-text'><data:top.shareToFacebookMsg/></span></a>
+      <a class='share-button sb-buzz' expr:href='data:post.sharePostUrl + &quot;&amp;target=buzz&quot;' expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=415,width=690\&quot;); return false;&quot;' expr:title='data:top.shareToBuzzMsg' target='_blank'>
+        <span class='share-button-link-text'><data:top.shareToBuzzMsg/></span></a>
+  </b:if>
+</b:includable>
+            <b:includable id='status-message'>
+  <b:if cond='data:navMessage'>
+  <div class='status-msg-wrap'>
+    <div class='status-msg-body'>
+      <data:navMessage/>
+    </div>
+    <div class='status-msg-border'>
+      <div class='status-msg-bg'>
+        <div class='status-msg-hidden'><data:navMessage/></div>
+      </div>
+    </div>
+  </div>
+  <div style='clear: both;'/>
+  </b:if>
+</b:includable>
+            <b:includable id='threaded-comment-form' var='post'>
+  <div class='comment-form'>
+    <a name='comment-form'/>
+    <b:if cond='data:mobile'>
+      <p><data:blogCommentMessage/></p>
+      <data:blogTeamBlogMessage/>
+      <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
+      <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' expr:height='data:cmtIframeInitialHeight' frameborder='0' id='comment-editor' name='comment-editor' src='' style='display: none' width='100%'/>
+    <b:else/>
+      <p><data:blogCommentMessage/></p>
+      <data:blogTeamBlogMessage/>
+      <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
+      <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' expr:height='data:cmtIframeInitialHeight' frameborder='0' id='comment-editor' name='comment-editor' src='' width='100%'/>
+    </b:if>
+    <data:post.cmtfpIframe/>
+    <script type='text/javascript'>
+      BLOG_CMT_createIframe(&#39;<data:post.appRpcRelayPath/>&#39;);
+    </script>
+  </div>
+</b:includable>
+            <b:includable id='threaded_comment_js' var='post'>
+  <script async='async' expr:src='data:post.commentSrc' type='text/javascript'/>
+
+  <script type='text/javascript'>
+    (function() {
+      var items = <data:post.commentJso/>;
+      var msgs = <data:post.commentMsgs/>;
+      var config = <data:post.commentConfig/>;
+
+// <![CDATA[
+      var cursor = null;
+      if (items && items.length > 0) {
+        cursor = parseInt(items[items.length - 1].timestamp) + 1;
+      }
+
+      var bodyFromEntry = function(entry) {
+        var text = (entry &&
+                    ((entry.content && entry.content.$t) ||
+                     (entry.summary && entry.summary.$t))) ||
+            '';
+        if (entry && entry.gd$extendedProperty) {
+          for (var k in entry.gd$extendedProperty) {
+            if (entry.gd$extendedProperty[k].name == 'blogger.contentRemoved') {
+              return '<span class="deleted-comment">' + text + '</span>';
+            }
+          }
+        }
+        return text;
+      }
+
+      var parse = function(data) {
+        cursor = null;
+        var comments = [];
+        if (data && data.feed && data.feed.entry) {
+          for (var i = 0, entry; entry = data.feed.entry[i]; i++) {
+            var comment = {};
+            // comment ID, parsed out of the original id format
+            var id = /blog-(\d+).post-(\d+)/.exec(entry.id.$t);
+            comment.id = id ? id[2] : null;
+            comment.body = bodyFromEntry(entry);
+            comment.timestamp = Date.parse(entry.published.$t) + '';
+            if (entry.author && entry.author.constructor === Array) {
+              var auth = entry.author[0];
+              if (auth) {
+                comment.author = {
+                  name: (auth.name ? auth.name.$t : undefined),
+                  profileUrl: (auth.uri ? auth.uri.$t : undefined),
+                  avatarUrl: (auth.gd$image ? auth.gd$image.src : undefined)
+                };
+              }
+            }
+            if (entry.link) {
+              if (entry.link[2]) {
+                comment.link = comment.permalink = entry.link[2].href;
+              }
+              if (entry.link[3]) {
+                var pid = /.*comments\/default\/(\d+)\?.*/.exec(entry.link[3].href);
+                if (pid && pid[1]) {
+                  comment.parentId = pid[1];
+                }
+              }
+            }
+            comment.deleteclass = 'item-control blog-admin';
+            if (entry.gd$extendedProperty) {
+              for (var k in entry.gd$extendedProperty) {
+                if (entry.gd$extendedProperty[k].name == 'blogger.itemClass') {
+                  comment.deleteclass += ' ' + entry.gd$extendedProperty[k].value;
+                } else if (entry.gd$extendedProperty[k].name == 'blogger.displayTime') {
+                  comment.displayTime = entry.gd$extendedProperty[k].value;
+                }
+              }
+            }
+            comments.push(comment);
+          }
+        }
+        return comments;
+      };
+
+      var paginator = function(callback) {
+        if (hasMore()) {
+          var url = config.feed + '?alt=json&v=2&orderby=published&reverse=false&max-results=50';
+          if (cursor) {
+            url += '&published-min=' + new Date(cursor).toISOString();
+          }
+          window.bloggercomments = function(data) {
+            var parsed = parse(data);
+            cursor = parsed.length < 50 ? null
+                : parseInt(parsed[parsed.length - 1].timestamp) + 1
+            callback(parsed);
+            window.bloggercomments = null;
+          }
+          url += '&callback=bloggercomments';
+          var script = document.createElement('script');
+          script.type = 'text/javascript';
+          script.src = url;
+          document.getElementsByTagName('head')[0].appendChild(script);
+        }
+      };
+      var hasMore = function() {
+        return !!cursor;
+      };
+      var getMeta = function(key, comment) {
+        if ('iswriter' == key) {
+          var matches = !!comment.author
+              && comment.author.name == config.authorName
+              && comment.author.profileUrl == config.authorUrl;
+          return matches ? 'true' : '';
+        } else if ('deletelink' == key) {
+          return config.baseUri + '/comment/delete/'
+               + config.blogId + '/' + comment.id;
+        } else if ('deleteclass' == key) {
+          return comment.deleteclass;
+        }
+        return '';
+      };
+
+      var replybox = null;
+      var replyUrlParts = null;
+      var replyParent = undefined;
+
+      var onReply = function(commentId, domId) {
+        if (replybox == null) {
+          // lazily cache replybox, and adjust to suit this style:
+          replybox = document.getElementById('comment-editor');
+          if (replybox != null) {
+            replybox.height = '250px';
+            replybox.style.display = 'block';
+            replyUrlParts = replybox.src.split('#');
+          }
+        }
+        if (replybox && (commentId !== replyParent)) {
+          replybox.src = '';
+          document.getElementById(domId).insertBefore(replybox, null);
+          replybox.src = replyUrlParts[0]
+              + (commentId ? '&parentID=' + commentId : '')
+              + '#' + replyUrlParts[1];
+          replyParent = commentId;
+        }
+      };
+
+      var hash = (window.location.hash || '#').substring(1);
+      var startThread, targetComment;
+      if (/^comment-form_/.test(hash)) {
+        startThread = hash.substring('comment-form_'.length);
+      } else if (/^c[0-9]+$/.test(hash)) {
+        targetComment = hash.substring(1);
+      }
+
+      // Configure commenting API:
+      var configJso = {
+        'maxDepth': config.maxThreadDepth
+      };
+      var provider = {
+        'id': config.postId,
+        'data': items,
+        'loadNext': paginator,
+        'hasMore': hasMore,
+        'getMeta': getMeta,
+        'onReply': onReply,
+        'rendered': true,
+        'initComment': targetComment,
+        'initReplyThread': startThread,
+        'config': configJso,
+        'messages': msgs
+      };
+
+      var render = function() {
+        if (window.goog && window.goog.comments) {
+          var holder = document.getElementById('comment-holder');
+          window.goog.comments.render(holder, provider);
+        }
+      };
+
+      // render now, or queue to render when library loads:
+      if (window.goog && window.goog.comments) {
+        render();
+      } else {
+        window.goog = window.goog || {};
+        window.goog.comments = window.goog.comments || {};
+        window.goog.comments.loadQueue = window.goog.comments.loadQueue || [];
+        window.goog.comments.loadQueue.push(render);
+      }
+    })();
+// ]]>
+  </script>
+</b:includable>
+            <b:includable id='threaded_comments' var='post'>
+  <div class='comments' id='comments'>
+    <a name='comments'/>
+    <h4><data:post.commentLabelFull/>:</h4>
+
+    <div class='comments-content'>
+      <b:include cond='data:post.embedCommentForm' data='post' name='threaded_comment_js'/>
+      <div id='comment-holder'>
+         <data:post.commentHtml/>
+      </div>
+    </div>
+
+    <p class='comment-footer'>
+      <b:if cond='data:post.allowNewComments'>
+        <b:include data='post' name='threaded-comment-form'/>
+      <b:else/>
+        <data:post.noNewCommentsText/>
+      </b:if>
+    </p>
+
+    <b:if cond='data:showCmtPopup'>
+      <div id='comment-popup'>
+        <iframe allowtransparency='true' frameborder='0' id='comment-actions' name='comment-actions' scrolling='no'>
+        </iframe>
+      </div>
+    </b:if>
+
+    <div id='backlinks-container'>
+    <div expr:id='data:widget.instanceId + &quot;_backlinks-container&quot;'>
+    </div>
+    </div>
+  </div>
+</b:includable>
+          </b:widget>
+          <b:widget id='AdSense1' locked='false' title='' type='AdSense'>
+            <b:widget-settings>
+              <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+              <b:widget-setting name='style.textcolor'>#ffffff</b:widget-setting>
+              <b:widget-setting name='style.layout'>970x90</b:widget-setting>
+              <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+              <b:widget-setting name='style.urlcolor'>#ffffff</b:widget-setting>
+              <b:widget-setting name='style.linkcolor'>#ffffff</b:widget-setting>
+              <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main'>
+  <div class='widget-content'>
+    <data:adCode/>
+    <b:include name='quickedit'/>
+  </div>
+</b:includable>
+          </b:widget>
+          <b:widget id='HTML11' locked='false' title='隨機文章' type='HTML'>
+            <b:widget-settings>
+              <b:widget-setting name='content'><![CDATA[<script type="text/javascript">
+var randarray = new Array();var l=0;var flag;
+var numofpost=10;function randomposts(json){
+var total = parseInt(json.feed.openSearch$totalResults.$t,10);
+for(i=0;i < numofpost;){flag=0;randarray.length=numofpost;l=Math.floor(Math.random()*total);for(j in randarray){if(l==randarray[j]){ flag=1;}}
+if(flag==0&&l!=0){randarray[i++]=l;}}document.write('<ul>');
+for(n in randarray){ var p=randarray[n];var entry=json.feed.entry[p-1];
+for(k=0; k < entry.link.length; k++){if(entry.link[k].rel=='alternate'){var item = "<li>" + "<a href=" + entry.link[k].href + ">" + entry.title.$t + "</a> </li>";
+document.write(item);}}
+}document.write('</ul>');}
+</script>
+<script src="/feeds/posts/default?alt=json-in-script&start-index=1&max-results=1000&callback=randomposts" type="text/javascript"></script>]]></b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
+</b:includable>
+          </b:widget>
+          <b:widget id='FeaturedPost1' locked='false' title='精選文章' type='FeaturedPost'>
+            <b:widget-settings>
+              <b:widget-setting name='showSnippet'>true</b:widget-setting>
+              <b:widget-setting name='showPostTitle'>true</b:widget-setting>
+              <b:widget-setting name='postId'>6117405836241509705</b:widget-setting>
+              <b:widget-setting name='showFirstImage'>true</b:widget-setting>
+              <b:widget-setting name='useMostRecentPost'>false</b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main'>
+  <!-- Only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <b:include name='content'/>
+
+  <b:include name='quickedit'/>
+</b:includable>
+            <b:includable id='content'>
+  <div class='post-summary'>
+    <b:if cond='data:showPostTitle and data:postTitle != &quot;&quot;'>
+      <h3><a expr:href='data:postUrl'><data:postTitle/></a></h3>
+    </b:if>
+    <b:if cond='data:showSnippet and data:postSummary != &quot;&quot;'>
+      <p>
+        <data:postSummary/>
+      </p>
+    </b:if>
+    <b:if cond='data:showFirstImage and data:postFirstImage != &quot;&quot;'>
+      <img class='image' expr:src='data:postFirstImage'/>
+    </b:if>
+  </div>
+
+  <style type='text/css'>
+    .image {
+      width: 100%;
+    }
+  </style>
+</b:includable>
+          </b:widget>
+          <b:widget id='AdSense2' locked='false' title='' type='AdSense'>
+            <b:widget-settings>
+              <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+              <b:widget-setting name='style.textcolor'>#ffffff</b:widget-setting>
+              <b:widget-setting name='style.layout'>970x90</b:widget-setting>
+              <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+              <b:widget-setting name='style.urlcolor'>#ffffff</b:widget-setting>
+              <b:widget-setting name='style.linkcolor'>#ffffff</b:widget-setting>
+              <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main'>
+  <div class='widget-content'>
+    <data:adCode/>
+    <b:include name='quickedit'/>
+  </div>
+</b:includable>
+          </b:widget>
+          <b:widget id='PopularPosts1' locked='false' title='熱門文章' type='PopularPosts'>
+            <b:widget-settings>
+              <b:widget-setting name='numItemsToShow'>10</b:widget-setting>
+              <b:widget-setting name='showThumbnails'>true</b:widget-setting>
+              <b:widget-setting name='showSnippets'>true</b:widget-setting>
+              <b:widget-setting name='timeRange'>LAST_WEEK</b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main'>
+  <b:if cond='data:title != &quot;&quot;'><h2><data:title/></h2></b:if>
+  <div class='widget-content popular-posts'>
+    <ul>
+      <b:loop values='data:posts' var='post'>
+      <li>
+        <b:if cond='!data:showThumbnails'>
+          <b:if cond='!data:showSnippets'>
+            <!-- (1) No snippet/thumbnail -->
+            <a expr:href='data:post.href'><data:post.title/></a>
+          <b:else/>
+            <!-- (2) Show only snippets -->
+            <div class='item-title'><a expr:href='data:post.href'><data:post.title/></a></div>
+            <div class='item-snippet'><data:post.snippet/></div>
+          </b:if>
+        <b:else/>
+          <!-- (3) Show only thumbnails or (4) Snippets and thumbnails. -->
+          <div expr:class='data:showSnippets ? &quot;item-content&quot; : &quot;item-thumbnail-only&quot;'>
+            <b:if cond='data:post.featuredImage.isResizable or data:post.thumbnail'>
+              <div class='item-thumbnail'>
+                <a expr:href='data:post.href' target='_blank'>
+                  <b:with value='data:post.featuredImage.isResizable                                  ? resizeImage(data:post.featuredImage, 72, &quot;1:1&quot;)                                  : data:post.thumbnail' var='image'>
+                    <img alt='' border='0' expr:src='data:image'/>
+                  </b:with>
+                </a>
+              </div>
+            </b:if>
+            <div class='item-title'><a expr:href='data:post.href'><data:post.title/></a></div>
+            <b:if cond='data:showSnippets'>
+              <div class='item-snippet'><data:post.snippet/></div>
+            </b:if>
+          </div>
+          <div style='clear: both;'/>
+        </b:if>
+      </li>
+      </b:loop>
+    </ul>
+    <b:include name='quickedit'/>
+  </div>
+</b:includable>
+          </b:widget>
+          <b:widget id='AdSense3' locked='false' title='' type='AdSense'>
+            <b:widget-settings>
+              <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+              <b:widget-setting name='style.textcolor'>#ffffff</b:widget-setting>
+              <b:widget-setting name='style.layout'>970x90</b:widget-setting>
+              <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+              <b:widget-setting name='style.urlcolor'>#ffffff</b:widget-setting>
+              <b:widget-setting name='style.linkcolor'>#ffffff</b:widget-setting>
+              <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main'>
+  <div class='widget-content'>
+    <data:adCode/>
+    <b:include name='quickedit'/>
+  </div>
+</b:includable>
+          </b:widget>
+        </b:section>
+      </div>
+
+      <div id='sidebar-wrapper'>
+        <b:section class='sidebar' id='sidebar' preferred='yes'>
+          <b:widget id='PageList1' locked='false' title='分類目錄' type='PageList'>
+            <b:widget-settings>
+              <b:widget-setting name='pageListJson'><![CDATA[{"link1":{"href":"http://ch-photodiary.blogspot.com/p/homepage_24.html","position":1,"title":"海外遊記總覽"},"link0":{"href":"http://ch-photodiary.blogspot.com/","position":0,"title":"首頁"},"link3":{"href":"http://ch-photodiary.blogspot.com/p/blog-page_31.html","position":3,"title":"關於我"},"link2":{"href":"http://ch-photodiary.blogspot.com/p/site-map.html","position":2,"title":"文章總覽-按類別"}}]]></b:widget-setting>
+              <b:widget-setting name='homeTitle'>首頁</b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main'>
+  <b:if cond='data:title != &quot;&quot;'><h2><data:title/></h2></b:if>
+  <div class='widget-content'>
+    <b:if cond='data:mobile'>
+      <select expr:id='data:widget.instanceId + &quot;_select&quot;'>
+        <b:if cond='data:showPlaceholder'>
+          <option disabled='disabled' hidden='hidden' value=''>
+            <b:attr cond='!data:hasCurrentPage' name='selected' value='selected'/>
+            <b:message name='messages.moveToPage'/>
+          </option>
+        </b:if>
+        <b:loop values='data:links' var='link'>
+          <option expr:value='data:link.href'>
+            <b:attr cond='data:link.isCurrentPage' name='selected' value='selected'/>
+            <data:link.title/>
+          </option>
+        </b:loop>
+      </select>
+      <span class='pagelist-arrow'>&amp;#9660;</span>
+    <b:else/>
+      <ul>
+        <b:loop values='data:links' var='link'>
+          <li>
+            <b:class cond='data:link.isCurrentPage' name='selected'/>
+            <a expr:href='data:link.href'><data:link.title/></a>
+          </li>
+        </b:loop>
+      </ul>
+    </b:if>
+    <b:include name='quickedit'/>
+  </div>
+</b:includable>
+          </b:widget>
+          <b:widget id='HTML10' locked='false' title='遊記分類' type='HTML'>
+            <b:widget-settings>
+              <b:widget-setting name='content'><![CDATA[<!-- 引入 jsTree 的 CSS 文件 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.12/themes/default/style.min.css" />
+  <style>
+    /* 调整虚线与图标的布局 */
+    .jstree-children {
+      margin-left: 20px; /* 控制虚线的缩进 */
+      border-left: 1px dashed #ccc; /* 添加垂直虚线 */
+    }
+
+    .jstree-icon {
+      margin-left: -20px; /* 让图标紧贴虚线 */
+    }
+
+    .jstree-anchor {
+      display: inline-block;
+      white-space: nowrap; /* 禁止文字换行 */
+    }
+
+    /* 可选：调整节点间距 */
+    .jstree-node {
+      margin-bottom: 5px; /* 控制每个节点之间的垂直间距 */
+    }
+
+    /* 修复图标与文本对齐 */
+    .jstree-icon, .jstree-anchor {
+      vertical-align: middle; /* 垂直居中对齐 */
+    }
+  </style>
+
+
+  <!-- 展開與收合的功能按鈕 -->
+
+    <a href="javascript:void(0);" id="expand-all">全部展開</a> | 
+    <a href="javascript:void(0);" id="collapse-all">全部收合</a>
+
+  <!-- 樹容器 -->
+  <div id="jstree"></div>
+
+  <!-- 引入 jQuery 和 jsTree -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.12/jstree.min.js"></script>
+  
+  <script>
+    $(function () {
+      // 定義樹結構資料
+      var data = [
+        {"id": "0", "parent": "#", "text": "CH@PhotoDiary", "a_attr": {"href": "http://ch-photodiary.blogspot.com/"}},
+        {"id": "1", "parent": "0", "text": "國內遊記 (36)"},
+        {"id": "2", "parent": "1", "text": "北台灣 (28)", "a_attr": {"href": "http://ch-photodiary.blogspot.com/search/label/%E5%9C%8B%E5%85%A7%E9%81%8A%E8%A8%98-%E5%8C%97%E9%83%A8"}},
+        {"id": "3", "parent": "1", "text": "中台灣 (3)", "a_attr": {"href": "http://ch-photodiary.blogspot.com/search/label/%E5%9C%8B%E5%85%A7%E9%81%8A%E8%A8%98-%E4%B8%AD%E9%83%A8"}},
+        {"id": "4", "parent": "1", "text": "南台灣 (2)"},
+        {"id": "5", "parent": "0", "text": "日本遊記 (3)"},
+        {"id": "6", "parent": "5", "text": "東京迪士尼親子遊 (4)"},
+        {"id": "7", "parent": "5", "text": "京都賞楓 (5)"},
+        {"id": "8", "parent": "0", "text": "中國遊記 (7)"},
+        {"id": "9", "parent": "8", "text": "廈門 - 鼓浪嶼、南普陀寺", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2009/01/2009.html"}},
+        {"id": "10", "parent": "8", "text": "2008 香港迪士尼遊記", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/02/blog-post_15.html"}},
+        {"id": "11", "parent": "8", "text": "香港夜景 - 天星碼頭", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/03/hongkong-nightview2004.html"}},
+        {"id": "12", "parent": "97", "text": "泰國曼谷嘟嘟車驚魂記", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/02/tuk-tuk-in-bangkok.html"}},
+        {"id": "13", "parent": "0", "text": "英國遊記 (8)"},
+        {"id": "14", "parent": "13", "text": "倫敦", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/03/20040601-england-day1.html"}},
+        {"id": "15", "parent": "13", "text": "劍橋", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/03/20040603-england-day2.html"}},
+        {"id": "16", "parent": "13", "text": "巴斯", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/04/20040604-england-day3-bath-spa.html"}},
+        {"id": "17", "parent": "13", "text": "布萊頓", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2004/06/20040605-england-day4-brighton.html"}},
+        {"id": "18", "parent": "13", "text": "利茲城堡", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2004/06/20040606-england-day5-leeds-castle.html"}},
+        {"id": "19", "parent": "13", "text": "莎士比亞故居", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2004/06/20040607-england-day6-stratford-upon.html"}},
+        {"id": "20", "parent": "13", "text": "湖區三日遊", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2004/06/20040608-england-day7-lake-distract.html"}},
+        {"id": "21", "parent": "13", "text": "Burberry Factory Shop", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2004/06/20040611-england-day10-burberry-factory.html"}},
+        {"id": "22", "parent": "0", "text": "法國遊記 (12)"},
+        {"id": "23", "parent": "22", "text": "巴黎香榭大道", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2001/04/20010415-france-paris.html"}},
+        {"id": "24", "parent": "22", "text": "巴黎迪士尼", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2001/04/20010416-france-disneyland.html"}},
+        {"id": "25", "parent": "0", "text": "德國遊記 - 新天鵝堡", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2001/04/20010418-germany-schloss-neuschwanstein.html"}},
+        {"id": "26", "parent": "0", "text": "義大利遊記 (4)"},
+        {"id": "27", "parent": "2", "text": "深坑 - 葡萄樹莊園", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/01/blog-post.html"}},
+        {"id": "28", "parent": "2", "text": "龍潭 - 小人國遊記", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/02/20100201.html"}},
+        {"id": "29", "parent": "2", "text": "板橋 - 林家花園搭訕記", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/03/blog-post.html"}},
+        {"id": "30", "parent": "2", "text": "台北 - 士林官邸", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/03/20100314-shiling-guandi.html"}},
+        {"id": "31", "parent": "2", "text": "烏來 - 內洞瀑布", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/03/20100323-wulai-forest.html"}},
+        {"id": "32", "parent": "2", "text": "平溪。天燈"},
+        {"id": "33", "parent": "2", "text": "北海岸 - 洋荳子咖啡", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/04/2010-04-25-tw-north-coast.html"}},
+        {"id": "34", "parent": "2", "text": "三芝 - 長角 96 號", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/05/20100501-long-horn-96.html"}},
+        {"id": "35", "parent": "2", "text": "北海岸 - 福華白拱門", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/05/20100524-tw-north-coast-part-ii.html"}},
+        {"id": "36", "parent": "3", "text": "台中 - 卓也小屋", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/02/blog-post_18.html"}},
+        {"id": "37", "parent": "4", "text": "草嶺 - 萬年峽谷", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/06/20100605-taiwan-grand-canyon.html"}},
+        {"id": "38", "parent": "4", "text": "嘉義 - 豐山風景區", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/06/20100606-taiwan-fongshan.html"}},
+        {"id": "39", "parent": "8", "text": "香港夜景 - 太平山", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/03/hong-kong-night-view-2005.html"}},
+        {"id": "40", "parent": "26", "text": "米蘭近郊 - 科摩湖", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2000/11/20001119-italy-lago-di-como.html"}},
+        {"id": "41", "parent": "26", "text": "佛羅倫斯", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/06/20010405-italy-florence.html"}},
+        {"id": "42", "parent": "26", "text": "羅馬", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/06/20010405-italy-roma.html"}},
+        {"id": "43", "parent": "26", "text": "比薩斜塔", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/06/20010407-italy-pisa.html"}},
+        {"id": "44", "parent": "0", "text": "瑞士遊記 (2)"},
+        {"id": "45", "parent": "44", "text": "琉森", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/06/2001330-swaziland-luzern.html"}},
+        {"id": "46", "parent": "44", "text": "鐵力士山", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/06/20010331-switzerland-mount-titlis.html"}},
+        {"id": "47", "parent": "2", "text": "平溪鐵道之旅 (3)"},
+        {"id": "48", "parent": "47", "text": "行前規劃篇", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/06/20100630-pinci-waterfall-part1.html"}},
+        {"id": "49", "parent": "47", "text": "十分瀑布", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/06/20100630-pinci-waterfall-part2.html"}},
+        {"id": "50", "parent": "47", "text": "菁桐老街", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/06/20100630-pinci-waterfall-part3.html"}},
+        {"id": "51", "parent": "2", "text": "台大安康農場", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/07/20100718-ntu-ankeng-farm.html"}},
+        {"id": "52", "parent": "3", "text": "南投 - 日月潭 (5)"},
+        {"id": "53", "parent": "52", "text": "行程規劃及總覽", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/08/20100806-sun-moon-lake-part-1.html"}},
+        {"id": "54", "parent": "52", "text": "纜車遊湖篇", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/08/20100806-sun-moon-lake-part-2-cable-car.html"}},
+        {"id": "55", "parent": "52", "text": "遊艇遊湖篇", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/08/20100806-sun-moon-lake-part-3-lake.html"}},
+        {"id": "56", "parent": "52", "text": "大淶閣住宿篇", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/08/20100806-sun-moon-lake-part4-delago.html"}},
+        {"id": "57", "parent": "52", "text": "涵碧步道晨曦篇", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/08/20100807-sun-moon-lake-sunrise.html"}},
+        {"id": "58", "parent": "2", "text": "苗栗大湖巧克力雲莊", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/08/20100807-sun-moon-lake-part6-chocolate.html"}},
+        {"id": "59", "parent": "7", "text": "清水寺夜間參拜", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/02/day1.html"}},
+        {"id": "60", "parent": "7", "text": "金閣寺、嵐山", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/02/day2-20061129.html"}},
+        {"id": "61", "parent": "7", "text": "奈良鹿苑, 東大寺, 二月堂", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/02/day3-20061130.html"}},
+        {"id": "62", "parent": "7", "text": "長岡京光明寺, 銀閣寺", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/02/day4-20061201.html"}},
+        {"id": "63", "parent": "7", "text": "東福寺", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/02/day5-20061202.html"}},
+        {"id": "64", "parent": "6", "text": "迪士尼樂園酒店", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/02/blog-post_06.html"}},
+        {"id": "65", "parent": "6", "text": "迪士尼樂園 -Land", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/02/day2-20091209.html"}},
+        {"id": "66", "parent": "6", "text": "築地市場真體驗", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/02/blog-post.html"}},
+        {"id": "67", "parent": "6", "text": "小小心得及行程安排建議", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/02/blog-post_08.html"}},
+        {"id": "68", "parent": "103", "text": "宜蘭頭城 - 蘭陽博物館", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/09/20100911-lanyang-museum.html"}},
+        {"id": "69", "parent": "2", "text": "三峽 - 滿月圓森林", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/10/2010-10-02-sanxia-fullmoon-forest.html"}},
+        {"id": "70", "parent": "2", "text": "八里左岸公園", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/10/2010-10-16-bali-rose-house.html"}},
+        {"id": "71", "parent": "8", "text": "2010 香港迪士尼遊記"},
+        {"id": "72", "parent": "71", "text": "行程規劃篇", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/12/2010-hong-kong-disney-planning.html"}},
+        {"id": "73", "parent": "71", "text": "香港夜景及幻彩詠香江", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/12/20101206-hong-kong-day1-night-view.html"}},
+        {"id": "74", "parent": "71", "text": "樂園親子攻略 Part 1", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/12/20101207-hong-kong-day2-disneyland.html"}},
+        {"id": "75", "parent": "71", "text": "樂園親子攻略 Part 2", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/12/20101208-hong-kong-day3-disneyland.html"}},
+        {"id": "76", "parent": "2", "text": "台北植物園", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/12/2010-12-26-taipei-botanical-garden.html"}},
+        {"id": "77", "parent": "3", "text": "南投 - 日月潭 Again(2)"},
+        {"id": "78", "parent": "77", "text": "Part 1 晨曦日出篇", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/01/2011-01-02-crazy-sun-moon-lake-part1.html"}},
+        {"id": "79", "parent": "77", "text": "Part 2 纜車遊湖篇", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/01/2011-01-02-crazy-sun-moon-lake-part2.html"}},
+        {"id": "80", "parent": "5", "text": "京阪神六日遊 (6)"},
+        {"id": "81", "parent": "80", "text": "京都: 錦市場、清水寺、金閣寺", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/08/20020601-japan-day1.html"}},
+        {"id": "82", "parent": "80", "text": "京都: 嵐山一帶、天龍寺", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/08/20020602-japan-day2.html"}},
+        {"id": "83", "parent": "80", "text": "奈良: 鹿苑、東大寺、二月堂、春日大社", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/08/20020603-japan-day3.html"}},
+        {"id": "84", "parent": "80", "text": "大阪: 環球影城、海遊館", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/10/20020604-japan-day4.html"}},
+        {"id": "85", "parent": "80", "text": "神戶: 布引花園、北野異人館、南京町中華街", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/08/20020605-japan-day5.html"}},
+        {"id": "86", "parent": "80", "text": "姬路: 好古園、姬路城", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/08/20020606-japan-day6.html"}},
+        {"id": "87", "parent": "2", "text": "2010 國際花博在台北"},
+        {"id": "88", "parent": "87", "text": "圓山花博 - 日景篇", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/01/20101201-taipei-flor-expo-part1.html"}},
+        {"id": "89", "parent": "87", "text": "圓山花博 - 夜景篇", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/01/20110109-taipei-flora-expo-part2.html"}},
+        {"id": "90", "parent": "2", "text": "竹東 - 綠世界生態農場 (4)"},
+        {"id": "91", "parent": "90", "text": "天鵝湖區", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/02/2011-02-08-green-world-part1.html"}},
+        {"id": "92", "parent": "90", "text": "動物劇場篇", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/02/2011-02-08-green-world-part2.html"}},
+        {"id": "93", "parent": "90", "text": "大探奇區", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/02/2011-02-08-green-world-part3.html"}},
+        {"id": "94", "parent": "90", "text": "鳥類、蝴蝶生態公園", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/02/2011-02-08-green-world-part4.html"}},
+        {"id": "95", "parent": "2", "text": "新店 - 牛伯伯生態園區", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/05/2011.html"}},
+        {"id": "96", "parent": "2", "text": "新竹尖石 - 薰衣草森林", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/05/2011-05-13-lavender-cottage.html"}},
+        {"id": "97", "parent": "0", "text": "東南亞遊記 (2)"},
+        {"id": "98", "parent": "97", "text": "新加坡出差順路遊記", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/06/2011-06-singapore-overview.html"}},
+        {"id": "99", "parent": "98", "text": "總覽篇", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/06/2011-06-singapore-overview.html"}},
+        {"id": "100", "parent": "98", "text": "小印度區、克拉碼頭", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/06/2011-06-singapore-part1.html"}},
+        {"id": "101", "parent": "98", "text": "新加坡植物園", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/06/2011-06-singapore-part2.html"}},
+        {"id": "102", "parent": "2", "text": "2011 福隆國際沙雕藝術節", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/05/2011-05-29-fu-long-sand-beach.html"}},
+        {"id": "103", "parent": "1", "text": "東部遊記 (4)"},
+        {"id": "104", "parent": "103", "text": "花蓮三日遊 (5)"},
+        {"id": "105", "parent": "104", "text": "行程總覽篇", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/08/2011-08-hualien-overview.html"}},
+        {"id": "106", "parent": "2", "text": "新店烏來 - 優聖美地", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/07/2011-06-20-wulai-yosamite.html"}},
+        {"id": "107", "parent": "1", "text": "離島遊記 (1)"},
+        {"id": "108", "parent": "107", "text": "金門遊記 (7)"},
+        {"id": "109", "parent": "108", "text": "總覽篇", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/04/2011-04-kinmen-overview.html"}},
+        {"id": "110", "parent": "108", "text": "瓊林聚落", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/04/2011-04-kinmen-part1.html"}},
+        {"id": "111", "parent": "108", "text": "探訪瓊林宗祠", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/04/2011-04-kinmen-part6.html"}},
+        {"id": "112", "parent": "108", "text": "陳景蘭洋樓", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/04/2011-04-kinmen-part2.html"}},
+        {"id": "113", "parent": "108", "text": "成功坑道", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/04/2011-04-kinmen-part3.html"}},
+        {"id": "114", "parent": "108", "text": "建功嶼", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/04/2011-04-kinmen-part4.html"}},
+        {"id": "115", "parent": "108", "text": "水頭得月樓", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/04/2011-04-kinmen-part5.html"}},
+        {"id": "116", "parent": "104", "text": "慕谷慕魚篇 ", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/09/2011-08-24-mukumugi.html"}},
+        {"id": "117", "parent": "2", "text": "北投春天酒店泡湯趣", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/09/2011-09-12-spring-hotel.html"}},
+        {"id": "118", "parent": "104", "text": "翰品酒店篇", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/09/2011-08-25-hualain-day2.html"}},
+        {"id": "119", "parent": "104", "text": "海洋公園篇", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/09/2011-08-25-hualan-sea-world.html"}},
+        {"id": "120", "parent": "104", "text": "悅來酒店篇", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/09/2011-08-26-hualian-farglory-hotel.html"}},
+        {"id": "121", "parent": "2", "text": "桃園春天農場同學會", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/05/2011-04-30-spring-farm.html"}},
+        {"id": "122", "parent": "103", "text": "宜蘭礁溪老爺酒店一日遊", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/10/2011-09-04-hotel-royal-chiao-hsi.html"}},
+        {"id": "123", "parent": "2", "text": "2011 小人國遊記", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/09/2011-09-24-small-world.html"}},
+        {"id": "124", "parent": "2", "text": "新竹南寮十七公里海岸線", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/10/2011-10-08-hsing-chu-coastline.html"}},
+        {"id": "125", "parent": "26", "text": "威尼斯一日遊", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/10/2000-11-26-venezia.html"}},
+        {"id": "126", "parent": "0", "text": "為什麼蜜月旅行一定要去歐洲?", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/10/2011-10-26-why-go-europe-for-honeymoon.html"}},
+        {"id": "127", "parent": "2", "text": "五股 - 準園生態莊園", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/11/2011-11-13-wugu-farm.html"}},
+        {"id": "128", "parent": "2", "text": "淡水賞櫻一日遊", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/03/2012-03-09-sunchih-sakura.html"}},
+        {"id": "129", "parent": "128", "text": "三芝 - 天元宮", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/03/2012-03-09-sunchih-sakura.html"}},
+        {"id": "130", "parent": "128", "text": "淡水 - 小白宮", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/03/2012-03-09-tam-shuei-white-house.html"}},
+        {"id": "131", "parent": "128", "text": "淡水 - 牛津學堂、紅毛城", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/03/2012-03-09-tam-shuei-red-house.html"}},
+        {"id": "132", "parent": "22", "text": "2012- 行程規劃篇", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/01/2012-01-paris-part1-overview.html"}},
+        {"id": "133", "parent": "22", "text": "2012- 出發．抵達", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/01/2012-paris-part2-off-go-and-arrival.html"}},
+        {"id": "134", "parent": "22", "text": "2012- 遊塞納河", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/01/2012-paris-part3-seine-river.html"}},
+        {"id": "135", "parent": "22", "text": "2012- 凡爾賽宮", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/01/2012-01-paris-part4-versailles.html"}},
+        {"id": "136", "parent": "22", "text": "2012- 凡爾賽宮花園", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/02/2012-01-paris-part5-versailles-garden.html"}},
+        {"id": "137", "parent": "22", "text": "2012- 巴黎迪士尼樂園", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/02/2012-01-paris-part6-disney-land.html"}},
+        {"id": "138", "parent": "22", "text": "2012- 穆浮塔街傳統市集", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/02/2012-01-paris-part7-rue-mouffetard.html"}},
+        {"id": "139", "parent": "22", "text": "2012- 楓丹白露宮", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/03/2012-01-paris-part8-chateau-de.html"}},
+        {"id": "140", "parent": "22", "text": "2012- 香榭大道、凱旋門", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/05/2012-01-paris-part9-champs-elysees.html"}},
+        {"id": "141", "parent": "22", "text": "2012- 法國美食番外篇", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/05/2012-01-paris-part10-france-cuisine.html"}},
+        {"id": "142", "parent": "8", "text": "香港海洋公園半日遊", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/05/2012-05-22-hk-ocean-park.html"}},
+        {"id": "143", "parent": "2", "text": "新山。夢湖", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/04/2012-04-04-dream-lake.html"}},
+        {"id": "144", "parent": "2", "text": "新店。文山農場"},
+        {"id": "145", "parent": "144", "text": "文山農場採茶記", "a_attr": {"href": "http://ch-photodiary.blogspot.tw/2012/04/2012-04-14-wen-sang-farm-part1.html"}},
+        {"id": "146", "parent": "144", "text": "文山農場夜訪螢河去~~", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/04/2012-04-14-wen-sang-farm-part2.html"}},
+        {"id": "147", "parent": "0", "text": "美國遊記<font color=\"red\"></font>"},
+        {"id": "148", "parent": "147", "text": "2012 出差順路遊記"},
+        {"id": "149", "parent": "148", "text": "PART 1 歌劇魅影", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/06/2012-06-phantom-of-opera.html"}},
+        {"id": "150", "parent": "148", "text": "PART 2 紐約。自由女神", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/06/2012-06-new-york-city.html"}},
+        {"id": "151", "parent": "148", "text": "PART 3 紐約。帝國大廈", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/07/2012-06-ny-empire-state-building.html"}},
+        {"id": "152", "parent": "148", "text": "PART 4 普林斯頓 (大學城)", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/07/2012-06-princeton.html"}},
+        {"id": "153", "parent": "8", "text": "武漢三日遊"},
+        {"id": "154", "parent": "32", "text": "放天燈", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/03/20100328-pinci-skylight.html"}},
+        {"id": "155", "parent": "32", "text": "平溪小鎮一日遊", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/03/2012-03-25-pinci-one-day-tour.html"}},
+        {"id": "156", "parent": "153", "text": "武漢。東湖", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/10/2012-10-11-wuhan-part1.html"}},
+        {"id": "157", "parent": "153", "text": "武漢。黃鶴樓", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/10/2012-10-12-wuhan-part2.html"}},
+        {"id": "158", "parent": "153", "text": "武漢。歸元禪寺", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/10/2012-10-13-wuhan-part3.html"}},
+        {"id": "159", "parent": "153", "text": "武漢。湖北省博物館", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/10/2012-10-13-wuhan-part4_26.html"}},
+        {"id": "160", "parent": "2", "text": "淡水。興福寮農場", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/10/2012-10-27-xingfuliao-farm.html"}},
+        {"id": "161", "parent": "103", "text": "礁溪。林美石磐步道", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2013/01/2012-07-08-linmei-trail.html"}},
+        {"id": "200", "parent": "0", "text": "奧地利遊記 (7)"},
+        {"id": "201", "parent": "200", "text": "奧地利親子自遊行-行前規劃篇", "a_attr": {"href": "https://ch-photodiary.blogspot.com/2014/09/2014-austria-overview.html"}},
+        {"id": "202", "parent": "200", "text": "奧地利親子自遊行 - Day 1. 中央咖啡館、霍夫堡皇宮、史蒂芬大教堂", "a_attr": {"href": "https://ch-photodiary.blogspot.com/2014/09/2014-08-austria-day1-central-cafe.html"}},
+        {"id": "203", "parent": "200", "text": "奧地利親子自遊行 - Day 2. 梅爾克修道院", "a_attr": {"href": "https://ch-photodiary.blogspot.com/2014/09/2014-08-austria-day2-melk.html"}},
+        {"id": "204", "parent": "200", "text": "奧地利親子自遊行- Day 2. 中世紀古城- 杜倫施坦", "a_attr": {"href": "https://ch-photodiary.blogspot.com/2014/09/2014-08-austria-day2-durnstein.html"}},
+        {"id": "205", "parent": "200", "text": "奧地利親子自遊行- 哈斯達特。Hallstatt 24 Hour", "a_attr": {"href": "https://ch-photodiary.blogspot.com/2014/10/2014-08-austria-day3-hallstatt-24-hour.html"}},
+        {"id": "206", "parent": "200", "text": "奧地利親子自遊行- 哈斯達特。探訪古老採鹽礦洞", "a_attr": {"href": "https://ch-photodiary.blogspot.com/2015/12/2014-08-austria-day3-hallstatt.html"}},
+        {"id": "207", "parent": "200", "text": "奧地利親子自遊行- 哈斯達特。達克斯坦冰洞", "a_attr": {"href": "https://ch-photodiary.blogspot.com/2015/12/2014-08-25-austria-dachstein-ice-cave.html"}}
+    ];
+    
+    
+      // 初始化 jsTree
+      $('#jstree').jstree({
+        'core': {
+          'data': data,
+          'check_callback': true
+        },
+        'plugins': ["wholerow"]
+      }).on('loaded.jstree', function () {
+        expandToLevel(3);
+      });
+
+      // 點擊事件處理
+      $('#jstree').on("select_node.jstree", function (e, data) {
+        // 阻止默認事件
+        e.preventDefault();
+        
+        var href = data.node && data.node.original && data.node.original.a_attr
+          ? data.node.original.a_attr.href
+          : null;
+        if (href) {
+          window.open(href, '_blank');
+        }
+        // 取消選中狀態
+        $('#jstree').jstree('deselect_node', data.node);
+        return false;
+      });
+
+      // 展開全部
+      $('#expand-all').on('click', function () {
+        $('#jstree').jstree('open_all');
+      });
+
+      // 收合全部
+      $('#collapse-all').on('click', function () {
+        $('#jstree').jstree('close_all');
+        expandToLevel(2);
+      });
+
+      // 展開到指定層級的函數
+      function expandToLevel(maxLevel) {
+        $('#jstree').jstree('get_json', '#').forEach(function expandNode(node, level) {
+          if (level < maxLevel) {
+            $('#jstree').jstree('open_node', node.id);
+            if (node.children) {
+              node.children.forEach(function (child) {
+                expandNode(child, level + 1);
+              });
+            }
+          }
+        }, 0);
+      }
+    });
+  </script>]]></b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
+</b:includable>
+          </b:widget>
+          <b:widget id='Attribution1' locked='true' title='' type='Attribution'>
+            <b:widget-settings>
+              <b:widget-setting name='copyright'><![CDATA[CH@PhotoDiary<br>]]></b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main'>
+    <div class='widget-content' style='text-align: center;'>
+      <b:if cond='data:attribution != &quot;&quot;'>
+       <data:attribution/>
+      </b:if>
+    </div>
+
+    <b:include name='quickedit'/>
+  </b:includable>
+          </b:widget>
+        </b:section>
+      </div>
+
+      <!-- spacer for skins that want sidebar and main to be the same height-->
+      <div class='clear'>&#160;</div>
+
+    </div> <!-- end content-wrapper -->
+  </div></div> <!-- end outer-wrapper -->
+
+</body>
+</html>

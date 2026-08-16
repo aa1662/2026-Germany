@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GLightbox Manual Test</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    h1 { color: #333; }
+    .test-section { margin: 20px 0; padding: 15px; border: 1px solid #ddd; border-radius: 8px; }
+    .test-section h2 { margin-top: 0; color: #666; }
+    .test-image { max-width: 200px; height: auto; margin: 10px; cursor: zoom-in; border-radius: 8px; }
+    .status { padding: 10px; margin: 10px 0; border-radius: 4px; }
+    .status.success { background: #d4edda; color: #155724; }
+    .status.error { background: #f8d7da; color: #721c24; }
+    .status.info { background: #d1ecf1; color: #0c5460; }
+    #results { margin-top: 20px; }
+    button { padding: 10px 20px; margin: 5px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>GLightbox Test Page</h1>
+  
+  <div class="test-section">
+    <h2>Test 1: Single Image</h2>
+    <a href="https://lh3.googleusercontent.com/pw/AP1GczOH46THqgI2triUIM8COUj1ShRWSRqlwA2RHYh-e3cmnDqIks7u7eTJ6yWm_9rHBD8opEvwDZLwWxi2eavZ8rynI3lmJAP3pVhvjxpT7-nNhiUz9g7_=w1600" class="glightbox" data-gallery="test1">
+      <img src="https://lh3.googleusercontent.com/pw/AP1GczOH46THqgI2triUIM8COUj1ShRWSRqlwA2RHYh-e3cmnDqIks7u7eTJ6yWm_9rHBD8opEvwDZLwWxi2eavZ8rynI3lmJAP3pVhvjxpT7-nNhiUz9g7_=w400" alt="Test Image 1" class="test-image">
+    </a>
+    <p>Click the image above. It should open in a lightbox.</p>
+  </div>
+
+  <div class="test-section">
+    <h2>Test 2: Gallery (3 images)</h2>
+    <a href="https://lh3.googleusercontent.com/pw/AP1GczOyCLHiqXk14vA9G5rYvd42WBn3Gp7h8LUQ20UZuSmSnHmC3yXyqr541s2P4qgebrQ0lUhOkTHCKcG4O0EVCYMV4yz4klv_9NZjuZYcKeAZ5rhI3in4=w1600" class="glightbox" data-gallery="test2" data-title="Image 1">
+      <img src="https://lh3.googleusercontent.com/pw/AP1GczOyCLHiqXk14vA9G5rYvd42WBn3Gp7h8LUQ20UZuSmSnHmC3yXyqr541s2P4qgebrQ0lUhOkTHCKcG4O0EVCYMV4yz4klv_9NZjuZYcKeAZ5rhI3in4=w400" alt="Gallery 1" class="test-image">
+    </a>
+    <a href="https://lh3.googleusercontent.com/pw/AP1GczOWDD25i4GiVQj5jRNYXXRx98kCB_VniePFFfv5D1nxmDCOpNmCPRTB0WZwBEFOKzNvluvEFCe4fVFOzJqxfAg3gGxEm7vaq7JPbNrto2pmdVYTJ_0q=w1600" class="glightbox" data-gallery="test2" data-title="Image 2">
+      <img src="https://lh3.googleusercontent.com/pw/AP1GczOWDD25i4GiVQj5jRNYXXRx98kCB_VniePFFfv5D1nxmDCOpNmCPRTB0WZwBEFOKzNvluvEFCe4fVFOzJqxfAg3gGxEm7vaq7JPbNrto2pmdVYTJ_0q=w400" alt="Gallery 2" class="test-image">
+    </a>
+    <a href="https://lh3.googleusercontent.com/pw/AP1GczMT0yaI1Mvwwq_Z8hhAVLrXGOfxDTt825Arq0PiwxWDQMvtJKbS8UZPsH2qOeUL41rTIrCDBdBjn7S6lbPFBkaROFCj1GjdHxtAmVaPrJu4hwV0FkgC=w1600" class="glightbox" data-gallery="test2" data-title="Image 3">
+      <img src="https://lh3.googleusercontent.com/pw/AP1GczMT0yaI1Mvwwq_Z8hhAVLrXGOfxDTt825Arq0PiwxWDQMvtJKbS8UZPsH2qOeUL41rTIrCDBdBjn7S6lbPFBkaROFCj1GjdHxtAmVaPrJu4hwV0FkgC=w400" alt="Gallery 3" class="test-image">
+    </a>
+    <p>Click any image. Use arrows to navigate between images.</p>
+  </div>
+
+  <div id="results">
+    <h2>Diagnostic Results</h2>
+    <div id="status-container"></div>
+  </div>
+
+  <button onclick="runDiagnostics()">Run Diagnostics</button>
+  <button onclick="window.location.href='../../docs/blog/day-07-blog.html'">Go to Blog Page</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script>
+    function addStatus(message, type) {
+      const container = document.getElementById('status-container');
+      const div = document.createElement('div');
+      div.className = 'status ' + type;
+      div.textContent = message;
+      container.appendChild(div);
+    }
+
+    function runDiagnostics() {
+      const container = document.getElementById('status-container');
+      container.innerHTML = '';
+
+      // Check GLightbox loaded
+      if (typeof GLightbox !== 'undefined') {
+        addStatus('GLightbox library loaded successfully', 'success');
+      } else {
+        addStatus('ERROR: GLightbox library not loaded', 'error');
+        return;
+      }
+
+      // Check glightbox elements
+      const elements = document.querySelectorAll('.glightbox');
+      addStatus('Found ' + elements.length + ' glightbox elements', 'info');
+
+      // Check href attributes
+      let validHrefs = 0;
+      elements.forEach((el, i) => {
+        if (el.href && el.href.includes('googleusercontent')) {
+          validHrefs++;
+        }
+      });
+      addStatus('Valid Google Photos URLs: ' + validHrefs + '/' + elements.length, validHrefs === elements.length ? 'success' : 'error');
+
+      // Initialize and test
+      try {
+        const lightbox = GLightbox({
+          selector: '.glightbox',
+          touchNavigation: true,
+          loop: true,
+          closeButton: true,
+          openEffect: 'zoom',
+          closeEffect: 'fade'
+        });
+        addStatus('GLightbox initialized successfully', 'success');
+        addStatus('Total slides: ' + (lightbox.elements ? lightbox.elements.length : 'unknown'), 'info');
+      } catch (e) {
+        addStatus('ERROR initializing GLightbox: ' + e.message, 'error');
+      }
+    }
+
+    // Auto-initialize
+    document.addEventListener('DOMContentLoaded', function() {
+      const lightbox = GLightbox({
+        selector: '.glightbox',
+        touchNavigation: true,
+        loop: true,
+        closeButton: true,
+        openEffect: 'zoom',
+        closeEffect: 'fade'
+      });
+      
+      runDiagnostics();
+    });
+  </script>
+</body>
+</html>
+

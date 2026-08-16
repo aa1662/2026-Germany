@@ -1,0 +1,17 @@
+# Node modules & dependencies
+node_modules/
+**/node_modules/
+
+# Test results & Playwright
+test-results/
+**/test-results/
+playwright-report/
+**/playwright-report/
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+*.tmp
+.augment/
+.vscode/
+.idea/

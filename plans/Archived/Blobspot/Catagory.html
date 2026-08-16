@@ -1,0 +1,262 @@
+<!-- 引入 jsTree 的 CSS 文件 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.12/themes/default/style.min.css" />
+  <style>
+    /* 调整虚线与图标的布局 */
+    .jstree-children {
+      margin-left: 20px; /* 控制虚线的缩进 */
+      border-left: 1px dashed #ccc; /* 添加垂直虚线 */
+    }
+
+    .jstree-icon {
+      margin-left: -20px; /* 让图标紧贴虚线 */
+    }
+
+    .jstree-anchor {
+      display: inline-block;
+      white-space: nowrap; /* 禁止文字换行 */
+    }
+
+    /* 可选：调整节点间距 */
+    .jstree-node {
+      margin-bottom: 5px; /* 控制每个节点之间的垂直间距 */
+    }
+
+    /* 修复图标与文本对齐 */
+    .jstree-icon, .jstree-anchor {
+      vertical-align: middle; /* 垂直居中对齐 */
+    }
+  </style>
+
+
+  <!-- 展開與收合的功能按鈕 -->
+
+    <a href="javascript:void(0);" id="expand-all">全部展開</a> | 
+    <a href="javascript:void(0);" id="collapse-all">全部收合</a>
+
+  <!-- 樹容器 -->
+  <div id="jstree"></div>
+
+  <!-- 引入 jQuery 和 jsTree -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.12/jstree.min.js"></script>
+  
+  <script>
+    $(function () {
+      // 定義樹結構資料
+      var data = [
+        {"id": "0", "parent": "#", "text": "CH@PhotoDiary", "a_attr": {"href": "http://ch-photodiary.blogspot.com/"}},
+        {"id": "1", "parent": "0", "text": "國內遊記 (36)"},
+        {"id": "2", "parent": "1", "text": "北台灣 (28)", "a_attr": {"href": "http://ch-photodiary.blogspot.com/search/label/%E5%9C%8B%E5%85%A7%E9%81%8A%E8%A8%98-%E5%8C%97%E9%83%A8"}},
+        {"id": "3", "parent": "1", "text": "中台灣 (3)", "a_attr": {"href": "http://ch-photodiary.blogspot.com/search/label/%E5%9C%8B%E5%85%A7%E9%81%8A%E8%A8%98-%E4%B8%AD%E9%83%A8"}},
+        {"id": "4", "parent": "1", "text": "南台灣 (2)"},
+        {"id": "5", "parent": "0", "text": "日本遊記 (3)"},
+        {"id": "6", "parent": "5", "text": "東京迪士尼親子遊 (4)"},
+        {"id": "7", "parent": "5", "text": "京都賞楓 (5)"},
+        {"id": "8", "parent": "0", "text": "中國遊記 (7)"},
+        {"id": "9", "parent": "8", "text": "廈門 - 鼓浪嶼、南普陀寺", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2009/01/2009.html"}},
+        {"id": "10", "parent": "8", "text": "2008 香港迪士尼遊記", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/02/blog-post_15.html"}},
+        {"id": "11", "parent": "8", "text": "香港夜景 - 天星碼頭", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/03/hongkong-nightview2004.html"}},
+        {"id": "12", "parent": "97", "text": "泰國曼谷嘟嘟車驚魂記", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/02/tuk-tuk-in-bangkok.html"}},
+        {"id": "13", "parent": "0", "text": "英國遊記 (8)"},
+        {"id": "14", "parent": "13", "text": "倫敦", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/03/20040601-england-day1.html"}},
+        {"id": "15", "parent": "13", "text": "劍橋", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/03/20040603-england-day2.html"}},
+        {"id": "16", "parent": "13", "text": "巴斯", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/04/20040604-england-day3-bath-spa.html"}},
+        {"id": "17", "parent": "13", "text": "布萊頓", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2004/06/20040605-england-day4-brighton.html"}},
+        {"id": "18", "parent": "13", "text": "利茲城堡", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2004/06/20040606-england-day5-leeds-castle.html"}},
+        {"id": "19", "parent": "13", "text": "莎士比亞故居", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2004/06/20040607-england-day6-stratford-upon.html"}},
+        {"id": "20", "parent": "13", "text": "湖區三日遊", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2004/06/20040608-england-day7-lake-distract.html"}},
+        {"id": "21", "parent": "13", "text": "Burberry Factory Shop", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2004/06/20040611-england-day10-burberry-factory.html"}},
+        {"id": "22", "parent": "0", "text": "法國遊記 (12)"},
+        {"id": "23", "parent": "22", "text": "巴黎香榭大道", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2001/04/20010415-france-paris.html"}},
+        {"id": "24", "parent": "22", "text": "巴黎迪士尼", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2001/04/20010416-france-disneyland.html"}},
+        {"id": "25", "parent": "0", "text": "德國遊記 - 新天鵝堡", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2001/04/20010418-germany-schloss-neuschwanstein.html"}},
+        {"id": "26", "parent": "0", "text": "義大利遊記 (4)"},
+        {"id": "27", "parent": "2", "text": "深坑 - 葡萄樹莊園", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/01/blog-post.html"}},
+        {"id": "28", "parent": "2", "text": "龍潭 - 小人國遊記", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/02/20100201.html"}},
+        {"id": "29", "parent": "2", "text": "板橋 - 林家花園搭訕記", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/03/blog-post.html"}},
+        {"id": "30", "parent": "2", "text": "台北 - 士林官邸", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/03/20100314-shiling-guandi.html"}},
+        {"id": "31", "parent": "2", "text": "烏來 - 內洞瀑布", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/03/20100323-wulai-forest.html"}},
+        {"id": "32", "parent": "2", "text": "平溪。天燈"},
+        {"id": "33", "parent": "2", "text": "北海岸 - 洋荳子咖啡", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/04/2010-04-25-tw-north-coast.html"}},
+        {"id": "34", "parent": "2", "text": "三芝 - 長角 96 號", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/05/20100501-long-horn-96.html"}},
+        {"id": "35", "parent": "2", "text": "北海岸 - 福華白拱門", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/05/20100524-tw-north-coast-part-ii.html"}},
+        {"id": "36", "parent": "3", "text": "台中 - 卓也小屋", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/02/blog-post_18.html"}},
+        {"id": "37", "parent": "4", "text": "草嶺 - 萬年峽谷", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/06/20100605-taiwan-grand-canyon.html"}},
+        {"id": "38", "parent": "4", "text": "嘉義 - 豐山風景區", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/06/20100606-taiwan-fongshan.html"}},
+        {"id": "39", "parent": "8", "text": "香港夜景 - 太平山", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/03/hong-kong-night-view-2005.html"}},
+        {"id": "40", "parent": "26", "text": "米蘭近郊 - 科摩湖", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2000/11/20001119-italy-lago-di-como.html"}},
+        {"id": "41", "parent": "26", "text": "佛羅倫斯", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/06/20010405-italy-florence.html"}},
+        {"id": "42", "parent": "26", "text": "羅馬", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/06/20010405-italy-roma.html"}},
+        {"id": "43", "parent": "26", "text": "比薩斜塔", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/06/20010407-italy-pisa.html"}},
+        {"id": "44", "parent": "0", "text": "瑞士遊記 (2)"},
+        {"id": "45", "parent": "44", "text": "琉森", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/06/2001330-swaziland-luzern.html"}},
+        {"id": "46", "parent": "44", "text": "鐵力士山", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/06/20010331-switzerland-mount-titlis.html"}},
+        {"id": "47", "parent": "2", "text": "平溪鐵道之旅 (3)"},
+        {"id": "48", "parent": "47", "text": "行前規劃篇", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/06/20100630-pinci-waterfall-part1.html"}},
+        {"id": "49", "parent": "47", "text": "十分瀑布", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/06/20100630-pinci-waterfall-part2.html"}},
+        {"id": "50", "parent": "47", "text": "菁桐老街", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/06/20100630-pinci-waterfall-part3.html"}},
+        {"id": "51", "parent": "2", "text": "台大安康農場", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/07/20100718-ntu-ankeng-farm.html"}},
+        {"id": "52", "parent": "3", "text": "南投 - 日月潭 (5)"},
+        {"id": "53", "parent": "52", "text": "行程規劃及總覽", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/08/20100806-sun-moon-lake-part-1.html"}},
+        {"id": "54", "parent": "52", "text": "纜車遊湖篇", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/08/20100806-sun-moon-lake-part-2-cable-car.html"}},
+        {"id": "55", "parent": "52", "text": "遊艇遊湖篇", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/08/20100806-sun-moon-lake-part-3-lake.html"}},
+        {"id": "56", "parent": "52", "text": "大淶閣住宿篇", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/08/20100806-sun-moon-lake-part4-delago.html"}},
+        {"id": "57", "parent": "52", "text": "涵碧步道晨曦篇", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/08/20100807-sun-moon-lake-sunrise.html"}},
+        {"id": "58", "parent": "2", "text": "苗栗大湖巧克力雲莊", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/08/20100807-sun-moon-lake-part6-chocolate.html"}},
+        {"id": "59", "parent": "7", "text": "清水寺夜間參拜", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/02/day1.html"}},
+        {"id": "60", "parent": "7", "text": "金閣寺、嵐山", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/02/day2-20061129.html"}},
+        {"id": "61", "parent": "7", "text": "奈良鹿苑, 東大寺, 二月堂", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/02/day3-20061130.html"}},
+        {"id": "62", "parent": "7", "text": "長岡京光明寺, 銀閣寺", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/02/day4-20061201.html"}},
+        {"id": "63", "parent": "7", "text": "東福寺", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/02/day5-20061202.html"}},
+        {"id": "64", "parent": "6", "text": "迪士尼樂園酒店", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/02/blog-post_06.html"}},
+        {"id": "65", "parent": "6", "text": "迪士尼樂園 -Land", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/02/day2-20091209.html"}},
+        {"id": "66", "parent": "6", "text": "築地市場真體驗", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/02/blog-post.html"}},
+        {"id": "67", "parent": "6", "text": "小小心得及行程安排建議", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/02/blog-post_08.html"}},
+        {"id": "68", "parent": "103", "text": "宜蘭頭城 - 蘭陽博物館", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/09/20100911-lanyang-museum.html"}},
+        {"id": "69", "parent": "2", "text": "三峽 - 滿月圓森林", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/10/2010-10-02-sanxia-fullmoon-forest.html"}},
+        {"id": "70", "parent": "2", "text": "八里左岸公園", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/10/2010-10-16-bali-rose-house.html"}},
+        {"id": "71", "parent": "8", "text": "2010 香港迪士尼遊記"},
+        {"id": "72", "parent": "71", "text": "行程規劃篇", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/12/2010-hong-kong-disney-planning.html"}},
+        {"id": "73", "parent": "71", "text": "香港夜景及幻彩詠香江", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/12/20101206-hong-kong-day1-night-view.html"}},
+        {"id": "74", "parent": "71", "text": "樂園親子攻略 Part 1", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/12/20101207-hong-kong-day2-disneyland.html"}},
+        {"id": "75", "parent": "71", "text": "樂園親子攻略 Part 2", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/12/20101208-hong-kong-day3-disneyland.html"}},
+        {"id": "76", "parent": "2", "text": "台北植物園", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/12/2010-12-26-taipei-botanical-garden.html"}},
+        {"id": "77", "parent": "3", "text": "南投 - 日月潭 Again(2)"},
+        {"id": "78", "parent": "77", "text": "Part 1 晨曦日出篇", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/01/2011-01-02-crazy-sun-moon-lake-part1.html"}},
+        {"id": "79", "parent": "77", "text": "Part 2 纜車遊湖篇", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/01/2011-01-02-crazy-sun-moon-lake-part2.html"}},
+        {"id": "80", "parent": "5", "text": "京阪神六日遊 (6)"},
+        {"id": "81", "parent": "80", "text": "京都: 錦市場、清水寺、金閣寺", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/08/20020601-japan-day1.html"}},
+        {"id": "82", "parent": "80", "text": "京都: 嵐山一帶、天龍寺", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/08/20020602-japan-day2.html"}},
+        {"id": "83", "parent": "80", "text": "奈良: 鹿苑、東大寺、二月堂、春日大社", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/08/20020603-japan-day3.html"}},
+        {"id": "84", "parent": "80", "text": "大阪: 環球影城、海遊館", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/10/20020604-japan-day4.html"}},
+        {"id": "85", "parent": "80", "text": "神戶: 布引花園、北野異人館、南京町中華街", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/08/20020605-japan-day5.html"}},
+        {"id": "86", "parent": "80", "text": "姬路: 好古園、姬路城", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/08/20020606-japan-day6.html"}},
+        {"id": "87", "parent": "2", "text": "2010 國際花博在台北"},
+        {"id": "88", "parent": "87", "text": "圓山花博 - 日景篇", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/01/20101201-taipei-flor-expo-part1.html"}},
+        {"id": "89", "parent": "87", "text": "圓山花博 - 夜景篇", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/01/20110109-taipei-flora-expo-part2.html"}},
+        {"id": "90", "parent": "2", "text": "竹東 - 綠世界生態農場 (4)"},
+        {"id": "91", "parent": "90", "text": "天鵝湖區", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/02/2011-02-08-green-world-part1.html"}},
+        {"id": "92", "parent": "90", "text": "動物劇場篇", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/02/2011-02-08-green-world-part2.html"}},
+        {"id": "93", "parent": "90", "text": "大探奇區", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/02/2011-02-08-green-world-part3.html"}},
+        {"id": "94", "parent": "90", "text": "鳥類、蝴蝶生態公園", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/02/2011-02-08-green-world-part4.html"}},
+        {"id": "95", "parent": "2", "text": "新店 - 牛伯伯生態園區", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/05/2011.html"}},
+        {"id": "96", "parent": "2", "text": "新竹尖石 - 薰衣草森林", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/05/2011-05-13-lavender-cottage.html"}},
+        {"id": "97", "parent": "0", "text": "東南亞遊記 (2)"},
+        {"id": "98", "parent": "97", "text": "新加坡出差順路遊記", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/06/2011-06-singapore-overview.html"}},
+        {"id": "99", "parent": "98", "text": "總覽篇", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/06/2011-06-singapore-overview.html"}},
+        {"id": "100", "parent": "98", "text": "小印度區、克拉碼頭", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/06/2011-06-singapore-part1.html"}},
+        {"id": "101", "parent": "98", "text": "新加坡植物園", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/06/2011-06-singapore-part2.html"}},
+        {"id": "102", "parent": "2", "text": "2011 福隆國際沙雕藝術節", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/05/2011-05-29-fu-long-sand-beach.html"}},
+        {"id": "103", "parent": "1", "text": "東部遊記 (4)"},
+        {"id": "104", "parent": "103", "text": "花蓮三日遊 (5)"},
+        {"id": "105", "parent": "104", "text": "行程總覽篇", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/08/2011-08-hualien-overview.html"}},
+        {"id": "106", "parent": "2", "text": "新店烏來 - 優聖美地", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/07/2011-06-20-wulai-yosamite.html"}},
+        {"id": "107", "parent": "1", "text": "離島遊記 (1)"},
+        {"id": "108", "parent": "107", "text": "金門遊記 (7)"},
+        {"id": "109", "parent": "108", "text": "總覽篇", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/04/2011-04-kinmen-overview.html"}},
+        {"id": "110", "parent": "108", "text": "瓊林聚落", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/04/2011-04-kinmen-part1.html"}},
+        {"id": "111", "parent": "108", "text": "探訪瓊林宗祠", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/04/2011-04-kinmen-part6.html"}},
+        {"id": "112", "parent": "108", "text": "陳景蘭洋樓", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/04/2011-04-kinmen-part2.html"}},
+        {"id": "113", "parent": "108", "text": "成功坑道", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/04/2011-04-kinmen-part3.html"}},
+        {"id": "114", "parent": "108", "text": "建功嶼", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/04/2011-04-kinmen-part4.html"}},
+        {"id": "115", "parent": "108", "text": "水頭得月樓", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/04/2011-04-kinmen-part5.html"}},
+        {"id": "116", "parent": "104", "text": "慕谷慕魚篇 ", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/09/2011-08-24-mukumugi.html"}},
+        {"id": "117", "parent": "2", "text": "北投春天酒店泡湯趣", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/09/2011-09-12-spring-hotel.html"}},
+        {"id": "118", "parent": "104", "text": "翰品酒店篇", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/09/2011-08-25-hualain-day2.html"}},
+        {"id": "119", "parent": "104", "text": "海洋公園篇", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/09/2011-08-25-hualan-sea-world.html"}},
+        {"id": "120", "parent": "104", "text": "悅來酒店篇", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/09/2011-08-26-hualian-farglory-hotel.html"}},
+        {"id": "121", "parent": "2", "text": "桃園春天農場同學會", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/05/2011-04-30-spring-farm.html"}},
+        {"id": "122", "parent": "103", "text": "宜蘭礁溪老爺酒店一日遊", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/10/2011-09-04-hotel-royal-chiao-hsi.html"}},
+        {"id": "123", "parent": "2", "text": "2011 小人國遊記", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/09/2011-09-24-small-world.html"}},
+        {"id": "124", "parent": "2", "text": "新竹南寮十七公里海岸線", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/10/2011-10-08-hsing-chu-coastline.html"}},
+        {"id": "125", "parent": "26", "text": "威尼斯一日遊", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/10/2000-11-26-venezia.html"}},
+        {"id": "126", "parent": "0", "text": "為什麼蜜月旅行一定要去歐洲?", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/10/2011-10-26-why-go-europe-for-honeymoon.html"}},
+        {"id": "127", "parent": "2", "text": "五股 - 準園生態莊園", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2011/11/2011-11-13-wugu-farm.html"}},
+        {"id": "128", "parent": "2", "text": "淡水賞櫻一日遊", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/03/2012-03-09-sunchih-sakura.html"}},
+        {"id": "129", "parent": "128", "text": "三芝 - 天元宮", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/03/2012-03-09-sunchih-sakura.html"}},
+        {"id": "130", "parent": "128", "text": "淡水 - 小白宮", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/03/2012-03-09-tam-shuei-white-house.html"}},
+        {"id": "131", "parent": "128", "text": "淡水 - 牛津學堂、紅毛城", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/03/2012-03-09-tam-shuei-red-house.html"}},
+        {"id": "132", "parent": "22", "text": "2012- 行程規劃篇", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/01/2012-01-paris-part1-overview.html"}},
+        {"id": "133", "parent": "22", "text": "2012- 出發．抵達", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/01/2012-paris-part2-off-go-and-arrival.html"}},
+        {"id": "134", "parent": "22", "text": "2012- 遊塞納河", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/01/2012-paris-part3-seine-river.html"}},
+        {"id": "135", "parent": "22", "text": "2012- 凡爾賽宮", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/01/2012-01-paris-part4-versailles.html"}},
+        {"id": "136", "parent": "22", "text": "2012- 凡爾賽宮花園", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/02/2012-01-paris-part5-versailles-garden.html"}},
+        {"id": "137", "parent": "22", "text": "2012- 巴黎迪士尼樂園", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/02/2012-01-paris-part6-disney-land.html"}},
+        {"id": "138", "parent": "22", "text": "2012- 穆浮塔街傳統市集", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/02/2012-01-paris-part7-rue-mouffetard.html"}},
+        {"id": "139", "parent": "22", "text": "2012- 楓丹白露宮", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/03/2012-01-paris-part8-chateau-de.html"}},
+        {"id": "140", "parent": "22", "text": "2012- 香榭大道、凱旋門", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/05/2012-01-paris-part9-champs-elysees.html"}},
+        {"id": "141", "parent": "22", "text": "2012- 法國美食番外篇", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/05/2012-01-paris-part10-france-cuisine.html"}},
+        {"id": "142", "parent": "8", "text": "香港海洋公園半日遊", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/05/2012-05-22-hk-ocean-park.html"}},
+        {"id": "143", "parent": "2", "text": "新山。夢湖", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/04/2012-04-04-dream-lake.html"}},
+        {"id": "144", "parent": "2", "text": "新店。文山農場"},
+        {"id": "145", "parent": "144", "text": "文山農場採茶記", "a_attr": {"href": "http://ch-photodiary.blogspot.tw/2012/04/2012-04-14-wen-sang-farm-part1.html"}},
+        {"id": "146", "parent": "144", "text": "文山農場夜訪螢河去~~", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/04/2012-04-14-wen-sang-farm-part2.html"}},
+        {"id": "147", "parent": "0", "text": "美國遊記<font color=\"red\"><em>New~</em></font>"},
+        {"id": "148", "parent": "147", "text": "2012 出差順路遊記"},
+        {"id": "149", "parent": "148", "text": "PART 1 歌劇魅影", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/06/2012-06-phantom-of-opera.html"}},
+        {"id": "150", "parent": "148", "text": "PART 2 紐約。自由女神", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/06/2012-06-new-york-city.html"}},
+        {"id": "151", "parent": "148", "text": "PART 3 紐約。帝國大廈", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/07/2012-06-ny-empire-state-building.html"}},
+        {"id": "152", "parent": "148", "text": "PART 4 普林斯頓 (大學城)", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/07/2012-06-princeton.html"}},
+        {"id": "153", "parent": "8", "text": "武漢三日遊"},
+        {"id": "154", "parent": "32", "text": "放天燈", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2010/03/20100328-pinci-skylight.html"}},
+        {"id": "155", "parent": "32", "text": "平溪小鎮一日遊", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/03/2012-03-25-pinci-one-day-tour.html"}},
+        {"id": "156", "parent": "153", "text": "武漢。東湖", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/10/2012-10-11-wuhan-part1.html"}},
+        {"id": "157", "parent": "153", "text": "武漢。黃鶴樓", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/10/2012-10-12-wuhan-part2.html"}},
+        {"id": "158", "parent": "153", "text": "武漢。歸元禪寺", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/10/2012-10-12-wuhan-part3.html"}},
+        {"id": "159", "parent": "153", "text": "武漢。湖北省博物館", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/10/2012-10-13-wuhan-part4_26.html"}},
+        {"id": "160", "parent": "2", "text": "淡水。興福寮農場", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2012/10/2012-10-27-xingfuliao-farm.html"}},
+        {"id": "161", "parent": "103", "text": "礁溪。林美石磐步道", "a_attr": {"href": "http://ch-photodiary.blogspot.com/2013/01/2012-07-08-linmei-trail.html"}}
+    ];
+    
+    
+      // 初始化 jsTree
+      $('#jstree').jstree({
+        'core': {
+          'data': data,
+          'check_callback': true
+        },
+        'plugins': ["wholerow"]
+      }).on('loaded.jstree', function () {
+        expandToLevel(3);
+      });
+
+      // 點擊事件處理
+      $('#jstree').on("select_node.jstree", function (e, data) {
+        // 阻止默認事件
+        e.preventDefault();
+        
+        var href = data.node.original.a_attr?.href;
+        if (href) {
+          window.open(href, '_blank');
+        }
+        // 取消選中狀態
+        $('#jstree').jstree('deselect_node', data.node);
+        return false;
+      });
+
+      // 展開全部
+      $('#expand-all').on('click', function () {
+        $('#jstree').jstree('open_all');
+      });
+
+      // 收合全部
+      $('#collapse-all').on('click', function () {
+        $('#jstree').jstree('close_all');
+        expandToLevel(2);
+      });
+
+      // 展開到指定層級的函數
+      function expandToLevel(maxLevel) {
+        $('#jstree').jstree('get_json', '#').forEach(function expandNode(node, level) {
+          if (level < maxLevel) {
+            $('#jstree').jstree('open_node', node.id);
+            if (node.children) {
+              node.children.forEach(function (child) {
+                expandNode(child, level + 1);
+              });
+            }
+          }
+        }, 0);
+      }
+    });
+  </script>
