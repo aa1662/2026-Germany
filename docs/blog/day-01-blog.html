@@ -41,31 +41,36 @@
         <span style="color: var(--primary); font-weight: 600;">深度圖文遊記</span>
       </div>
 
-      <!-- 標題與 Meta -->
-      <header style="margin-bottom: 2rem;">
-        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.75rem;">
-          <span class="badge badge-alpine">📍 德國 慕尼黑 ➔ 奧地利 薩爾斯堡 ➔ 哈修塔特</span>
-          <span class="badge badge-gold">📅 2026/1/26 (一)</span>
-          <span class="badge badge-forest">🏨 宿：哈修塔特湖區</span>
+      <!-- ========================================== -->
+      <!-- 雜誌風 Split Hero (直式封面 4:5 左圖右文) -->
+      <!-- ========================================== -->
+      <section class="split-hero">
+        <div class="split-hero-img-wrap">
+          <a href="../images/ig/17869170573551215.jpg" class="glightbox" data-gallery="blog-day01-hero" data-title="薩爾斯堡老城與要塞遠眺 · 2026 冬">
+            <img src="../images/ig/17869170573551215.jpg" alt="薩爾斯堡老城冬景">
+          </a>
         </div>
-        <h1 style="font-family: var(--font-heading); font-size: 2.2rem; line-height: 1.3; color: var(--primary); margin-bottom: 0.75rem;">
-          Day 01：莫札特的家，我來過三次了 — 冰雪公路與哈修塔特抵達
-        </h1>
-        <p style="color: var(--text-sub); font-size: 1.05rem;">
-          從慕尼黑機場踏入零下的冷冽空氣，取了配備冬胎的座駕，沿著 A8 冰雪高速一路南下。原因不重要，反正我又來到了這座音樂之城。
-        </p>
-      </header>
-
-      <!-- 封面 Hero 大圖 (GLightbox) -->
-      <figure style="margin: 0 0 2rem;">
-        <a href="../images/ig/17869170573551215.jpg" class="glightbox" data-gallery="blog-day01" data-title="薩爾斯堡老城與要塞遠眺 · 2026 冬">
-          <img src="../images/ig/17869170573551215.jpg" alt="薩爾斯堡老城" class="blog-hero-image">
-        </a>
-        <figcaption class="blog-hero-caption">❄️ 薩爾斯堡冬日街景：莫札特的家，我來過三次了。原因不重要，反正我又來了。</figcaption>
-      </figure>
+        <div class="split-hero-content">
+          <div class="hero-badge-group" style="margin-bottom: 0.75rem;">
+            <span class="badge badge-alpine">📍 慕尼黑 ➔ 薩爾斯堡 ➔ 哈修塔特</span>
+            <span class="badge badge-gold">📅 2026/1/26 (一)</span>
+            <span class="badge badge-forest">🏨 宿：哈修塔特湖區</span>
+          </div>
+          <h1 style="font-family: var(--font-heading); font-size: 2.1rem; line-height: 1.3; color: var(--primary); margin-bottom: 0.75rem;">
+            Day 01：莫札特的家，我來過三次了
+          </h1>
+          <p style="color: var(--text-sub); font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.25rem;">
+            從慕尼黑機場取了配備冬胎的座駕，沿著 A8 冰雪公路一路南下。時隔多年重訪這座被音符與巴洛克建築包圍的城鎮，原因不重要，反正我又來了。
+          </p>
+          <div style="font-size: 0.88rem; color: var(--text-muted); display: flex; gap: 1rem;">
+            <span>🚗 自駕約 225 km</span>
+            <span>⏱️ 車程約 3.5 小時</span>
+          </div>
+        </div>
+      </section>
 
       <!-- ========================================== -->
-      <!-- 【第 1 層：現場微光】IG 原生照片牆 (以貼文為單位) -->
+      <!-- 【第 1 層：現場微光】IG 原生照片牆 (直式 4:5 雙拼與三拼網格) -->
       <!-- ========================================== -->
       <div style="display: flex; align-items: center; justify-content: space-between; margin: 3rem 0 1rem;">
         <h2 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--primary);">
@@ -74,7 +79,7 @@
         <span class="badge badge-gold">現場真實記錄</span>
       </div>
 
-      <!-- IG 貼文: 薩爾斯堡 (5 張照片) -->
+      <!-- IG 貼文: 薩爾斯堡 (5 張直式照片) -->
       <div class="ig-post-card">
         <div class="ig-post-header">
           <div class="ig-post-avatar">🎵</div>
@@ -86,28 +91,34 @@
         <div class="ig-post-caption">#奧地利 薩爾茲堡
 莫札特的家，我來過三次了。
 原因不重要，反正我又來了。</div>
-        <div class="photo-grid photo-grid-4">
-          <div class="photo-grid-item">
+
+        <!-- 直式雙拼 (2-Column Duo: 4:5 比例並排) -->
+        <div class="portrait-duo">
+          <div class="portrait-item">
             <a href="../images/ig/17869170573551215.jpg" class="glightbox" data-gallery="ig-post-day01" data-title="Salzburg, Austria · 2026/02/03 (1/5)">
               <img src="../images/ig/17869170573551215.jpg" alt="Salzburg 1">
             </a>
           </div>
-          <div class="photo-grid-item">
+          <div class="portrait-item">
             <a href="../images/ig/17848709826671858.jpg" class="glightbox" data-gallery="ig-post-day01" data-title="Salzburg, Austria · 2026/02/03 (2/5)">
               <img src="../images/ig/17848709826671858.jpg" alt="Salzburg 2">
             </a>
           </div>
-          <div class="photo-grid-item">
+        </div>
+
+        <!-- 直式三拼 (3-Column Trio: 4:5 比例並排) -->
+        <div class="portrait-trio">
+          <div class="portrait-item">
             <a href="../images/ig/18080030972253620.jpg" class="glightbox" data-gallery="ig-post-day01" data-title="Salzburg, Austria · 2026/02/03 (3/5)">
               <img src="../images/ig/18080030972253620.jpg" alt="Salzburg 3">
             </a>
           </div>
-          <div class="photo-grid-item">
+          <div class="portrait-item">
             <a href="../images/ig/18404555965120428.jpg" class="glightbox" data-gallery="ig-post-day01" data-title="Salzburg, Austria · 2026/02/03 (4/5)">
               <img src="../images/ig/18404555965120428.jpg" alt="Salzburg 4">
             </a>
           </div>
-          <div class="photo-grid-item">
+          <div class="portrait-item">
             <a href="../images/ig/18118708651584568.jpg" class="glightbox" data-gallery="ig-post-day01" data-title="Salzburg, Austria · 2026/02/03 (5/5)">
               <img src="../images/ig/18118708651584568.jpg" alt="Salzburg 5">
             </a>
