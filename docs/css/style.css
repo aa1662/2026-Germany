@@ -392,6 +392,32 @@ button {
   transform: scale(0.96);
 }
 
+/* Google Maps Navigation Link */
+.btn-map {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: var(--bg-page);
+  color: var(--primary);
+  border: 1px solid var(--border-color);
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-md);
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-left: 0.35rem;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.btn-map:hover {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-1px);
+}
+
 /* ---------- 10. Timeline & Itinerary Cards ---------- */
 .timeline-card {
   background: var(--bg-card);
