@@ -440,7 +440,7 @@ button {
   padding: 1rem 0;
 }
 
-/* 雜誌風 Split Hero (專治直式照片封面) */
+/* 雜誌風 Split Hero (直式照片封面) */
 .split-hero {
   display: grid;
   grid-template-columns: 5fr 7fr;
@@ -479,11 +479,87 @@ button {
   justify-content: center;
 }
 
+/* ---------- 時光對照雙聯屏 Diptych Hero (2014夏 vs 2026冬) ---------- */
+.diptych-hero {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: 1.75rem;
+  margin: 1.5rem 0 2.5rem;
+  box-shadow: var(--shadow-md);
+}
+
+.diptych-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.diptych-frame {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  box-shadow: var(--shadow-sm);
+}
+
+.diptych-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: zoom-in;
+  transition: transform var(--transition-normal);
+}
+
+.diptych-frame:hover img {
+  transform: scale(1.03);
+}
+
+.diptych-tag {
+  position: absolute;
+  bottom: 0.85rem;
+  left: 0.85rem;
+  background: rgba(15, 39, 68, 0.88);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  letter-spacing: 0.02em;
+}
+
+.diptych-tag-summer {
+  background: rgba(21, 128, 61, 0.88);
+}
+
+.diptych-tag-winter {
+  background: rgba(2, 132, 199, 0.88);
+}
+
+.diptych-quote {
+  background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+  border-left: 4px solid var(--accent);
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-md);
+  margin-top: 1rem;
+  color: #92400e;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
 @media (max-width: 768px) {
   .split-hero {
     grid-template-columns: 1fr;
     padding: 1.25rem;
     gap: 1.5rem;
+  }
+
+  .diptych-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 }
 
