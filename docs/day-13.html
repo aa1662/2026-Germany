@@ -3,283 +3,241 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Day 13: 新天鵝堡馬車上山、歌手廳、阿爾卑斯湖、帕特納赫峽谷冬季冰瀑、Das Graseck 隱藏優勢">
-  <title>Day 13 - 夢幻騎士堡 ↔ 藍色冰瀑奇緣 | 2026 德國冬季之旅</title>
+  <meta name="description" content="Day 13 時間表: 楚格峰登頂德國最高峰 (2962m)、阿爾卑斯四國全景俯瞰、帕特納赫冰瀑峽谷 (Partnachklamm)、加米許老街濕壁畫">
+  <title>Day 13 時間表 - 楚格峰登頂 ✕ 帕特納赫冬季冰瀑 | 2026 德國冬季之旅</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;900&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="vendor/glightbox/glightbox.min.css">
 </head>
 <body>
-  <nav class="navbar">
+  <div class="reading-progress"></div>
+
+  <nav class="site-nav">
     <div class="container">
-      <a href="index.html" class="navbar-brand">🇩🇪 2026 德國冬季之旅</a>
-      <ul class="navbar-menu">
+      <a href="index.html" class="brand-link">
+        <span>🇩🇪 2026 德南冬旅誌</span>
+        <span class="brand-badge">Travel OS</span>
+      </a>
+      <ul class="nav-links">
         <li><a href="index.html">首頁</a></li>
-        <li><a href="index.html#timeline">行程總覽</a></li>
-        <li><a href="day-01.html" class="active">每日行程</a></li>
-        <li class="dropdown">
-          <a href="#">城市指南 ▾</a>
-          <ul class="dropdown-menu">
-            <li><a href="guide-hallstatt.html">哈修塔特區</a></li>
-            <li><a href="guide-wurzburg.html">符茲堡區</a></li>
-            <li><a href="guide-heidelberg.html">海德堡區</a></li>
-            <li><a href="guide-colmar.html">科爾馬區</a></li>
-            <li><a href="guide-garmisch.html">加米許區</a></li>
-          </ul>
-        </li>
+        <li><a href="index.html#itinerary">15天行程</a></li>
+        <li><a href="day-13.html" class="active">純時間表</a></li>
+        <li><a href="blog/day-02-blog.html">精選遊記</a></li>
       </ul>
-      <button class="navbar-share" title="分享此行程">📤 分享</button>
-      <button class="navbar-toggle" aria-label="選單" aria-expanded="false">☰</button>
+      <button class="nav-share-btn btn-share"><span>📤 分享</span></button>
     </div>
   </nav>
 
-  <div class="container">
-    <div class="day-switcher">
-      <a href="day-01.html" class="day-btn">1</a><a href="day-02.html" class="day-btn">2</a><a href="day-03.html" class="day-btn">3</a>
-      <a href="day-04.html" class="day-btn">4</a><a href="day-05.html" class="day-btn">5</a><a href="day-06.html" class="day-btn">6</a>
-      <a href="day-07.html" class="day-btn">7</a><a href="day-08.html" class="day-btn">8</a><a href="day-09.html" class="day-btn">9</a>
-      <a href="day-10.html" class="day-btn">10</a><a href="day-11.html" class="day-btn">11</a><a href="day-12.html" class="day-btn">12</a>
-      <a href="day-13.html" class="day-btn active">13</a><a href="day-14.html" class="day-btn">14</a><a href="day-15.html" class="day-btn">15</a>
+  <main class="container">
+    <nav class="day-nav-bar" aria-label="天數切換">
+      <a href="day-01.html" class="day-nav-btn">Day 1</a>
+      <a href="day-02.html" class="day-nav-btn">Day 2</a>
+      <a href="day-03.html" class="day-nav-btn">Day 3</a>
+      <a href="day-04.html" class="day-nav-btn">Day 4</a>
+      <a href="day-05.html" class="day-nav-btn">Day 5</a>
+      <a href="day-06.html" class="day-nav-btn">Day 6</a>
+      <a href="day-07.html" class="day-nav-btn">Day 7</a>
+      <a href="day-08.html" class="day-nav-btn">Day 8</a>
+      <a href="day-09.html" class="day-nav-btn">Day 9</a>
+      <a href="day-10.html" class="day-nav-btn">Day 10</a>
+      <a href="day-11.html" class="day-nav-btn">Day 11</a>
+      <a href="day-12.html" class="day-nav-btn">Day 12</a>
+      <a href="day-13.html" class="day-nav-btn active">Day 13</a>
+      <a href="day-14.html" class="day-nav-btn">Day 14</a>
+      <a href="day-15.html" class="day-nav-btn">Day 15</a>
+    </nav>
+
+    <!-- 1. 當日摘要 Hero Bento -->
+    <header class="schedule-hero-card">
+      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <span class="badge badge-alpine">🏔️ 德國巔峰之巔：2,962m</span>
+        <span class="badge badge-forest">❄️ 巨型天然冰瀑峽谷</span>
+        <span class="badge badge-gold">🚠 全景超大纜車</span>
+        <span class="badge badge-glass">🏨 連住第 2 晚：加米許</span>
+      </div>
+      <div>
+        <h1 style="font-family: var(--font-heading); font-size: 2.1rem; line-height: 1.3; margin-bottom: 0.5rem; color: #fff;">
+          Day 13：楚格峰頂 360° 壯闊全景 ✕ 帕特納赫冰瀑奇觀
+        </h1>
+        <p style="color: rgba(255, 255, 255, 0.9); font-size: 1.05rem;">
+          📅 2026/2/7 (六) ｜ 乘坐高空纜車登頂德國第一高峰楚格峰俯瞰四國千座雪山，午後深入帕特納赫峽谷探訪宛如冰雪奇緣的數十公尺巨型藍冰瀑布。
+        </p>
+      </div>
+    </header>
+
+    <!-- 2. 行前檢核與避坑 Bento -->
+    <section class="bento-grid">
+      <div class="bento-card bento-col-6">
+        <h3 style="color: var(--primary); font-size: 1.15rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.4rem;">
+          🎫 楚格峰與冰瀑實戰指南
+        </h3>
+        <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.92rem; line-height: 1.7; color: var(--text-sub);">
+          <li><strong>楚格峰套票 (Zugspitze Round Trip)</strong>：包含艾布湖纜車（Seilbahn Zugspitze）、齒軌火車（Zahnradbahn）與冰川纜車（Gletscherbahn）。</li>
+          <li><strong>高山防寒必備</strong>：峰頂氣溫通常在 -10°C ~ -15°C，務必穿著防風羽絨、保暖毛帽、太陽眼鏡（防雪盲）與防滑靴。</li>
+          <li><strong>峽谷開放時間</strong>：帕特納赫峽谷（Partnachklamm）冬季通常 08:00 - 18:00 開放（門票 €7.5/人）。</li>
+        </ul>
+      </div>
+
+      <div class="bento-card bento-col-6" style="background: var(--daruma-light); border-color: rgba(220, 38, 38, 0.3);">
+        <h3 style="color: var(--daruma-red); font-size: 1.15rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.4rem;">
+          ⚠️ TripNG 冰瀑峽谷避坑警示
+        </h3>
+        <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.92rem; line-height: 1.7; color: #7f1d1d;">
+          <li><strong>峽谷滴水與防滑</strong>：峽谷岩壁走道內常有冰融滴水，路面極滑，請穿著防水外套與抓地雪靴，勿攜帶大型腳架阻礙狹窄步道。</li>
+          <li><strong>奧運滑雪跳台停車</strong>：峽谷入口停車場位於 <a href="https://maps.google.com/?q=Skistadion+Garmisch" target="_blank" rel="noopener" class="text-map-link"><code>Olympia Skistadion</code></a>，停妥後需沿溪畔步行約 20 分鐘至峽谷售票處。</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 3. 視覺化時間軸 -->
+    <section style="margin: 3rem 0 1.5rem;">
+      <h2 style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--primary); margin-bottom: 1.5rem;">
+        ⏱️ 當日精確時間表 (Schedule Timeline)
+      </h2>
+
+      <div class="timeline-section">
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">08:30 🚠 艾布湖纜車 ➔ 登頂楚格峰 (2,962m)</span>
+              <div><span class="badge badge-alpine">德國之巔</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub); margin-bottom: 0.5rem;">
+              驅車至艾布湖畔纜車站，搭乘破世界三項工程紀錄的 <a href="https://maps.google.com/?q=Zugspitze+Cable+Car" target="_blank" rel="noopener" class="text-map-link">楚格峰高空全景纜車</a>，10 分鐘直抵巔峰。
+            </p>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">
+              登上德國最高觀景露台，360 度眺望德、奧、意、瑞四國超過 400 座白雪覆蓋的阿爾卑斯群峰與雲海。
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">10:30 ❄️ 楚格峰冰川平台 (Zugspitzplatt) ✕ 全景午餐</span>
+              <div><span class="badge badge-gold">萬年冰川</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub); margin-bottom: 0.5rem;">
+              搭乘冰川纜車降至海拔 2,600 公尺之冰川平台，參觀德國最高天主教瑪麗亞升天禮拜堂。
+            </p>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">
+              於全景景觀餐廳品嚐熱騰騰的阿爾卑斯高山燉牛肉湯（Gulaschsuppe）與香脆薯條。
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">13:00 🚂 齒軌火車下山 ➔ 奧林匹克跳台球場</span>
+              <div><span class="badge badge-wine">齒軌列車</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub);">
+              搭乘齒軌火車穿過山體隧道返回山腳，開車前往加米許 1936 年冬季奧運跳台球場（Olympia Skistadion）。
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">14:00 🧊 深入帕特納赫峽谷 (Partnachklamm) 冬季冰瀑</span>
+              <div><span class="badge badge-forest">冰雪奇緣實景</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub); margin-bottom: 0.5rem;">
+              徒步走進深達 80 公尺的 <a href="https://maps.google.com/?q=Partnach+Gorge" target="_blank" rel="noopener" class="text-map-link">帕特納赫冰瀑峽谷 (Partnachklamm)</a>。
+            </p>
+            <ul style="font-size: 0.88rem; color: var(--text-muted); padding-left: 1.25rem; line-height: 1.6;">
+              <li>兩側懸崖峭壁掛滿長達數十公尺的巨型藍色冰柱與冰瀑，奔騰溪水在冰層下穿梭，視覺極致震撼。</li>
+              <li>沿岩壁隧道與棧道漫步約 700 公尺，宛如踏入真實版《冰雪奇緣》艾莎城堡。</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">16:30 🎨 帕滕基興路德維希老街 (Ludwigstraße) 漫步</span>
+              <div><span class="badge badge-gold">彩繪壁畫屋</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub); margin-bottom: 0.5rem;">
+              漫步於 <a href="https://maps.google.com/?q=Ludwigstrasse+Garmisch" target="_blank" rel="noopener" class="text-map-link">路德維希街 (Ludwigstraße)</a>。
+            </p>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">
+              欣賞巴伐利亞傳統山形房屋外牆上細緻華麗的「呂夫特爾濕壁畫（<button class="btn-audio" data-pronounce="Lüftlmalerei" data-lang="de-DE">Lüftlmalerei 🔊</button>）」，描繪聖經故事與高山狩獵風情。
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">18:30 ♨️ 高山溫泉 SPA ✕ 暖心阿爾卑斯晚宴</span>
+              <div><span class="badge badge-wine">溫泉放鬆</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub);">
+              返回飯店享受溫泉水療 SPA，晚間品嚐高山傳統起司煎餅（Kasspatzn）與熱蘋果卷。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. POI 速查 -->
+    <section style="margin: 3.5rem 0 2rem;">
+      <h2 style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--primary); margin-bottom: 1.25rem;">
+        📍 今日景點與美食速查 (At-a-Glance)
+      </h2>
+      <div class="bento-grid">
+        <div class="bento-card bento-col-4">
+          <span class="badge badge-alpine">🏔️ 德國第一峰</span>
+          <h4 style="margin: 0.5rem 0 0.25rem; color: var(--primary);">
+            <a href="https://maps.google.com/?q=Zugspitze" target="_blank" rel="noopener" class="text-map-link">楚格峰 (Zugspitze)</a>
+          </h4>
+          <p style="font-size: 0.88rem; color: var(--text-sub); line-height: 1.6;">
+            海拔 2,962 公尺，全德最高點，四國群峰無死角全景觀景台。
+          </p>
+        </div>
+
+        <div class="bento-card bento-col-4">
+          <span class="badge badge-forest">🧊 巨型冰瀑</span>
+          <h4 style="margin: 0.5rem 0 0.25rem; color: var(--primary);">
+            <a href="https://maps.google.com/?q=Partnach+Gorge" target="_blank" rel="noopener" class="text-map-link">帕特納赫冰瀑峽谷</a>
+          </h4>
+          <p style="font-size: 0.88rem; color: var(--text-sub); line-height: 1.6;">
+            冬季限定巨型冰柱冰瀑奇觀，深谷穿鑿棧道令人屏息。門票 €7.5。
+          </p>
+        </div>
+
+        <div class="bento-card bento-col-4">
+          <span class="badge badge-gold">🎨 濕壁畫名街</span>
+          <h4 style="margin: 0.5rem 0 0.25rem; color: var(--primary);">
+            <a href="https://maps.google.com/?q=Ludwigstrasse+Garmisch" target="_blank" rel="noopener" class="text-map-link">路德維希街 (Ludwigstraße)</a>
+          </h4>
+          <p style="font-size: 0.88rem; color: var(--text-sub); line-height: 1.6;">
+            阿爾卑斯傳統濕壁畫（Lüftlmalerei）大師之作，木雕店與傳統工藝薈萃。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 導覽按鈕 -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin: 3.5rem 0 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
+      <a href="day-12.html" style="font-weight: 600; color: var(--primary); font-size: 0.95rem;">← 前一天：Day 12 黑森林 ➔ 加米許</a>
+      <a href="day-14.html" style="font-weight: 600; color: var(--primary); font-size: 0.95rem;">下一天：Day 14 新天鵝堡童話雪景 →</a>
     </div>
+  </main>
+
+  <div class="mobile-dock">
+    <a href="index.html" class="dock-item"><span class="dock-icon">🏠</span><span>首頁</span></a>
+    <a href="day-13.html" class="dock-item active"><span class="dock-icon">⏱️</span><span>時間表</span></a>
+    <a href="blog/day-02-blog.html" class="dock-item"><span class="dock-icon">📖</span><span>遊記</span></a>
+    <a href="javascript:void(0)" class="dock-item btn-share"><span class="dock-icon">📤</span><span>分享</span></a>
   </div>
 
-  <section class="daily-schedule">
-    <div class="container">
-      <div class="schedule-header">
-        <h1>Day 13：夢幻騎士堡 ↔ 藍色冰瀑奇緣 🏰❄️</h1>
-        <p class="schedule-meta">📅 2026/2/7 (六) ｜ 🚗 來回約 120 公里 ｜ 🎫 需預訂門票</p>
-        <div class="schedule-info-bar">
-          <span class="hotel-badge">🏨 住宿：加米許 Das Graseck</span>
-          <a href="guide-garmisch.html" class="guide-link">📖 城市指南</a>
-        </div>
-      </div>
-
-      <div class="attraction-winter-note" style="margin-bottom:1rem;">
-        🎫 <strong>今日交通：</strong>自駕（Garmisch ↔ Fussen）+ 馬車 + 飯店私人纜車。
-      </div>
-      <div class="attraction-winter-note" style="margin-bottom:1.5rem;">
-        🌡️ <strong>冬季提醒：</strong>2 月的新天鵝堡山區體感溫度約 -5°C，請務必攜帶暖暖包。
-      </div>
-
-      <h2>📸 冬季網美攻略</h2>
-      <div class="collapsible">
-        <div class="collapsible-header"><span class="collapsible-title">🏰 夢幻城堡 + 藍色冰瀑「長靴女孩」攻略</span><span class="collapsible-icon">▼</span></div>
-        <div class="collapsible-body">
-          <p style="margin-bottom:1rem;">今天是 <strong>童話城堡日</strong>，重點是馬車上下山保護長靴，以及下午的帕特納赫峽谷冬季冰瀑（2 月限定）。</p>
-          <table class="schedule-table">
-            <thead><tr><th>景點名稱</th><th>📸 網美拍照攻略</th><th>冬季特別考量與「長靴」警告</th></tr></thead>
-            <tbody>
-              <tr><td>★ 新天鵝堡</td><td>📸 馬車站到城堡門口這段下坡，是抓拍長靴背影與城堡尖塔的最佳角度<br>城堡正門前的露台風景同樣壯麗</td><td>⚠️ 警告：冬季巴士停駛，馬車 drops off 後仍需步行 5-10 分鐘，請牽好女兒</td></tr>
-              <tr><td>🏞️ 阿爾卑斯湖</td><td>📸 在停車場旁步行 2 分鐘即可到湖邊，拍一張倒影照</td><td>⚠️ 體檢：絕不環湖！穿長靴環湖 1 小時是災難，拍完照直接上車</td></tr>
-              <tr><td>★ 帕特納赫峽谷</td><td>📸 藍色冰瀑：這是 2 月限定！在結冰的岩壁前拍人像，視覺效果極度震撼</td><td>⚠️ 極重要：峽谷內地面濕、滑、冷。長靴若無抓地力會非常危險。建議在車上換上防滑鞋墊</td></tr>
-            </tbody>
-          </table>
-
-          <div class="attraction-winter-note" style="margin-top:1.5rem;">
-            🩺 <strong>今日旅程小提醒（針對長靴女孩與專業父親）</strong>
-          </div>
-          <ol style="margin-top:0.5rem;">
-            <li><strong>「馬車」是唯一選擇：</strong>新天鵝堡的上坡路在冬季常有融雪形成的「黑冰」。馬車雖然慢且有味道，但它能保護女兒那雙漂亮的長靴不被泥濘噴濺，也能讓她的腳踝不至於在 40 分鐘的爬坡中受傷。</li>
-            <li><strong>Das Graseck 的隱藏優勢（峽谷戰略）：</strong>由於您們住在 Das Graseck，您可以向飯店詢問「從山上進入峽谷」的路線。省力法：從飯店往下走一小段路即可到達峽谷的上游入口，這比從山下停車場走 20 分鐘上坡路要輕鬆得多！</li>
-            <li><strong>峽谷內部的「生物力學」：</strong>帕特納赫峽谷在冬季會因為結冰而變得狹窄。長靴女孩步行時，建議您擔任「前鋒」，確認地面不滑再讓她跟進。如果您有隨身攜帶簡易型冰爪 (Crampons)，這時候幫女兒套在長靴上，您就是她心目中的超級英雄。</li>
-            <li><strong>專業背景的觀察點：</strong>在城堡內參觀時，可以留意路德維希二世對人工鍾乳石洞穴的設計。身為生科人，您可以與女兒討論那個年代如何利用舞台燈光與建築技術來模仿自然界的「鈣化景觀」，這會讓純拍照的行程多了一層知性美。</li>
-          </ol>
-        </div>
-      </div>
-
-      <h2>📋 當日時間表（優化調整版）</h2>
-      <div class="collapsible">
-        <div class="collapsible-header"><span class="collapsible-title">08:30 Das Graseck 出發 → 19:00 晚餐</span><span class="collapsible-icon">▼</span></div>
-        <div class="collapsible-body">
-          <table class="schedule-table">
-            <thead><tr><th>時間</th><th>活動內容</th><th>交通/攝影&備註</th></tr></thead>
-            <tbody>
-              <tr><td class="schedule-time">08:30</td><td>從 Das Graseck 出發</td><td>🚡 搭飯店纜車下山取車<br>🚗 開車前往霍恩施萬高</td></tr>
-              <tr><td class="schedule-time">09:30</td><td>抵達 P4 停車場</td><td>🅿️ P4 最近（€10-12/天）<br>停好車後立刻去馬車站排隊</td></tr>
-              <tr><td class="schedule-time">10:00</td><td>馬車上山 (Horse Carriage)</td><td>🐴 重點：絕不走路！<br>馬車只到半山腰，但能省下 80% 的體力<br>上山 €8</td></tr>
-              <tr><td class="schedule-time">10:30</td><td>新天鵝堡導覽（預約場次）</td><td>🏰 內部不可拍照<br>歌手廳（Sangersaal）的音響效果值得細細品味</td></tr>
-              <tr><td class="schedule-time">11:30</td><td>城堡觀景台拍照</td><td>📸 若瑪麗安橋關閉，請改在城堡正門前的露台拍攝</td></tr>
-              <tr><td class="schedule-time">12:00</td><td>馬車下山</td><td>🐴 下山對長靴腳趾壓力大，繼續坐馬車是明智之舉<br>下山 €4</td></tr>
-              <tr><td class="schedule-time">12:30</td><td>阿爾卑斯湖畔午餐</td><td>🍽️ 在 Hohenschwangau 村莊簡單用餐<br>📸 在湖邊拍張長靴美照即可</td></tr>
-              <tr><td class="schedule-time">14:00</td><td>返回加米許</td><td>🚗 自駕回奧林匹克滑雪場停車場</td></tr>
-              <tr><td class="schedule-time">15:00</td><td>帕特納赫峽谷 (Partnachklamm)</td><td>🚡 關鍵：從飯店纜車站步行進入<br>❄️ 冬季冰瀑是重點！</td></tr>
-              <tr><td class="schedule-time">17:00</td><td>返回飯店享用設施</td><td>🧖 回 Das Graseck 泡熱水澡<br>舒緩穿了一天長靴的小腿</td></tr>
-              <tr><td class="schedule-time">19:00</td><td>飯店晚餐</td><td>🍷 Das Graseck Fine Dining</td></tr>
-            </tbody>
-          </table>
-
-          <div class="attraction-winter-note" style="margin-top:1.5rem;">
-            💡 <strong>當日重點：</strong><br>
-            ⚠️ 新天鵝堡必須提前預訂門票！官網：hohenschwangau.de<br>
-            ✅ 馬車上下山（保護長靴、省體力）<br>
-            ✅ 帕特納赫峽谷冬季冰瀑（2 月限定）<br>
-            ✅ Das Graseck 隱藏優勢：從飯店往下走即可到達峽谷上游入口<br>
-            ⚠️ 當日車程統計：約 120 公里 / 約 2 小時
-          </div>
-        </div>
-      </div>
-
-      <!-- 新天鵝堡景點詳情 -->
-      <section class="attractions">
-        <h2>📍 新天鵝堡景點詳情</h2>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">★ 新天鵝堡 Neuschwanstein Castle</h3>
-            <p class="attraction-desc">世界最著名的童話城堡！路德維希二世的夢幻傑作，迪士尼城堡的原型。必看：王座廳（拜占庭風格）、歌手廳（仿瓦特堡）、國王臥室（4.5 年製作木雕）、人工鍾乳石洞穴 (Grotte)。</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">💰</span><span>門票 €15-18</span></div>
-              <div class="attraction-info-item"><span class="icon">⏰</span><span>冬季 10:00-16:00</span></div>
-              <div class="attraction-info-item"><span class="icon">📷</span><span>內部禁止拍照</span></div>
-              <div class="attraction-info-item"><span class="icon">🐴</span><span>馬車上山 €8 / 下山 €4</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 雪景中更夢幻！冬季遊客較少，參觀品質高。馬車 drops off 後仍需步行 5-10 分鐘</div>
-            <div class="attraction-actions">
-              <a href="https://www.hohenschwangau.de/" target="_blank" rel="noopener" class="btn btn-more">🎫 官網預訂門票</a>
-              <a href="https://www.google.com/maps/search/?api=1&query=Neuschwanstein+Castle" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">📸 瑪麗安橋 Marienbrucke</h3>
-            <p class="attraction-desc">經典城堡拍攝角度，橫跨峽谷的懸索橋，距城堡約 15 分鐘步行。但冬季經常因安全原因關閉！</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">⚠️</span><span>冬季常關閉</span></div>
-              <div class="attraction-info-item"><span class="icon">📷</span><span>替代點：城堡東側觀景台</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 出發前查官網確認是否開放</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Marienbrucke+Neuschwanstein" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">🏞️ 阿爾卑斯湖 Alpsee</h3>
-            <p class="attraction-desc">城堡下方的翠綠湖泊，在停車場旁步行 2 分鐘即可到湖邊。</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">💰</span><span>免費參觀</span></div>
-              <div class="attraction-info-item"><span class="icon">📸</span><span>拍一張倒影照即可</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 體檢：絕不環湖！穿長靴環湖 1 小時是災難，拍完照直接上車</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Alpsee+Hohenschwangau" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 帕特納赫峽谷景點詳情 -->
-      <section class="attractions">
-        <h2>📍 帕特納赫峽谷景點詳情</h2>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">★ 帕特納赫峽谷 Partnachklamm</h3>
-            <p class="attraction-desc">全長約 700 公尺的峽谷，沿帕特納赫溪流開鑿，兩側岩壁高達 80 公尺。冬季峽谷內的瀑布結冰，形成壯觀的冰柱和冰簾！</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">💰</span><span>門票 €7.5</span></div>
-              <div class="attraction-info-item"><span class="icon">⏱️</span><span>全程約 1.5-2 小時</span></div>
-              <div class="attraction-info-item"><span class="icon">👟</span><span>穿防水防滑鞋！</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ <strong>冬季冰瀑是加米許最大亮點！</strong>攜帶手電筒備用。峽谷內地面濕、滑、冷</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Partnachklamm" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-              <a href="guide-garmisch.html#partnachklamm" class="btn btn-more">📖 了解更多</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">❄️ 冬季冰瀑奇景</h3>
-            <p class="attraction-desc">冬季峽谷內的瀑布結冰，形成壯觀的冰柱和冰簾，是加米許冬季最大亮點。這是冬季造訪加米許的最大理由！</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">📸</span><span>藍色冰瀑，2 月限定</span></div>
-              <div class="attraction-info-item"><span class="icon">⚠️</span><span>拍照注意安全，腳下濕滑</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 建議在車上換上防滑鞋墊。如有簡易型冰爪 (Crampons) 更佳</div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 必買伴手禮 -->
-      <section class="attractions">
-        <h2>🛍️ 必買伴手禮</h2>
-        <div class="collapsible">
-          <div class="collapsible-header"><span class="collapsible-title">新天鵝堡紀念品</span><span class="collapsible-icon">▼</span></div>
-          <div class="collapsible-body">
-            <table class="schedule-table">
-              <thead><tr><th>商品名稱</th><th>詳細介紹</th><th>價格參考</th></tr></thead>
-              <tbody>
-                <tr><td>★ 官方導覽手冊</td><td>城堡歷史與建築詳解</td><td>€10-15</td></tr>
-                <tr><td>城堡明信片套組</td><td>經典角度明信片</td><td>€5-10</td></tr>
-                <tr><td>城堡模型</td><td>精緻收藏品</td><td>€25-60</td></tr>
-                <tr><td>路德維希二世相關書籍</td><td>了解這位「童話國王」的傳奇人生</td><td>€15-30</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      <!-- 實用資訊 -->
-      <section class="attractions">
-        <h2>ℹ️ 實用資訊</h2>
-
-        <div class="collapsible">
-          <div class="collapsible-header"><span class="collapsible-title">🚗 停車資訊</span><span class="collapsible-icon">▼</span></div>
-          <div class="collapsible-body">
-            <p><strong>新天鵝堡（霍恩施萬高）：</strong></p>
-            <ul>
-              <li>★ <strong>P4 停車場</strong> - €10-12/天，最靠近售票中心</li>
-              <li>P1-P3 停車場也可使用</li>
-            </ul>
-            <p><strong>帕特納赫峽谷：</strong></p>
-            <ul>
-              <li>★ <strong>Olympia-Skistadion 停車場</strong> - €5-8</li>
-              <li>或從 Das Graseck 飯店往下走進入峽谷上游入口（省力法）</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="collapsible">
-          <div class="collapsible-header"><span class="collapsible-title">🐴 馬車資訊</span><span class="collapsible-icon">▼</span></div>
-          <div class="collapsible-body">
-            <ul>
-              <li><strong>上山：</strong>€8（馬車只到半山腰，但能省下 80% 的體力）</li>
-              <li><strong>下山：</strong>€4（下山對長靴腳趾壓力大，繼續坐馬車是明智之舉）</li>
-              <li><strong>注意：</strong>冬季巴士停駛，馬車是唯一選擇</li>
-              <li><strong>提醒：</strong>馬車 drops off 後仍需步行 5-10 分鐘到城堡入口</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="collapsible">
-          <div class="collapsible-header"><span class="collapsible-title">🚡 Das Graseck 隱藏優勢（峽谷戰略）</span><span class="collapsible-icon">▼</span></div>
-          <div class="collapsible-body">
-            <p>由於您們住在 Das Graseck，您可以向飯店詢問「從山上進入峽谷」的路線：</p>
-            <ul>
-              <li>★ <strong>省力法：</strong>從飯店往下走一小段路即可到達峽谷的上游入口</li>
-              <li>這比從山下停車場走 20 分鐘上坡路要輕鬆得多！</li>
-              <li>適合穿長靴的女孩，減少上坡負擔</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <div class="day-nav">
-        <a href="day-12.html">← Day 12</a>
-        <a href="day-14.html">Day 14 →</a>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer"><div class="container"><p>2026 德國南部冬季自駕之旅 | 個人旅遊規劃</p></div></footer>
-  <script src="js/main.js"></script>
+  <script src="vendor/glightbox/glightbox.min.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
-

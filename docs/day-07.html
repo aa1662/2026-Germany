@@ -1,360 +1,240 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Day 7: 符茲堡最後巡禮↔海德堡世界遺產自駕之旅，主教宮、瑪麗恩堡要塞攝影指南">
-  <title>Day 7 - 符茲堡最後巡禮↔海德堡（世界遺產自駕之旅）| 2026 德國冬季之旅</title>
+  <meta name="description" content="Day 7 時間表: 符茲堡主教宮世界最大濕壁畫、舊美茵橋舉杯白葡萄酒、瑪麗恩堡要塞俯瞰美茵河、自駕轉移至海德堡">
+  <title>Day 07 時間表 - 符茲堡主教宮 ➔ 海德堡轉移 | 2026 德國冬季之旅</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;900&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="vendor/glightbox/glightbox.min.css">
 </head>
 <body>
-  <nav class="navbar">
+  <div class="reading-progress"></div>
+
+  <nav class="site-nav">
     <div class="container">
-      <a href="index.html" class="navbar-brand">🇩🇪 2026 德國冬季之旅</a>
-      <ul class="navbar-menu">
+      <a href="index.html" class="brand-link">
+        <span>🇩🇪 2026 德南冬旅誌</span>
+        <span class="brand-badge">Travel OS</span>
+      </a>
+      <ul class="nav-links">
         <li><a href="index.html">首頁</a></li>
-        <li><a href="index.html#timeline">行程總覽</a></li>
-        <li><a href="day-01.html" class="active">每日行程</a></li>
-        <li class="dropdown">
-          <a href="#">城市指南 ▾</a>
-          <ul class="dropdown-menu">
-            <li><a href="guide-hallstatt.html">哈修塔特區</a></li>
-            <li><a href="guide-wurzburg.html">符茲堡區</a></li>
-            <li><a href="guide-heidelberg.html">海德堡區</a></li>
-            <li><a href="guide-colmar.html">科爾馬區</a></li>
-            <li><a href="guide-garmisch.html">加米許區</a></li>
-          </ul>
-        </li>
+        <li><a href="index.html#itinerary">15天行程</a></li>
+        <li><a href="day-07.html" class="active">純時間表</a></li>
+        <li><a href="blog/day-02-blog.html">精選遊記</a></li>
       </ul>
-      <button class="navbar-share" title="分享此行程">📤 分享</button>
-      <button class="navbar-toggle" aria-label="選單" aria-expanded="false">☰</button>
+      <button class="nav-share-btn btn-share"><span>📤 分享</span></button>
     </div>
   </nav>
 
-  <div class="container">
-    <div class="day-switcher">
-      <a href="day-01.html" class="day-btn">1</a><a href="day-02.html" class="day-btn">2</a><a href="day-03.html" class="day-btn">3</a>
-      <a href="day-04.html" class="day-btn">4</a><a href="day-05.html" class="day-btn">5</a><a href="day-06.html" class="day-btn">6</a>
-      <a href="day-07.html" class="day-btn active">7</a><a href="day-08.html" class="day-btn">8</a><a href="day-09.html" class="day-btn">9</a>
-      <a href="day-10.html" class="day-btn">10</a><a href="day-11.html" class="day-btn">11</a><a href="day-12.html" class="day-btn">12</a>
-      <a href="day-13.html" class="day-btn">13</a><a href="day-14.html" class="day-btn">14</a><a href="day-15.html" class="day-btn">15</a>
+  <main class="container">
+    <nav class="day-nav-bar" aria-label="天數切換">
+      <a href="day-01.html" class="day-nav-btn">Day 1</a>
+      <a href="day-02.html" class="day-nav-btn">Day 2</a>
+      <a href="day-03.html" class="day-nav-btn">Day 3</a>
+      <a href="day-04.html" class="day-nav-btn">Day 4</a>
+      <a href="day-05.html" class="day-nav-btn">Day 5</a>
+      <a href="day-06.html" class="day-nav-btn">Day 6</a>
+      <a href="day-07.html" class="day-nav-btn active">Day 7</a>
+      <a href="day-08.html" class="day-nav-btn">Day 8</a>
+      <a href="day-09.html" class="day-nav-btn">Day 9</a>
+      <a href="day-10.html" class="day-nav-btn">Day 10</a>
+      <a href="day-11.html" class="day-nav-btn">Day 11</a>
+      <a href="day-12.html" class="day-nav-btn">Day 12</a>
+      <a href="day-13.html" class="day-nav-btn">Day 13</a>
+      <a href="day-14.html" class="day-nav-btn">Day 14</a>
+      <a href="day-15.html" class="day-nav-btn">Day 15</a>
+    </nav>
+
+    <!-- 1. 當日摘要 Hero Bento -->
+    <header class="schedule-hero-card">
+      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <span class="badge badge-gold">🇩🇪 基地轉移：進駐海德堡</span>
+        <span class="badge badge-alpine">🚗 自駕轉移 130 km</span>
+        <span class="badge badge-forest">⏱️ 總車程約 1.5 小時</span>
+        <span class="badge badge-glass">🏨 宿：海德堡（連住 3 晚）</span>
+      </div>
+      <div>
+        <h1 style="font-family: var(--font-heading); font-size: 2.1rem; line-height: 1.3; margin-bottom: 0.5rem; color: #fff;">
+          Day 07：世界遺產主教宮 ✕ 舊美茵橋舉杯 ➔ 海德堡進駐
+        </h1>
+        <p style="color: rgba(255, 255, 255, 0.9); font-size: 1.05rem;">
+          📅 2026/2/1 (日) ｜ 上午仰望提也波洛世界最大階梯濕壁畫，舊美茵橋上端著玻璃杯品飲白酒，午後登上要塞，傍晚西行進駐浪漫海德堡。
+        </p>
+      </div>
+    </header>
+
+    <!-- 2. 行前檢核與避坑 Bento -->
+    <section class="bento-grid">
+      <div class="bento-card bento-col-6">
+        <h3 style="color: var(--primary); font-size: 1.15rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.4rem;">
+          🎫 符茲堡主教宮參觀重點
+        </h3>
+        <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.92rem; line-height: 1.7; color: var(--text-sub);">
+          <li><strong>開放時間</strong>：冬季 10:00 - 16:30（最後入場 16:00），門票 €9/人。</li>
+          <li><strong>宮殿前廣場停車</strong>：主教宮正前方有大型收費停車場（Residenzplatz），車位充裕。</li>
+          <li><strong>舊美茵橋「橋上酒（Brückenschoppen）」</strong>：至橋頭酒莊外帶一杯法蘭肯白酒（押金 €5），端著酒杯在聖人石雕旁品飲。</li>
+        </ul>
+      </div>
+
+      <div class="bento-card bento-col-6" style="background: var(--daruma-light); border-color: rgba(220, 38, 38, 0.3);">
+        <h3 style="color: var(--daruma-red); font-size: 1.15rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.4rem;">
+          ⚠️ TripNG 自駕轉移避坑警示
+        </h3>
+        <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.92rem; line-height: 1.7; color: #7f1d1d;">
+          <li><strong>理性飲酒原則</strong>：駕駛者在舊美茵橋上請品嚐無酒精葡萄汁（Traubensaft），絕不可酒後駕車。</li>
+          <li><strong>海德堡進城交通</strong>：週日傍晚海德堡老城周邊停車場容易客滿，建議先至飯店卸行李並使用飯店車位或停 P11 / P12。</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 3. 視覺化時間軸 -->
+    <section style="margin: 3rem 0 1.5rem;">
+      <h2 style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--primary); margin-bottom: 1.5rem;">
+        ⏱️ 當日精確時間表 (Schedule Timeline)
+      </h2>
+
+      <div class="timeline-section">
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">09:30 🏛️ 符茲堡主教宮 (Würzburger Residenz)</span>
+              <div><span class="badge badge-gold">世界文化遺產</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub); margin-bottom: 0.5rem;">
+              參觀被譽為「歐洲最美巴洛克宮殿」的 <a href="https://maps.google.com/?q=Wuerzburger+Residenz" target="_blank" rel="noopener" class="text-map-link">符茲堡主教宮</a>。
+            </p>
+            <ul style="font-size: 0.88rem; color: var(--text-muted); padding-left: 1.25rem; line-height: 1.6;">
+              <li>仰望威尼斯大師提也波洛繪製之 <strong>全球最大無支柱拱頂天頂濕壁畫（四大洲寓意）</strong>。</li>
+              <li>漫步奢華極致的白廳（Weißer Saal）與金碧輝煌的皇帝廳（Kaisersaal）。</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">11:30 🍷 舊美茵橋舉杯白葡萄酒 (Brückenschoppen)</span>
+              <div><span class="badge badge-wine">法蘭肯微醺</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub); margin-bottom: 0.5rem;">
+              步行至飾有 12 座巴洛克聖人雕像的 <a href="https://maps.google.com/?q=Alte+Mainbruecke+Wuerzburg" target="_blank" rel="noopener" class="text-map-link">舊美茵橋 (Alte Mainbrücke)</a>。
+            </p>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">
+              於橋頭小酒館點一杯清脆礦物風味的席爾瓦納白酒（<button class="btn-audio" data-pronounce="Silvaner" data-lang="de-DE">Silvaner 🔊</button>），憑欄遠眺瑪麗恩堡要塞與葡萄園梯田。
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">13:00 🍽️ 符茲堡舊城午餐</span>
+              <div><span class="badge badge-forest">老城酒香</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub);">
+              於市集廣場周邊餐廳享用午餐，品嚐法蘭肯脆皮豬肩肉（Schäufele）與馬鈴薯球。
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">14:30 🏰 瑪麗恩堡要塞 (Festung Marienberg) 俯瞰</span>
+              <div><span class="badge badge-wine">高空視野</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub); margin-bottom: 0.5rem;">
+              開車或步行登上對岸山丘之 <a href="https://maps.google.com/?q=Festung+Marienberg+Wuerzburg" target="_blank" rel="noopener" class="text-map-link">瑪麗恩堡要塞</a>。
+            </p>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">
+              要塞花園觀景台是俯瞰符茲堡全城、美茵河 S 型轉彎與舊美茵橋的最佳視角。
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">16:00 🚗 沿 A3 / A81 前往海德堡</span>
+              <div><span class="badge badge-alpine">自駕 130 km</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub);">
+              告別法蘭肯酒鄉，沿高速公路西行前往內卡河畔的浪漫主義古城海德堡，車程約 1.5 小時。
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">17:30 🏨 抵達海德堡 ✕ 老城浪漫漫步</span>
+              <div><span class="badge badge-forest">進駐基地三</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub);">
+              辦理飯店入住，傍晚漫步於全德最長徒步街海德堡主街（Hauptstraße），感受大學城的書卷與浪漫氣息。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. POI 速查 -->
+    <section style="margin: 3.5rem 0 2rem;">
+      <h2 style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--primary); margin-bottom: 1.25rem;">
+        📍 今日景點與美食速查 (At-a-Glance)
+      </h2>
+      <div class="bento-grid">
+        <div class="bento-card bento-col-4">
+          <span class="badge badge-gold">🏛️ 建築奇蹟</span>
+          <h4 style="margin: 0.5rem 0 0.25rem; color: var(--primary);">
+            <a href="https://maps.google.com/?q=Wuerzburger+Residenz" target="_blank" rel="noopener" class="text-map-link">符茲堡主教宮</a>
+          </h4>
+          <p style="font-size: 0.88rem; color: var(--text-sub); line-height: 1.6;">
+            提也波洛世界最大階梯濕壁畫，巴洛克宮殿顛峰之作。門票 €9。
+          </p>
+        </div>
+
+        <div class="bento-card bento-col-4">
+          <span class="badge badge-wine">🍷 橋上品酒</span>
+          <h4 style="margin: 0.5rem 0 0.25rem; color: var(--primary);">
+            <a href="https://maps.google.com/?q=Alte+Mainbruecke+Wuerzburg" target="_blank" rel="noopener" class="text-map-link">舊美茵橋 (Alte Mainbrücke)</a>
+          </h4>
+          <p style="font-size: 0.88rem; color: var(--text-sub); line-height: 1.6;">
+            端著玻璃酒杯在聖人石雕旁品嚐法蘭肯白葡萄酒，享受符茲堡最浪漫的生活儀式。
+          </p>
+        </div>
+
+        <div class="bento-card bento-col-4">
+          <span class="badge badge-alpine">🏰 要塞全景</span>
+          <h4 style="margin: 0.5rem 0 0.25rem; color: var(--primary);">
+            <a href="https://maps.google.com/?q=Festung+Marienberg+Wuerzburg" target="_blank" rel="noopener" class="text-map-link">瑪麗恩堡要塞</a>
+          </h4>
+          <p style="font-size: 0.88rem; color: var(--text-sub); line-height: 1.6;">
+            美茵河畔制高點，俯瞰整座主教之城與紅瓦古橋的最佳全景眺望點。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 導覽按鈕 -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin: 3.5rem 0 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
+      <a href="day-06.html" style="font-weight: 600; color: var(--primary); font-size: 0.95rem;">← 前一天：Day 06 羅騰堡童話</a>
+      <a href="day-08.html" style="font-weight: 600; color: var(--primary); font-size: 0.95rem;">下一天：Day 08 海德堡浪漫古城 →</a>
     </div>
+  </main>
+
+  <div class="mobile-dock">
+    <a href="index.html" class="dock-item"><span class="dock-icon">🏠</span><span>首頁</span></a>
+    <a href="day-07.html" class="dock-item active"><span class="dock-icon">⏱️</span><span>時間表</span></a>
+    <a href="blog/day-02-blog.html" class="dock-item"><span class="dock-icon">📖</span><span>遊記</span></a>
+    <a href="javascript:void(0)" class="dock-item btn-share"><span class="dock-icon">📤</span><span>分享</span></a>
   </div>
 
-  <section class="daily-schedule">
-    <div class="container">
-      <div class="schedule-header">
-        <h1>Day 7：符茲堡最後巡禮 ↔ 海德堡（世界遺產自駕之旅）🚗</h1>
-        <p class="schedule-meta">📅 2026/2/1 (日) ｜ 🚗 約 130 公里 ｜ 🏛️ 世界遺產主教宮</p>
-        <div class="schedule-info-bar">
-          <span class="hotel-badge">🏨 住宿：海德堡</span>
-          <a href="guide-heidelberg.html" class="guide-link">📖 城市指南</a>
-        </div>
-      </div>
-
-      <div class="attraction-winter-note" style="margin-bottom:1.5rem;">
-        ⚠️ <strong>週日警訊：</strong>德國週日商店全數關閉（含藥局、超市），購物行程請務必在前幾天完成。
-      </div>
-
-      <h2>📸 冬季網美攻略</h2>
-      <div class="collapsible">
-        <div class="collapsible-header"><span class="collapsible-title">❄️ 符茲堡最後巡禮網美攻略（10:00 - 14:30）</span><span class="collapsible-icon">▼</span></div>
-        <div class="collapsible-body">
-          <p style="margin-bottom:1rem;">這是符茲堡的最後一天，把握機會在世界遺產主教宮與瑪麗恩堡要塞留下最美的回憶。<strong>自駕優勢：</strong>行李直接放車上，車停飯店或主教宮旁停車場。</p>
-          <table class="schedule-table">
-            <thead><tr><th>時間</th><th>拍攝地點</th><th>攝影建議/備註</th></tr></thead>
-            <tbody>
-              <tr><td class="schedule-time">10:00</td><td>符茲堡主教宮 (Residence)</td><td>📸 室內禁止攝影，請專心欣賞濕壁畫與鏡廳<br>建築正前方的「法蘭克尼亞噴泉」是唯一能拍到主教宮全貌的點<br>裡面暖氣很足，是 1 月底躲避寒風的最佳景點</td></tr>
-              <tr><td class="schedule-time">11:30</td><td>宮廷花園 (Hofgarten)</td><td>📸 主教宮後方花園，巴洛克雕像配建築外牆極具氣勢<br>冬季植被較少，但對稱式造景非常適合長靴與大衣的搭配<br>這裡是補償室內不能拍的最佳地點</td></tr>
-              <tr><td class="schedule-time">12:15</td><td>市集廣場 & 獵鷹之屋</td><td>📸 獵鷹之屋：全德最華麗的洛可可裝飾外牆<br>鵝黃色的牆面在冬天陰天裡特別亮眼，適合拍人像特寫<br>週日內部旅遊中心可能休息，僅在外部拍照</td></tr>
-              <tr><td class="schedule-time">13:30</td><td>舊美茵橋 (Alte Mainbrücke)</td><td>📸 網美位：側靠在石橋欄杆，手拿圓腹瓶葡萄酒（或酒杯），背景對準山上的要塞<br>冬季橋上風很大，拍照時大衣扣子解開 30 秒拍完趕快扣上<br>買杯酒走上橋，拍下經典品酒照</td></tr>
-              <tr><td class="schedule-time">14:30</td><td>瑪麗恩堡要塞</td><td>📸 網美位：站在要塞露台，將美茵河與舊美茵橋收進鏡頭，這是符茲堡「最強全景」<br>🚗 自駕優勢：不用爬坡！導航設定「Parkplatz Festung Marienberg」，山頂停車場離觀景台很近，長靴穿搭無壓力</td></tr>
-            </tbody>
-          </table>
-
-          <div class="attraction-winter-note" style="margin-top:1.5rem;">
-            🩺 <strong>符茲堡最後巡禮體檢貼士（針對長靴女孩與爸爸）</strong>
-          </div>
-          <ol style="margin-top:0.5rem;">
-            <li><strong>「開車上要塞」是正解：</strong>瑪麗恩堡要塞的步行路線雖然有風景，但 1 月底的路面可能有薄冰，加上陡度高，穿長靴走這段路回飯店拿車會讓體力直接見底。既然有車，直接開上去要塞門口是給女兒最大的溫柔。</li>
-            <li><strong>主教宮的攝影遺憾補救：</strong>因為主教宮室內不能拍，女兒可能會有點失望。請爸爸在宮廷花園 (Hofgarten) 多花點心思，幫她拍一些「巴洛克名媛感」的照片作為補償。花園的對稱式造景非常適合長靴與大衣的搭配。</li>
-            <li><strong>週日停車與加油：</strong>週日符茲堡市區路邊停車通常比較容易，但主教宮旁就有付費地下停車場，最為保險。另外，離開符茲堡前記得檢查油箱，週日加油站雖有開，但有些無人加油站只收信用卡。</li>
-            <li><strong>海德堡初印象：</strong>海德堡的舊城區也是石板路。如果 17:30 抵達海德堡時女兒已經累了，建議直接在飯店附近吃晚餐就好，不需要強求當晚就逛完整個舊城，海德堡可以留給隔天再戰。</li>
-          </ol>
-        </div>
-      </div>
-
-      <h2>📋 當日時間表（充實版）</h2>
-      <div class="collapsible">
-        <div class="collapsible-header"><span class="collapsible-title">完整行程時間表（09:30 - 19:00）</span><span class="collapsible-icon">▼</span></div>
-        <div class="collapsible-body">
-          <table class="schedule-table">
-            <thead><tr><th>時間</th><th>活動內容</th><th>交通/攝影&備註</th></tr></thead>
-            <tbody>
-              <tr><td class="schedule-time">09:30</td><td>辦理退房、行李上車</td><td>🚗 自駕優勢：行李直接放車上，車停飯店或找主教宮旁停車場</td></tr>
-              <tr><td class="schedule-time">10:00</td><td>符茲堡主教宮 (Residence) 深度參觀</td><td>室內禁止攝影，請專心欣賞濕壁畫與鏡廳<br>門票 €9，週日 10:00-16:30</td></tr>
-              <tr><td class="schedule-time">11:30</td><td>宮廷花園 (Hofgarten)</td><td>📸 主教宮後方花園，巴洛克雕像配建築外牆極具氣勢</td></tr>
-              <tr><td class="schedule-time">12:15</td><td>市集廣場 & 午餐</td><td>推薦 Bürgerspital<br>週日氣氛溫馨，必喝當地白葡萄酒</td></tr>
-              <tr><td class="schedule-time">13:30</td><td>舊美茵橋 (Alte Mainbrücke)</td><td>📸 買杯酒走上橋，以「瑪麗恩堡要塞」為背景拍下經典品酒照</td></tr>
-              <tr><td class="schedule-time">14:15</td><td>開車前往瑪麗恩堡要塞</td><td>🚗 移動建議：直接開車上山！導航設定「Parkplatz Festung Marienberg」</td></tr>
-              <tr><td class="schedule-time">14:30</td><td>要塞俯瞰拍照</td><td>📸 從要塞圍欄俯瞰整個符茲堡紅屋頂與美茵河</td></tr>
-              <tr><td class="schedule-time">15:30</td><td>自駕前往海德堡</td><td>離開符茲堡，車程約 1.5 - 2 小時</td></tr>
-              <tr><td class="schedule-time">17:30</td><td>抵達海德堡</td><td>辦理入住。若天還沒黑，可先到海德堡舊城區稍微散步</td></tr>
-              <tr><td class="schedule-time">19:00</td><td>海德堡晚餐</td><td>在大學城氛圍中享用晚餐<br>推薦 Vetter's Brauhaus 自釀啤酒</td></tr>
-            </tbody>
-          </table>
-
-          <div class="attraction-winter-note" style="margin-top:1.5rem;">
-            💡 <strong>當日重點：</strong><br>
-            ✅ 10:00 符茲堡主教宮 — 世界遺產，世界最大濕壁畫<br>
-            ✅ 11:30 宮廷花園 — 補償室內不能拍的遺憾<br>
-            ✅ 13:30 舊美茵橋 — 經典品酒照<br>
-            ✅ 14:30 瑪麗恩堡要塞 — 符茲堡「最強全景」<br>
-            ✅ 17:30 抵達海德堡 — 開啟大學城之旅
-          </div>
-        </div>
-      </div>
-
-      <section class="attractions">
-        <h2>📍 符茲堡景點詳情（整合優化版）</h2>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">★ 符茲堡主教宮 Würzburg Residence</h3>
-            <p class="attraction-desc">巴洛克巔峰之作，UNESCO 世界遺產。室內有世界最大濕壁畫，但絕對禁止拍照。其宏偉的階梯廳與鏡廳令人嘆為觀止！</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">💰</span><span>門票 €9</span></div>
-              <div class="attraction-info-item"><span class="icon">⏰</span><span>週日 10:00-16:30</span></div>
-              <div class="attraction-info-item"><span class="icon">📷</span><span>內部嚴禁拍照</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 裡面暖氣很足，是 1 月底躲避寒風的最佳景點。📸 建築正前方的「法蘭克尼亞噴泉」是唯一能拍到主教宮全貌的點</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Wurzburg+Residence" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-              <a href="guide-wurzburg.html#wurzburg-residence" class="btn btn-more">📖 了解更多</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">🆕 ★ 宮廷花園 Hofgarten</h3>
-            <p class="attraction-desc">主教宮後方的巴洛克式花園，對稱式造景極具氣勢。雖然冬季植被較少，但巴洛克雕像配建築外牆依然壯觀。</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">📸</span><span>補償室內不能拍的最佳地點</span></div>
-              <div class="attraction-info-item"><span class="icon">💰</span><span>免費</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 對稱式造景非常適合長靴與大衣的搭配，幫女兒拍一些「巴洛克名媛感」的照片</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Hofgarten+Wurzburg" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">★ 舊美茵橋 Alte Mainbrücke</h3>
-            <p class="attraction-desc">符茲堡的象徵。建於 15 世紀的古老石橋，橋上的 12 尊聖人雕像極具歷史感。在橋上品酒是當地傳統！</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">📸</span><span>網美位：側靠石橋欄杆，手拿圓腹瓶葡萄酒</span></div>
-              <div class="attraction-info-item"><span class="icon">🍷</span><span>Alte Mainmühle 外賣窗口</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 冬季橋上風很大，拍照時大衣扣子解開 30 秒拍完趕快扣上。背景對準山上的要塞</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Alte+Mainbrucke+Wurzburg" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-              <a href="guide-wurzburg.html#wurzburg-bridge" class="btn btn-more">📖 了解更多</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">★ 瑪麗恩堡要塞 Festung Marienberg</h3>
-            <p class="attraction-desc">俯視全城的軍事堡壘，曾是主教避難所。從要塞露台可將美茵河與舊美茵橋收進鏡頭，這是符茲堡「最強全景」。</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">📸</span><span>網美位：站在要塞露台俯瞰紅屋頂與美茵河</span></div>
-              <div class="attraction-info-item"><span class="icon">💰</span><span>庭院免費</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 🚗 自駕優勢：不用爬坡！導航設定「Parkplatz Festung Marienberg」，山頂停車場離觀景台很近，長靴穿搭無壓力</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Festung+Marienberg+Wurzburg" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-              <a href="guide-wurzburg.html#wurzburg-fortress" class="btn btn-more">📖 了解更多</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">🆕 ★ 獵鷹之屋 Falkenhaus</h3>
-            <p class="attraction-desc">市集廣場旁，全德最華麗的洛可可裝飾外牆。鵝黃色的牆面在冬天陰天裡特別亮眼，適合拍人像特寫。</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">📸</span><span>鵝黃色牆面適合人像特寫</span></div>
-              <div class="attraction-info-item"><span class="icon">💰</span><span>免費（外觀）</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 週日內部旅遊中心可能休息，僅在外部拍照</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Falkenhaus+Wurzburg" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">★ 海德堡老橋 Alte Brücke</h3>
-            <p class="attraction-desc">海德堡最著名的地標之一，從橋上可欣賞城堡與老城區的絕美夜景。記得摸橋猴雕像祈福！</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">🐒</span><span>摸橋猴祈福</span></div>
-              <div class="attraction-info-item"><span class="icon">📷</span><span>夜景拍攝絕佳</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 如果 17:30 抵達時女兒已經累了，可以留給隔天再戰</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Alte+Brucke+Heidelberg" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-              <a href="guide-heidelberg.html#heidelberg-bridge" class="btn btn-more">📖 了解更多</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <hr style="margin: 3rem 0; border: none; border-top: 2px dashed #ddd;">
-      <h2 style="text-align: center; color: #2c5282; margin: 2rem 0;">🌙 傍晚：海德堡抵達日（老城浪漫夜慶生版）</h2>
-
-      <div class="attraction-winter-note" style="margin-bottom:1.5rem;">
-        🚆 <strong>交通建議：</strong>飯店入住後改採「路面電車」或「自駕至老城 P12 停車場」。<br>
-        🌡️ <strong>冬季提醒：</strong>2 月初海德堡入夜體感溫度約 -2°C 至 2°C，美茵河畔風大。
-      </div>
-
-      <h2>📸 海德堡夜間網美攻略</h2>
-      <div class="collapsible">
-        <div class="collapsible-header"><span class="collapsible-title">❄️ 海德堡抵達日網美攻略（17:00 - 21:00）</span><span class="collapsible-icon">▼</span></div>
-        <div class="collapsible-body">
-          <p style="margin-bottom:1rem;">抵達海德堡的第一個夜晚，把握「藍色時刻」在老橋拍下城堡燈火的浪漫畫面。<strong>交通建議：</strong>搭 Tram 5 或 23 至 Bismarckplatz，或直接開車到 Parkhaus Kornmarkt (P12)。</p>
-          <table class="schedule-table">
-            <thead><tr><th>時間</th><th>拍攝地點</th><th>攝影建議/備註</th></tr></thead>
-            <tbody>
-              <tr><td class="schedule-time">17:40-18:00</td><td>老橋 (Alte Brücke)</td><td>📸 冬季「藍色時刻」：17:21 日落後，17:40-18:00 天空呈現深藍色<br>城堡剛點燈、天空還沒全黑的最美畫面<br>網美位：橋頭兩座白色圓塔中間，利用燈光拍出深邃感</td></tr>
-              <tr><td class="schedule-time">18:15</td><td>Vetter's Brauhaus</td><td>📸 拍一張巨大的自釀啤酒桶作為背景<br>地址：Steingasse 9<br>週日晚間人多，建議抵達飯店後先請櫃檯幫忙電話訂位</td></tr>
-              <tr><td class="schedule-time">19:45</td><td>老橋夜景</td><td>📸 從老橋往南拍海德堡城堡燈火<br>與摸橋猴合照：讓女兒把臉湊在猴子空心的頭部裡拍照，趣味十足</td></tr>
-              <tr><td class="schedule-time">20:30</td><td>老橋旁咖啡小店</td><td>如果太冷，老橋旁有幾間溫馨的咖啡小店可以暖手<br>拍攝溫馨氛圍，為這一天畫下完美句點</td></tr>
-            </tbody>
-          </table>
-
-          <div class="attraction-winter-note" style="margin-top:1.5rem;">
-            🩺 <strong>海德堡抵達日體檢貼士（針對長靴女孩與爸爸）</strong>
-          </div>
-          <ol style="margin-top:0.5rem;">
-            <li><strong>堅決不走回頭路：</strong>從飯店（Leonardo Hotel）到老橋的步行路程是 2 公里。穿長靴來回就是 4 公里！既然有 VRN 票券，請直接在飯店門口的 Heidelberg Hauptbahnhof 搭乘路面電車到 Bismarckplatz。</li>
-            <li><strong>爸爸神操作：</strong>妳也可以直接開車到 Parkhaus Kornmarkt (P12)。這停車場有電梯，出來直接就是老城核心區，離餐廳步行只要 3 分鐘！</li>
-            <li><strong>冬季「藍色時刻」捕捉：</strong>雖然 17:21 日落，但 17:40-18:00 之間天空會呈現深藍色。如果妳們能提早 15 分鐘抵達老橋，能拍到城堡剛點燈、天空還沒全黑的最美畫面。</li>
-            <li><strong>長靴與地溫：</strong>海德堡的夜晚地氣很寒。如果女兒的長靴底較薄，請務必幫她準備發熱鞋墊。老城的石板路雖然浪漫，但每一步都在吸走腳底的熱量。</li>
-            <li><strong>週日生存指南：</strong>週日海德堡的主街（Hauptstrasse）商店全關，但餐廳、咖啡廳與老橋全天候歡迎遊客。這晚的主角就是「美食」與「夜景」。</li>
-          </ol>
-        </div>
-      </div>
-
-      <h2>📋 海德堡晚間時間表</h2>
-      <div class="collapsible">
-        <div class="collapsible-header"><span class="collapsible-title">完整行程時間表（15:00 - 21:00）</span><span class="collapsible-icon">▼</span></div>
-        <div class="collapsible-body">
-          <table class="schedule-table">
-            <thead><tr><th>時間</th><th>活動內容</th><th>交通/攝影&備註</th></tr></thead>
-            <tbody>
-              <tr><td class="schedule-time">15:00</td><td>從符茲堡出發</td><td>🚗 自駕：A3 接 A5 高速公路</td></tr>
-              <tr><td class="schedule-time">17:00</td><td>抵達海德堡並 Check-in</td><td>Leonardo Hotel。行李卸下後，不要走路！</td></tr>
-              <tr><td class="schedule-time">17:45</td><td>前往老城區 (Altstadt)</td><td>建議：搭 Tram 5 或 23 至 Bismarckplatz<br>或直接開車前往 P12 停車場</td></tr>
-              <tr><td class="schedule-time">18:15</td><td>Vetter's 傳統德式晚餐</td><td>地址：Steingasse 9<br>必點：自釀啤酒與德國豬腳</td></tr>
-              <tr><td class="schedule-time">19:45</td><td>老橋 (Alte Brücke) 夜景拍照</td><td>📸 從老橋往南拍海德堡城堡燈火，或是與摸橋猴合照</td></tr>
-              <tr><td class="schedule-time">20:30</td><td>深夜咖啡或甜點</td><td>如果太冷，老橋旁有幾間溫馨的咖啡小店可以暖手</td></tr>
-              <tr><td class="schedule-time">21:00</td><td>返回飯店</td><td>使用 VRN 交通 App 確認路面電車班次，直達飯店門口</td></tr>
-            </tbody>
-          </table>
-
-          <div class="attraction-winter-note" style="margin-top:1.5rem;">
-            💡 <strong>當晚重點：</strong><br>
-            ✅ 17:40-18:00 老橋「藍色時刻」— 城堡燈火最美畫面<br>
-            ✅ 18:15 Vetter's — 自釀啤酒與德國豬腳<br>
-            ✅ 19:45 老橋夜景 — 與摸橋猴合照<br>
-            ✅ 這晚的主角就是「美食」與「夜景」
-          </div>
-        </div>
-      </div>
-
-      <section class="attractions">
-        <h2>📍 海德堡抵達日景點詳情</h2>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">★ 老橋 Alte Brücke</h3>
-            <p class="attraction-desc">海德堡最著名的石橋，正式名稱為卡爾-特奧多橋。從橋上可欣賞城堡與老城區的絕美夜景，是海德堡最經典的拍照地點。</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">📸</span><span>網美位：橋頭兩座白色圓塔中間，利用燈光拍出深邃感</span></div>
-              <div class="attraction-info-item"><span class="icon">🌙</span><span>藍色時刻：17:40-18:00</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 河邊風極大，圍巾與帽子是拍照兼保暖的必備配件</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Alte+Brucke+Heidelberg" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-              <a href="guide-heidelberg.html#heidelberg-bridge" class="btn btn-more">📖 了解更多</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">★ 摸橋猴 Brückenaffe</h3>
-            <p class="attraction-desc">橋頭旁的青銅猴子雕像，據說摸鏡子會發財、摸手指會重返海德堡。是遊客必訪的趣味景點。</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">📸</span><span>讓女兒把臉湊在猴子空心的頭部裡拍照，趣味十足</span></div>
-              <div class="attraction-info-item"><span class="icon">🪙</span><span>摸鏡子會發財</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 銅像在低溫下手感極冰，摸完記得放進口袋取暖</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Bruckenaffe+Heidelberg" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">★ 聖靈教堂 Heiliggeistkirche</h3>
-            <p class="attraction-desc">位於市中心廣場，老城的地標性建築。哥德式建築風格，是海德堡最重要的教堂之一。</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">📸</span><span>教堂外圍的小商店（週日不開但有燈）是極佳的中世紀背景</span></div>
-              <div class="attraction-info-item"><span class="icon">💰</span><span>免費（外觀）</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 教堂周邊的石板路較平整，對長靴較友善</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Heiliggeistkirche+Heidelberg" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">🍴 Vetter's Brauhaus</h3>
-            <p class="attraction-desc">當地極具名氣的酒館，氛圍熱鬧。自釀啤酒與德國豬腳是必點招牌，是體驗海德堡夜生活的最佳選擇。</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">📸</span><span>拍一張巨大的自釀啤酒桶作為背景</span></div>
-              <div class="attraction-info-item"><span class="icon">📍</span><span>地址：Steingasse 9</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 週日晚間人多，建議抵達飯店後先請櫃檯幫忙電話訂位</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Vetters+Brauhaus+Heidelberg" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div class="day-nav">
-        <a href="day-06.html">← Day 6</a>
-        <a href="day-08.html">Day 8 →</a>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer"><div class="container"><p>2026 德國南部冬季自駕之旅 | 個人旅遊規劃</p></div></footer>
-  <script src="js/main.js"></script>
+  <script src="vendor/glightbox/glightbox.min.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
-
-

@@ -3,299 +3,240 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Day 8: 海德堡古堡與學霸日常（長靴無憂版），城堡纜車、學生監獄、O型環狀動線攻略">
-  <title>Day 8 - 海德堡古堡與學霸日常（長靴無憂版）| 2026 德國冬季之旅</title>
+  <meta name="description" content="Day 8 時間表: 海德堡城堡纜車登頂、世界最大木酒桶、老橋銅猴、哲學家小徑眺望日落、學生之吻巧克力">
+  <title>Day 08 時間表 - 海德堡 (Heidelberg) 浪漫古城 | 2026 德國冬季之旅</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;900&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="vendor/glightbox/glightbox.min.css">
 </head>
 <body>
-  <nav class="navbar">
+  <div class="reading-progress"></div>
+
+  <nav class="site-nav">
     <div class="container">
-      <a href="index.html" class="navbar-brand">🇩🇪 2026 德國冬季之旅</a>
-      <ul class="navbar-menu">
+      <a href="index.html" class="brand-link">
+        <span>🇩🇪 2026 德南冬旅誌</span>
+        <span class="brand-badge">Travel OS</span>
+      </a>
+      <ul class="nav-links">
         <li><a href="index.html">首頁</a></li>
-        <li><a href="index.html#timeline">行程總覽</a></li>
-        <li><a href="day-01.html" class="active">每日行程</a></li>
-        <li class="dropdown">
-          <a href="#">城市指南 ▾</a>
-          <ul class="dropdown-menu">
-            <li><a href="guide-hallstatt.html">哈修塔特區</a></li>
-            <li><a href="guide-wurzburg.html">符茲堡區</a></li>
-            <li><a href="guide-heidelberg.html">海德堡區</a></li>
-            <li><a href="guide-colmar.html">科爾馬區</a></li>
-            <li><a href="guide-garmisch.html">加米許區</a></li>
-          </ul>
-        </li>
+        <li><a href="index.html#itinerary">15天行程</a></li>
+        <li><a href="day-08.html" class="active">純時間表</a></li>
+        <li><a href="blog/day-02-blog.html">精選遊記</a></li>
       </ul>
-      <button class="navbar-share" title="分享此行程">📤 分享</button>
-      <button class="navbar-toggle" aria-label="選單" aria-expanded="false">☰</button>
+      <button class="nav-share-btn btn-share"><span>📤 分享</span></button>
     </div>
   </nav>
 
-  <div class="container">
-    <div class="day-switcher">
-      <a href="day-01.html" class="day-btn">1</a><a href="day-02.html" class="day-btn">2</a><a href="day-03.html" class="day-btn">3</a>
-      <a href="day-04.html" class="day-btn">4</a><a href="day-05.html" class="day-btn">5</a><a href="day-06.html" class="day-btn">6</a>
-      <a href="day-07.html" class="day-btn">7</a><a href="day-08.html" class="day-btn active">8</a><a href="day-09.html" class="day-btn">9</a>
-      <a href="day-10.html" class="day-btn">10</a><a href="day-11.html" class="day-btn">11</a><a href="day-12.html" class="day-btn">12</a>
-      <a href="day-13.html" class="day-btn">13</a><a href="day-14.html" class="day-btn">14</a><a href="day-15.html" class="day-btn">15</a>
+  <main class="container">
+    <nav class="day-nav-bar" aria-label="天數切換">
+      <a href="day-01.html" class="day-nav-btn">Day 1</a>
+      <a href="day-02.html" class="day-nav-btn">Day 2</a>
+      <a href="day-03.html" class="day-nav-btn">Day 3</a>
+      <a href="day-04.html" class="day-nav-btn">Day 4</a>
+      <a href="day-05.html" class="day-nav-btn">Day 5</a>
+      <a href="day-06.html" class="day-nav-btn">Day 6</a>
+      <a href="day-07.html" class="day-nav-btn">Day 7</a>
+      <a href="day-08.html" class="day-nav-btn active">Day 8</a>
+      <a href="day-09.html" class="day-nav-btn">Day 9</a>
+      <a href="day-10.html" class="day-nav-btn">Day 10</a>
+      <a href="day-11.html" class="day-nav-btn">Day 11</a>
+      <a href="day-12.html" class="day-nav-btn">Day 12</a>
+      <a href="day-13.html" class="day-nav-btn">Day 13</a>
+      <a href="day-14.html" class="day-nav-btn">Day 14</a>
+      <a href="day-15.html" class="day-nav-btn">Day 15</a>
+    </nav>
+
+    <!-- 1. 當日摘要 Hero Bento -->
+    <header class="schedule-hero-card">
+      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <span class="badge badge-gold">🇩🇪 基地三：海德堡宿</span>
+        <span class="badge badge-wine">🚶 全日老城深度徒步（免開車）</span>
+        <span class="badge badge-forest">🚠 城堡登山纜車</span>
+        <span class="badge badge-glass">🏨 連住第 2 晚：海德堡</span>
+      </div>
+      <div>
+        <h1 style="font-family: var(--font-heading); font-size: 2.1rem; line-height: 1.3; margin-bottom: 0.5rem; color: #fff;">
+          Day 08：我把心遺留在海德堡 ✕ 城堡酒桶與哲學家小徑
+        </h1>
+        <p style="color: rgba(255, 255, 255, 0.9); font-size: 1.05rem;">
+          📅 2026/2/2 (一) ｜ 搭乘齒軌纜車登上紅砂岩城堡，瞻仰 22 萬公升巨大酒桶，漫步九孔老橋觸摸銅猴，攀登哲學家之道靜賞內卡河金黃落日。
+        </p>
+      </div>
+    </header>
+
+    <!-- 2. 行前檢核與避坑 Bento -->
+    <section class="bento-grid">
+      <div class="bento-card bento-col-6">
+        <h3 style="color: var(--primary); font-size: 1.15rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.4rem;">
+          🎫 海德堡城堡套票指南
+        </h3>
+        <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.92rem; line-height: 1.7; color: var(--text-sub);">
+          <li><strong>城堡套票 (€9/人)</strong>：包含往返登山纜車（Bergbahn）、城堡大庭院、大酒桶與德國藥房博物館門票。</li>
+          <li><strong>纜車站點</strong>：自舊城區 Kornmarkt 站搭乘第一段纜車直達 Schloss（城堡站）。</li>
+          <li><strong>學生之吻巧克力 (Studentenkuss)</strong>：老城傳承百年名產（Café Knösel），象徵 19 世紀海德堡大學生的純愛信物。</li>
+        </ul>
+      </div>
+
+      <div class="bento-card bento-col-6" style="background: var(--daruma-light); border-color: rgba(220, 38, 38, 0.3);">
+        <h3 style="color: var(--daruma-red); font-size: 1.15rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.4rem;">
+          ⚠️ TripNG 哲學家小徑避坑警示
+        </h3>
+        <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.92rem; line-height: 1.7; color: #7f1d1d;">
+          <li><strong>蛇徑 (Schlangenweg) 坡度較陡</strong>：自老橋北端通往哲學家小徑的石板階梯坡度較大，冬季穿防滑鞋步步踩穩。</li>
+          <li><strong>落日黃金時間</strong>：2 月初海德堡日落約 17:15，建議 16:00 前抵達哲學家小徑觀景台，光線打在紅砂岩城堡上最為瑰麗。</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 3. 視覺化時間軸 -->
+    <section style="margin: 3rem 0 1.5rem;">
+      <h2 style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--primary); margin-bottom: 1.5rem;">
+        ⏱️ 當日精確時間表 (Schedule Timeline)
+      </h2>
+
+      <div class="timeline-section">
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">09:30 🚠 搭乘登山纜車前往海德堡城堡</span>
+              <div><span class="badge badge-wine">城堡纜車</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub);">
+              由穀物廣場（Kornmarkt）纜車站搭乘歷史登山纜車，直達高踞山腰之 <a href="https://maps.google.com/?q=Heidelberg+Castle" target="_blank" rel="noopener" class="text-map-link">海德堡城堡 (Schloss Heidelberg)</a>。
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">10:15 🍷 參觀世界最大木酒桶 ✕ 藥房博物館</span>
+              <div><span class="badge badge-gold">世界之最</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub); margin-bottom: 0.5rem;">
+              走入城堡酒窖瞻仰容量達 221,726 公升的傳奇巨型木酒桶（<button class="btn-audio" data-pronounce="Großes Fass" data-lang="de-DE">Großes Fass 🔊</button>）。
+            </p>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">
+              參觀中世紀德國藥房博物館（Deutsches Apotheken-Museum），鑑賞古老煉金術器皿與草藥櫃。
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">12:30 🍽️ 穀物市場 ✕ 百年精釀酒館午餐</span>
+              <div><span class="badge badge-forest">老城美味</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub); margin-bottom: 0.5rem;">
+              搭纜車下山至老城區，於 <a href="https://maps.google.com/?q=Kulturbrauerei+Heidelberg" target="_blank" rel="noopener" class="text-map-link"><em>Kulturbrauerei Heidelberg</em></a> 享用午餐。
+            </p>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">
+              品嚐自釀無過濾新鮮生啤酒佐以巴伐利亞脆皮烤豬腳與手工馬鈴薯丸。
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">14:00 🐒 漫步老橋 (Alte Brücke) ✕ 摸銅猴求財運</span>
+              <div><span class="badge badge-alpine">經典傳說</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub); margin-bottom: 0.5rem;">
+              走上海德堡地標 <a href="https://maps.google.com/?q=Alte+Bruecke+Heidelberg" target="_blank" rel="noopener" class="text-map-link">卡爾·特奧多老橋 (Alte Brücke)</a>。
+            </p>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">
+              橋頭觸摸著名銅猴手中的銅鏡象徵帶來財富，摸手指象徵未來重返海德堡。
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">15:30 🌅 攀登哲學家小徑 (Philosophenweg) 眺望日落</span>
+              <div><span class="badge badge-gold">落日絕景</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub); margin-bottom: 0.5rem;">
+              穿過蛇徑登上對岸山腰的 <a href="https://maps.google.com/?q=Philosophenweg+Heidelberg" target="_blank" rel="noopener" class="text-map-link">哲學家小徑</a>。
+            </p>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">
+              歌德與黑格爾曾在此沉思漫步，此處正是遠眺老橋、內卡河與雄偉紅砂岩城堡的黃金全景位置。
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">18:30 🍫 Café Knösel 學生之吻 ✕ 浪漫晚餐</span>
+              <div><span class="badge badge-wine">百年情書</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub);">
+              至創始店購買「學生之吻巧克力（<button class="btn-audio" data-pronounce="Studentenkuss" data-lang="de-DE">Studentenkuss 🔊</button>）」，晚間於老城燭光餐廳享用浪漫晚餐。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. POI 速查 -->
+    <section style="margin: 3.5rem 0 2rem;">
+      <h2 style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--primary); margin-bottom: 1.25rem;">
+        📍 今日景點與美食速查 (At-a-Glance)
+      </h2>
+      <div class="bento-grid">
+        <div class="bento-card bento-col-4">
+          <span class="badge badge-wine">🏰 浪漫地標</span>
+          <h4 style="margin: 0.5rem 0 0.25rem; color: var(--primary);">
+            <a href="https://maps.google.com/?q=Heidelberg+Castle" target="_blank" rel="noopener" class="text-map-link">海德堡城堡</a>
+          </h4>
+          <p style="font-size: 0.88rem; color: var(--text-sub); line-height: 1.6;">
+            阿爾卑斯以北最壯麗的文藝復興廢墟城堡，內藏 22 萬公升大酒桶。套票 €9。
+          </p>
+        </div>
+
+        <div class="bento-card bento-col-4">
+          <span class="badge badge-gold">🌅 思想家之道</span>
+          <h4 style="margin: 0.5rem 0 0.25rem; color: var(--primary);">
+            <a href="https://maps.google.com/?q=Philosophenweg+Heidelberg" target="_blank" rel="noopener" class="text-map-link">哲學家小徑</a>
+          </h4>
+          <p style="font-size: 0.88rem; color: var(--text-sub); line-height: 1.6;">
+            俯瞰內卡河、老橋與城堡落日餘暉的殿堂級機位，傍晚 4 點光線最佳。
+          </p>
+        </div>
+
+        <div class="bento-card bento-col-4">
+          <span class="badge badge-alpine">🍫 傳奇伴手禮</span>
+          <h4 style="margin: 0.5rem 0 0.25rem; color: var(--primary);">
+            <a href="https://maps.google.com/?q=Chocolaterie+Knoesel+Heidelberg" target="_blank" rel="noopener" class="text-map-link">Café Knösel 學生之吻</a>
+          </h4>
+          <p style="font-size: 0.88rem; color: var(--text-sub); line-height: 1.6;">
+            1863 年創立之海德堡最古老咖啡館，學生之吻黑巧克力華麗典雅。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 導覽按鈕 -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin: 3.5rem 0 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
+      <a href="day-07.html" style="font-weight: 600; color: var(--primary); font-size: 0.95rem;">← 前一天：Day 07 符茲堡 ➔ 海德堡</a>
+      <a href="day-09.html" style="font-weight: 600; color: var(--primary); font-size: 0.95rem;">下一天：Day 09 哈瑙 ✕ 法蘭克福 →</a>
     </div>
+  </main>
+
+  <div class="mobile-dock">
+    <a href="index.html" class="dock-item"><span class="dock-icon">🏠</span><span>首頁</span></a>
+    <a href="day-08.html" class="dock-item active"><span class="dock-icon">⏱️</span><span>時間表</span></a>
+    <a href="blog/day-02-blog.html" class="dock-item"><span class="dock-icon">📖</span><span>遊記</span></a>
+    <a href="javascript:void(0)" class="dock-item btn-share"><span class="dock-icon">📤</span><span>分享</span></a>
   </div>
 
-  <section class="daily-schedule">
-    <div class="container">
-      <div class="schedule-header">
-        <h1>Day 8：海德堡古堡與學霸日常（長靴無憂版）🏰</h1>
-        <p class="schedule-meta">📅 2026/2/2 (一) ｜ 🚶 步行日 ｜ 🎫 城堡門票 €9（含纜車）+ VRN 一日票</p>
-        <div class="schedule-info-bar">
-          <span class="hotel-badge">🏨 住宿：海德堡</span>
-          <a href="guide-heidelberg.html" class="guide-link">📖 城市指南</a>
-        </div>
-      </div>
-
-      <div class="attraction-winter-note" style="margin-bottom:1rem;">
-        🗺️ <strong>路線設計：</strong>O 型環狀動線（飯店 → 城堡 → 一路向西回飯店，不走回頭路）
-      </div>
-      <div class="attraction-winter-note" style="margin-bottom:1.5rem;">
-        🌡️ <strong>冬季提醒：</strong>城堡山上風大，體感溫度可能低於 0°C。藥房博物館室內暖氣充足，是避寒兼補充知識的好地方。
-      </div>
-
-      <h2>📸 冬季網美攻略</h2>
-      <div class="collapsible">
-        <div class="collapsible-header"><span class="collapsible-title">❄️ 海德堡古堡與學霸日常網美攻略（09:30 - 17:30）</span><span class="collapsible-icon">▼</span></div>
-        <div class="collapsible-body">
-          <p style="margin-bottom:1rem;">這份行程針對 <strong>18 歲女兒網美照需求、長靴步行壓力、以及 2 月初低溫環境</strong>優化。採用 O 型環狀動線，搭配公車 33 號，讓長靴女孩不用走回頭路。</p>
-          <table class="schedule-table">
-            <thead><tr><th>時間</th><th>拍攝地點</th><th>攝影建議/備註</th></tr></thead>
-            <tbody>
-              <tr><td class="schedule-time">09:30</td><td>海德堡城堡纜車</td><td>📸 纜車上山途中可拍老城全景<br>刷票上山，參觀大酒桶、藥房博物館、宮廷庭院</td></tr>
-              <tr><td class="schedule-time">11:30</td><td>城堡露台</td><td>📸 網美位：這裡是拍「長靴 + 海德堡紅屋頂全景」最經典的位點<br>冬季枯枝配上古堡殘磚，有種廢墟美</td></tr>
-              <tr><td class="schedule-time">12:00</td><td>巨大酒桶</td><td>📸 跟大酒桶側邊的「酒桶小矮人」合照<br>地下室較潮濕冷冽，拍照動作要快</td></tr>
-              <tr><td class="schedule-time">14:00</td><td>學生監獄</td><td>📸 色彩鮮豔的牆壁塗鴉非常有視覺衝擊感，適合拍酷妹風格<br>樓梯狹窄，穿長靴上樓請注意腳步</td></tr>
-              <tr><td class="schedule-time">17:30</td><td>騎士之家</td><td>📸 建築正面的精美雕刻是絕佳背景，就在聖靈教堂對面<br>拍照時請留意路面電車經過</td></tr>
-            </tbody>
-          </table>
-
-          <div class="attraction-winter-note" style="margin-top:1.5rem;">
-            🩺 <strong>海德堡深度遊體檢貼士（針對長靴女孩與專業老爸）</strong>
-          </div>
-          <ol style="margin-top:0.5rem;">
-            <li><strong>放棄「散步回飯店」的幻想：</strong>從老橋區（餐廳位置）回飯店約 2.1 公里。2 月的深夜，氣溫會降到冰點，石板路會變得冷硬且濕滑。既然妳有 VRN 票，請務必搭車回飯店。長靴在石板路上走 30 分鐘，腳部受壓會讓女兒隔天無法自駕。</li>
-            <li><strong>生科背景的微型觀察：</strong>在參觀藥房博物館 (Deutsches Apotheken-Museum) 時，身為專業背景的妳，可以跟女兒介紹那些古老的萃取工具與植物藥典，這會讓這趟行程除了拍照外更具深度。</li>
-            <li><strong>公車 33 號是妳的救星：</strong>33 號公車串聯了「火車站（妳飯店附近）」、「纜車站」、「大學廣場」。只要覺得女兒腳酸，直接跳上公車坐一兩站，這對保護長靴女孩的腳踝至關重要。</li>
-            <li><strong>冬季穿搭建議：</strong>海德堡城堡山上的風是「穿透性」的。雖然穿長靴很美，但如果靴內空間足夠，請一定要讓她加一層羊毛鞋墊。地面低溫會直接傳導到腳掌。</li>
-          </ol>
-        </div>
-      </div>
-
-      <h2>📋 當日時間表（充實版）</h2>
-      <div class="collapsible">
-        <div class="collapsible-header"><span class="collapsible-title">完整行程時間表（08:00 - 20:00）</span><span class="collapsible-icon">▼</span></div>
-        <div class="collapsible-body">
-          <table class="schedule-table">
-            <thead><tr><th>時間</th><th>活動內容</th><th>交通/攝影&備註</th></tr></thead>
-            <tbody>
-              <tr><td class="schedule-time">08:00-09:00</td><td>飯店早餐</td><td>可選購飯店早餐（€18-22/人）或外出用餐</td></tr>
-              <tr><td class="schedule-time">09:00</td><td>飯店出發</td><td>🚌 飯店門口搭乘 33 號公車直達「Rathaus/Bergbahn」</td></tr>
-              <tr><td class="schedule-time">09:30-12:30</td><td>海德堡城堡深度導覽</td><td>門票：€9（含纜車來回 + 城堡庭院 + 巨型酒桶 + 藥房博物館）<br>冬季開放時間：10:00-16:00<br>建議 09:30 抵達纜車站，10:00 進入城堡</td></tr>
-              <tr><td class="schedule-time">11:30</td><td>城堡露台拍照</td><td>📸 這裡是拍「長靴 + 海德堡紅屋頂全景」最經典的位點</td></tr>
-              <tr><td class="schedule-time">12:30-13:30</td><td>Palmbräu Gasse 午餐</td><td>🚡 下山：搭纜車回 Kornmarkt，步行 5 分鐘即達<br>地址：Hauptstraße 185，價位：€12-18/人<br>⚠️ 週一魔咒：Schnitzelbank 週一到五只開晚餐，改去這間！</td></tr>
-              <tr><td class="schedule-time">13:30-15:30</td><td>Hauptstraße 購物（東段→中段）</td><td>沿 Hauptstraße 向西漫步購物<br>歐洲最長步行街之一（約 1.6 公里）<br>營業時間：週一 10:00-19:00</td></tr>
-              <tr><td class="schedule-time">14:00</td><td>學生監獄 (Studentenkarzer)</td><td>步行至大學廣場（約 5 分鐘）<br>門票：約 €3，看當年中二學生的牆壁塗鴉</td></tr>
-              <tr><td class="schedule-time">15:00-17:30</td><td>繼續購物 + 咖啡時光</td><td>累了就找咖啡廳（如 Café Knösel）喝杯熱飲<br>大學廣場附近有很多特色文具店與藥妝店</td></tr>
-              <tr><td class="schedule-time">18:15-19:30</td><td>Zum Roten Ochsen 晚餐</td><td>🚌 從大學廣場搭乘 33 號公車回「Rathaus」站，省下折返體力<br>地址：Hauptstraße 217，百年老店、傳統德國菜、名人簽名牆<br>⚠️ 備案：若沒開，改去 Kulturbrauerei（老橋附近，自釀啤酒，空間大）</td></tr>
-              <tr><td class="schedule-time">20:00</td><td>夜間返程</td><td>🚌 餐廳門口步行 3 分鐘到公車站，搭 33 號或 Tram 直達飯店門口</td></tr>
-            </tbody>
-          </table>
-
-          <div class="attraction-winter-note" style="margin-top:1.5rem;">
-            💡 <strong>當日重點：</strong><br>
-            ✅ 城堡是海德堡必訪景點，預留 3 小時<br>
-            ✅ 採用 O 型環狀動線：飯店(西) → 城堡(東) → 向西購物 → 晚餐(東) → 搭車回飯店<br>
-            ✅ 學生監獄安排在向西途中，順路參觀<br>
-            ✅ 公車 33 號是救星，累了就跳上車<br>
-            ⚠️ 冬季城堡開放時間較短（10:00-16:00）<br>
-            ⚠️ 週一餐廳魔咒：很多老牌餐廳週一不開中午，午餐改去 Palmbräu Gasse
-          </div>
-        </div>
-      </div>
-
-      <section class="attractions">
-        <h2>📍 海德堡深度遊景點詳情</h2>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">★ 海德堡城堡 Heidelberger Schloss</h3>
-            <p class="attraction-desc">德國最重要的文藝復興建築遺跡，融合哥德式、文藝復興和巴洛克風格。必看巨型酒桶、藥房博物館和伊莉莎白門（浪漫的愛情故事遺跡）！</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">📍</span><span>Schlosshof 1, 69117 Heidelberg</span></div>
-              <div class="attraction-info-item"><span class="icon">💰</span><span>門票 €9（含纜車來回 + 城堡庭院 + 巨型酒桶 + 藥房博物館）</span></div>
-              <div class="attraction-info-item"><span class="icon">⏰</span><span>冬季 10:00-16:00（最後入場 15:30）</span></div>
-              <div class="attraction-info-item"><span class="icon">⏱️</span><span>建議停留 2.5-3 小時</span></div>
-              <div class="attraction-info-item"><span class="icon">🎧</span><span>英文導覽 €6（需預約）</span></div>
-              <div class="attraction-info-item"><span class="icon">📸</span><span>網美位：城堡殘壁與內庭花園</span></div>
-            </div>
-            <p class="attraction-desc" style="margin-top:0.5rem;"><strong>交通方式：</strong>搭乘 Bergbahn 纜車（約 3 分鐘），或從 Kornmarkt 步行上山（約 15-20 分鐘）</p>
-            <div class="attraction-winter-note">❄️ 冬季枯枝配上古堡殘磚，有種廢墟美。藥房博物館室內暖氣充足，是避寒兼補充知識的好地方</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Heidelberg+Castle" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-              <a href="guide-heidelberg.html#heidelberg-castle" class="btn btn-more">📖 了解更多</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">★ 巨大酒桶 Großes Fass</h3>
-            <p class="attraction-desc">全世界最大的木製酒桶，可容納 22 萬公升葡萄酒！位於城堡地下室，是海德堡城堡的必訪亮點。</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">🍷</span><span>容量 22 萬公升</span></div>
-              <div class="attraction-info-item"><span class="icon">📸</span><span>跟「酒桶小矮人」合照</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 地下室較潮濕冷冽，拍照動作要快</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Heidelberg+Castle+Wine+Barrel" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">★ 學生監獄 Studentenkarzer</h3>
-            <p class="attraction-desc">19 世紀處罰違規學生的地方（1778-1914），牆上滿是學生塗鴉和簽名，見證大學城的獨特歷史。</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">📍</span><span>Augustinergasse 2, 69117 Heidelberg</span></div>
-              <div class="attraction-info-item"><span class="icon">💰</span><span>門票 €3</span></div>
-              <div class="attraction-info-item"><span class="icon">⏰</span><span>週二-週六 10:00-18:00，週日 10:00-17:30</span></div>
-              <div class="attraction-info-item"><span class="icon">⏱️</span><span>建議停留 30-45 分鐘</span></div>
-              <div class="attraction-info-item"><span class="icon">📸</span><span>色彩鮮豔的牆壁塗鴉，適合拍酷妹風格</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 樓梯狹窄，穿長靴上樓請注意腳步</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Studentenkarzer+Heidelberg" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-              <a href="guide-heidelberg.html#heidelberg-studentenkarzer" class="btn btn-more">📖 了解更多</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">★ 老橋 Alte Brücke</h3>
-            <p class="attraction-desc">建於 1788 年的巴洛克式石橋，是海德堡最具代表性的地標之一。橋上有兩座塔樓和著名的橋猴雕像。</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">💰</span><span>免費</span></div>
-              <div class="attraction-info-item"><span class="icon">📸</span><span>最佳拍照時間：日落時分（約 17:00-17:30）</span></div>
-              <div class="attraction-info-item"><span class="icon">🐒</span><span>橋猴雕像：摸鏡子傳說會帶來財富</span></div>
-            </div>
-            <p class="attraction-desc" style="margin-top:0.5rem;"><strong>拍照建議：</strong>從橋上拍攝城堡夜景、河畔步道拍攝老橋全景</p>
-            <div class="attraction-winter-note">❄️ 冬季傍晚橋上風大，拍完趕快進室內取暖</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Alte+Brucke+Heidelberg" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">★ 騎士之家 Haus zum Ritter</h3>
-            <p class="attraction-desc">老城區最古老的建築（1592 年），現為飯店。文藝復興風格的精美雕刻外牆是海德堡的地標之一。</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">📍</span><span>聖靈教堂對面</span></div>
-              <div class="attraction-info-item"><span class="icon">📸</span><span>建築正面的精美雕刻是絕佳背景</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 拍照時請留意路面電車經過</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Haus+zum+Ritter+Heidelberg" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">🛍️ Hauptstraße 主街</h3>
-            <p class="attraction-desc">歐洲最長的步行購物街之一，全長約 1.6 公里，兩旁有各式商店、咖啡廳和餐廳。累了就找咖啡廳（如 Café Knösel）喝杯熱飲。</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">⏰</span><span>週一 10:00-19:00</span></div>
-              <div class="attraction-info-item"><span class="icon">☕</span><span>推薦 Café Knösel</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 大學廣場附近有很多特色文具店與藥妝店</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Hauptstrasse+Heidelberg" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="attractions">
-        <h2>🔄 週一替代景點（室內避寒好選擇）</h2>
-        <div class="collapsible">
-          <div class="collapsible-header"><span class="collapsible-title">週一開放的室內景點，購物途中的溫暖歇腳點</span><span class="collapsible-icon">▼</span></div>
-          <div class="collapsible-body">
-
-            <div class="attraction-card">
-              <div class="attraction-body">
-                <h3 class="attraction-name">🆕 人體世界博物館 (Körperwelten)</h3>
-                <p class="attraction-desc">位於 Altes Hallenbad（百年前的室內游泳池），展示真實的人體標本，從解剖角度探索生命。新古典主義建築配上科學展品，張力十足！</p>
-                <div class="attraction-info">
-                  <div class="attraction-info-item"><span class="icon">📍</span><span>Poststraße 4, 69115 Heidelberg</span></div>
-                  <div class="attraction-info-item"><span class="icon">⏱️</span><span>參觀約 1.5 小時</span></div>
-                  <div class="attraction-info-item"><span class="icon">📸</span><span>百年游泳池建築本身就是拍照亮點</span></div>
-                </div>
-                <div class="attraction-winter-note">❄️ 室內避寒首選，暖氣充足，剛好避開傍晚最冷時段</div>
-                <p class="attraction-desc" style="margin-top:0.5rem;">🩺 <strong>生科背景隱藏樂趣：</strong>可與女兒討論塑化技術 (Plastination) 的原理，讓行程更具專業深度</p>
-                <div class="attraction-actions">
-                  <a href="https://www.google.com/maps/search/?api=1&query=Körperwelten+Heidelberg" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="attraction-card">
-              <div class="attraction-body">
-                <h3 class="attraction-name">★ 大學圖書館 (Universitätsbibliothek)</h3>
-                <p class="attraction-desc">德國最古老的圖書館之一，紅磚與雕刻極度精美。內部閱覽室雖然開放，但須保持安靜。</p>
-                <div class="attraction-info">
-                  <div class="attraction-info-item"><span class="icon">📍</span><span>Plöck 107-109, 69117 Heidelberg</span></div>
-                  <div class="attraction-info-item"><span class="icon">💰</span><span>免費參觀大廳</span></div>
-                  <div class="attraction-info-item"><span class="icon">📸</span><span>站在大門前階梯上，長靴配雕塑牆，非常有學霸氣質</span></div>
-                </div>
-                <div class="attraction-winter-note">❄️ 若外面太冷，可進大廳取暖</div>
-                <div class="attraction-actions">
-                  <a href="https://www.google.com/maps/search/?api=1&query=Universitätsbibliothek+Heidelberg" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="attraction-card">
-              <div class="attraction-body">
-                <h3 class="attraction-name">★ 耶穌會教堂 (Jesuitenkirche)</h3>
-                <p class="attraction-desc">位於大學廣場旁，純白巴洛克風格，內部明亮。是購物途中的溫暖歇腳點。</p>
-                <div class="attraction-info">
-                  <div class="attraction-info-item"><span class="icon">📍</span><span>Schulgasse 4, 69117 Heidelberg</span></div>
-                  <div class="attraction-info-item"><span class="icon">💰</span><span>免費參觀</span></div>
-                  <div class="attraction-info-item"><span class="icon">📸</span><span>白色圓柱與採光，拍起來皮膚白皙、空靈</span></div>
-                </div>
-                <div class="attraction-winter-note">❄️ 免費參觀，是購物途中的溫暖歇腳點</div>
-                <div class="attraction-actions">
-                  <a href="https://www.google.com/maps/search/?api=1&query=Jesuitenkirche+Heidelberg" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <div class="day-nav">
-        <a href="day-07.html">← Day 7</a>
-        <a href="day-09.html">Day 9 →</a>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer"><div class="container"><p>2026 德國南部冬季自駕之旅 | 個人旅遊規劃</p></div></footer>
-  <script src="js/main.js"></script>
+  <script src="vendor/glightbox/glightbox.min.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
-

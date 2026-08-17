@@ -3,272 +3,216 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Day 3: 德奧跨國自駕、Ingolstadt Village 購物村、符茲堡 Maritim Hotel、Bürgerspital 法蘭肯白酒">
-  <title>Day 3 - 哈修塔特 ↔ 購物村 ↔ 符茲堡（跨國長征版）| 2026 德國冬季之旅</title>
+  <meta name="description" content="Day 3 時間表: 哈修塔特出發、阿爾卑斯冰雪公路長途轉移、Ingolstadt Village 暢貨中心購物補給、抵達法蘭肯名城符茲堡">
+  <title>Day 03 時間表 - 哈修塔特 ➔ Ingolstadt ➔ 符茲堡 | 2026 德國冬季之旅</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;900&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="vendor/glightbox/glightbox.min.css">
 </head>
 <body>
-  <nav class="navbar">
+  <div class="reading-progress"></div>
+
+  <!-- 頂部玻璃擬態導覽列 -->
+  <nav class="site-nav">
     <div class="container">
-      <a href="index.html" class="navbar-brand">🇩🇪 2026 德國冬季之旅</a>
-      <ul class="navbar-menu">
+      <a href="index.html" class="brand-link">
+        <span>🇩🇪 2026 德南冬旅誌</span>
+        <span class="brand-badge">Travel OS</span>
+      </a>
+      <ul class="nav-links">
         <li><a href="index.html">首頁</a></li>
-        <li><a href="index.html#timeline">行程總覽</a></li>
-        <li><a href="day-01.html" class="active">每日行程</a></li>
-        <li class="dropdown">
-          <a href="#">城市指南 ▾</a>
-          <ul class="dropdown-menu">
-            <li><a href="guide-hallstatt.html">哈修塔特區</a></li>
-            <li><a href="guide-wurzburg.html">符茲堡區</a></li>
-            <li><a href="guide-heidelberg.html">海德堡區</a></li>
-            <li><a href="guide-colmar.html">科爾馬區</a></li>
-            <li><a href="guide-garmisch.html">加米許區</a></li>
-          </ul>
-        </li>
+        <li><a href="index.html#itinerary">15天行程</a></li>
+        <li><a href="day-03.html" class="active">純時間表</a></li>
+        <li><a href="blog/day-02-blog.html">精選遊記</a></li>
       </ul>
-      <button class="navbar-share" title="分享此行程">📤 分享</button>
-      <button class="navbar-toggle" aria-label="選單" aria-expanded="false">☰</button>
+      <button class="nav-share-btn btn-share"><span>📤 分享</span></button>
     </div>
   </nav>
 
-  <div class="container">
-    <div class="day-switcher">
-      <a href="day-01.html" class="day-btn">1</a>
-      <a href="day-02.html" class="day-btn">2</a>
-      <a href="day-03.html" class="day-btn active">3</a>
-      <a href="day-04.html" class="day-btn">4</a>
-      <a href="day-05.html" class="day-btn">5</a>
-      <a href="day-06.html" class="day-btn">6</a>
-      <a href="day-07.html" class="day-btn">7</a>
-      <a href="day-08.html" class="day-btn">8</a>
-      <a href="day-09.html" class="day-btn">9</a>
-      <a href="day-10.html" class="day-btn">10</a>
-      <a href="day-11.html" class="day-btn">11</a>
-      <a href="day-12.html" class="day-btn">12</a>
-      <a href="day-13.html" class="day-btn">13</a>
-      <a href="day-14.html" class="day-btn">14</a>
-      <a href="day-15.html" class="day-btn">15</a>
+  <main class="container">
+    <!-- 15 天切換條 -->
+    <nav class="day-nav-bar" aria-label="天數切換">
+      <a href="day-01.html" class="day-nav-btn">Day 1</a>
+      <a href="day-02.html" class="day-nav-btn">Day 2</a>
+      <a href="day-03.html" class="day-nav-btn active">Day 3</a>
+      <a href="day-04.html" class="day-nav-btn">Day 4</a>
+      <a href="day-05.html" class="day-nav-btn">Day 5</a>
+      <a href="day-06.html" class="day-nav-btn">Day 6</a>
+      <a href="day-07.html" class="day-nav-btn">Day 7</a>
+      <a href="day-08.html" class="day-nav-btn">Day 8</a>
+      <a href="day-09.html" class="day-nav-btn">Day 9</a>
+      <a href="day-10.html" class="day-nav-btn">Day 10</a>
+      <a href="day-11.html" class="day-nav-btn">Day 11</a>
+      <a href="day-12.html" class="day-nav-btn">Day 12</a>
+      <a href="day-13.html" class="day-nav-btn">Day 13</a>
+      <a href="day-14.html" class="day-nav-btn">Day 14</a>
+      <a href="day-15.html" class="day-nav-btn">Day 15</a>
+    </nav>
+
+    <!-- 1. 當日摘要 Hero Bento -->
+    <header class="schedule-hero-card">
+      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <span class="badge badge-gold">🇩🇪 基地轉移：進駐符茲堡</span>
+        <span class="badge badge-alpine">🚗 長途轉移 530 km</span>
+        <span class="badge badge-forest">⏱️ 總車程約 5.5 小時</span>
+        <span class="badge badge-glass">🏨 宿：符茲堡（連住 4 晚）</span>
+      </div>
+      <div>
+        <h1 style="font-family: var(--font-heading); font-size: 2.1rem; line-height: 1.3; margin-bottom: 0.5rem; color: #fff;">
+          Day 03：阿爾卑斯長途北上 ➔ Ingolstadt 購物 ➔ 符茲堡進駐
+        </h1>
+        <p style="color: rgba(255, 255, 255, 0.9); font-size: 1.05rem;">
+          📅 2026/1/28 (三) ｜ 告別奧地利湖區，跨國北上巴伐利亞，中途於 Ingolstadt Village 補給精品與保暖衣物，傍晚進駐羅曼蒂克大道起點符茲堡。
+        </p>
+      </div>
+    </header>
+
+    <!-- 2. 行前檢核與避坑 Bento -->
+    <section class="bento-grid">
+      <div class="bento-card bento-col-6">
+        <h3 style="color: var(--primary); font-size: 1.15rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.4rem;">
+          🎫 今日長途自駕檢核
+        </h3>
+        <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.92rem; line-height: 1.7; color: var(--text-sub);">
+          <li><strong>長途油料檢查</strong>：離開哈修塔特前於湖區加油站加滿油，高速公路沿線油價較貴。</li>
+          <li><strong>退房與接駁</strong>：提前於 08:30 辦理退房，由飯店安排接駁車至 P1 取車出發。</li>
+          <li><strong>購物退稅</strong>：Ingolstadt 購物滿額可索取 Global Blue / Planet 退稅單，出境時於機場退稅。</li>
+        </ul>
+      </div>
+
+      <div class="bento-card bento-col-6" style="background: var(--daruma-light); border-color: rgba(220, 38, 38, 0.3);">
+        <h3 style="color: var(--daruma-red); font-size: 1.15rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.4rem;">
+          ⚠️ TripNG 長途自駕避坑警示
+        </h3>
+        <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.92rem; line-height: 1.7; color: #7f1d1d;">
+          <li><strong>A9 / A3 高速公路施工塞車</strong>：巴伐利亞冬季高速偶有除雪車與施工，導航請開啟即時路況。</li>
+          <li><strong>符茲堡市區停車</strong>：老城區路邊停車不易，建議直停飯店專用停車場或市區地下停車場（如 Parkhaus Theater）。</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 3. 視覺化時間軸 -->
+    <section style="margin: 3rem 0 1.5rem;">
+      <h2 style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--primary); margin-bottom: 1.5rem;">
+        ⏱️ 當日精確時間表 (Schedule Timeline)
+      </h2>
+
+      <div class="timeline-section">
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">08:30 🚗 告別哈修塔特，啟程北上</span>
+              <div><span class="badge badge-alpine">跨國長途 350 km</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub);">
+              由 P1 停車場取車，沿 B145 接 A1、A8 高速公路跨越德奧邊界，駛向 Ingolstadt，車程約 3.5 小時。
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">12:00 🛍️ Ingolstadt Village 暢貨中心購物 ✕ 午餐</span>
+              <div><span class="badge badge-gold">購物補給 3.5h</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub); margin-bottom: 0.5rem;">
+              抵達 <a href="https://maps.google.com/?q=Ingolstadt+Village" target="_blank" rel="noopener" class="text-map-link">Ingolstadt Village</a> 享受免費大型停車場。
+            </p>
+            <ul style="font-size: 0.88rem; color: var(--text-muted); padding-left: 1.25rem; line-height: 1.6;">
+              <li>歐洲著名露天折扣名品村，匯集雙立人、WMF、Boss、Moncler、Bally 等德國與歐洲頂級品牌。</li>
+              <li>於商場餐廳享用熱騰騰的午餐與咖啡，稍作長途休息。</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">15:30 🛣️ 沿 A3 高速公路前往符茲堡</span>
+              <div><span class="badge badge-alpine">自駕 180 km</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub);">
+              離開 Ingolstadt，接 A9 轉 A3 高速公路直達法蘭肯酒鄉首都符茲堡（Würzburg），車程約 2 小時。
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">17:30 🏨 抵達符茲堡辦理入住</span>
+              <div><span class="badge badge-forest">進駐基地二</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub);">
+              入住符茲堡市區飯店，展開法蘭肯酒鄉連續 4 晚的定點深度漫遊。
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">18:30 🍷 符茲堡舊城漫步 ✕ 法蘭肯百年酒館晚餐</span>
+              <div><span class="badge badge-wine">酒鄉微醺</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub); margin-bottom: 0.5rem;">
+              漫步前往數百年歷史的 <a href="https://maps.google.com/?q=Buergerspital+Weinstuben+Wuerzburg" target="_blank" rel="noopener" class="text-map-link"><em>Bürgerspital Weinstuben</em></a> 享用晚餐。
+            </p>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">
+              品嚐法蘭肯特色大肚酒瓶（Bocksbeutel）盛裝的席爾瓦納白葡萄酒（Silvaner），佐以脆皮烤豬肩肉（Schäufele）。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. POI 速查 -->
+    <section style="margin: 3.5rem 0 2rem;">
+      <h2 style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--primary); margin-bottom: 1.25rem;">
+        📍 今日景點與美食速查 (At-a-Glance)
+      </h2>
+      <div class="bento-grid">
+        <div class="bento-card bento-col-6">
+          <span class="badge badge-gold">🛍️ 暢貨中心</span>
+          <h4 style="margin: 0.5rem 0 0.25rem; color: var(--primary);">
+            <a href="https://maps.google.com/?q=Ingolstadt+Village" target="_blank" rel="noopener" class="text-map-link">Ingolstadt Village</a>
+          </h4>
+          <p style="font-size: 0.88rem; color: var(--text-sub); line-height: 1.6;">
+            超過 110 家國際精品店鋪，營業時間 10:00-20:00（週日公休），附設寬敞免費停車場。
+          </p>
+        </div>
+
+        <div class="bento-card bento-col-6">
+          <span class="badge badge-wine">🍽️ 百年酒館</span>
+          <h4 style="margin: 0.5rem 0 0.25rem; color: var(--primary);">
+            <a href="https://maps.google.com/?q=Buergerspital+Weinstuben+Wuerzburg" target="_blank" rel="noopener" class="text-map-link">Bürgerspital Weinstuben</a>
+          </h4>
+          <p style="font-size: 0.88rem; color: var(--text-sub); line-height: 1.6;">
+            符茲堡超過 700 年歷史的傳奇酒莊餐廳，大肚瓶白酒（Bocksbeutel）世界馳名。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 導覽按鈕 -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin: 3.5rem 0 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
+      <a href="day-02.html" style="font-weight: 600; color: var(--primary); font-size: 0.95rem;">← 前一天：Day 02 哈修塔特漫遊</a>
+      <a href="day-04.html" style="font-weight: 600; color: var(--primary); font-size: 0.95rem;">下一天：Day 04 班堡煙燻啤酒 →</a>
     </div>
+  </main>
+
+  <!-- 手機底部 App-Like 導覽列 -->
+  <div class="mobile-dock">
+    <a href="index.html" class="dock-item"><span class="dock-icon">🏠</span><span>首頁</span></a>
+    <a href="day-03.html" class="dock-item active"><span class="dock-icon">⏱️</span><span>時間表</span></a>
+    <a href="blog/day-02-blog.html" class="dock-item"><span class="dock-icon">📖</span><span>遊記</span></a>
+    <a href="javascript:void(0)" class="dock-item btn-share"><span class="dock-icon">📤</span><span>分享</span></a>
   </div>
 
-  <section class="daily-schedule">
-    <div class="container">
-      <div class="schedule-header">
-        <h1>Day 3：哈修塔特 ↔ 購物村 ↔ 符茲堡（跨國長征版）🚗</h1>
-        <p class="schedule-meta">📅 2026/1/28 (三) ｜ 🚗 約 530 公里 ｜ ⏱️ 約 5.5 小時車程 ｜ 🛍️ 購物日</p>
-        <div class="schedule-info-bar">
-          <span class="hotel-badge">🏨 住宿：符茲堡 Maritim Hotel</span>
-          <a href="guide-wurzburg.html" class="guide-link">📖 城市指南</a>
-        </div>
-      </div>
-
-      <div class="attraction-winter-note" style="margin-bottom:1rem;">
-        🎫 <strong>今日交通：</strong>德奧跨國自駕（約 530 公里）。
-      </div>
-      <div class="attraction-winter-note" style="margin-bottom:1.5rem;">
-        🌡️ <strong>冬季提醒：</strong>A8 / A9 高速公路在冬季常有大雨或濕滑路面（Slush），車速請保持穩健。建議在慕尼黑附近的 Rasthof 休息一下。
-      </div>
-
-      <h2>📸 冬季網美攻略</h2>
-      <div class="collapsible">
-        <div class="collapsible-header"><span class="collapsible-title">❄️ 購物村 + 符茲堡「父女專屬」攻略</span><span class="collapsible-icon">▼</span></div>
-        <div class="collapsible-body">
-          <p style="margin-bottom:1rem;">今天是 <strong>跨國長征日</strong>，重點是讓女兒在購物村盡情血拚，然後優雅地抵達符茲堡享用法蘭肯白酒晚餐。</p>
-          <table class="schedule-table">
-            <thead><tr><th>地點</th><th>📸 網美 & 購物小撇步</th><th>冬季特別考量</th></tr></thead>
-            <tbody>
-              <tr><td>★ Ingolstadt Village</td><td>📸 入口處的彩色裝飾牆<br>必買：Rituals (香氛)、Lululemon (女孩最愛)<br>⚠️ 先去服務中心出示護照領取 9 折優惠券</td><td>室內購物不受天氣影響<br>冬季折扣季更優惠</td></tr>
-              <tr><td>★ Maritim Hotel</td><td>符茲堡指標性飯店，地下停車場非常大<br>離交流道近，不必開進舊城區狹窄的小巷<br>電梯直達大廳</td><td>行李直接由飯店行李車接手<br>讓女兒優雅入住</td></tr>
-              <tr><td>🍴 Bürgerspital</td><td>法蘭肯地區著名的酒莊餐廳<br>必喝：Bocksbeutel (圓腹瓶) 白葡萄酒<br>這是符茲堡的象徵</td><td>室內暖氣足，氣氛極佳<br>適合長途駕駛後放鬆</td></tr>
-            </tbody>
-          </table>
-
-          <div class="attraction-winter-note" style="margin-top:1.5rem;">
-            🩺 <strong>今日旅程小提醒（針對長靴女孩與專業父親）</strong>
-          </div>
-          <ol style="margin-top:0.5rem;">
-            <li><strong>「車就是妳的置物櫃」：</strong>長靴女孩逛街最忌諱手提大包小包。身為貼心老爸，建議每買到一定量就回車上放一次（停車場很近）。讓女兒兩手空空、姿態優雅地進出下一家店，這才是自駕購物的精髓。</li>
-            <li><strong>高速公路的「生理時鐘」：</strong>從奧地利開回德國，這段 5 小時以上的路程，對專注力是極大考驗。建議在慕尼黑附近的 Rasthof (高速公路服務區) 停一下，喝杯咖啡、伸展一下穿長靴而僵硬的腳踝。</li>
-            <li><strong>退稅 (Tax Free) 的生科準則：</strong>德國退稅門檻為 €50.01。在購物村每張單據都要記得拿退稅單。雖然是 18 歲女孩買單，但專業的父親可以幫忙檢查單據上的姓名拼音是否正確，這關乎最後在機場能領回多少「實驗經費」。</li>
-            <li><strong>符茲堡的第一眼印象：</strong>抵達符茲堡後，如果天色已黑且女兒太累，不要強求去老美茵橋 (Alte Mainbrücke)。Maritim 飯店旁邊就有不錯的餐廳，甚至飯店本身的餐廳水準也很高。</li>
-          </ol>
-        </div>
-      </div>
-
-      <h2>📋 當日時間表（優化調整版）</h2>
-      <div class="collapsible">
-        <div class="collapsible-header"><span class="collapsible-title">08:00 哈修塔特退房 → 21:00 符茲堡休息</span><span class="collapsible-icon">▼</span></div>
-        <div class="collapsible-body">
-          <table class="schedule-table">
-            <thead><tr><th>時間</th><th>活動內容</th><th>交通/購物&備註</th></tr></thead>
-            <tbody>
-              <tr><td class="schedule-time">08:00</td><td>哈修塔特退房出發</td><td>🚗 建議提早 30 分鐘上路，避開慕尼黑週三的早晨車潮<br>最後一次拍攝經典明信片角度</td></tr>
-              <tr><td class="schedule-time">09:00</td><td>出發前往 Ingolstadt Village</td><td>🚗 路線：B145 → A10 → A8 → A9<br>車程約 3.5 小時（350 公里）</td></tr>
-              <tr><td class="schedule-time">12:30</td><td>抵達 Ingolstadt Village</td><td>🅿️ 免費停車場，建議停在 P1 或 P2，離精品區入口最近</td></tr>
-              <tr><td class="schedule-time">12:30-16:30</td><td>瘋狂購物與午餐</td><td>📸 購物村的中世紀造景<br>⚠️ 先去服務中心出示護照領取 9 折優惠券<br>多留 1 小時，讓女兒逛得盡興</td></tr>
-              <tr><td class="schedule-time">16:30</td><td>離開購物村</td><td>🚗 路線：A9 → A7<br>車程約 2 小時（180 公里）</td></tr>
-              <tr><td class="schedule-time">18:30</td><td>抵達符茲堡 (Würzburg)</td><td>🏨 入住 Maritim Hotel<br>行李直接由飯店行李車接手</td></tr>
-              <tr><td class="schedule-time">19:15</td><td>符茲堡暖心晚餐</td><td>🍴 推薦：Bürgerspital Weinstuben<br>室內暖氣足，氣氛極佳<br>必喝：Bocksbeutel 白葡萄酒</td></tr>
-              <tr><td class="schedule-time">21:00</td><td>飯店休息、整理戰利品</td><td>準備迎接隔天的法蘭肯區深度行程</td></tr>
-            </tbody>
-          </table>
-
-          <div class="attraction-winter-note" style="margin-top:1.5rem;">
-            💡 <strong>當日重點：</strong><br>
-            ✅ 哈修塔特最後巡禮 & 退房<br>
-            ✅ Ingolstadt Village 購物村（先領 9 折優惠券）<br>
-            ✅ 符茲堡 Maritim Hotel 入住<br>
-            ✅ Bürgerspital 法蘭肯白酒晚餐<br>
-            ⚠️ 當日車程統計：約 530 公里 / 約 5.5 小時
-          </div>
-        </div>
-      </div>
-
-      <!-- 購物村景點詳情 -->
-      <section class="attractions">
-        <h2>📍 購物村景點詳情</h2>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">★ Ingolstadt Village Outlet</h3>
-            <p class="attraction-desc">德國兩大 Outlet 之一，品牌密度高！超過 110 家品牌店，全年提供 30%-70% 折扣。</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">📍</span><span>Otto-Hahn-Straße 1, 85055 Ingolstadt</span></div>
-              <div class="attraction-info-item"><span class="icon">⏰</span><span>10:00-20:00</span></div>
-              <div class="attraction-info-item"><span class="icon">🅿️</span><span>免費停車（P1 或 P2 離精品區入口最近）</span></div>
-              <div class="attraction-info-item"><span class="icon">📸</span><span>入口處的彩色裝飾牆</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 室內購物不受天氣影響，冬季折扣季更優惠。先去服務中心出示護照領取 9 折優惠券！</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Ingolstadt+Village+Outlet" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 符茲堡景點詳情 -->
-      <section class="attractions">
-        <h2>📍 符茲堡景點詳情</h2>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">★ Maritim Hotel Würzburg</h3>
-            <p class="attraction-desc">符茲堡指標性飯店，地下停車場非常大。離交流道近，不必開進舊城區狹窄的小巷。電梯直達大廳。</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">📍</span><span>Pleichertorstraße 5, 97070 Würzburg</span></div>
-              <div class="attraction-info-item"><span class="icon">🅿️</span><span>大型地下停車場（€15-20/天）</span></div>
-              <div class="attraction-info-item"><span class="icon">⭐</span><span>4 星級飯店，設施完善</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 行李直接由飯店行李車接手，讓女兒優雅入住</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Maritim+Hotel+Wurzburg" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">🍴 Bürgerspital Weinstuben</h3>
-            <p class="attraction-desc">法蘭肯地區著名的酒莊餐廳！必喝 Bocksbeutel (圓腹瓶) 白葡萄酒，這是符茲堡的象徵。</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">📍</span><span>Theaterstraße 19, 97070 Würzburg</span></div>
-              <div class="attraction-info-item"><span class="icon">💰</span><span>€15-25/人</span></div>
-              <div class="attraction-info-item"><span class="icon">🍷</span><span>必喝：Bocksbeutel 白葡萄酒</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 室內暖氣足，氣氛極佳。適合長途駕駛後放鬆</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Burgerspital+Weinstuben+Wurzburg" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 購物村攻略 -->
-      <section class="attractions">
-        <h2>🛍️ 購物村攻略</h2>
-
-        <div class="collapsible">
-          <div class="collapsible-header"><span class="collapsible-title">推薦品牌清單</span><span class="collapsible-icon">▼</span></div>
-          <div class="collapsible-body">
-            <table class="schedule-table">
-              <thead><tr><th>類別</th><th>品牌</th><th>推薦理由</th></tr></thead>
-              <tbody>
-                <tr><td>運動品牌</td><td>Adidas、Nike、Puma</td><td>德國本土品牌折扣更深</td></tr>
-                <tr><td>精品服飾</td><td>Hugo Boss、Armani</td><td>歐洲價格優勢明顯</td></tr>
-                <tr><td>包包配件</td><td>Michael Kors、Furla</td><td>女孩最愛</td></tr>
-                <tr><td>德國廚具</td><td>WMF、Zwilling</td><td>德國製造，品質保證</td></tr>
-                <tr><td>香氛保養</td><td>Rituals、L'Occitane</td><td>送禮自用兩相宜</td></tr>
-                <tr><td>運動休閒</td><td>Lululemon</td><td>女孩最愛！</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <div class="collapsible">
-          <div class="collapsible-header"><span class="collapsible-title">退稅 (Tax Free) 須知</span><span class="collapsible-icon">▼</span></div>
-          <div class="collapsible-body">
-            <ul>
-              <li><strong>退稅門檻：</strong>€50.01（單店單日消費）</li>
-              <li><strong>退稅比例：</strong>約 10-14%（視金額而定）</li>
-              <li><strong>注意事項：</strong>
-                <ul>
-                  <li>每張單據都要記得拿退稅單</li>
-                  <li>檢查單據上的姓名拼音是否正確</li>
-                  <li>保留所有收據，機場退稅時需要</li>
-                  <li>商品在離開歐盟前不可拆封使用</li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- 實用資訊 -->
-      <section class="attractions">
-        <h2>ℹ️ 實用資訊</h2>
-
-        <div class="collapsible">
-          <div class="collapsible-header"><span class="collapsible-title">🚗 停車資訊</span><span class="collapsible-icon">▼</span></div>
-          <div class="collapsible-body">
-            <p><strong>Ingolstadt Village：</strong></p>
-            <ul>
-              <li>★ <strong>免費停車場</strong> - 建議停在 P1 或 P2，離精品區入口最近</li>
-            </ul>
-            <p><strong>符茲堡：</strong></p>
-            <ul>
-              <li>★ <strong>Maritim Hotel 地下停車場</strong> - €15-20/天，非常大，電梯直達大廳</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="collapsible">
-          <div class="collapsible-header"><span class="collapsible-title">🍽️ 餐廳推薦</span><span class="collapsible-icon">▼</span></div>
-          <div class="collapsible-body">
-            <p><strong>符茲堡晚餐：</strong></p>
-            <ul>
-              <li>★ <strong>Bürgerspital Weinstuben</strong> - 法蘭肯葡萄酒和傳統料理，必喝 Bocksbeutel</li>
-              <li>Alte Mainmühle - 橋頭餐廳，美茵河景</li>
-              <li>恩典小食坊 - 道地川菜，可用中文溝通（⚠️ 只收現金，週一休息）</li>
-              <li>Maritim Hotel 餐廳 - 如果太累，飯店本身的餐廳水準也很高</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <div class="day-nav">
-        <a href="day-02.html">← Day 2</a>
-        <a href="day-04.html">Day 4 →</a>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container"><p>2026 德國南部冬季自駕之旅 | 個人旅遊規劃</p></div>
-  </footer>
-  <script src="js/main.js"></script>
+  <script src="vendor/glightbox/glightbox.min.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
-

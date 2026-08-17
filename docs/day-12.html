@@ -3,275 +3,224 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Day 12: 蒂蒂湖黑森林蛋糕、Drubba 咕咕鐘、Das Graseck 飯店纜車、阿爾卑斯山景 Spa">
-  <title>Day 12 - 黑森林之眼 ↔ 楚格峰門戶（纜車隱世版）| 2026 德國冬季之旅</title>
+  <meta name="description" content="Day 12 時間表: 告別法國亞爾薩斯、穿越黑森林全景公路、蒂蒂湖雪景漫步、正統黑森林蛋糕、咕咕鐘、抵達加米許雪山溫泉山莊">
+  <title>Day 12 時間表 - 黑森林蒂蒂湖 ➔ 加米許阿爾卑斯 | 2026 德國冬季之旅</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;900&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="vendor/glightbox/glightbox.min.css">
 </head>
 <body>
-  <nav class="navbar">
+  <div class="reading-progress"></div>
+
+  <nav class="site-nav">
     <div class="container">
-      <a href="index.html" class="navbar-brand">🇩🇪 2026 德國冬季之旅</a>
-      <ul class="navbar-menu">
+      <a href="index.html" class="brand-link">
+        <span>🇩🇪 2026 德南冬旅誌</span>
+        <span class="brand-badge">Travel OS</span>
+      </a>
+      <ul class="nav-links">
         <li><a href="index.html">首頁</a></li>
-        <li><a href="index.html#timeline">行程總覽</a></li>
-        <li><a href="day-01.html" class="active">每日行程</a></li>
-        <li class="dropdown">
-          <a href="#">城市指南 ▾</a>
-          <ul class="dropdown-menu">
-            <li><a href="guide-hallstatt.html">哈修塔特區</a></li>
-            <li><a href="guide-wurzburg.html">符茲堡區</a></li>
-            <li><a href="guide-heidelberg.html">海德堡區</a></li>
-            <li><a href="guide-colmar.html">科爾馬區</a></li>
-            <li><a href="guide-garmisch.html">加米許區</a></li>
-          </ul>
-        </li>
+        <li><a href="index.html#itinerary">15天行程</a></li>
+        <li><a href="day-12.html" class="active">純時間表</a></li>
+        <li><a href="blog/day-02-blog.html">精選遊記</a></li>
       </ul>
-      <button class="navbar-share" title="分享此行程">📤 分享</button>
-      <button class="navbar-toggle" aria-label="選單" aria-expanded="false">☰</button>
+      <button class="nav-share-btn btn-share"><span>📤 分享</span></button>
     </div>
   </nav>
 
-  <div class="container">
-    <div class="day-switcher">
-      <a href="day-01.html" class="day-btn">1</a><a href="day-02.html" class="day-btn">2</a><a href="day-03.html" class="day-btn">3</a>
-      <a href="day-04.html" class="day-btn">4</a><a href="day-05.html" class="day-btn">5</a><a href="day-06.html" class="day-btn">6</a>
-      <a href="day-07.html" class="day-btn">7</a><a href="day-08.html" class="day-btn">8</a><a href="day-09.html" class="day-btn">9</a>
-      <a href="day-10.html" class="day-btn">10</a><a href="day-11.html" class="day-btn">11</a><a href="day-12.html" class="day-btn active">12</a>
-      <a href="day-13.html" class="day-btn">13</a><a href="day-14.html" class="day-btn">14</a><a href="day-15.html" class="day-btn">15</a>
+  <main class="container">
+    <nav class="day-nav-bar" aria-label="天數切換">
+      <a href="day-01.html" class="day-nav-btn">Day 1</a>
+      <a href="day-02.html" class="day-nav-btn">Day 2</a>
+      <a href="day-03.html" class="day-nav-btn">Day 3</a>
+      <a href="day-04.html" class="day-nav-btn">Day 4</a>
+      <a href="day-05.html" class="day-nav-btn">Day 5</a>
+      <a href="day-06.html" class="day-nav-btn">Day 6</a>
+      <a href="day-07.html" class="day-nav-btn">Day 7</a>
+      <a href="day-08.html" class="day-nav-btn">Day 8</a>
+      <a href="day-09.html" class="day-nav-btn">Day 9</a>
+      <a href="day-10.html" class="day-nav-btn">Day 10</a>
+      <a href="day-11.html" class="day-nav-btn">Day 11</a>
+      <a href="day-12.html" class="day-nav-btn active">Day 12</a>
+      <a href="day-13.html" class="day-nav-btn">Day 13</a>
+      <a href="day-14.html" class="day-nav-btn">Day 14</a>
+      <a href="day-15.html" class="day-nav-btn">Day 15</a>
+    </nav>
+
+    <!-- 1. 當日摘要 Hero Bento -->
+    <header class="schedule-hero-card">
+      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <span class="badge badge-gold">🏔️ 基地五：進駐加米許阿爾卑斯</span>
+        <span class="badge badge-alpine">🚗 長途自駕 360 km</span>
+        <span class="badge badge-forest">⏱️ 總車程約 4.5 小時</span>
+        <span class="badge badge-glass">🏨 宿：加米許（連住 3 晚）</span>
+      </div>
+      <div>
+        <h1 style="font-family: var(--font-heading); font-size: 2.1rem; line-height: 1.3; margin-bottom: 0.5rem; color: #fff;">
+          Day 12：黑森林蒂蒂湖雪景 ➔ 抵達阿爾卑斯加米許溫泉
+        </h1>
+        <p style="color: rgba(255, 255, 255, 0.9); font-size: 1.05rem;">
+          📅 2026/2/6 (五) ｜ 提早自法國出發，穿越冷杉覆雪的黑森林全景公路，於蒂蒂湖畔品嚐櫻桃蛋糕與手工咕咕鐘，傍晚進駐楚格峰山腳加米許度假溫泉飯店。
+        </p>
+      </div>
+    </header>
+
+    <!-- 2. 行前檢核與避坑 Bento -->
+    <section class="bento-grid">
+      <div class="bento-card bento-col-6">
+        <h3 style="color: var(--primary); font-size: 1.15rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.4rem;">
+          🎫 今日長途自駕路線指南
+        </h3>
+        <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.92rem; line-height: 1.7; color: var(--text-sub);">
+          <li><strong>08:00 提早出發</strong>：今日跨越黑森林與巴伐利亞南部，建議 08:00 前自科爾馬啟程。</li>
+          <li><strong>德境全線自駕</strong>：蒂蒂湖至加米許走 <code>A81 ➔ A7 ➔ B17 ➔ B23</code> 全程在德國境內，<strong>不需要奧地利通行證</strong>。</li>
+          <li><strong>蒂蒂湖停車</strong>：湖畔大型停車場（Parkplatz Titisee），步行 2 分鐘直達湖畔步道。</li>
+        </ul>
+      </div>
+
+      <div class="bento-card bento-col-6" style="background: var(--daruma-light); border-color: rgba(220, 38, 38, 0.3);">
+        <h3 style="color: var(--daruma-red); font-size: 1.15rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.4rem;">
+          ⚠️ TripNG 黑森林山區避坑警示
+        </h3>
+        <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.92rem; line-height: 1.7; color: #7f1d1d;">
+          <li><strong>B500 黑森林公路高海拔積雪</strong>：蒂蒂湖海拔約 850 公尺，清晨彎道多有薄雪或暗冰，請保持 50-60 km/h 穩健行駛。</li>
+          <li><strong>加米許雙子城路標</strong>：加米許（Garmisch）與帕滕基興（Partenkirchen）為雙城合併，老街風格不同，入住飯店請確認確切導航地址。</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 3. 視覺化時間軸 -->
+    <section style="margin: 3rem 0 1.5rem;">
+      <h2 style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--primary); margin-bottom: 1.5rem;">
+        ⏱️ 當日精確時間表 (Schedule Timeline)
+      </h2>
+
+      <div class="timeline-section">
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">08:00 🚗 告別科爾馬，前往德國黑森林</span>
+              <div><span class="badge badge-alpine">自駕 80 km</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub);">
+              由科爾馬啟程東行，越過萊茵河進入德國巴登-符騰堡邦，沿 B500 景觀公路登上黑森林，車程約 1 小時。
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">09:30 🌲 蒂蒂湖 (Titisee) 雪景漫步 ✕ 黑森林蛋糕</span>
+              <div><span class="badge badge-forest">冷杉雪景</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub); margin-bottom: 0.5rem;">
+              抵達黑森林高原明珠 <a href="https://maps.google.com/?q=Titisee+Lake" target="_blank" rel="noopener" class="text-map-link">蒂蒂湖 (Titisee)</a>。
+            </p>
+            <ul style="font-size: 0.88rem; color: var(--text-muted); padding-left: 1.25rem; line-height: 1.6;">
+              <li>沿湖畔步道欣賞白雪覆蓋的冷杉森林倒影。</li>
+              <li>品嚐正統添加櫻桃烈酒（Kirschwasser）的正宗黑森林櫻桃蛋糕（<button class="btn-audio" data-pronounce="Schwarzwälder Kirschtorte" data-lang="de-DE">Schwarzwälder Kirschtorte 🔊</button>）。</li>
+              <li>參觀傳奇 Drubba 咕咕鐘（Kuckucksuhr）工坊，欣賞精緻機械發條報時工藝。</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">12:00 🛣️ 沿 A81 / A7 / B17 前往加米許</span>
+              <div><span class="badge badge-alpine">自駕 280 km</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub);">
+              離開蒂蒂湖，接高速公路穿越巴伐利亞南部高原，於高速休息站享用午餐，車程約 3.5 小時。
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">16:00 🏔️ 抵達加米許 (Garmisch) 辦理入住</span>
+              <div><span class="badge badge-gold">進駐基地五</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub);">
+              抵達德國阿爾卑斯雙子城加米許-帕滕基興，入住高山景觀溫泉飯店，展開最後 3 晚的雪山古堡度假。
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">18:30 🍖 巴伐利亞脆皮豬腳 ✕ 阿爾卑斯之夜</span>
+              <div><span class="badge badge-wine">道地硬派美食</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub); margin-bottom: 0.5rem;">
+              於傳統木屋酒館享用經典爐烤脆皮豬腳（<button class="btn-audio" data-pronounce="Schweinshaxe" data-lang="de-DE">Schweinshaxe 🔊</button>）。
+            </p>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">
+              搭配小麥白啤酒（Weissbier）與熱呼呼的馬鈴薯丸，洗去長途自駕疲勞。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. POI 速查 -->
+    <section style="margin: 3.5rem 0 2rem;">
+      <h2 style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--primary); margin-bottom: 1.25rem;">
+        📍 今日景點與美食速查 (At-a-Glance)
+      </h2>
+      <div class="bento-grid">
+        <div class="bento-card bento-col-4">
+          <span class="badge badge-forest">🌲 黑森林之珠</span>
+          <h4 style="margin: 0.5rem 0 0.25rem; color: var(--primary);">
+            <a href="https://maps.google.com/?q=Titisee+Lake" target="_blank" rel="noopener" class="text-map-link">蒂蒂湖 (Titisee)</a>
+          </h4>
+          <p style="font-size: 0.88rem; color: var(--text-sub); line-height: 1.6;">
+            海拔 850 公尺高原湖泊，冷杉林環抱，冬季雪景宛如純白畫卷。
+          </p>
+        </div>
+
+        <div class="bento-card bento-col-4">
+          <span class="badge badge-wine">🍰 原產地甜點</span>
+          <h4 style="margin: 0.5rem 0 0.25rem; color: var(--primary);">
+            <a href="https://maps.google.com/?q=Cafe+Titisee" target="_blank" rel="noopener" class="text-map-link">黑森林櫻桃蛋糕</a>
+          </h4>
+          <p style="font-size: 0.88rem; color: var(--text-sub); line-height: 1.6;">
+            濃郁鮮奶油、酸櫻桃與黑森林櫻桃蒸餾烈酒交織，口感濃醇不膩。
+          </p>
+        </div>
+
+        <div class="bento-card bento-col-4">
+          <span class="badge badge-gold">🏔️ 雙子名城</span>
+          <h4 style="margin: 0.5rem 0 0.25rem; color: var(--primary);">
+            <a href="https://maps.google.com/?q=Garmisch-Partenkirchen" target="_blank" rel="noopener" class="text-map-link">加米許-帕滕基興</a>
+          </h4>
+          <p style="font-size: 0.88rem; color: var(--text-sub); line-height: 1.6;">
+            德國第一高峰楚格峰山腳門戶，建築外牆繪滿華麗 Lüftlmalerei 濕壁畫。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 導覽按鈕 -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin: 3.5rem 0 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
+      <a href="day-11.html" style="font-weight: 600; color: var(--primary); font-size: 0.95rem;">← 前一天：Day 11 瑞士巴塞爾 ✕ 埃吉桑姆</a>
+      <a href="day-13.html" style="font-weight: 600; color: var(--primary); font-size: 0.95rem;">下一天：Day 13 楚格峰 ✕ 冰瀑峽谷 →</a>
     </div>
+  </main>
+
+  <div class="mobile-dock">
+    <a href="index.html" class="dock-item"><span class="dock-icon">🏠</span><span>首頁</span></a>
+    <a href="day-12.html" class="dock-item active"><span class="dock-icon">⏱️</span><span>時間表</span></a>
+    <a href="blog/day-02-blog.html" class="dock-item"><span class="dock-icon">📖</span><span>遊記</span></a>
+    <a href="javascript:void(0)" class="dock-item btn-share"><span class="dock-icon">📤</span><span>分享</span></a>
   </div>
 
-  <section class="daily-schedule">
-    <div class="container">
-      <div class="schedule-header">
-        <h1>Day 12：黑森林之眼 ↔ 楚格峰門戶（纜車隱世版）🚗</h1>
-        <p class="schedule-meta">📅 2026/2/6 (五) ｜ 🚗 約 360 公里 ｜ ⚠️ 08:00 提早出發</p>
-        <div class="schedule-info-bar">
-          <span class="hotel-badge">🏨 住宿：加米許 Das Graseck</span>
-          <a href="guide-garmisch.html" class="guide-link">📖 城市指南</a>
-        </div>
-      </div>
-
-      <div class="attraction-winter-note" style="margin-bottom:1rem;">
-        🎫 <strong>今日交通：</strong>全日自駕（約 360 公里）+ 飯店專屬纜車。
-      </div>
-      <div class="attraction-winter-note" style="margin-bottom:1.5rem;">
-        🌡️ <strong>冬季提醒：</strong>往加米許的路上，海拔會逐漸升高，路面可能有積雪或結冰，請確認雨刷精與防凍液充足。
-      </div>
-
-      <h2>📸 冬季網美攻略</h2>
-      <div class="collapsible">
-        <div class="collapsible-header"><span class="collapsible-title">❄️ 黑森林 + 阿爾卑斯山「纜車隱世」攻略</span><span class="collapsible-icon">▼</span></div>
-        <div class="collapsible-body">
-          <p style="margin-bottom:1rem;">今天是 <strong>長途移動日</strong>，重點是在蒂蒂湖品嚐黑森林蛋糕，然後優雅地搭乘飯店專屬纜車抵達阿爾卑斯山上的隱世飯店。</p>
-          <table class="schedule-table">
-            <thead><tr><th>景點名稱</th><th>📸 網美拍照攻略</th><th>冬季特別考量</th></tr></thead>
-            <tbody>
-              <tr><td>★ 蒂蒂湖 (Titisee)</td><td>📸 穿著長靴靠在湖畔圍欄，背景是結冰湖面與彩色木屋，非常有冬日氛圍</td><td>湖邊風強，雖然步道好走，但保暖必須做足</td></tr>
-              <tr><td>★ Das Graseck</td><td>📸 纜車內部！小巧復古的纜車與窗外的阿爾卑斯山景是絕佳攝影棚<br>被喻為「通往天堂的飯店」</td><td>⚠️ 唯一路徑：若錯過纜車營運時間會非常麻煩，務必在 18:00 前抵達</td></tr>
-              <tr><td>🎨 Ludwigstrasse</td><td>加米許最有名的壁畫大街<br>牆面彩繪（Lüftlmalerei）非常精美</td><td>⚠️ 體檢建議：週五開車已久，建議留在飯店享受設施，明天再去</td></tr>
-            </tbody>
-          </table>
-
-          <div class="attraction-winter-note" style="margin-top:1.5rem;">
-            🩺 <strong>今日長途移動小提醒（針對長靴女孩與專業父親）</strong>
-          </div>
-          <ol style="margin-top:0.5rem;">
-            <li><strong>「飯店纜車」的科學邏輯：</strong>Das Graseck 的接駁設計對長靴女孩是福音。流程：妳先將車停在 Skistadion 停車場（會有飯店指示牌），按對講機聯絡飯店，纜車就會下來。優點：行李直接進纜車，女兒只需坐著欣賞 5 分鐘美景就能抵達大廳。這解決了飯店位於半山腰「穿長靴難爬坡」的問題。</li>
-            <li><strong>黑森林蛋糕的「生科觀察」：</strong>真正的黑森林蛋糕含有高濃度的 Kirschwasser (櫻桃烈酒)。提醒女兒，酒精在低溫下會使血管擴張、初期體感變暖，但水分流失也快，吃完後記得在車上補充足夠水分。</li>
-            <li><strong>週五下班車潮：</strong>A81 接 A7 往阿爾卑斯山區是旅遊熱線。週五下午容易塞車，如果途中延誤，請爸爸保持冷靜，車上備好女兒喜歡的零食與音樂，緩解長時間坐車的焦慮。</li>
-            <li><strong>長靴與 Spa 的完美銜接：</strong>抵達 Das Graseck 後，飯店有非常棒的桑拿與水療設施。長靴穿了一整天，小腿容易水腫，建議進房後讓女兒先去享用飯店的 Spa，這能徹底解決久坐車內的足部疲累。</li>
-          </ol>
-        </div>
-      </div>
-
-      <h2>📋 當日時間表（優化調整版）</h2>
-      <div class="collapsible">
-        <div class="collapsible-header"><span class="collapsible-title">08:00 科爾馬出發 → 18:30 飯店晚餐</span><span class="collapsible-icon">▼</span></div>
-        <div class="collapsible-body">
-          <table class="schedule-table">
-            <thead><tr><th>時間</th><th>活動內容</th><th>交通/攝影&備註</th></tr></thead>
-            <tbody>
-              <tr><td class="schedule-time">08:00</td><td>科爾馬出發</td><td>🚗 穿過萊茵河重返德國<br>B31 穿過黑森林山谷風景極美</td></tr>
-              <tr><td class="schedule-time">09:15</td><td>蒂蒂湖 (Titisee)</td><td>🅿️ Seestrasse 停車場（€2-3/小時）<br>📸 結冰湖面與彩色木屋</td></tr>
-              <tr><td class="schedule-time">10:00</td><td>Drubba 咕咕鐘 & 蛋糕</td><td>必做：買鐘可退稅<br>🍰 推薦 Cafe Felina，酒味紮實、口感豐富</td></tr>
-              <tr><td class="schedule-time">11:30</td><td>離開蒂蒂湖</td><td>🚗 多留 1 小時，避免女兒為了趕路而心情不佳</td></tr>
-              <tr><td class="schedule-time">12:30</td><td>高速公路午餐</td><td>🍔 停靠大型休息站 (Raststätte)<br>快速補充熱量，準備長途駕駛</td></tr>
-              <tr><td class="schedule-time">15:00</td><td>抵達加米許飯店停車場</td><td>🅿️ 關鍵：導航至 Olympic Ski Stadium (Skistadion)<br>飯店專屬停車位在此</td></tr>
-              <tr><td class="schedule-time">15:30</td><td>搭乘 Graseckbahn 上山</td><td>🚡 驚喜：這是飯店私人的小纜車<br>行李會由纜車運送，長靴女孩可優雅上山</td></tr>
-              <tr><td class="schedule-time">16:00</td><td>飯店 Check-in 休息</td><td>🧖 Das Graseck 以水療 (Spa) 聞名<br>強烈建議在飯店放鬆，不要再下山了</td></tr>
-              <tr><td class="schedule-time">18:30</td><td>飯店晚餐 (Fine Dining)</td><td>🍷 既然進場程序繁瑣，晚餐直接在飯店享用<br>品質極佳且氣氛浪漫</td></tr>
-            </tbody>
-          </table>
-
-          <div class="attraction-winter-note" style="margin-top:1.5rem;">
-            💡 <strong>當日重點：</strong><br>
-            ⚠️ 08:00 提早出發（比弗萊堡方案早 30 分鐘）<br>
-            ✅ 蒂蒂湖：品嚐黑森林蛋糕、購買咕咕鐘<br>
-            ✅ 搭乘 Graseckbahn 飯店專屬纜車上山<br>
-            ✅ Das Graseck 飯店 Spa 放鬆<br>
-            ⚠️ 當日車程統計：約 360 公里 / 約 4.5 小時
-          </div>
-        </div>
-      </div>
-
-      <!-- 蒂蒂湖景點詳情 -->
-      <section class="attractions">
-        <h2>📍 蒂蒂湖景點詳情</h2>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">★ 蒂蒂湖 (Titisee)</h3>
-            <p class="attraction-desc">黑森林最著名的冰河湖，湖面約 1.3 平方公里，被森林環繞。冬季湖面可能結冰，別有韻味！</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">💰</span><span>免費參觀</span></div>
-              <div class="attraction-info-item"><span class="icon">🅿️</span><span>Seestrasse 停車場（€2-3/小時）</span></div>
-              <div class="attraction-info-item"><span class="icon">📸</span><span>穿著長靴靠在湖畔圍欄，背景是結冰湖面</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 湖邊風強，雖然步道好走，但保暖必須做足</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Titisee+Germany" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-              <a href="guide-garmisch.html#titisee" class="btn btn-more">📖 了解更多</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">★ Drubba 咕咕鐘 & Cafe Felina</h3>
-            <p class="attraction-desc">黑森林最大咕咕鐘展示店，可觀看製作過程示範。買鐘可退稅！旁邊的 Cafe Felina 黑森林蛋糕酒味紮實、口感豐富。</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">💰</span><span>傳統款 €50-200 / 精緻手工款 €200-500+</span></div>
-              <div class="attraction-info-item"><span class="icon">📦</span><span>可寄回台灣</span></div>
-              <div class="attraction-info-item"><span class="icon">🍰</span><span>黑森林蛋糕 €4-6/片，配熱巧克力最佳</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 室內溫暖，購物避寒。認明 VdS 認證標誌！停留 1.5 小時停車費約 €4-6</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Drubba+Titisee" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 加米許景點詳情 -->
-      <section class="attractions">
-        <h2>📍 加米許景點詳情</h2>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">★ Das Graseck 飯店</h3>
-            <p class="attraction-desc">被喻為「通往天堂的飯店」，需搭纜車才能抵達！飯店以水療 (Spa) 聞名，阿爾卑斯山景無敵。</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">🅿️</span><span>導航至 Olympic Ski Stadium (Skistadion)</span></div>
-              <div class="attraction-info-item"><span class="icon">🚡</span><span>Graseckbahn 飯店專屬纜車</span></div>
-              <div class="attraction-info-item"><span class="icon">📸</span><span>纜車內部！小巧復古的纜車與窗外山景</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 唯一路徑：若錯過纜車營運時間會非常麻煩，務必在 18:00 前抵達</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Das+Graseck+Garmisch" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">🎨 Ludwigstrasse 壁畫大街</h3>
-            <p class="attraction-desc">加米許主要購物街，彩繪濕壁畫建築林立，傳統巴伐利亞風情。牆面彩繪（Lüftlmalerei）描繪宗教故事和民間傳說，保存最完整！</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">💰</span><span>免費欣賞</span></div>
-              <div class="attraction-info-item"><span class="icon">📍</span><span>路德維希大街</span></div>
-              <div class="attraction-info-item"><span class="icon">🌙</span><span>傍晚燈光氛圍佳</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 體檢建議：週五開車已久，建議留在飯店享受設施，明天再去。白雪襯托更美，早上光線最佳</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Ludwigstrasse+Garmisch" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">🏘️ Partenkirchen 老城區</h3>
-            <p class="attraction-desc">較古老的一區，更傳統的巴伐利亞風格，餐廳較多。冬季人少，更寧靜。</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">🚶</span><span>從 Garmisch 步行約 15 分鐘</span></div>
-              <div class="attraction-info-item"><span class="icon">🍽️</span><span>晚餐推薦區域</span></div>
-              <div class="attraction-info-item"><span class="icon">🚌</span><span>可搭乘巴士</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 體檢建議：今天開車已久，建議明天再去。更傳統氛圍，餐廳選擇多</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Partenkirchen+Germany" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 必吃美食 -->
-      <section class="attractions">
-        <h2>🍰 必吃美食</h2>
-        <div class="collapsible">
-          <div class="collapsible-header"><span class="collapsible-title">黑森林蛋糕 & 飯店 Fine Dining</span><span class="collapsible-icon">▼</span></div>
-          <div class="collapsible-body">
-            <table class="schedule-table">
-              <thead><tr><th>美食名稱</th><th>詳細介紹</th><th>推薦餐廳</th><th>價格參考</th></tr></thead>
-              <tbody>
-                <tr><td>★ 黑森林蛋糕 (Schwarzwalder Kirschtorte)</td><td>正宗口味！巧克力、櫻桃、鮮奶油<br>含高濃度 Kirschwasser 櫻桃烈酒</td><td>Cafe Felina（蒂蒂湖）</td><td>€4-6/片</td></tr>
-                <tr><td>黑森林火腿</td><td>煙燻風味濃郁</td><td>蒂蒂湖各餐廳</td><td>€15-30</td></tr>
-                <tr><td>櫻桃酒 (Kirschwasser)</td><td>黑森林蛋糕的靈魂</td><td>Drubba 咕咕鐘店</td><td>€15-25</td></tr>
-                <tr><td>★ Das Graseck Fine Dining</td><td>飯店晚餐，品質極佳且氣氛浪漫</td><td>Das Graseck 飯店餐廳</td><td>€40-60/人</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      <!-- 實用資訊 -->
-      <section class="attractions">
-        <h2>ℹ️ 實用資訊</h2>
-
-        <div class="collapsible">
-          <div class="collapsible-header"><span class="collapsible-title">🚗 停車資訊</span><span class="collapsible-icon">▼</span></div>
-          <div class="collapsible-body">
-            <p><strong>蒂蒂湖：</strong></p>
-            <ul>
-              <li>★ <strong>Seestrasse 停車場</strong> - €2-3/小時，離湖畔最近</li>
-            </ul>
-            <p><strong>加米許（Das Graseck）：</strong></p>
-            <ul>
-              <li>★ <strong>Olympic Ski Stadium (Skistadion)</strong> - 飯店專屬停車位在此</li>
-              <li>按對講機聯絡飯店，纜車就會下來接人</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="collapsible">
-          <div class="collapsible-header"><span class="collapsible-title">🚡 飯店纜車資訊 (Graseckbahn)</span><span class="collapsible-icon">▼</span></div>
-          <div class="collapsible-body">
-            <p><strong>操作流程：</strong></p>
-            <ol>
-              <li>導航至 Olympic Ski Stadium (Skistadion)</li>
-              <li>將車停在飯店專屬停車位（會有指示牌）</li>
-              <li>按對講機聯絡飯店</li>
-              <li>纜車會下來接人，行李直接進纜車</li>
-              <li>5 分鐘美景欣賞後抵達飯店大廳</li>
-            </ol>
-            <p style="color:#e74c3c;"><strong>⚠️ 注意：</strong>務必在 18:00 前抵達，錯過纜車營運時間會非常麻煩！</p>
-          </div>
-        </div>
-      </section>
-
-      <div class="day-nav">
-        <a href="day-11.html">← Day 11</a>
-        <a href="day-13.html">Day 13 →</a>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer"><div class="container"><p>2026 德國南部冬季自駕之旅 | 個人旅遊規劃</p></div></footer>
-  <script src="js/main.js"></script>
+  <script src="vendor/glightbox/glightbox.min.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
-

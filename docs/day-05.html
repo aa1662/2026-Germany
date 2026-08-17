@@ -3,283 +3,240 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Day 5: 符茲堡↔紐倫堡冬季網美購物版，皇帝堡、白工匠巷、吊刑吏之橋攝影攻略">
-  <title>Day 5 - 紐倫堡一日遊（冬季網美購物版）| 2026 德國冬季之旅</title>
+  <meta name="description" content="Day 5 時間表: 符茲堡搭火車前往紐倫堡、工匠廣場、美泉金環傳說、皇帝堡全景俯瞰、炭烤紐倫堡小香腸">
+  <title>Day 05 時間表 - 紐倫堡 (Nürnberg) 皇帝堡與工藝之都 | 2026 德國冬季之旅</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;900&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="vendor/glightbox/glightbox.min.css">
 </head>
 <body>
-  <nav class="navbar">
+  <div class="reading-progress"></div>
+
+  <nav class="site-nav">
     <div class="container">
-      <a href="index.html" class="navbar-brand">🇩🇪 2026 德國冬季之旅</a>
-      <ul class="navbar-menu">
+      <a href="index.html" class="brand-link">
+        <span>🇩🇪 2026 德南冬旅誌</span>
+        <span class="brand-badge">Travel OS</span>
+      </a>
+      <ul class="nav-links">
         <li><a href="index.html">首頁</a></li>
-        <li><a href="index.html#timeline">行程總覽</a></li>
-        <li><a href="day-01.html" class="active">每日行程</a></li>
-        <li class="dropdown">
-          <a href="#">城市指南 ▾</a>
-          <ul class="dropdown-menu">
-            <li><a href="guide-hallstatt.html">哈修塔特區</a></li>
-            <li><a href="guide-wurzburg.html">符茲堡區</a></li>
-            <li><a href="guide-heidelberg.html">海德堡區</a></li>
-            <li><a href="guide-colmar.html">科爾馬區</a></li>
-            <li><a href="guide-garmisch.html">加米許區</a></li>
-          </ul>
-        </li>
+        <li><a href="index.html#itinerary">15天行程</a></li>
+        <li><a href="day-05.html" class="active">純時間表</a></li>
+        <li><a href="blog/day-02-blog.html">精選遊記</a></li>
       </ul>
-      <button class="navbar-share" title="分享此行程">📤 分享</button>
-      <button class="navbar-toggle" aria-label="選單" aria-expanded="false">☰</button>
+      <button class="nav-share-btn btn-share"><span>📤 分享</span></button>
     </div>
   </nav>
 
-  <div class="container">
-    <div class="day-switcher">
-      <a href="day-01.html" class="day-btn">1</a><a href="day-02.html" class="day-btn">2</a><a href="day-03.html" class="day-btn">3</a>
-      <a href="day-04.html" class="day-btn">4</a><a href="day-05.html" class="day-btn active">5</a><a href="day-06.html" class="day-btn">6</a>
-      <a href="day-07.html" class="day-btn">7</a><a href="day-08.html" class="day-btn">8</a><a href="day-09.html" class="day-btn">9</a>
-      <a href="day-10.html" class="day-btn">10</a><a href="day-11.html" class="day-btn">11</a><a href="day-12.html" class="day-btn">12</a>
-      <a href="day-13.html" class="day-btn">13</a><a href="day-14.html" class="day-btn">14</a><a href="day-15.html" class="day-btn">15</a>
+  <main class="container">
+    <nav class="day-nav-bar" aria-label="天數切換">
+      <a href="day-01.html" class="day-nav-btn">Day 1</a>
+      <a href="day-02.html" class="day-nav-btn">Day 2</a>
+      <a href="day-03.html" class="day-nav-btn">Day 3</a>
+      <a href="day-04.html" class="day-nav-btn">Day 4</a>
+      <a href="day-05.html" class="day-nav-btn active">Day 5</a>
+      <a href="day-06.html" class="day-nav-btn">Day 6</a>
+      <a href="day-07.html" class="day-nav-btn">Day 7</a>
+      <a href="day-08.html" class="day-nav-btn">Day 8</a>
+      <a href="day-09.html" class="day-nav-btn">Day 9</a>
+      <a href="day-10.html" class="day-nav-btn">Day 10</a>
+      <a href="day-11.html" class="day-nav-btn">Day 11</a>
+      <a href="day-12.html" class="day-nav-btn">Day 12</a>
+      <a href="day-13.html" class="day-nav-btn">Day 13</a>
+      <a href="day-14.html" class="day-nav-btn">Day 14</a>
+      <a href="day-15.html" class="day-nav-btn">Day 15</a>
+    </nav>
+
+    <!-- 1. 當日摘要 Hero Bento -->
+    <header class="schedule-hero-card">
+      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <span class="badge badge-gold">🇩🇪 基地二：符茲堡宿</span>
+        <span class="badge badge-wine">🚂 火車一日遊</span>
+        <span class="badge badge-forest">🎫 拜仁邦票 (Bayern-Ticket €27)</span>
+        <span class="badge badge-glass">🏨 連住第 3 晚：符茲堡</span>
+      </div>
+      <div>
+        <h1 style="font-family: var(--font-heading); font-size: 2.1rem; line-height: 1.3; margin-bottom: 0.5rem; color: #fff;">
+          Day 05：皇帝堡走讀 ✕ 轉動美泉幸運金環 紐倫堡 (Nürnberg)
+        </h1>
+        <p style="color: rgba(255, 255, 255, 0.9); font-size: 1.05rem;">
+          📅 2026/1/30 (五) ｜ 拜仁邦票輕鬆搭乘 RE 快車，登上神聖羅馬帝國皇帝堡俯瞰紅瓦古城，主市集廣場轉動許願金環，品嚐櫸木炭烤小香腸。
+        </p>
+      </div>
+    </header>
+
+    <!-- 2. 行前檢核與避坑 Bento -->
+    <section class="bento-grid">
+      <div class="bento-card bento-col-6">
+        <h3 style="color: var(--primary); font-size: 1.15rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.4rem;">
+          🎫 紐倫堡徒步走讀指南
+        </h3>
+        <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.92rem; line-height: 1.7; color: var(--text-sub);">
+          <li><strong>火車班次密集</strong>：符茲堡至紐倫堡 RE 列車每小時 1~2 班，車程僅約 55 分鐘。</li>
+          <li><strong>皇帝堡門票</strong>：城堡庭園與觀景台免費開放，宮殿與雙層禮拜堂門票 €9/人。</li>
+          <li><strong>市區交通</strong>：紐倫堡中央車站出站即達老城南門，全區適合徒步散策。</li>
+        </ul>
+      </div>
+
+      <div class="bento-card bento-col-6" style="background: var(--daruma-light); border-color: rgba(220, 38, 38, 0.3);">
+        <h3 style="color: var(--daruma-red); font-size: 1.15rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.4rem;">
+          ⚠️ TripNG 紐倫堡實戰避坑警示
+        </h3>
+        <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.92rem; line-height: 1.7; color: #7f1d1d;">
+          <li><strong>美泉金環真假辨識</strong>：主市集廣場美泉鐵欄杆上有兩個環，<strong>黃銅金色無縫環</strong>才是帶來好運的正版，黑色環是給鐵匠徒弟看的測試環。</li>
+          <li><strong>小香腸份量指南</strong>：紐倫堡香腸（Nürnberger Rostbratwurst）體型細小如手指，一般餐廳點「6 根 / 8 根 / 10 根 / 12 根」，佐以酸菜或馬鈴薯沙拉。</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 3. 視覺化時間軸 -->
+    <section style="margin: 3rem 0 1.5rem;">
+      <h2 style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--primary); margin-bottom: 1.5rem;">
+        ⏱️ 當日精確時間表 (Schedule Timeline)
+      </h2>
+
+      <div class="timeline-section">
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">09:15 🚂 符茲堡搭車前往紐倫堡</span>
+              <div><span class="badge badge-wine">RE 快車</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub);">
+              持拜仁邦票搭乘 RE 列車，約 10:10 抵達紐倫堡中央車站（Nürnberg Hbf）。
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">10:20 🏰 工匠廣場 (Handwerkerhof) ✕ 老城南門</span>
+              <div><span class="badge badge-gold">中世紀風情</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub); margin-bottom: 0.5rem;">
+              走出車站即見厚實的中世紀圓塔城門，進入 <a href="https://maps.google.com/?q=Handwerkerhof+Nuernberg" target="_blank" rel="noopener" class="text-map-link">工匠廣場 (Handwerkerhof)</a>。
+            </p>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">
+              欣賞傳統玻璃吹製、皮革手作工坊與木質骨架小屋。
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">11:00 ✨ 主市集廣場 (Hauptmarkt) ✕ 美泉幸運金環</span>
+              <div><span class="badge badge-alpine">轉動許願</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub); margin-bottom: 0.5rem;">
+              前往紐倫堡心臟 <a href="https://maps.google.com/?q=Hauptmarkt+Nuernberg" target="_blank" rel="noopener" class="text-map-link">主市集廣場 (Hauptmarkt)</a>，欣賞哥德式聖母教堂與金碧輝煌的 <a href="https://maps.google.com/?q=Schoener+Brunnen+Nuernberg" target="_blank" rel="noopener" class="text-map-link">美泉 (Schöner Brunnen)</a>。
+            </p>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">
+              相傳順時針轉動欄杆上的無縫黃銅金環三圈，心中的願望便會實現。
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">12:30 🌭 炭烤紐倫堡小香腸 ✕ 老城午餐</span>
+              <div><span class="badge badge-forest">道地美食</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub); margin-bottom: 0.5rem;">
+              前往 1380 年傳承名店 <a href="https://maps.google.com/?q=Bratwursthaeusle+Nuernberg" target="_blank" rel="noopener" class="text-map-link"><em>Bratwursthäusle bei St. Sebald</em></a> 享用午餐。
+            </p>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">
+              以櫸木火炭現烤的細小香腸（<button class="btn-audio" data-pronounce="Nürnberger Rostbratwurst" data-lang="de-DE">Nürnberger Rostbratwurst 🔊</button>），搭配芥末醬、德式酸菜與椒鹽捲餅（Brezel）。
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">14:00 👑 登頂皇帝堡 (Kaiserburg) 俯瞰全城</span>
+              <div><span class="badge badge-wine">帝王視角</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub); margin-bottom: 0.5rem;">
+              漫步登上砂岩巨石之巔的 <a href="https://maps.google.com/?q=Kaiserburg+Nuernberg" target="_blank" rel="noopener" class="text-map-link">皇帝堡 (Kaiserburg Nürnberg)</a>。
+            </p>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">
+              站在城堡展望台上，360 度俯瞰整座紐倫堡老城的壯觀紅瓦屋頂群與哥德式教堂雙塔。
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">16:30 🚂 返回符茲堡</span>
+              <div><span class="badge badge-alpine">舒適返程</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub);">
+              步行返回紐倫堡車站搭乘 RE 快車返回符茲堡，結束充實的中世紀帝都巡禮。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. POI 速查 -->
+    <section style="margin: 3.5rem 0 2rem;">
+      <h2 style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--primary); margin-bottom: 1.25rem;">
+        📍 今日景點與美食速查 (At-a-Glance)
+      </h2>
+      <div class="bento-grid">
+        <div class="bento-card bento-col-4">
+          <span class="badge badge-wine">🏰 地標城堡</span>
+          <h4 style="margin: 0.5rem 0 0.25rem; color: var(--primary);">
+            <a href="https://maps.google.com/?q=Kaiserburg+Nuernberg" target="_blank" rel="noopener" class="text-map-link">皇帝堡 (Kaiserburg)</a>
+          </h4>
+          <p style="font-size: 0.88rem; color: var(--text-sub); line-height: 1.6;">
+            神聖羅馬帝國重要帝王要塞，觀景平台俯瞰全城紅瓦景致極佳。
+          </p>
+        </div>
+
+        <div class="bento-card bento-col-4">
+          <span class="badge badge-gold">✨ 奇蹟之泉</span>
+          <h4 style="margin: 0.5rem 0 0.25rem; color: var(--primary);">
+            <a href="https://maps.google.com/?q=Schoener+Brunnen+Nuernberg" target="_blank" rel="noopener" class="text-map-link">美泉 (Schöner Brunnen)</a>
+          </h4>
+          <p style="font-size: 0.88rem; color: var(--text-sub); line-height: 1.6;">
+            19 公尺高的哥德式八角噴泉，記住轉動欄杆上的金色黃銅無縫環三圈許願。
+          </p>
+        </div>
+
+        <div class="bento-card bento-col-4">
+          <span class="badge badge-forest">🌭 經典小吃</span>
+          <h4 style="margin: 0.5rem 0 0.25rem; color: var(--primary);">
+            <a href="https://maps.google.com/?q=Bratwursthaeusle+Nuernberg" target="_blank" rel="noopener" class="text-map-link">Bratwursthäusle 香腸老店</a>
+          </h4>
+          <p style="font-size: 0.88rem; color: var(--text-sub); line-height: 1.6;">
+            聖塞巴德斯教堂旁百年炭烤小香腸名店，錫盤盛裝熱氣騰騰，香氣撲鼻。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 導覽按鈕 -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin: 3.5rem 0 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
+      <a href="day-04.html" style="font-weight: 600; color: var(--primary); font-size: 0.95rem;">← 前一天：Day 04 班堡煙燻啤酒</a>
+      <a href="day-06.html" style="font-weight: 600; color: var(--primary); font-size: 0.95rem;">下一天：Day 06 羅騰堡童話小鎮 →</a>
     </div>
+  </main>
+
+  <div class="mobile-dock">
+    <a href="index.html" class="dock-item"><span class="dock-icon">🏠</span><span>首頁</span></a>
+    <a href="day-05.html" class="dock-item active"><span class="dock-icon">⏱️</span><span>時間表</span></a>
+    <a href="blog/day-02-blog.html" class="dock-item"><span class="dock-icon">📖</span><span>遊記</span></a>
+    <a href="javascript:void(0)" class="dock-item btn-share"><span class="dock-icon">📤</span><span>分享</span></a>
   </div>
 
-  <section class="daily-schedule">
-    <div class="container">
-      <div class="schedule-header">
-        <h1>Day 5：紐倫堡一日遊（冬季網美購物版）🚆</h1>
-        <p class="schedule-meta">📅 2026/1/30 (五) ｜ 🚆 火車當日來回 ｜ 🎫 拜仁邦票 2人共約 €36</p>
-        <div class="schedule-info-bar">
-          <span class="hotel-badge">🏨 住宿：符茲堡</span>
-          <a href="guide-wurzburg.html" class="guide-link">📖 城市指南</a>
-        </div>
-      </div>
-
-      <div class="attraction-winter-note" style="margin-bottom:1.5rem;">
-        🎫 <strong>拜仁邦票 (Bayern-Ticket)</strong>：2人共約 €36，涵蓋符茲堡↔紐倫堡火車 + 紐倫堡地鐵/公車。⚠️ 平日 09:00 後才能使用！
-      </div>
-
-      <h2>📸 冬季網美攻略</h2>
-      <div class="collapsible">
-        <div class="collapsible-header"><span class="collapsible-title">❄️ 紐倫堡冬季網美一日遊（10:10 - 18:00）</span><span class="collapsible-icon">▼</span></div>
-        <div class="collapsible-body">
-          <p style="margin-bottom:1rem;">這份行程針對 <strong>18 歲女兒網美照需求、長靴步行壓力、以及 1 月底低溫環境</strong>優化。特別調整了皇帝堡與聖母教堂的順序，確保你們不用在 15 分鐘內穿著長靴從山上衝刺下山，讓行程更優雅出片。</p>
-          <table class="schedule-table">
-            <thead><tr><th>時間</th><th>拍攝地點</th><th>攝影建議/備註</th></tr></thead>
-            <tbody>
-              <tr><td class="schedule-time">10:10</td><td>工匠廣場 (Handwerkerhof)</td><td>📸 出車站即達，復古木構建築像走進童話小鎮<br>狹窄巷弄與小窗台非常出片<br>這裡最避風，是抵達後的第一個暖氣站</td></tr>
-              <tr><td class="schedule-time">10:45</td><td>聖羅倫茲教堂 & 氣象小屋</td><td>📸 步行穿過舊城，教堂對面的「趣味氣象小屋」是可愛拍照點<br>哥德式教堂外觀壯觀</td></tr>
-              <tr><td class="schedule-time">11:20</td><td>主市集廣場 & 美泉<br>(Hauptmarkt & Schöner Brunnen)</td><td>📸 轉動美泉金色銅環祈福<br>此時順光適合拍金燦燦的噴泉<br>站在聖母教堂前，拍出廣場開闊感</td></tr>
-              <tr><td class="schedule-time">12:00</td><td>聖母教堂機械鐘表演</td><td>🕛 必看：廣場東側，12 點整準時觀看國王與選帝侯的「小人舞」<br>教堂內部磚紅哥德風格，神聖感十足<br>內部暖和，是等待表演前的最佳遮風處</td></tr>
-              <tr><td class="schedule-time">14:00</td><td>皇帝堡 (Kaiserburg)</td><td>📸 吃飽後緩步上山，在城牆邊俯瞰紐倫堡紅屋頂全景<br>穿長靴靠在古城牆拍照，比例會顯得非常修長<br>⚠️ 斜坡石板路冬季易滑，請務必攙扶女兒<br><br>🚌 <strong>交通建議：</strong>搭乘 36 號公車從 Rathaus 站到 Burgstraße 站（1 站約 2 分鐘），省下從廣場爬坡的體力。邦票已涵蓋，不需另外付費</td></tr>
-              <tr><td class="schedule-time">15:30</td><td>🆕 白工匠巷 (Weißgerbergasse)</td><td>📸 網美大推薦！從城堡下山步行 5 分即達<br>紐倫堡最美彩色半木構建築街<br>雖然只有 200 公尺，但每一棟房子都是風景</td></tr>
-              <tr><td class="schedule-time">16:15</td><td>🆕 吊刑吏之橋 (Henkersteg)</td><td>📸 跨越河心的木造廊橋，冬季河水配上古橋氛圍感極強<br>從旁邊的 Maxbrücke 往這座橋拍，是經典明信片角度<br>傍晚點燈後，河面倒影非常有層次</td></tr>
-              <tr><td class="schedule-time">17:00</td><td>舊城購物 / 薑餅伴手禮</td><td>返回主街或百貨區購物<br>必買 Lebkuchen Schmidt 鐵盒薑餅<br>Königstraße 有非常多現代商店（彩妝、服飾）</td></tr>
-            </tbody>
-          </table>
-
-          <div class="attraction-winter-note" style="margin-top:1.5rem;">
-            🚌 <strong>紐倫堡皇帝堡交通攻略</strong>
-          </div>
-          <p style="margin-top:0.5rem;">雖然沒有公車可以直接開進城堡庭院內（那是行人徒步區），但可以搭乘最靠近城堡坡底的公車，省下從主市集廣場爬坡的一大段路：</p>
-
-          <h4 style="margin-top:1rem;">最推薦：36 號公車</h4>
-          <ul>
-            <li><strong>上車地點：</strong>Hauptmarkt（主市集廣場）或 Rathaus（市政廳）站</li>
-            <li><strong>下車站點：</strong>Burgstraße</li>
-            <li><strong>搭乘說明：</strong>在聖母教堂看完 12:00 表演並在 Bratwursthäusle 吃完午餐後，餐廳門口附近就有 Rathaus 站。搭乘往「Plärrer」方向的 36 號公車，只需坐 1 站（約 2 分鐘）即可抵達 Burgstraße</li>
-            <li><strong>下車後步行：</strong>距離城堡入口約 300 公尺，依然是上坡石板路，但比從廣場一路爬上來輕鬆很多</li>
-            <li><strong>邦票涵蓋：</strong>拜仁邦票已包含紐倫堡所有公車與地鐵，不需另外付費！</li>
-          </ul>
-
-          <h4 style="margin-top:1rem;">更省力的替代方案：計程車 / Uber</h4>
-          <ul>
-            <li><strong>目的地設定：</strong>Kaiserburg Nürnberg</li>
-            <li><strong>優點：</strong>司機通常可以開到城堡最上方的車輛迴轉點，將步行距離縮到最短</li>
-            <li><strong>適用情況：</strong>如果女兒的長靴真的讓她走路很辛苦，建議直接從午餐餐廳門口叫車</li>
-          </ul>
-
-          <div class="attraction-winter-note" style="margin-top:1.5rem;">
-            🩺 <strong>旅伴的最後叮嚀</strong>
-          </div>
-          <ol style="margin-top:0.5rem;">
-            <li><strong>動線邏輯：</strong>將皇帝堡（山頂）放在午餐後，是為了讓你們不用為了趕 12 點的鐘而在 15 分鐘內從山上「衝下山」。穿長靴走那段急下坡對腳趾非常不友善。</li>
-            <li><strong>購物點：</strong>如果想買流行的彩妝或服飾，從主市集廣場往南延伸的 <strong>Königstraße</strong> 有非常多現代商店。</li>
-            <li><strong>光線提醒：</strong>紐倫堡的高大建築多，冬季 16:00 之後陰影會很重。建議在 <strong>14:00~16:00</strong> 之間完成皇帝堡與白工匠巷的重頭戲拍照。</li>
-            <li><strong>足部救援：</strong>紐倫堡地鐵（U-Bahn）非常方便，如果女兒長靴走累了，從 <strong>Lorenzkirche 站</strong>到 <strong>Hauptbahnhof（車站）</strong>只有一站，但可以幫她省下 10 分鐘的體力。</li>
-            <li><strong>斜坡防滑：</strong>1 月底的皇帝堡斜坡如果遇到融雪或結冰會非常滑。長靴如果是平底且沒有防滑紋路，走在石板斜坡上會像在溜冰，請一定要牽好她。</li>
-            <li><strong>拍照時機：</strong>既然搭車上山，建議拍完城堡全景後，再「一路下坡」走回舊城區。下坡雖然對腳趾有壓力，但體力消耗比上坡小很多，沿途還能順路經過 Weißgerbergasse（白工匠巷）拍網美照。</li>
-          </ol>
-        </div>
-      </div>
-
-      <h2>📋 當日時間表（充實版）</h2>
-      <div class="collapsible">
-        <div class="collapsible-header"><span class="collapsible-title">完整行程時間表（08:30 - 19:30）</span><span class="collapsible-icon">▼</span></div>
-        <div class="collapsible-body">
-          <table class="schedule-table">
-            <thead><tr><th>時間</th><th>活動內容</th><th>交通/攝影&購物備註</th></tr></thead>
-            <tbody>
-              <tr><td class="schedule-time">08:30</td><td>飯店出發</td><td>步行至符茲堡中央車站（Maritim Hotel 出發約 5-10 分）</td></tr>
-              <tr><td class="schedule-time">09:01</td><td>搭乘 RE 區域快車</td><td>使用邦票，車程約 1 小時，直達紐倫堡</td></tr>
-              <tr><td class="schedule-time">10:10</td><td>工匠廣場 (Handwerkerhof)</td><td>📸 出車站即達，復古木構建築像走進童話小鎮</td></tr>
-              <tr><td class="schedule-time">10:45</td><td>聖羅倫茲教堂 & 氣象小屋</td><td>步行穿過舊城，教堂對面的「趣味氣象小屋」是可愛拍照點</td></tr>
-              <tr><td class="schedule-time">11:20</td><td>主市集廣場 & 美泉</td><td>轉動美泉（Schöner Brunnen）金色銅環<br>此時順光適合拍金燦燦的噴泉</td></tr>
-              <tr><td class="schedule-time">12:00</td><td>聖母教堂機械鐘表演</td><td>🕛 必看：廣場東側，12 點整準時觀看國王與選帝侯的「小人舞」</td></tr>
-              <tr><td class="schedule-time">12:30</td><td>Bratwursthäusle 午餐</td><td>必吃：炭烤紐倫堡小香腸<br>這間名店就在教堂旁，減少長靴步行負擔</td></tr>
-              <tr><td class="schedule-time">14:00</td><td>皇帝堡 (Kaiserburg)</td><td>吃飽後緩步上山<br>📸 在城牆邊俯瞰紐倫堡紅屋頂全景</td></tr>
-              <tr><td class="schedule-time">15:30</td><td>🆕 白工匠巷 (Weißgerbergasse)</td><td>📸 網美大推薦：從城堡下山步行 5 分即達<br>紐倫堡最美彩色半木構建築街</td></tr>
-              <tr><td class="schedule-time">16:15</td><td>🆕 吊刑吏之橋 (Henkersteg)</td><td>📸 跨越河心的木造廊橋，冬季河水配上古橋氛圍感極強</td></tr>
-              <tr><td class="schedule-time">17:00</td><td>舊城購物 / 薑餅伴手禮</td><td>返回主街或百貨區購物<br>必買 Lebkuchen Schmidt 鐵盒薑餅</td></tr>
-              <tr><td class="schedule-time">18:00</td><td>搭乘 RE 返回符茲堡</td><td>帶著戰利品與美照，約 19:00 抵達符茲堡</td></tr>
-              <tr><td class="schedule-time">19:30</td><td>符茲堡晚餐</td><td>Bürgerspital Weinstuben 品嚐法蘭肯葡萄酒與烤豬肩肉</td></tr>
-            </tbody>
-          </table>
-
-          <div class="attraction-winter-note" style="margin-top:1.5rem;">
-            💡 <strong>當日重點：</strong><br>
-            ✅ 12:00 聖母教堂機械鐘「小人舞」表演<br>
-            ✅ 皇帝堡俯瞰紐倫堡紅屋頂全景<br>
-            ✅ 🆕 白工匠巷 — 紐倫堡最美彩色半木構建築街<br>
-            ✅ 🆕 吊刑吏之橋 — 經典明信片角度<br>
-            ✅ 品嚐正宗紐倫堡小香腸<br>
-            ✅ 購買 Lebkuchen Schmidt 鐵盒薑餅伴手禮
-          </div>
-        </div>
-      </div>
-
-      <section class="attractions">
-        <h2>📍 紐倫堡景點詳情</h2>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">★ 工匠廣場 Handwerkerhof</h3>
-            <p class="attraction-desc">火車站旁的復刻中世紀小村落，集結手工藝與小店。狹窄巷弄與小窗台非常出片。</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">📸</span><span>復古木構建築，像走進童話小鎮</span></div>
-              <div class="attraction-info-item"><span class="icon">💰</span><span>免費參觀</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 這裡最避風，是抵達後的第一個暖氣站</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Handwerkerhof+Nuremberg" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">★ 主市集廣場 Hauptmarkt</h3>
-            <p class="attraction-desc">紐倫堡的心臟。週五有市集（7:00-20:00），充滿生活感。轉動美泉（Schöner Brunnen）金色銅環祈福。</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">📸</span><span>站在聖母教堂前，拍出廣場開闊感</span></div>
-              <div class="attraction-info-item"><span class="icon">🛒</span><span>週五市集 7:00-20:00</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 攤位有賣熱紅酒或熱湯，適合路過暖手</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Hauptmarkt+Nuremberg" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">★ 聖母教堂 Frauenkirche</h3>
-            <p class="attraction-desc">正午 12 點看機械鐘「小人舞」。教堂內部磚紅哥德風格，神聖感十足。教堂前方廣場是抓拍女兒在市集中漫步的好地方。</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">🕛</span><span>正午 12 點必看機械鐘！</span></div>
-              <div class="attraction-info-item"><span class="icon">💰</span><span>免費入場</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 內部暖和，是等待 12 點表演前的最佳遮風處</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Frauenkirche+Nuremberg" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">★ 皇帝堡 Kaiserburg</h3>
-            <p class="attraction-desc">神聖羅馬帝國的象徵。需爬一小段坡，視野極佳。穿長靴靠在古城牆拍照，比例會顯得非常修長。</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">📸</span><span>城牆邊俯瞰紐倫堡紅屋頂全景</span></div>
-              <div class="attraction-info-item"><span class="icon">💰</span><span>庭院免費，內部 €8</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 路面注意：斜坡石板路冬季易滑，請務必攙扶女兒</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Kaiserburg+Nuremberg" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">🆕 白工匠巷 Weißgerbergasse</h3>
-            <p class="attraction-desc">整排彩色房子，是網美必拍聖地。紐倫堡最浪漫的街道，背景色彩繽紛，適合人像。雖然只有 200 公尺，但每一棟房子都是風景。</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">📸</span><span>紐倫堡最美彩色半木構建築街</span></div>
-              <div class="attraction-info-item"><span class="icon">🚶</span><span>從城堡下山步行 5 分即達</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 冬季 14:00-16:00 光線最佳，建議此時段拍攝</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Weißgerbergasse+Nuremberg" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">🆕 吊刑吏之橋 Henkersteg</h3>
-            <p class="attraction-desc">橫跨雷格尼茨河支流的木橋。從旁邊的 Maxbrücke 往這座橋拍，是經典明信片角度。</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">📸</span><span>跨越河心的木造廊橋，氛圍感極強</span></div>
-              <div class="attraction-info-item"><span class="icon">💰</span><span>免費參觀</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 傍晚點燈後，河面倒影非常有層次</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Henkersteg+Nuremberg" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">★ 紐倫堡香腸 Bratwursthäusle</h3>
-            <p class="attraction-desc">尺寸如指頭大小，碳烤香氣逼人，搭配芥末醬與酸菜。餐廳裝潢傳統，拍照很有在地感。</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">🌭</span><span>必點 6 或 12 根套餐</span></div>
-              <div class="attraction-info-item"><span class="icon">💰</span><span>€8-12</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 熱騰騰的烤爐邊是冬天最療癒的角落</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Bratwursthausle+Nuremberg" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="attractions">
-        <h2>🛍️ 必買伴手禮</h2>
-        <div class="collapsible open">
-          <div class="collapsible-header"><span class="collapsible-title">紐倫堡伴手禮清單</span><span class="collapsible-icon">▼</span></div>
-          <div class="collapsible-body">
-            <ul>
-              <li><strong>紐倫堡薑餅 (Lebkuchen)</strong> - 必買 Lebkuchen Schmidt 鐵盒薑餅，€5-15</li>
-              <li><strong>玩具</strong> - 玩具博物館商店或舊城區玩具店</li>
-              <li><strong>聖誕裝飾品</strong> - 工匠廣場內的手工藝品店</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <div class="day-nav">
-        <a href="day-04.html">← Day 4</a>
-        <a href="day-06.html">Day 6 →</a>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer"><div class="container"><p>2026 德國南部冬季自駕之旅 | 個人旅遊規劃</p></div></footer>
-  <script src="js/main.js"></script>
+  <script src="vendor/glightbox/glightbox.min.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
-

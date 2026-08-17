@@ -3,248 +3,237 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Day 10: 德法邊境巡禮與科爾馬童話夜，史派爾大教堂世界遺產、小威尼斯夜景、跨境自駕攻略">
-  <title>Day 10 - 德法邊境巡禮與科爾馬童話夜 | 2026 德國冬季之旅</title>
+  <meta name="description" content="Day 10 時間表: 史派爾大教堂世界遺產、跨國自駕進入法國亞爾薩斯、科爾馬小威尼斯、宮崎駿霍爾的移動城堡原型木屋、火焰烤餅">
+  <title>Day 10 時間表 - 海德堡 ➔ 史派爾 ➔ 法國科爾馬 | 2026 德國冬季之旅</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;900&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="vendor/glightbox/glightbox.min.css">
 </head>
 <body>
-  <nav class="navbar">
+  <div class="reading-progress"></div>
+
+  <nav class="site-nav">
     <div class="container">
-      <a href="index.html" class="navbar-brand">🇩🇪 2026 德國冬季之旅</a>
-      <ul class="navbar-menu">
+      <a href="index.html" class="brand-link">
+        <span>🇩🇪 2026 德南冬旅誌</span>
+        <span class="brand-badge">Travel OS</span>
+      </a>
+      <ul class="nav-links">
         <li><a href="index.html">首頁</a></li>
-        <li><a href="index.html#timeline">行程總覽</a></li>
-        <li><a href="day-01.html" class="active">每日行程</a></li>
-        <li class="dropdown">
-          <a href="#">城市指南 ▾</a>
-          <ul class="dropdown-menu">
-            <li><a href="guide-hallstatt.html">哈修塔特區</a></li>
-            <li><a href="guide-wurzburg.html">符茲堡區</a></li>
-            <li><a href="guide-heidelberg.html">海德堡區</a></li>
-            <li><a href="guide-colmar.html">科爾馬區</a></li>
-            <li><a href="guide-garmisch.html">加米許區</a></li>
-          </ul>
-        </li>
+        <li><a href="index.html#itinerary">15天行程</a></li>
+        <li><a href="day-10.html" class="active">純時間表</a></li>
+        <li><a href="blog/day-02-blog.html">精選遊記</a></li>
       </ul>
-      <button class="navbar-share" title="分享此行程">📤 分享</button>
-      <button class="navbar-toggle" aria-label="選單" aria-expanded="false">☰</button>
+      <button class="nav-share-btn btn-share"><span>📤 分享</span></button>
     </div>
   </nav>
 
-  <div class="container">
-    <div class="day-switcher">
-      <a href="day-01.html" class="day-btn">1</a><a href="day-02.html" class="day-btn">2</a><a href="day-03.html" class="day-btn">3</a>
-      <a href="day-04.html" class="day-btn">4</a><a href="day-05.html" class="day-btn">5</a><a href="day-06.html" class="day-btn">6</a>
-      <a href="day-07.html" class="day-btn">7</a><a href="day-08.html" class="day-btn">8</a><a href="day-09.html" class="day-btn">9</a>
-      <a href="day-10.html" class="day-btn active">10</a><a href="day-11.html" class="day-btn">11</a><a href="day-12.html" class="day-btn">12</a>
-      <a href="day-13.html" class="day-btn">13</a><a href="day-14.html" class="day-btn">14</a><a href="day-15.html" class="day-btn">15</a>
+  <main class="container">
+    <nav class="day-nav-bar" aria-label="天數切換">
+      <a href="day-01.html" class="day-nav-btn">Day 1</a>
+      <a href="day-02.html" class="day-nav-btn">Day 2</a>
+      <a href="day-03.html" class="day-nav-btn">Day 3</a>
+      <a href="day-04.html" class="day-nav-btn">Day 4</a>
+      <a href="day-05.html" class="day-nav-btn">Day 5</a>
+      <a href="day-06.html" class="day-nav-btn">Day 6</a>
+      <a href="day-07.html" class="day-nav-btn">Day 7</a>
+      <a href="day-08.html" class="day-nav-btn">Day 8</a>
+      <a href="day-09.html" class="day-nav-btn">Day 9</a>
+      <a href="day-10.html" class="day-nav-btn active">Day 10</a>
+      <a href="day-11.html" class="day-nav-btn">Day 11</a>
+      <a href="day-12.html" class="day-nav-btn">Day 12</a>
+      <a href="day-13.html" class="day-nav-btn">Day 13</a>
+      <a href="day-14.html" class="day-nav-btn">Day 14</a>
+      <a href="day-15.html" class="day-nav-btn">Day 15</a>
+    </nav>
+
+    <!-- 1. 當日摘要 Hero Bento -->
+    <header class="schedule-hero-card">
+      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <span class="badge badge-trap">🇫🇷 基地轉移：進駐法國科爾馬</span>
+        <span class="badge badge-alpine">🚗 跨國自駕 240 km</span>
+        <span class="badge badge-forest">⏱️ 總車程約 2.5 小時</span>
+        <span class="badge badge-glass">🏨 宿：科爾馬（連住 2 晚）</span>
+      </div>
+      <div>
+        <h1 style="font-family: var(--font-heading); font-size: 2.1rem; line-height: 1.3; margin-bottom: 0.5rem; color: #fff;">
+          Day 10：世界遺產史派爾 ➔ 跨境法國 ✕ 科爾馬小威尼斯童話
+        </h1>
+        <p style="color: rgba(255, 255, 255, 0.9); font-size: 1.05rem;">
+          📅 2026/2/4 (三) ｜ 參觀全歐最大羅曼式史派爾大教堂，穿越萊茵河邊境進入法國亞爾薩斯，漫步宮崎駿《霍爾的移動城堡》原型木屋與小威尼斯運河夜景。
+        </p>
+      </div>
+    </header>
+
+    <!-- 2. 行前檢核與避坑 Bento -->
+    <section class="bento-grid">
+      <div class="bento-card bento-col-6">
+        <h3 style="color: var(--primary); font-size: 1.15rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.4rem;">
+          🎫 跨境法國自駕檢核
+        </h3>
+        <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.92rem; line-height: 1.7; color: var(--text-sub);">
+          <li><strong>申根區跨境無邊檢</strong>：由德國 A5 高速切入法國 A35，無需海關蓋章，但請隨身攜帶護照與車輛文件。</li>
+          <li><strong>奧地利通行證到期提醒</strong>：Day 1 購買之 10 日 Vignette 於今日到期，後續在德法瑞境內不再需要。</li>
+          <li><strong>科爾馬市區停車</strong>：老城內禁止外車進入，推薦停放於 <a href="https://maps.google.com/?q=Parking+Rapp+Colmar" target="_blank" rel="noopener" class="text-map-link"><code>Parking Rapp</code></a> 或 <code>Parking Saint-Josse</code>。</li>
+        </ul>
+      </div>
+
+      <div class="bento-card bento-col-6" style="background: var(--daruma-light); border-color: rgba(220, 38, 38, 0.3);">
+        <h3 style="color: var(--daruma-red); font-size: 1.15rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.4rem;">
+          ⚠️ TripNG 亞爾薩斯實戰避坑警示
+        </h3>
+        <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.92rem; line-height: 1.7; color: #7f1d1d;">
+          <li><strong>法國高速公路速限</strong>：法國晴天高速速限 130 km/h，雨雪天降至 110 km/h，測速照相嚴格。</li>
+          <li><strong>餐廳用餐時間差異</strong>：法國餐廳晚餐通常於 19:00 或 19:30 方開始營業，熱門小酒館（Winstub）建議提前訂位。</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 3. 視覺化時間軸 -->
+    <section style="margin: 3rem 0 1.5rem;">
+      <h2 style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--primary); margin-bottom: 1.5rem;">
+        ⏱️ 當日精確時間表 (Schedule Timeline)
+      </h2>
+
+      <div class="timeline-section">
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">09:00 🚗 出發前往史派爾 (Speyer)</span>
+              <div><span class="badge badge-alpine">自駕 45 km</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub);">
+              告別海德堡，向西行駛 40 分鐘抵達萊茵河畔歷史名城史派爾。
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">10:00 ⛪ 史派爾大教堂 (Speyerer Dom)</span>
+              <div><span class="badge badge-gold">世界文化遺產</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub); margin-bottom: 0.5rem;">
+              參觀全歐洲規模最宏偉的羅曼式教堂 <a href="https://maps.google.com/?q=Speyer+Cathedral" target="_blank" rel="noopener" class="text-map-link">史派爾主教座堂</a>。
+            </p>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">
+              建於 1030 年，安葬了神聖羅馬帝國 8 位皇帝與國王，巨大圓拱與地下墓室莊嚴震撼。
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">11:30 🇫🇷 穿越萊茵河邊境，跨國進入法國</span>
+              <div><span class="badge badge-trap">跨境自駕 195 km</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub);">
+              經 A5 / A35 公路南下，越過德法邊界進入亞爾薩斯（Alsace）大區，車程約 2 小時。
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">14:00 🏨 抵達科爾馬 ✕ 小威尼斯 (Petite Venise)</span>
+              <div><span class="badge badge-wine">霍爾移動城堡原型</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub); margin-bottom: 0.5rem;">
+              入住科爾馬飯店，漫步進入 <a href="https://maps.google.com/?q=Petite+Venise+Colmar" target="_blank" rel="noopener" class="text-map-link">小威尼斯 (Petite Venise)</a> 與製革廠區（Quartier des Tanneurs）。
+            </p>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">
+              宮崎駿動畫《霍爾的移動城堡》開場女主角蘇菲居住的城鎮原型！五彩斑斕的半木骨架屋倒映在運河清波中，宛如童話。
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">16:30 🏰 人頭屋 (Maison des Têtes) ✕ 菲斯泰爾屋</span>
+              <div><span class="badge badge-gold">文藝復興奇觀</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub); margin-bottom: 0.5rem;">
+              造訪飾有 106 顆怪誕面具雕刻的 <a href="https://maps.google.com/?q=Maison+des+Tetes+Colmar" target="_blank" rel="noopener" class="text-map-link">人頭屋</a> 與經典木造八角塔樓 <a href="https://maps.google.com/?q=Maison+Pfister+Colmar" target="_blank" rel="noopener" class="text-map-link">普菲斯特屋 (Maison Pfister)</a>。
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">18:30 🍕 亞爾薩斯火焰烤餅 ✕ 麗絲玲白酒晚餐</span>
+              <div><span class="badge badge-forest">法式鄉村美食</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub); margin-bottom: 0.5rem;">
+              於傳統小酒館（Winstub）品嚐剛出爐的薄脆火焰烤餅（<button class="btn-audio" data-pronounce="Tarte Flambée" data-lang="fr-FR">Tarte Flambée 🔊</button>）。
+            </p>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">
+              佐以亞爾薩斯特級麗絲玲白葡萄酒（Riesling）或瓊瑤漿（Gewürztraminer），香氣芳馥微醺。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. POI 速查 -->
+    <section style="margin: 3.5rem 0 2rem;">
+      <h2 style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--primary); margin-bottom: 1.25rem;">
+        📍 今日景點與美食速查 (At-a-Glance)
+      </h2>
+      <div class="bento-grid">
+        <div class="bento-card bento-col-4">
+          <span class="badge badge-trap">🛶 童話水岸</span>
+          <h4 style="margin: 0.5rem 0 0.25rem; color: var(--primary);">
+            <a href="https://maps.google.com/?q=Petite+Venise+Colmar" target="_blank" rel="noopener" class="text-map-link">科爾馬小威尼斯</a>
+          </h4>
+          <p style="font-size: 0.88rem; color: var(--text-sub); line-height: 1.6;">
+            勞赫河穿城而過，彩色木質骨架屋與小橋花架相映，夜景燈光格外浪漫。
+          </p>
+        </div>
+
+        <div class="bento-card bento-col-4">
+          <span class="badge badge-gold">🏛️ 動畫原型</span>
+          <h4 style="margin: 0.5rem 0 0.25rem; color: var(--primary);">
+            <a href="https://maps.google.com/?q=Maison+Pfister+Colmar" target="_blank" rel="noopener" class="text-map-link">普菲斯特屋 (Maison Pfister)</a>
+          </h4>
+          <p style="font-size: 0.88rem; color: var(--text-sub); line-height: 1.6;">
+            1537 年興建的文藝復興名宅，《霍爾的移動城堡》中移動城堡外觀靈感來源。
+          </p>
+        </div>
+
+        <div class="bento-card bento-col-4">
+          <span class="badge badge-forest">🍕 特色美食</span>
+          <h4 style="margin: 0.5rem 0 0.25rem; color: var(--primary);">
+            <a href="https://maps.google.com/?q=Winstub+Colmar" target="_blank" rel="noopener" class="text-map-link">亞爾薩斯傳統小酒館</a>
+          </h4>
+          <p style="font-size: 0.88rem; color: var(--text-sub); line-height: 1.6;">
+            火焰烤餅（Tarte Flambée）薄脆如紙，鋪滿鮮奶油、洋蔥與厚切培根，熱香濃郁。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 導覽按鈕 -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin: 3.5rem 0 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
+      <a href="day-09.html" style="font-weight: 600; color: var(--primary); font-size: 0.95rem;">← 前一天：Day 09 哈瑙 ✕ 法蘭克福</a>
+      <a href="day-11.html" style="font-weight: 600; color: var(--primary); font-size: 0.95rem;">下一天：Day 11 瑞士巴塞爾 ✕ 埃吉桑姆 →</a>
     </div>
+  </main>
+
+  <div class="mobile-dock">
+    <a href="index.html" class="dock-item"><span class="dock-icon">🏠</span><span>首頁</span></a>
+    <a href="day-10.html" class="dock-item active"><span class="dock-icon">⏱️</span><span>時間表</span></a>
+    <a href="blog/day-02-blog.html" class="dock-item"><span class="dock-icon">📖</span><span>遊記</span></a>
+    <a href="javascript:void(0)" class="dock-item btn-share"><span class="dock-icon">📤</span><span>分享</span></a>
   </div>
 
-  <section class="daily-schedule">
-    <div class="container">
-      <div class="schedule-header">
-        <h1>Day 10：德法邊境巡禮與科爾馬童話夜 🚗🇫🇷</h1>
-        <p class="schedule-meta">📅 2026/2/4 (三) ｜ 🚗 全程自駕約 165 公里 ｜ 🌍 德法跨境</p>
-        <div class="schedule-info-bar">
-          <span class="hotel-badge">🏨 住宿：科爾馬 Hôtel Le Colombier</span>
-          <a href="guide-colmar.html" class="guide-link">📖 城市指南</a>
-        </div>
-      </div>
-
-      <div class="attraction-winter-note" style="margin-bottom:1rem;">
-        🌍 <strong>跨境提醒：</strong>德國和法國均為申根區，無邊境檢查。確認租車保險涵蓋法國！
-      </div>
-      <div class="attraction-winter-note" style="margin-bottom:1.5rem;">
-        🌡️ <strong>冬季提醒：</strong>亞爾薩斯地區冬季濕氣較重，體感溫度可能比海德堡更冷，請確保女兒長靴內有足夠的保暖襪。
-      </div>
-
-      <h2>📸 冬季網美攻略</h2>
-      <div class="collapsible">
-        <div class="collapsible-header"><span class="collapsible-title">❄️ 德法邊境巡禮網美攻略（10:15 - 20:30）</span><span class="collapsible-icon">▼</span></div>
-        <div class="collapsible-body">
-          <p style="margin-bottom:1rem;">這份行程針對 <strong>跨境自駕、長靴步行壓力、以及傍晚點燈拍攝</strong>優化。飯店選在小威尼斯門口，讓女兒可以隨時回房取暖。</p>
-          <table class="schedule-table">
-            <thead><tr><th>時間</th><th>拍攝地點</th><th>攝影建議/備註</th></tr></thead>
-            <tbody>
-              <tr><td class="schedule-time">10:15</td><td>史派爾大教堂</td><td>📸 網美位：大教堂正前方的噴泉與壯麗的西側立面<br>長靴配上古老紅砂岩建築，非常大氣</td></tr>
-              <tr><td class="schedule-time">11:30</td><td>大教堂內部與地下墓室</td><td>📸 壯闊的羅馬式長廊<br>地下墓室埋葬多位神聖羅馬帝國皇帝，對歷史控極具吸引力</td></tr>
-              <tr><td class="schedule-time">17:15</td><td>小威尼斯 (La Petite Venise)</td><td>📸 一級戰區：Rue de la Poissonnerie 的小橋上<br>剛點燈的運河與半木構造建築，這是科爾馬最美、最有網美感的時間</td></tr>
-              <tr><td class="schedule-time">18:30</td><td>Winstub 傳統晚餐</td><td>📸 推薦 Winstub Brenner（就在小威尼斯旁）<br>必吃火焰薄餅 (Tarte Flambée) 與亞爾薩斯白酒</td></tr>
-            </tbody>
-          </table>
-
-          <div class="attraction-winter-note" style="margin-top:1.5rem;">
-            🩺 <strong>今日跨境自駕小提醒（針對長靴女孩與專業父親）</strong>
-          </div>
-          <ol style="margin-top:0.5rem;">
-            <li><strong>停車位的戰略選擇：</strong>在史派爾，Festplatz 雖然位子多，但離大教堂有一小段距離。穿長靴的女兒走在史派爾的大石板路上會很吃力。建議直接導航 <strong>Parkhaus am Dom (P1)</strong>，它是地下停車場，出來就是教堂，省力且溫暖。</li>
-            <li><strong>法國開車注意事項：</strong>速限方面，法國一般道路通常是 80 或 90 km/h，進入城鎮區域絕對是 30 或 50 km/h，抓得很嚴。環保貼紙 (Crit'Air) 方面，如果只是去科爾馬且不停留史特拉斯堡市中心，通常不需要。</li>
-            <li><strong>科爾馬的「飯店定位」關鍵：</strong>強烈建議入住 <strong>Hôtel Le Colombier</strong>。飯店就位於小威尼斯的入口，女兒可以在 17:00 點燈前在溫暖的房間化妝、換衣服，下樓走 30 公尺就能到最佳攝影位拍照。拍完覺得冷，5 分鐘內就能回房喝熱茶。</li>
-          </ol>
-        </div>
-      </div>
-
-      <h2>📋 當日時間表（充實版）</h2>
-      <div class="collapsible">
-        <div class="collapsible-header"><span class="collapsible-title">09:00 海德堡退房 → 20:30 科爾馬漫步回房</span><span class="collapsible-icon">▼</span></div>
-        <div class="collapsible-body">
-          <table class="schedule-table">
-            <thead><tr><th>時間</th><th>活動內容</th><th>交通/攝影&備註</th></tr></thead>
-            <tbody>
-              <tr><td class="schedule-time">09:00</td><td>海德堡退房</td><td>確認帳單無誤、取回停車卡<br>確認行李妥善固定</td></tr>
-              <tr><td class="schedule-time">09:30</td><td>從海德堡出發</td><td>🚗 車程約 45 分鐘（約 45 公里）<br>走 A5/B39 公路</td></tr>
-              <tr><td class="schedule-time">10:15</td><td>抵達史派爾大教堂</td><td>🅿️ 停車：Parkhaus am Dom (P1)，約 €1.50/小時<br>出停車場即是大教堂，省下穿長靴走路</td></tr>
-              <tr><td class="schedule-time">10:30-11:30</td><td>史派爾大教堂參觀</td><td>UNESCO 世界遺產，免費入場<br>地下墓室 €3.50，預留 1-1.5 小時</td></tr>
-              <tr><td class="schedule-time">12:00-12:30</td><td>史派爾舊城區午餐</td><td>在 Maximilianstraße 沿線餐廳用餐<br>約 €10-15/人，避開寒風</td></tr>
-              <tr><td class="schedule-time">13:30</td><td>啟程前往科爾馬</td><td>🚗 車程約 1.5 小時（約 120 公里）<br>經 A35 高速公路跨境進入法國，注意速限標誌變更</td></tr>
-              <tr><td class="schedule-time">15:00</td><td>科爾馬飯店 Check-in</td><td>推薦：Hôtel Le Colombier<br>就在小威尼斯門口，拍照、回房休息極度方便</td></tr>
-              <tr><td class="schedule-time">16:00</td><td>飯店小憩 / 補妝時間</td><td>讓女兒在房間換裝或休息<br>應對傍晚的低溫拍攝</td></tr>
-              <tr><td class="schedule-time">17:15</td><td>小威尼斯 (La Petite Venise)</td><td>📸 剛點燈的運河與半木構造建築<br>這是科爾馬最美、最有網美感的時間</td></tr>
-              <tr><td class="schedule-time">18:30-20:00</td><td>Winstub 傳統晚餐</td><td>推薦：Winstub Brenner（就在小威尼斯旁）<br>必吃火焰薄餅 (Tarte Flambée) 與亞爾薩斯白酒</td></tr>
-              <tr><td class="schedule-time">20:30</td><td>漫步回房</td><td>飯店就在旁邊，即使穿長靴也能輕鬆走回</td></tr>
-            </tbody>
-          </table>
-
-          <div class="attraction-winter-note" style="margin-top:1.5rem;">
-            💡 <strong>當日重點：</strong><br>
-            ✅ 史派爾大教堂：世界遺產，神聖羅馬帝國皇帝陵墓<br>
-            ✅ 跨境進入法國亞爾薩斯地區<br>
-            ✅ 夜遊小威尼斯燈光夜景<br>
-            ⚠️ 當日車程統計：約 165 公里 / 約 2.5 小時
-          </div>
-        </div>
-      </div>
-
-      <section class="attractions">
-        <h2>📍 德法跨境景點詳情</h2>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">★ 史派爾大教堂 Kaiserdom</h3>
-            <p class="attraction-desc">世界最大的羅馬式教堂之一，UNESCO 世界遺產。建於 1030 年，是神聖羅馬帝國皇帝的陵墓所在地。</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">💰</span><span>免費入場（地下墓室 €3.50）</span></div>
-              <div class="attraction-info-item"><span class="icon">⏰</span><span>9:00-19:00</span></div>
-              <div class="attraction-info-item"><span class="icon">⏱️</span><span>建議停留 1-1.5 小時</span></div>
-              <div class="attraction-info-item"><span class="icon">🅿️</span><span>停車：Parkhaus am Dom (P1)，約 €1.50/小時</span></div>
-              <div class="attraction-info-item"><span class="icon">📸</span><span>網美位：大教堂正前方的噴泉與壯麗的西側立面</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 室內參觀不受天氣影響，冬季遊客少。長靴配上古老紅砂岩建築，非常大氣</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Speyer+Cathedral" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">★ 小威尼斯 La Petite Venise</h3>
-            <p class="attraction-desc">科爾馬最精華的區域！運河穿梭在彩色木屋間，亞爾薩斯最浪漫的縮影。傍晚點燈後氛圍極佳！</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">📸</span><span>一級戰區：Rue de la Poissonnerie 的小橋上</span></div>
-              <div class="attraction-info-item"><span class="icon">🌙</span><span>最佳拍攝時間：17:00-17:30 剛點燈時</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 運河邊風大，拍照時請女兒注意保暖。薄霧中的景色別有風情，石板路可能濕滑</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Petite+Venise+Colmar" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-              <a href="guide-colmar.html#colmar-petite-venise" class="btn btn-more">📖 了解更多</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">★ 聖馬丁教堂 Collégiale Saint-Martin</h3>
-            <p class="attraction-desc">科爾馬老城中心巨大的哥德式教堂，擁有特別的彩色屋頂。教堂周邊的巷弄，隨便一個轉角都是中世紀風景。</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">💰</span><span>免費參觀</span></div>
-              <div class="attraction-info-item"><span class="icon">📸</span><span>教堂周邊巷弄都是拍照好點</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 教堂周邊石板路較不平整，長靴步行需放慢腳步</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Collegiale+Saint-Martin+Colmar" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">★ 普菲斯泰屋 Maison Pfister</h3>
-            <p class="attraction-desc">建於 1537 年，科爾馬最著名的地標建築之一，擁有華麗的凸窗、木製迴廊和聖經故事壁畫。</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">💰</span><span>免費參觀外觀</span></div>
-            </div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Maison+Pfister+Colmar" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-              <a href="guide-colmar.html#colmar-pfister" class="btn btn-more">📖 了解更多</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="attractions">
-        <h2>🚗 跨境自駕小提醒</h2>
-        <div class="collapsible">
-          <div class="collapsible-header"><span class="collapsible-title">停車策略、法國開車注意事項、飯店定位關鍵</span><span class="collapsible-icon">▼</span></div>
-          <div class="collapsible-body">
-
-            <div class="attraction-winter-note" style="margin-bottom:1rem;">
-              🅿️ <strong>停車位的戰略選擇</strong>
-            </div>
-            <p>在史派爾，<strong>Festplatz</strong> 雖然位子多，但離大教堂有一小段距離（約 10 分鐘步行）。穿長靴的女兒走在史派爾的大石板路上會很吃力。</p>
-            <p><strong>建議：</strong>直接導航 <strong>Parkhaus am Dom (P1)</strong>，它是地下停車場，出來就是教堂，省力且溫暖。停車費約 €1.50/小時。</p>
-
-            <div class="attraction-winter-note" style="margin-top:1.5rem;margin-bottom:1rem;">
-              🇫🇷 <strong>法國開車注意事項</strong>
-            </div>
-            <table class="schedule-table">
-              <thead><tr><th>項目</th><th>說明</th></tr></thead>
-              <tbody>
-                <tr><td>速限</td><td>一般道路 80-90 km/h，城鎮區域 30-50 km/h，抓得很嚴</td></tr>
-                <tr><td>環保貼紙 (Crit'Air)</td><td>如果只是去科爾馬且不停留史特拉斯堡市中心，通常不需要<br>保險起見，租車時可詢問是否有法國環保貼紙</td></tr>
-                <tr><td>高速公路</td><td>經 A35 高速公路跨境進入法國，注意速限標誌變更</td></tr>
-              </tbody>
-            </table>
-
-            <div class="attraction-winter-note" style="margin-top:1.5rem;margin-bottom:1rem;">
-              🏨 <strong>科爾馬的「飯店定位」關鍵</strong>
-            </div>
-            <p>強烈建議入住 <strong>Hôtel Le Colombier</strong>。</p>
-            <p><strong>理由：</strong>飯店就位於小威尼斯的入口。這意味著女兒可以在 17:00 點燈前，在溫暖的房間化妝、換衣服，下樓走 30 公尺就能到最佳攝影位拍照。拍完覺得冷，5 分鐘內就能回房喝熱茶，這是對長靴女孩最大的體貼。</p>
-
-          </div>
-        </div>
-      </section>
-
-      <section class="attractions">
-        <h2>🇫🇷 法語基本問候</h2>
-        <div class="collapsible open">
-          <div class="collapsible-header"><span class="collapsible-title">常用法語</span><span class="collapsible-icon">▼</span></div>
-          <div class="collapsible-body">
-            <ul>
-              <li><strong>Bonjour</strong> (棒糾) - 你好</li>
-              <li><strong>Merci</strong> (梅西) - 謝謝</li>
-              <li><strong>S'il vous plaît</strong> (西vu普雷) - 請</li>
-              <li><strong>L'addition</strong> (拉迪西翁) - 結帳</li>
-            </ul>
-            <p>💡 科爾馬位於亞爾薩斯，當地人多數會說德語，英語在觀光區也能通！</p>
-          </div>
-        </div>
-      </section>
-
-      <div class="day-nav">
-        <a href="day-09.html">← Day 9</a>
-        <a href="day-11.html">Day 11 →</a>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer"><div class="container"><p>2026 德國南部冬季自駕之旅 | 個人旅遊規劃</p></div></footer>
-  <script src="js/main.js"></script>
+  <script src="vendor/glightbox/glightbox.min.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
-

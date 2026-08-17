@@ -3,272 +3,235 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Day 4: 符茲堡出發，火車一日遊班堡，世界遺產小鎮與煙燻啤酒">
-  <title>Day 4 - 班堡一日遊 | 2026 德國冬季之旅</title>
+  <meta name="description" content="Day 4 時間表: 符茲堡火車一日遊、班堡水上市政廳、小威尼斯水岸、百年老店 Schlenkerla 品嚐煙燻啤酒 (Rauchbier)">
+  <title>Day 04 時間表 - 班堡 (Bamberg) 世界遺產巡禮 | 2026 德國冬季之旅</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;900&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="vendor/glightbox/glightbox.min.css">
 </head>
 <body>
-  <nav class="navbar">
+  <div class="reading-progress"></div>
+
+  <nav class="site-nav">
     <div class="container">
-      <a href="index.html" class="navbar-brand">🇩🇪 2026 德國冬季之旅</a>
-      <ul class="navbar-menu">
+      <a href="index.html" class="brand-link">
+        <span>🇩🇪 2026 德南冬旅誌</span>
+        <span class="brand-badge">Travel OS</span>
+      </a>
+      <ul class="nav-links">
         <li><a href="index.html">首頁</a></li>
-        <li><a href="index.html#timeline">行程總覽</a></li>
-        <li><a href="day-01.html" class="active">每日行程</a></li>
-        <li class="dropdown">
-          <a href="#">城市指南 ▾</a>
-          <ul class="dropdown-menu">
-            <li><a href="guide-hallstatt.html">哈修塔特區</a></li>
-            <li><a href="guide-wurzburg.html">符茲堡區</a></li>
-            <li><a href="guide-heidelberg.html">海德堡區</a></li>
-            <li><a href="guide-colmar.html">科爾馬區</a></li>
-            <li><a href="guide-garmisch.html">加米許區</a></li>
-          </ul>
-        </li>
+        <li><a href="index.html#itinerary">15天行程</a></li>
+        <li><a href="day-04.html" class="active">純時間表</a></li>
+        <li><a href="blog/day-02-blog.html">精選遊記</a></li>
       </ul>
-      <button class="navbar-share" title="分享此行程">📤 分享</button>
-      <button class="navbar-toggle" aria-label="選單" aria-expanded="false">☰</button>
+      <button class="nav-share-btn btn-share"><span>📤 分享</span></button>
     </div>
   </nav>
 
-  <div class="container">
-    <div class="day-switcher">
-      <a href="day-01.html" class="day-btn">1</a><a href="day-02.html" class="day-btn">2</a><a href="day-03.html" class="day-btn">3</a>
-      <a href="day-04.html" class="day-btn active">4</a><a href="day-05.html" class="day-btn">5</a><a href="day-06.html" class="day-btn">6</a>
-      <a href="day-07.html" class="day-btn">7</a><a href="day-08.html" class="day-btn">8</a><a href="day-09.html" class="day-btn">9</a>
-      <a href="day-10.html" class="day-btn">10</a><a href="day-11.html" class="day-btn">11</a><a href="day-12.html" class="day-btn">12</a>
-      <a href="day-13.html" class="day-btn">13</a><a href="day-14.html" class="day-btn">14</a><a href="day-15.html" class="day-btn">15</a>
-    </div>
-  </div>
+  <main class="container">
+    <nav class="day-nav-bar" aria-label="天數切換">
+      <a href="day-01.html" class="day-nav-btn">Day 1</a>
+      <a href="day-02.html" class="day-nav-btn">Day 2</a>
+      <a href="day-03.html" class="day-nav-btn">Day 3</a>
+      <a href="day-04.html" class="day-nav-btn active">Day 4</a>
+      <a href="day-05.html" class="day-nav-btn">Day 5</a>
+      <a href="day-06.html" class="day-nav-btn">Day 6</a>
+      <a href="day-07.html" class="day-nav-btn">Day 7</a>
+      <a href="day-08.html" class="day-nav-btn">Day 8</a>
+      <a href="day-09.html" class="day-nav-btn">Day 9</a>
+      <a href="day-10.html" class="day-nav-btn">Day 10</a>
+      <a href="day-11.html" class="day-nav-btn">Day 11</a>
+      <a href="day-12.html" class="day-nav-btn">Day 12</a>
+      <a href="day-13.html" class="day-nav-btn">Day 13</a>
+      <a href="day-14.html" class="day-nav-btn">Day 14</a>
+      <a href="day-15.html" class="day-nav-btn">Day 15</a>
+    </nav>
 
-  <section class="daily-schedule">
-    <div class="container">
-      <div class="schedule-header">
-        <h1>Day 4：班堡一日遊 🚆</h1>
-        <p class="schedule-meta">📅 2026/1/29 (四) ｜ 🚆 火車當日來回 ｜ 🎫 拜仁邦票 €27</p>
-        <div class="schedule-info-bar">
-          <span class="hotel-badge">🏨 住宿：符茲堡</span>
-          <a href="guide-wurzburg.html" class="guide-link">📖 城市指南</a>
-        </div>
+    <!-- 1. 當日摘要 Hero Bento -->
+    <header class="schedule-hero-card">
+      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <span class="badge badge-gold">🇩🇪 基地二：符茲堡宿</span>
+        <span class="badge badge-wine">🚂 火車一日遊（免開車）</span>
+        <span class="badge badge-forest">🎫 拜仁邦票 (Bayern-Ticket €27)</span>
+        <span class="badge badge-glass">🏨 連住第 2 晚：符茲堡</span>
+      </div>
+      <div>
+        <h1 style="font-family: var(--font-heading); font-size: 2.1rem; line-height: 1.3; margin-bottom: 0.5rem; color: #fff;">
+          Day 04：千年小威尼斯 ✕ 傳奇煙燻啤酒之都 班堡 (Bamberg)
+        </h1>
+        <p style="color: rgba(255, 255, 255, 0.9); font-size: 1.05rem;">
+          📅 2026/1/29 (四) ｜ 使用拜仁邦票搭乘雙層火車，探索雷格尼茨河上的奇蹟水上市政廳，深入古城老巷痛飲數百年傳承煙燻黑啤。
+        </p>
+      </div>
+    </header>
+
+    <!-- 2. 行前檢核與避坑 Bento -->
+    <section class="bento-grid">
+      <div class="bento-card bento-col-6">
+        <h3 style="color: var(--primary); font-size: 1.15rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.4rem;">
+          🎫 拜仁邦票 (Bayern-Ticket) 實戰規範
+        </h3>
+        <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.92rem; line-height: 1.7; color: var(--text-sub);">
+          <li><strong>啟用時間</strong>：平日（週一至週五）<strong>09:00 起方可使用</strong>，搭乘前請勿提早上車。</li>
+          <li><strong>適用範圍</strong>：巴伐利亞邦內所有 RE / RB 區域火車、市區公車與路面電車（不可搭 ICE/IC 高鐵）。</li>
+          <li><strong>票價</strong>：單人 €27，2 人同行 €36，可於 DB App 或車站自動售票機購買。</li>
+        </ul>
       </div>
 
-      <div class="attraction-winter-note" style="margin-bottom:1.5rem;">
-        🎫 <strong>拜仁邦票 (Bayern-Ticket)</strong>：€27/人，涵蓋符茲堡↔班堡火車 + 兩地市內公車。平日 09:00 後可用！
+      <div class="bento-card bento-col-6" style="background: var(--daruma-light); border-color: rgba(220, 38, 38, 0.3);">
+        <h3 style="color: var(--daruma-red); font-size: 1.15rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.4rem;">
+          ⚠️ TripNG 班堡一日遊避坑警示
+        </h3>
+        <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.92rem; line-height: 1.7; color: #7f1d1d;">
+          <li><strong>班堡火車站至老城距離</strong>：火車站步行至水上市政廳約 1.5 公里（15-20 分鐘），亦可憑邦票直接搭乘市區公車直達舊城。</li>
+          <li><strong>Schlenkerla 酒館排隊秘訣</strong>：中午 12:30 至 13:30 用餐人潮眾多，若只想品嚐啤酒，可至店門口立飲區直接點單（「Stehausschank」）。</li>
+        </ul>
       </div>
+    </section>
 
-      <h2>📸 冬季網美攻略</h2>
-      <div class="collapsible">
-        <div class="collapsible-header"><span class="collapsible-title">❄️ 班貝格冬季網美一日遊（10:00 - 19:30）</span><span class="collapsible-icon">▼</span></div>
-        <div class="collapsible-body">
-          <p style="margin-bottom:1rem;">針對 1 月底、2 月初的冬季氣候（-1°C ~ 5°C），這段時間班貝格可能伴隨殘雪、薄冰或細雨。冬季的班貝格雖然沒有夏天的綠意，但卻有一種「中世紀冷冽美學」的氛圍。以下是為父女旅遊量身打造的冬季深度行程，重點在於<strong>「防寒、防滑、出大片」</strong>：</p>
-          <table class="schedule-table">
-            <thead><tr><th>時間</th><th>拍攝地點</th><th>攝影建議/備註</th></tr></thead>
-            <tbody>
-              <tr><td class="schedule-time">10:00</td><td>抵達 Bamberg 火車站</td><td>冬季石板路濕滑，步行至舊城區約 15-20 分鐘<br>若長靴跟較高，建議搭乘 901、902 或 907 號公車至「Am Kranen」<br>確保暖暖包已拆封，戶外拍照 10 分鐘手就會僵</td></tr>
-              <tr><td class="schedule-time">10:30</td><td>舊市政廳 (Altes Rathaus)<br>— 全球最美市政廳</td><td>📷 拍攝位點：站在 Geyerwörthsteg 鐵橋上<br>穿著長大衣配長靴拍背影或側臉，極具歐系名伶感<br>牆上 3D 立體壁畫在冬季陰天時對比度更高，適合濾鏡調色</td></tr>
-              <tr><td class="schedule-time">11:15</td><td>小威尼斯 (Klein Venedig)<br>— 霧氣中的童話</td><td>📷 河邊木桁架建築，冬季早上常有薄霧<br>建議在 Am Kranen 河岸步道拍攝<br>讓女兒靠在護欄，以對岸彩色木屋為背景</td></tr>
-              <tr><td class="schedule-time">12:00</td><td>Schlenkerla 燻啤酒餐廳<br>— 避寒補熱量</td><td>📷 餐廳內部漆黑厚重木頭裝潢，很有魔幻電影感<br>拍舉杯照片非常出片<br>必點：煙燻啤酒 + 班貝格洋蔥，這頓午餐是重要熱能來源</td></tr>
-              <tr><td class="schedule-time">13:30</td><td>班貝格主教座堂 (Bamberger Dom)<br>— 挑戰山丘區</td><td>⚠️ 從舊城區爬上 Domberg 石板路有點陡，長靴底太平會滑<br>📷 四座高塔與廣場，冬季石磚地呈深灰色<br>穿深色長靴會顯得比例非常修長</td></tr>
-              <tr><td class="schedule-time">14:15</td><td>新宮殿玫瑰園 (Rosengarten)<br>— 冬季秘境</td><td>📷 雖無玫瑰，但整齊樹籬與幾何造景在雪景下別有風味<br>⭐ 這是全班貝格拍「網美與紅屋頂」最安全、最輕鬆的位點<br>從園內圍欄可俯瞰整個班貝格舊城</td></tr>
-              <tr><td class="schedule-time">15:15</td><td>聖米歇爾修道院 (Kloster Michelsberg)<br>— 登頂遠眺</td><td>📷 下午 3 點多，陽光變得非常溫柔（Golden Hour）<br>視野比玫瑰園更高<br>⭐ 如遇積雪，紅瓦屋頂覆蓋白雪是德南冬季精華</td></tr>
-              <tr><td class="schedule-time">16:30</td><td>Cafe Müller 或 Cafe Luitpold<br>— 冬季午茶時間</td><td>1 月份下午 4 點後氣溫驟降<br>點一份熱蘋果捲（Apfelstrudel）或熱巧克力<br>讓穿長靴走了一天的雙腳徹底放鬆</td></tr>
-              <tr><td class="schedule-time">17:30</td><td>舊城區 Sandstraße<br>— 藍調時刻 (Blue Hour)</td><td>📷 班貝格 1、2 月約 17:00 全黑，舊市政廳燈光亮起<br>河水倒影轉為深藍色<br>穿長靴走在點燈的鵝黃色巷弄，有《哈利波特》斜角巷既視感</td></tr>
-              <tr><td class="schedule-time">19:00</td><td>啟程返回火車站</td><td>建議直接叫計程車或搭公車回車站<br>冬季入夜後體感溫度降到 0 度以下，避免在寒風中走路<br>確認 ICE 或 RE 班次，車上暖氣很足</td></tr>
-            </tbody>
-          </table>
+    <!-- 3. 視覺化時間軸 -->
+    <section style="margin: 3rem 0 1.5rem;">
+      <h2 style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--primary); margin-bottom: 1.5rem;">
+        ⏱️ 當日精確時間表 (Schedule Timeline)
+      </h2>
 
-          <div class="attraction-winter-note" style="margin-top:1.5rem;">
-            🩺 <strong>父親帶女兒出行的特別叮嚀</strong>
-          </div>
-          <ol style="margin-top:0.5rem;">
-            <li><strong>石板路魔咒：</strong>長靴若是「細跟」或「硬底」，走在班貝格會非常痛苦。建議多帶幾片<strong>足部暖暖包</strong>（貼在襪底那種），不僅保暖還能增加一點點緩衝空間。</li>
-            <li><strong>服裝建議：</strong>班貝格背景多為土黃與磚紅色。女兒穿<strong>白色、米色或正紅色</strong>的大衣，搭配長靴在鏡頭裡會最亮眼。</li>
-            <li><strong>光線寶貴：</strong>冬季 16:30 之後就沒光了。所有的「人像大片」請務必在 15:30 聖米歇爾修道院之前完成，天黑後轉為拍攝建築夜景。</li>
-            <li><strong>洗手間資訊：</strong>18 歲女孩可能需要頻繁整理妝容。除了餐廳外，新宮殿（Neue Residenz）內部有乾淨的洗手間可以使用。</li>
-          </ol>
-          <p style="margin-top:1rem;"><em>這份路線減少了不必要的重複步行，並將體力花在最值得拍的地方，祝你們父女倆在班貝格拍出精彩的冬季大片！</em></p>
-        </div>
-      </div>
-
-      <h2>📋 當日時間表（充實版）</h2>
-      <div class="collapsible">
-        <div class="collapsible-header"><span class="collapsible-title">完整行程時間表（08:30 - 晚上）</span><span class="collapsible-icon">▼</span></div>
-        <div class="collapsible-body">
-          <table class="schedule-table">
-            <thead><tr><th>時間</th><th>活動</th><th>交通/備註</th></tr></thead>
-            <tbody>
-              <tr><td class="schedule-time">08:30</td><td>從飯店出發，步行前往符茲堡中央車站</td><td>Maritim Hotel 步行 5-10 分鐘即可到達</td></tr>
-              <tr><td class="schedule-time">09:00-10:00</td><td>搭乘 RE/RB 區域火車前往班堡</td><td>使用拜仁邦票（09:00 後可用）<br>車程約 1 小時，不需預訂座位</td></tr>
-              <tr><td class="schedule-time">10:00-10:45</td><td>抵達班堡，步行至綠色市場週市集 (Grüner Markt)</td><td>週四營業 7:00-18:00<br>購買蜂蜜、起司、香腸等伴手禮<br>準備現金</td></tr>
-              <tr><td class="schedule-time">10:45-11:15</td><td>🆕 深度參觀班堡大教堂 (Bamberger Dom) 內部</td><td>德國最重要的羅馬式教堂之一<br>必看：「班堡騎士」雕像、亨利二世皇帝陵墓<br>免費入場</td></tr>
-              <tr><td class="schedule-time">11:15-11:45</td><td>🆕 新王宮玫瑰園 (Rosengarten) 俯瞰全景</td><td>免費入場，可俯瞰班堡紅瓦屋頂全景<br>冬季無花但視野極佳</td></tr>
-              <tr><td class="schedule-time">11:45-12:15</td><td>參觀舊市政廳 (Altes Rathaus)，拍攝經典照片</td><td>📷 攝影建議：<br>• 最佳時間：10:00-12:00（順光）<br>• 拍攝點①：Obere Brücke（上橋）往西拍 = 順光，壁畫清晰<br>• 拍攝點②：Geyerswörthsteg（南側橋）拍側面<br>• 早上太陽在東方，從上橋往西拍最佳</td></tr>
-              <tr><td class="schedule-time">12:30-14:00</td><td>在 Schlenkerla 酒館享用午餐，體驗煙燻啤酒</td><td>必點：Rauchbier + 班堡洋蔥或豬腳<br>可購買瓶裝煙燻啤酒作為伴手禮（€3-5/瓶）</td></tr>
-              <tr><td class="schedule-time">14:00-14:30</td><td>漫步於小威尼斯區 (Klein-Venedig)，欣賞水岸風光</td><td>最佳觀賞點：Am Leinritt 街<br>冬季人少，適合拍照</td></tr>
-              <tr><td class="schedule-time">14:30-15:30</td><td>🆕 米歇爾山修道院 (Michaelsberg Monastery)</td><td>⭐ 班堡制高點！俯瞰整個老城區<br>草藥園、天花板有超過 600 種植物壁畫<br>從小威尼斯步行約 15-20 分鐘（上坡）</td></tr>
-              <tr><td class="schedule-time">15:30-16:00</td><td>老城區自由漫步/咖啡時間/買伴手禮</td><td>可返回 Grüner Markt 購買遺漏的伴手禮</td></tr>
-              <tr><td class="schedule-time">16:30-17:30</td><td>搭乘 RE/RB 區域火車返回符茲堡</td><td>使用拜仁邦票<br>車程約 1 小時</td></tr>
-              <tr><td class="schedule-time">17:30-18:00</td><td>抵達符茲堡，返回飯店休息</td><td>可使用拜仁邦票搭乘市內公車/路面電車</td></tr>
-              <tr><td class="schedule-time">晚上</td><td>在符茲堡舊城區享用晚餐</td><td>推薦：Bürgerspital Weinstuben<br>品嚐法蘭肯葡萄酒和烤豬肩肉</td></tr>
-            </tbody>
-          </table>
-
-          <div class="attraction-winter-note" style="margin-top:1.5rem;">
-            💡 <strong>當日重點：</strong><br>
-            ✅ 體驗班堡週四市集（7:00-18:00）<br>
-            ✅ 深度參觀班堡大教堂內部 + 玫瑰園全景<br>
-            ✅ 🆕 登上米歇爾山修道院俯瞰全城<br>
-            ✅ 品嚐煙燻啤酒（Rauchbier）和班堡洋蔥<br>
-            ✅ 購買伴手禮：瓶裝煙燻啤酒、蜂蜜、果醬<br>
-            ✅ 拜仁邦票涵蓋全天所有交通，無需另購票
-          </div>
-        </div>
-      </div>
-
-      <section class="attractions">
-        <h2>📍 班堡景點詳情</h2>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">★ 綠色市場週市集 Grüner Markt</h3>
-            <p class="attraction-desc">班堡市中心的週市集，販售新鮮農產品、起司、香腸、蜂蜜、麵包等當地特產。</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">🕐</span><span>週四營業 7:00-18:00</span></div>
-              <div class="attraction-info-item"><span class="icon">💡</span><span>建議早上前往，準備現金</span></div>
+      <div class="timeline-section">
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">09:15 🚂 符茲堡中央車站搭車出發</span>
+              <div><span class="badge badge-wine">RE 區域快車</span></div>
             </div>
-            <div class="attraction-winter-note">❄️ 穿著保暖衣物，冬季以根莖類蔬菜、蜂蜜、起司為主</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Grüner+Markt+Bamberg" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub);">
+              由符茲堡中央車站搭乘 RE/RB 雙層列車前往班堡，車程約 50 分鐘，沿美茵河畔欣賞巴伐利亞冬季田園風光。
+            </p>
           </div>
         </div>
 
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">★ 班堡大教堂 Bamberger Dom</h3>
-            <p class="attraction-desc">🆕 德國最重要的羅馬式教堂之一，建於 1012 年，四座塔樓壯觀。</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">⭐</span><span>必看「班堡騎士」雕像</span></div>
-              <div class="attraction-info-item"><span class="icon">👑</span><span>亨利二世皇帝與皇后陵墓</span></div>
-              <div class="attraction-info-item"><span class="icon">🎫</span><span>免費入場</span></div>
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">10:15 🏛️ 抵達班堡 ✕ 雷格尼茨河島水上市政廳</span>
+              <div><span class="badge badge-gold">世界文化遺產</span></div>
             </div>
-            <div class="attraction-winter-note">❄️ 教堂內部是避寒好去處，冬季遊客較少</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Bamberger+Dom" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub); margin-bottom: 0.5rem;">
+              漫步至建於河流中央人工島上的 <a href="https://maps.google.com/?q=Altes+Rathaus+Bamberg" target="_blank" rel="noopener" class="text-map-link">舊市政廳 (Altes Rathaus)</a>。
+            </p>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">
+              欣賞立面上生動的洛可可濕壁畫與穿出牆面的俏皮小天使立體雕塑腿。
+            </p>
           </div>
         </div>
 
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">★ 新王宮玫瑰園 Rosengarten</h3>
-            <p class="attraction-desc">🆕 位於新王宮頂層，可俯瞰班堡紅瓦屋頂全景和米歇爾山。</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">🎫</span><span>免費入場</span></div>
-              <div class="attraction-info-item"><span class="icon">📷</span><span>拍攝城市全景最佳點</span></div>
-              <div class="attraction-info-item"><span class="icon">⏱️</span><span>建議停留 20-30 分鐘</span></div>
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">11:30 🛶 小威尼斯 (Klein Venedig) 水岸漫步</span>
+              <div><span class="badge badge-alpine">浪漫水岸</span></div>
             </div>
-            <div class="attraction-winter-note">❄️ 冬季無花但視野極佳，可俯瞰雪白屋頂</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Rosengarten+Neue+Residenz+Bamberg" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub);">
+              沿雷格尼茨河畔欣賞整排中世紀漁民木質半木結構古屋與垂柳，水岸倒影優雅迷人。
+            </p>
           </div>
         </div>
 
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">★ 舊市政廳 Altes Rathaus</h3>
-            <p class="attraction-desc">班堡最具代表性的地標，建在雷格尼茨河中央小島上，外牆有華麗濕壁畫。</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">📷</span><span>最佳時間：10:00-12:00 順光</span></div>
-              <div class="attraction-info-item"><span class="icon">📍</span><span>拍攝點：Obere Brücke 往西拍</span></div>
-              <div class="attraction-info-item"><span class="icon">📍</span><span>側面：Geyerswörthsteg 橋</span></div>
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">12:30 🍺 傳奇老店 Schlenkerla 品嚐煙燻啤酒 ✕ 午餐</span>
+              <div><span class="badge badge-forest">百年傳奇</span></div>
             </div>
-            <div class="attraction-winter-note">❄️ 冬季河霧繚繞如仙境，雪景下非常上鏡</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Altes+Rathaus+Bamberg" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-              <a href="guide-wurzburg.html#bamberg-rathaus" class="btn btn-more">📖 了解更多</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">★ 煙燻啤酒體驗 Rauchbier</h3>
-            <p class="attraction-desc">班堡的代名詞，帶有獨特煙燻培根風味的黑啤酒。</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">🍺</span><span>Schlenkerla 是最著名酒館</span></div>
-              <div class="attraction-info-item"><span class="icon">🍖</span><span>搭配德式豬腳更對味</span></div>
-              <div class="attraction-info-item"><span class="icon">💰</span><span>€3-4/杯，瓶裝 €3-5</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 寒冷天氣中來一杯溫暖的啤酒，酒館是完美的避寒午餐地點</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Schlenkerla+Bamberg" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-              <a href="guide-wurzburg.html#bamberg-schlenkerla" class="btn btn-more">📖 了解更多</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">小威尼斯 Klein-Venedig</h3>
-            <p class="attraction-desc">沿著雷格尼茨河畔的一排古老半木結構漁夫房屋，景色如畫。</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">📍</span><span>最佳觀賞點：Am Leinritt 街</span></div>
-              <div class="attraction-info-item"><span class="icon">🚶</span><span>適合悠閒散步</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 冬季遊船停駛，薄雪覆蓋屋頂時景色特別</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Klein+Venedig+Bamberg" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">🆕 米歇爾山修道院 Michaelsberg</h3>
-            <p class="attraction-desc">⭐ 班堡制高點！俯瞰整個老城區，草藥園有古老植物，教堂天花板有超過 600 種植物壁畫。</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">🚶</span><span>從老城區步行約 15-20 分鐘（上坡）</span></div>
-              <div class="attraction-info-item"><span class="icon">⏱️</span><span>建議停留 45-60 分鐘</span></div>
-              <div class="attraction-info-item"><span class="icon">⚠️</span><span>修道院教堂可能整修中</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 早晨光線照射城市美景，山頂風大，注意保暖</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Michaelsberg+Monastery+Bamberg" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-              <a href="guide-wurzburg.html#bamberg-michaelsberg" class="btn btn-more">📖 了解更多</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      <section class="attractions">
-        <h2>🛍️ 必買伴手禮</h2>
-        <div class="collapsible open">
-          <div class="collapsible-header"><span class="collapsible-title">班堡伴手禮清單</span><span class="collapsible-icon">▼</span></div>
-          <div class="collapsible-body">
-            <ul>
-              <li><strong>煙燻啤酒瓶裝</strong> - Schlenkerla 或超市購買，€3-5/瓶（注意行李限重）</li>
-              <li><strong>蜂蜜、果醬</strong> - 週市集購買</li>
-              <li><strong>當地起司</strong> - 週市集購買</li>
+            <p style="font-size: 0.95rem; color: var(--text-sub); margin-bottom: 0.5rem;">
+              走進 1405 年創立的傳奇酒館 <a href="https://maps.google.com/?q=Schlenkerla+Bamberg" target="_blank" rel="noopener" class="text-map-link"><em>Schlenkerla</em></a>。
+            </p>
+            <ul style="font-size: 0.88rem; color: var(--text-muted); padding-left: 1.25rem; line-height: 1.6;">
+              <li>品嚐以櫸木煙燻麥芽釀造的經典黑啤酒（<button class="btn-audio" data-pronounce="Rauchbier" data-lang="de-DE">Rauchbier 🔊</button>），獨特培根煙燻香氣令人難忘。</li>
+              <li>午餐推薦：班堡鑲肉洋蔥（Bamberger Zwiebel）或傳統脆皮烤豬腳。</li>
             </ul>
           </div>
         </div>
-      </section>
 
-      <div class="day-nav">
-        <a href="day-03.html">← Day 3</a>
-        <a href="day-05.html">Day 5 →</a>
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">14:30 ⛪ 班堡大教堂與新宮殿玫瑰花園</span>
+              <div><span class="badge badge-wine">登高眺望</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub);">
+              登上山丘參觀四塔羅曼式班堡大教堂，造訪著名的「班堡騎士雕像」，於新宮殿庭園俯瞰老城紅瓦天際線。
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">16:30 🚂 搭火車返回符茲堡</span>
+              <div><span class="badge badge-alpine">返程休息</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub);">
+              搭乘 RE 列車返回符茲堡，免除長途自駕疲勞，晚間於符茲堡老城品味法蘭肯美食。
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer class="footer"><div class="container"><p>2026 德國南部冬季自駕之旅 | 個人旅遊規劃</p></div></footer>
-  <script src="js/main.js"></script>
+    <!-- 4. POI 速查 -->
+    <section style="margin: 3.5rem 0 2rem;">
+      <h2 style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--primary); margin-bottom: 1.25rem;">
+        📍 今日景點與美食速查 (At-a-Glance)
+      </h2>
+      <div class="bento-grid">
+        <div class="bento-card bento-col-4">
+          <span class="badge badge-alpine">🏛️ 世界遺產</span>
+          <h4 style="margin: 0.5rem 0 0.25rem; color: var(--primary);">
+            <a href="https://maps.google.com/?q=Altes+Rathaus+Bamberg" target="_blank" rel="noopener" class="text-map-link">舊市政廳 (Altes Rathaus)</a>
+          </h4>
+          <p style="font-size: 0.88rem; color: var(--text-sub); line-height: 1.6;">
+            建於雷格尼茨河中央橋樑上的奇蹟建築，外牆飾滿繁複巴洛克立體濕壁畫。
+          </p>
+        </div>
+
+        <div class="bento-card bento-col-4">
+          <span class="badge badge-wine">🍺 傳奇啤酒</span>
+          <h4 style="margin: 0.5rem 0 0.25rem; color: var(--primary);">
+            <a href="https://maps.google.com/?q=Schlenkerla+Bamberg" target="_blank" rel="noopener" class="text-map-link">Schlenkerla 煙燻酒館</a>
+          </h4>
+          <p style="font-size: 0.88rem; color: var(--text-sub); line-height: 1.6;">
+            班堡最著名百年老店，煙燻啤酒（Rauchbier）與洋蔥鑲肉（Bamberger Zwiebel）必點。
+          </p>
+        </div>
+
+        <div class="bento-card bento-col-4">
+          <span class="badge badge-gold">🛶 浪漫水岸</span>
+          <h4 style="margin: 0.5rem 0 0.25rem; color: var(--primary);">
+            <a href="https://maps.google.com/?q=Klein+Venedig+Bamberg" target="_blank" rel="noopener" class="text-map-link">小威尼斯 (Klein Venedig)</a>
+          </h4>
+          <p style="font-size: 0.88rem; color: var(--text-sub); line-height: 1.6;">
+            昔日漁民聚居的水岸木骨屋群，冬季覆雪時宛如童話插畫般優雅迷人。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 導覽按鈕 -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin: 3.5rem 0 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
+      <a href="day-03.html" style="font-weight: 600; color: var(--primary); font-size: 0.95rem;">← 前一天：Day 03 符茲堡轉移</a>
+      <a href="day-05.html" style="font-weight: 600; color: var(--primary); font-size: 0.95rem;">下一天：Day 05 紐倫堡走讀 →</a>
+    </div>
+  </main>
+
+  <div class="mobile-dock">
+    <a href="index.html" class="dock-item"><span class="dock-icon">🏠</span><span>首頁</span></a>
+    <a href="day-04.html" class="dock-item active"><span class="dock-icon">⏱️</span><span>時間表</span></a>
+    <a href="blog/day-02-blog.html" class="dock-item"><span class="dock-icon">📖</span><span>遊記</span></a>
+    <a href="javascript:void(0)" class="dock-item btn-share"><span class="dock-icon">📤</span><span>分享</span></a>
+  </div>
+
+  <script src="vendor/glightbox/glightbox.min.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
-

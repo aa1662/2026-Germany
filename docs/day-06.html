@@ -3,247 +3,239 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Day 6: 符茲堡↔羅騰堡童話網美自駕版，P4停車攻略、普雷萊茵廣場、聖誕飾品店攝影指南">
-  <title>Day 6 - 羅騰堡童話網美自駕一日遊 | 2026 德國冬季之旅</title>
+  <meta name="description" content="Day 6 時間表: 羅曼蒂克大道自駕、羅騰堡普連萊經典拍照點、中世紀古城牆漫步、聖誕博物館、品嚐雪球甜點 (Schneeball)">
+  <title>Day 06 時間表 - 羅騰堡 (Rothenburg) 中世紀童話小鎮 | 2026 德國冬季之旅</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;900&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="vendor/glightbox/glightbox.min.css">
 </head>
 <body>
-  <nav class="navbar">
+  <div class="reading-progress"></div>
+
+  <nav class="site-nav">
     <div class="container">
-      <a href="index.html" class="navbar-brand">🇩🇪 2026 德國冬季之旅</a>
-      <ul class="navbar-menu">
+      <a href="index.html" class="brand-link">
+        <span>🇩🇪 2026 德南冬旅誌</span>
+        <span class="brand-badge">Travel OS</span>
+      </a>
+      <ul class="nav-links">
         <li><a href="index.html">首頁</a></li>
-        <li><a href="index.html#timeline">行程總覽</a></li>
-        <li><a href="day-01.html" class="active">每日行程</a></li>
-        <li class="dropdown">
-          <a href="#">城市指南 ▾</a>
-          <ul class="dropdown-menu">
-            <li><a href="guide-hallstatt.html">哈修塔特區</a></li>
-            <li><a href="guide-wurzburg.html">符茲堡區</a></li>
-            <li><a href="guide-heidelberg.html">海德堡區</a></li>
-            <li><a href="guide-colmar.html">科爾馬區</a></li>
-            <li><a href="guide-garmisch.html">加米許區</a></li>
-          </ul>
-        </li>
+        <li><a href="index.html#itinerary">15天行程</a></li>
+        <li><a href="day-06.html" class="active">純時間表</a></li>
+        <li><a href="blog/day-02-blog.html">精選遊記</a></li>
       </ul>
-      <button class="navbar-share" title="分享此行程">📤 分享</button>
-      <button class="navbar-toggle" aria-label="選單" aria-expanded="false">☰</button>
+      <button class="nav-share-btn btn-share"><span>📤 分享</span></button>
     </div>
   </nav>
 
-  <div class="container">
-    <div class="day-switcher">
-      <a href="day-01.html" class="day-btn">1</a><a href="day-02.html" class="day-btn">2</a><a href="day-03.html" class="day-btn">3</a>
-      <a href="day-04.html" class="day-btn">4</a><a href="day-05.html" class="day-btn">5</a><a href="day-06.html" class="day-btn active">6</a>
-      <a href="day-07.html" class="day-btn">7</a><a href="day-08.html" class="day-btn">8</a><a href="day-09.html" class="day-btn">9</a>
-      <a href="day-10.html" class="day-btn">10</a><a href="day-11.html" class="day-btn">11</a><a href="day-12.html" class="day-btn">12</a>
-      <a href="day-13.html" class="day-btn">13</a><a href="day-14.html" class="day-btn">14</a><a href="day-15.html" class="day-btn">15</a>
+  <main class="container">
+    <nav class="day-nav-bar" aria-label="天數切換">
+      <a href="day-01.html" class="day-nav-btn">Day 1</a>
+      <a href="day-02.html" class="day-nav-btn">Day 2</a>
+      <a href="day-03.html" class="day-nav-btn">Day 3</a>
+      <a href="day-04.html" class="day-nav-btn">Day 4</a>
+      <a href="day-05.html" class="day-nav-btn">Day 5</a>
+      <a href="day-06.html" class="day-nav-btn active">Day 6</a>
+      <a href="day-07.html" class="day-nav-btn">Day 7</a>
+      <a href="day-08.html" class="day-nav-btn">Day 8</a>
+      <a href="day-09.html" class="day-nav-btn">Day 9</a>
+      <a href="day-10.html" class="day-nav-btn">Day 10</a>
+      <a href="day-11.html" class="day-nav-btn">Day 11</a>
+      <a href="day-12.html" class="day-nav-btn">Day 12</a>
+      <a href="day-13.html" class="day-nav-btn">Day 13</a>
+      <a href="day-14.html" class="day-nav-btn">Day 14</a>
+      <a href="day-15.html" class="day-nav-btn">Day 15</a>
+    </nav>
+
+    <!-- 1. 當日摘要 Hero Bento -->
+    <header class="schedule-hero-card">
+      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <span class="badge badge-gold">🇩🇪 基地二：符茲堡宿</span>
+        <span class="badge badge-alpine">🚗 自駕來回 130 km</span>
+        <span class="badge badge-forest">⏱️ 總車程約 2 小時</span>
+        <span class="badge badge-glass">🏨 連住第 4 晚：符茲堡</span>
+      </div>
+      <div>
+        <h1 style="font-family: var(--font-heading); font-size: 2.1rem; line-height: 1.3; margin-bottom: 0.5rem; color: #fff;">
+          Day 06：中世紀時間膠囊 ✕ 羅曼蒂克大道 羅騰堡 (Rothenburg)
+        </h1>
+        <p style="color: rgba(255, 255, 255, 0.9); font-size: 1.05rem;">
+          📅 2026/1/31 (六) ｜ 沿羅曼蒂克大道自駕南下，造訪「中世紀之寶」羅騰堡，普連萊黃金機位拍照、漫步城牆，走進 Käthe Wohlfahrt 永恆聖誕童話世界。
+        </p>
+      </div>
+    </header>
+
+    <!-- 2. 行前檢核與避坑 Bento -->
+    <section class="bento-grid">
+      <div class="bento-card bento-col-6">
+        <h3 style="color: var(--primary); font-size: 1.15rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.4rem;">
+          🎫 羅騰堡自駕停車指南
+        </h3>
+        <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.92rem; line-height: 1.7; color: var(--text-sub);">
+          <li><strong>停車推薦</strong>：請勿開進狹窄老城區。推薦停在城門外的 <a href="https://maps.google.com/?q=Parkplatz+P4+Rothenburg+ob+der+Tauber" target="_blank" rel="noopener" class="text-map-link"><code>Parkplatz P4 (Bezoldweg)</code></a> 或 <code>P3</code>，步行 3 分鐘即入城。</li>
+          <li><strong>週六市集</strong>：市集廣場週六上午 08:00 - 12:00 有在地農夫市集，販售熱蘋果汁與手工乳酪。</li>
+        </ul>
+      </div>
+
+      <div class="bento-card bento-col-6" style="background: var(--daruma-light); border-color: rgba(220, 38, 38, 0.3);">
+        <h3 style="color: var(--daruma-red); font-size: 1.15rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.4rem;">
+          ⚠️ TripNG 羅騰堡實戰避坑警示
+        </h3>
+        <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.92rem; line-height: 1.7; color: #7f1d1d;">
+          <li><strong>古城牆防滑注意</strong>：羅騰堡城牆長廊（Stadtmauer）部分石階較陡峭，冬季有薄雪，行走請握緊扶手。</li>
+          <li><strong>甜點雪球 (Schneeball) 口味選擇</strong>：傳統原味撒糖粉（Puderzucker）口感偏乾，建議搭配熱咖啡，或選擇巧克力/榛果淋醬口味。</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 3. 視覺化時間軸 -->
+    <section style="margin: 3rem 0 1.5rem;">
+      <h2 style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--primary); margin-bottom: 1.5rem;">
+        ⏱️ 當日精確時間表 (Schedule Timeline)
+      </h2>
+
+      <div class="timeline-section">
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">09:00 🚗 沿羅曼蒂克大道自駕南下</span>
+              <div><span class="badge badge-alpine">自駕 65 km</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub);">
+              由符茲堡取車出發，沿 A7 / 羅曼蒂克大道南下前往陶伯河畔羅騰堡，車程約 50 分鐘。
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">10:00 📸 普連萊小廣場 (Plönlein) 經典機位</span>
+              <div><span class="badge badge-gold">明信片絕景</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub); margin-bottom: 0.5rem;">
+              漫步至全德國最著名的拍照景點 <a href="https://maps.google.com/?q=Ploenlein+Rothenburg+ob+der+Tauber" target="_blank" rel="noopener" class="text-map-link">普連萊 (Plönlein)</a>。
+            </p>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">
+              黃色半木結構木屋、左右岔道與兩座中世紀高聳塔樓交會，如童話繪本實景。
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">11:30 🏰 環城古城牆長廊 (Stadtmauer) 漫步</span>
+              <div><span class="badge badge-wine">中世紀防禦</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub); margin-bottom: 0.5rem;">
+              登上完整保存的中世紀城牆，穿梭於木造長廊之間。
+            </p>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">
+              牆磚上刻有世界各地捐款重建者的姓名，俯瞰紅瓦古街與陶伯河谷。
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">12:30 ☕ 傳統雪球 (Schneeball) ✕ 老城午餐</span>
+              <div><span class="badge badge-forest">特色甜點</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub); margin-bottom: 0.5rem;">
+              品嚐陶伯河畔傳承 300 年的節慶糕點「雪球」（<button class="btn-audio" data-pronounce="Schneeball" data-lang="de-DE">Schneeball 🔊</button>）。
+            </p>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">
+              午餐推薦：老城德式酒館品嚐法蘭肯烤香腸與洋蔥濃湯。
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">14:00 🎄 Käthe Wohlfahrt 聖誕村與博物館</span>
+              <div><span class="badge badge-gold">夢幻童話</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub); margin-bottom: 0.5rem;">
+              走進全年無休的夢幻聖誕世界 <a href="https://maps.google.com/?q=Kaethe+Wohlfahrt+Rothenburg" target="_blank" rel="noopener" class="text-map-link"><em>Käthe Wohlfahrt - Weihnachtsdorf</em></a>。
+            </p>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">
+              欣賞 4 公尺高的巨型旋轉木製聖誕塔、數萬件手工胡桃鉗與吹煙木偶。
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">16:30 🚗 啟程返回符茲堡</span>
+              <div><span class="badge badge-alpine">返程 65 km</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub);">
+              夕陽西下時驅車返回符茲堡，享受在基地二的最後一個溫馨夜晚。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. POI 速查 -->
+    <section style="margin: 3.5rem 0 2rem;">
+      <h2 style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--primary); margin-bottom: 1.25rem;">
+        📍 今日景點與美食速查 (At-a-Glance)
+      </h2>
+      <div class="bento-grid">
+        <div class="bento-card bento-col-4">
+          <span class="badge badge-gold">📸 明信片地標</span>
+          <h4 style="margin: 0.5rem 0 0.25rem; color: var(--primary);">
+            <a href="https://maps.google.com/?q=Ploenlein+Rothenburg+ob+der+Tauber" target="_blank" rel="noopener" class="text-map-link">普連萊 (Plönlein)</a>
+          </h4>
+          <p style="font-size: 0.88rem; color: var(--text-sub); line-height: 1.6;">
+            羅騰堡靈魂機位，木骨屋與雙塔交會，早晨 10 點光線柔和最美。
+          </p>
+        </div>
+
+        <div class="bento-card bento-col-4">
+          <span class="badge badge-wine">🎄 聖誕名店</span>
+          <h4 style="margin: 0.5rem 0 0.25rem; color: var(--primary);">
+            <a href="https://maps.google.com/?q=Kaethe+Wohlfahrt+Rothenburg" target="_blank" rel="noopener" class="text-map-link">Käthe Wohlfahrt 聖誕村</a>
+          </h4>
+          <p style="font-size: 0.88rem; color: var(--text-sub); line-height: 1.6;">
+            全球最著名的聖誕裝飾總店，室內覆雪屋頂與巨型聖誕樹極致浪漫。
+          </p>
+        </div>
+
+        <div class="bento-card bento-col-4">
+          <span class="badge badge-alpine">🏰 古城長廊</span>
+          <h4 style="margin: 0.5rem 0 0.25rem; color: var(--primary);">
+            <a href="https://maps.google.com/?q=Stadtmauer+Rothenburg+ob+der+Tauber" target="_blank" rel="noopener" class="text-map-link">環城古城牆 (Stadtmauer)</a>
+          </h4>
+          <p style="font-size: 0.88rem; color: var(--text-sub); line-height: 1.6;">
+            全長約 2.5 公里木造迴廊城牆，免費登臨，俯瞰陶伯河谷與紅瓦屋頂。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 導覽按鈕 -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin: 3.5rem 0 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
+      <a href="day-05.html" style="font-weight: 600; color: var(--primary); font-size: 0.95rem;">← 前一天：Day 05 紐倫堡走讀</a>
+      <a href="day-07.html" style="font-weight: 600; color: var(--primary); font-size: 0.95rem;">下一天：Day 07 符茲堡 ➔ 海德堡 →</a>
     </div>
+  </main>
+
+  <div class="mobile-dock">
+    <a href="index.html" class="dock-item"><span class="dock-icon">🏠</span><span>首頁</span></a>
+    <a href="day-06.html" class="dock-item active"><span class="dock-icon">⏱️</span><span>時間表</span></a>
+    <a href="blog/day-02-blog.html" class="dock-item"><span class="dock-icon">📖</span><span>遊記</span></a>
+    <a href="javascript:void(0)" class="dock-item btn-share"><span class="dock-icon">📤</span><span>分享</span></a>
   </div>
 
-  <section class="daily-schedule">
-    <div class="container">
-      <div class="schedule-header">
-        <h1>Day 6：羅騰堡一日遊（童話網美自駕版）🚗</h1>
-        <p class="schedule-meta">📅 2026/1/31 (六) ｜ 🚗 自駕來回約 2 小時 ｜ 🏰 中世紀童話小鎮</p>
-        <div class="schedule-info-bar">
-          <span class="hotel-badge">🏨 住宿：符茲堡</span>
-          <a href="guide-wurzburg.html" class="guide-link">📖 城市指南</a>
-        </div>
-      </div>
-
-      <div class="attraction-winter-note" style="margin-bottom:1.5rem;">
-        🅿️ <strong>停車攻略：</strong>導航設定 <strong>P4 (Am Burggarten)</strong>，就在城堡花園旁邊，進入舊城區路段最平坦。將車停在城外，戰利品隨時可以放回後車廂，不用提著逛。
-      </div>
-
-      <h2>📸 冬季網美攻略</h2>
-      <div class="collapsible">
-        <div class="collapsible-header"><span class="collapsible-title">❄️ 羅騰堡童話網美一日遊（09:30 - 16:30）</span><span class="collapsible-icon">▼</span></div>
-        <div class="collapsible-body">
-          <p style="margin-bottom:1rem;">這份「<strong>自駕網美版</strong>」行程，大幅減少了不必要的路程，讓父女之旅能優雅地在童話小鎮留下最美的一面。自駕優勢：早上 8:30 出發，9:30 到剛好避開大團遊客。</p>
-          <table class="schedule-table">
-            <thead><tr><th>時間</th><th>拍攝地點</th><th>攝影建議/備註</th></tr></thead>
-            <tbody>
-              <tr><td class="schedule-time">09:30</td><td>城堡花園 (Burggarten)</td><td>📸 從花園石門往回拍老城全景<br>早晨陽光柔和，非常出片<br>冬季清晨可能有薄霧，拍起來更有空靈仙氣</td></tr>
-              <tr><td class="schedule-time">10:15</td><td>普雷萊茵廣場 (Plönlein)</td><td>📸 羅騰堡最經典轉角<br>網美位：站在兩路交會點，從低角度往上拍，長靴會讓雙腿顯得極長<br>10:30-11:30 順光，皮膚會呈現自然透亮感</td></tr>
-              <tr><td class="schedule-time">11:00</td><td>市集廣場週市集</td><td>📸 女兒穿著長靴提著市集紙袋在攤位前側拍，很有旅歐名伶的感覺<br>市集攤位有賣熱紅酒，捧在手中拍照既保暖又可愛<br>購買蜂蜜、起司伴手禮，在瑪麗恩藥局買百靈油</td></tr>
-              <tr><td class="schedule-time">12:00</td><td>「一飲救城」偶劇表演</td><td>🎭 站在廣場鐘塔前觀看 12 點整的表演（約 2 分鐘）<br>表演結束後在廣場附近景觀餐廳用餐</td></tr>
-              <tr><td class="schedule-time">14:00</td><td>聖誕博物館 & 飾品店</td><td>📸 Käthe Wohlfahrt 店門口的「紅色禮物巴士」是必拍位<br>店內的巨型胡桃鉗與紅色古董車是必拍場景<br>室內避寒首選，店內氛圍感極強，能拍出暖色調大片</td></tr>
-              <tr><td class="schedule-time">15:30</td><td>羅德門 (Rödertor) 城牆</td><td>📸 在城牆的防禦孔往外拍，可以捕捉到極具層次感的紅瓦塔樓景致<br>🆕 局部體驗：僅需爬上一小段城牆拍俯瞰照，不建議走完長度<br>⚠️ 石階陡峭且濕滑，請穿長靴的女兒扶好扶手</td></tr>
-            </tbody>
-          </table>
-
-          <div class="attraction-winter-note" style="margin-top:1.5rem;">
-            🩺 <strong>羅騰堡自駕體檢貼士（針對長靴女孩）</strong>
-          </div>
-          <ol style="margin-top:0.5rem;">
-            <li><strong>石板路警告：</strong>羅騰堡的石板路是「大顆且凹凸不平」的類型，對靴子的鞋跟非常不友善。既然自駕，強烈建議在車上備一雙平底鞋，拍照時再換上長靴。</li>
-            <li><strong>伴手禮重災區：</strong>羅騰堡是全德國最好買的地方（百靈油、聖誕飾品、雪球）。自駕的好處是：隨買隨放車上。建議下午兩點買完聖誕飾品後，先走回 P4 停車場放東西，讓女兒在咖啡廳休息，這樣她不用提著重物走坡路。</li>
-            <li><strong>關於雪球 (Schneeball)：</strong>雪球真的很大，拿在手上拍照很夢幻，但口感極乾。建議買「巧克力塗層」的，拍照比較漂亮且味道較豐富。一定要進咖啡廳點一壺熱伯爵茶或熱巧克力來配，這才叫享受。</li>
-            <li><strong>百靈油囤貨：</strong>市集廣場旁的藥局貨源充足。100ml 的百靈油在法蘭肯地區比慕尼黑好買很多，建議在此一次購足。</li>
-          </ol>
-        </div>
-      </div>
-
-      <h2>📋 當日時間表（充實版）</h2>
-      <div class="collapsible">
-        <div class="collapsible-header"><span class="collapsible-title">完整行程時間表（08:30 - 19:00）</span><span class="collapsible-icon">▼</span></div>
-        <div class="collapsible-body">
-          <table class="schedule-table">
-            <thead><tr><th>時間</th><th>活動內容</th><th>交通/攝影&購物備註</th></tr></thead>
-            <tbody>
-              <tr><td class="schedule-time">08:30</td><td>符茲堡取車出發</td><td>自駕優勢：早上 8 點出發太趕，8:30 出發 9:30 到剛好避開大團遊客</td></tr>
-              <tr><td class="schedule-time">09:30</td><td>城堡花園 (Burggarten)</td><td>📸 從花園石門往回拍老城全景<br>早晨陽光柔和，非常出片</td></tr>
-              <tr><td class="schedule-time">10:15</td><td>普雷萊茵廣場 (Plönlein)</td><td>📸 羅騰堡最經典轉角<br>上午 10 點半前光線剛好照亮黃色小屋</td></tr>
-              <tr><td class="schedule-time">11:00</td><td>市集廣場週市集</td><td>週六市集（至 12:00）<br>購買蜂蜜、起司伴手禮，在瑪麗恩藥局買百靈油</td></tr>
-              <tr><td class="schedule-time">12:00</td><td>「一飲救城」偶劇表演</td><td>🎭 站在廣場鐘塔前觀看 12 點整的表演（約 2 分鐘）</td></tr>
-              <tr><td class="schedule-time">12:30</td><td>舊城區午餐 + 雪球</td><td>推薦在廣場附近景觀餐廳用餐<br>買一個巧克力雪球拍照</td></tr>
-              <tr><td class="schedule-time">14:00</td><td>聖誕博物館 & 飾品店</td><td>📸 Käthe Wohlfahrt 店門口的「紅色禮物巴士」是必拍位<br>門票 €5，室內避寒好去處</td></tr>
-              <tr><td class="schedule-time">15:30</td><td>羅德門 (Rödertor) 城牆</td><td>🆕 局部體驗：僅需爬上一小段城牆拍俯瞰照<br>不建議走完長度</td></tr>
-              <tr><td class="schedule-time">16:30</td><td>取車離開羅騰堡</td><td>自駕返程，車內暖氣可緩解一天的腳部疲勞</td></tr>
-              <tr><td class="schedule-time">17:30</td><td>回到符茲堡</td><td>建議先回飯店放東西，再步行前往舊城區晚餐</td></tr>
-              <tr><td class="schedule-time">19:00</td><td>符茲堡最後晚宴</td><td>推薦尋找當地高評價餐廳，慶祝法蘭肯區行程圓滿結束</td></tr>
-            </tbody>
-          </table>
-
-          <div class="attraction-winter-note" style="margin-top:1.5rem;">
-            💡 <strong>當日重點：</strong><br>
-            ✅ 09:30 城堡花園 — 從石門拍老城全景<br>
-            ✅ 10:15 普雷萊茵廣場 — 德國最經典街景<br>
-            ✅ 12:00 「一飲救城」偶劇表演<br>
-            ✅ 14:00 Käthe Wohlfahrt 聖誕飾品店 — 紅色禮物巴士必拍<br>
-            ✅ 百靈油、聖誕飾品、雪球 — 羅騰堡必買三寶
-          </div>
-        </div>
-      </div>
-
-      <section class="attractions">
-        <h2>📍 羅騰堡網美景點詳情</h2>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">🆕 ★ 城堡花園 Burggarten</h3>
-            <p class="attraction-desc">舊城區最西側的綠地，是拍攝老城全景的最佳位置。利用城堡石造門框作為相框，拍攝後方的彩色房屋與塔樓。</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">📸</span><span>從石門往回拍老城全景</span></div>
-              <div class="attraction-info-item"><span class="icon">💰</span><span>免費</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 冬季清晨可能有薄霧，拍起來更有空靈仙氣</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Burggarten+Rothenburg+ob+der+Tauber" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">★ 普雷萊茵廣場 Plönlein</h3>
-            <p class="attraction-desc">羅騰堡地標，兩條路交會的 Y 字型建築。德國最經典的街景之一！兩條小路在此分岔，配上半木結構房屋和城門塔樓，是羅騰堡的標誌性畫面。</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">📸</span><span>網美位：站在兩路交會點，從低角度往上拍</span></div>
-              <div class="attraction-info-item"><span class="icon">💰</span><span>免費</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 10:30-11:30 順光，皮膚會呈現自然透亮感。長靴會讓雙腿顯得極長</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Plonlein+Rothenburg" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">🆕 ★ 市集廣場週市集 Marktplatz</h3>
-            <p class="attraction-desc">週六當地人的日常市集，充滿歐式生活感。可購買蜂蜜、起司伴手禮，在瑪麗恩藥局買百靈油。</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">📸</span><span>女兒提著市集紙袋在攤位前側拍，很有旅歐名伶的感覺</span></div>
-              <div class="attraction-info-item"><span class="icon">🛒</span><span>週六市集 8:00-12:00</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 市集攤位有賣熱紅酒，捧在手中拍照既保暖又可愛</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Marktplatz+Rothenburg+ob+der+Tauber" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">★ 聖誕飾品店 Käthe Wohlfahrt</h3>
-            <p class="attraction-desc">全球最美的聖誕用品旗艦店，內有巨型聖誕樹。世界聞名的聖誕飾品專賣店，全年營業！</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">📸</span><span>店門口「紅色禮物巴士」+ 巨型胡桃鉗必拍</span></div>
-              <div class="attraction-info-item"><span class="icon">🎄</span><span>全年營業</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 室內避寒首選，店內氛圍感極強，能拍出暖色調大片</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Kathe+Wohlfahrt+Rothenburg" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">🆕 ★ 羅德門城牆 Rödertor</h3>
-            <p class="attraction-desc">保存完整的中世紀防禦工事。僅需爬上一小段城牆拍俯瞰照，不建議走完長度。</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">📸</span><span>在城牆防禦孔往外拍，捕捉層次感紅瓦塔樓景致</span></div>
-              <div class="attraction-info-item"><span class="icon">💰</span><span>免費</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 警訊：石階陡峭且濕滑，請穿長靴的女兒扶好扶手，僅拍照即可下樓</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Rodertor+Rothenburg" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="attractions">
-        <h2>🍰 必吃美食</h2>
-        <div class="collapsible open">
-          <div class="collapsible-header"><span class="collapsible-title">羅騰堡特色美食</span><span class="collapsible-icon">▼</span></div>
-          <div class="collapsible-body">
-            <ul>
-              <li><strong>雪球 (Schneeball)</strong> - 羅騰堡特色甜點，€3-5<br>
-                📸 網美提醒：雪球真的很大，拿在手上拍照很夢幻，但口感極乾<br>
-                建議買「巧克力塗層」的，拍照比較漂亮且味道較豐富<br>
-                搭配：一定要進咖啡廳點一壺熱伯爵茶或熱巧克力來配，這才叫享受</li>
-              <li><strong>法蘭肯葡萄酒</strong> - 當地特產白葡萄酒</li>
-              <li><strong>熱紅酒 (Glühwein)</strong> - 市集攤位有賣，捧在手中拍照既保暖又可愛</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section class="attractions">
-        <h2>🛍️ 必買伴手禮</h2>
-        <div class="collapsible open">
-          <div class="collapsible-header"><span class="collapsible-title">羅騰堡必買三寶</span><span class="collapsible-icon">▼</span></div>
-          <div class="collapsible-body">
-            <ul>
-              <li><strong>百靈油 (China-Öl)</strong> - 100ml，市集廣場旁瑪麗恩藥局<br>
-                法蘭肯地區比慕尼黑好買很多，建議在此一次購足</li>
-              <li><strong>聖誕飾品</strong> - Käthe Wohlfahrt 聖誕飾品店<br>
-                胡桃鉗士兵、聖誕金字塔、手工玻璃球飾品</li>
-              <li><strong>雪球 (Schneeball)</strong> - 巧克力塗層款最推薦<br>
-                可買禮盒裝帶回台灣送人</li>
-              <li><strong>蜂蜜、起司</strong> - 週六市集攤位<br>
-                當地農產品，新鮮又有特色</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <div class="day-nav">
-        <a href="day-05.html">← Day 5</a>
-        <a href="day-07.html">Day 7 →</a>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer"><div class="container"><p>2026 德國南部冬季自駕之旅 | 個人旅遊規劃</p></div></footer>
-  <script src="js/main.js"></script>
+  <script src="vendor/glightbox/glightbox.min.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
-

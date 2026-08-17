@@ -3,300 +3,237 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Day 11: 亞爾薩斯童話雙城，科爾馬深度遊、埃吉桑姆法國最美村莊、美女與野獸原型、亞爾薩斯白酒品酒">
-  <title>Day 11 - 亞爾薩斯童話雙城 | 2026 德國冬季之旅</title>
+  <meta name="description" content="Day 11 時間表: 瑞士巴塞爾國際清算銀行 (BIS) 朝聖、萊茵河畔、法國最美同心圓童話小鎮埃吉桑姆 (Eguisheim)、亞爾薩斯酒鄉">
+  <title>Day 11 時間表 - 瑞士巴塞爾 BIS 朝聖 ✕ 埃吉桑姆最美村莊 | 2026 德國冬季之旅</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;900&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="vendor/glightbox/glightbox.min.css">
 </head>
 <body>
-  <nav class="navbar">
+  <div class="reading-progress"></div>
+
+  <nav class="site-nav">
     <div class="container">
-      <a href="index.html" class="navbar-brand">🇩🇪 2026 德國冬季之旅</a>
-      <ul class="navbar-menu">
+      <a href="index.html" class="brand-link">
+        <span>🇩🇪 2026 德南冬旅誌</span>
+        <span class="brand-badge">Travel OS</span>
+      </a>
+      <ul class="nav-links">
         <li><a href="index.html">首頁</a></li>
-        <li><a href="index.html#timeline">行程總覽</a></li>
-        <li><a href="day-01.html" class="active">每日行程</a></li>
-        <li class="dropdown">
-          <a href="#">城市指南 ▾</a>
-          <ul class="dropdown-menu">
-            <li><a href="guide-hallstatt.html">哈修塔特區</a></li>
-            <li><a href="guide-wurzburg.html">符茲堡區</a></li>
-            <li><a href="guide-heidelberg.html">海德堡區</a></li>
-            <li><a href="guide-colmar.html">科爾馬區</a></li>
-            <li><a href="guide-garmisch.html">加米許區</a></li>
-          </ul>
-        </li>
+        <li><a href="index.html#itinerary">15天行程</a></li>
+        <li><a href="day-11.html" class="active">純時間表</a></li>
+        <li><a href="blog/day-02-blog.html">精選遊記</a></li>
       </ul>
-      <button class="navbar-share" title="分享此行程">📤 分享</button>
-      <button class="navbar-toggle" aria-label="選單" aria-expanded="false">☰</button>
+      <button class="nav-share-btn btn-share"><span>📤 分享</span></button>
     </div>
   </nav>
 
-  <div class="container">
-    <div class="day-switcher">
-      <a href="day-01.html" class="day-btn">1</a><a href="day-02.html" class="day-btn">2</a><a href="day-03.html" class="day-btn">3</a>
-      <a href="day-04.html" class="day-btn">4</a><a href="day-05.html" class="day-btn">5</a><a href="day-06.html" class="day-btn">6</a>
-      <a href="day-07.html" class="day-btn">7</a><a href="day-08.html" class="day-btn">8</a><a href="day-09.html" class="day-btn">9</a>
-      <a href="day-10.html" class="day-btn">10</a><a href="day-11.html" class="day-btn active">11</a><a href="day-12.html" class="day-btn">12</a>
-      <a href="day-13.html" class="day-btn">13</a><a href="day-14.html" class="day-btn">14</a><a href="day-15.html" class="day-btn">15</a>
+  <main class="container">
+    <nav class="day-nav-bar" aria-label="天數切換">
+      <a href="day-01.html" class="day-nav-btn">Day 1</a>
+      <a href="day-02.html" class="day-nav-btn">Day 2</a>
+      <a href="day-03.html" class="day-nav-btn">Day 3</a>
+      <a href="day-04.html" class="day-nav-btn">Day 4</a>
+      <a href="day-05.html" class="day-nav-btn">Day 5</a>
+      <a href="day-06.html" class="day-nav-btn">Day 6</a>
+      <a href="day-07.html" class="day-nav-btn">Day 7</a>
+      <a href="day-08.html" class="day-nav-btn">Day 8</a>
+      <a href="day-09.html" class="day-nav-btn">Day 9</a>
+      <a href="day-10.html" class="day-nav-btn">Day 10</a>
+      <a href="day-11.html" class="day-nav-btn active">Day 11</a>
+      <a href="day-12.html" class="day-nav-btn">Day 12</a>
+      <a href="day-13.html" class="day-nav-btn">Day 13</a>
+      <a href="day-14.html" class="day-nav-btn">Day 14</a>
+      <a href="day-15.html" class="day-nav-btn">Day 15</a>
+    </nav>
+
+    <!-- 1. 當日摘要 Hero Bento -->
+    <header class="schedule-hero-card">
+      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <span class="badge badge-trap">🇫🇷 基地四：科爾馬宿</span>
+        <span class="badge badge-wine">🇨🇭 跨越三國交界：瑞士巴塞爾</span>
+        <span class="badge badge-alpine">🚗 自駕一日遊 140 km</span>
+        <span class="badge badge-glass">🏨 連住第 2 晚：科爾馬</span>
+      </div>
+      <div>
+        <h1 style="font-family: var(--font-heading); font-size: 2.1rem; line-height: 1.3; margin-bottom: 0.5rem; color: #fff;">
+          Day 11：瑞士巴塞爾 BIS 朝聖 ✕ 法國最美村莊埃吉桑姆
+        </h1>
+        <p style="color: rgba(255, 255, 255, 0.9); font-size: 1.05rem;">
+          📅 2026/2/5 (四) ｜ 南下瑞士巴塞爾朝聖「央行的央行」國際清算銀行 (BIS) 總部與萊茵河畔，午後折返亞爾薩斯漫步同心圓最美童話古村埃吉桑姆。
+        </p>
+      </div>
+    </header>
+
+    <!-- 2. 行前檢核與避坑 Bento -->
+    <section class="bento-grid">
+      <div class="bento-card bento-col-6">
+        <h3 style="color: var(--primary); font-size: 1.15rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.4rem;">
+          🎫 瑞士入境與停車指南
+        </h3>
+        <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.92rem; line-height: 1.7; color: var(--text-sub);">
+          <li><strong>避免購買瑞士年票 Vignette</strong>：由法國 A35 進入巴塞爾市區時，選擇平面公路（如 St. Louis 邊境）進城，<strong>避開瑞士高速公路</strong>，即可免買 CHF 40 瑞士高速年票。</li>
+          <li><strong>巴塞爾停車</strong>：推薦停放於中央車站旁的 <a href="https://maps.google.com/?q=Parkhaus+Centralbahnplatz+Basel" target="_blank" rel="noopener" class="text-map-link"><code>Parkhaus Centralbahn</code></a>，步行 2 分鐘直達 BIS 總部大樓。</li>
+        </ul>
+      </div>
+
+      <div class="bento-card bento-col-6" style="background: var(--daruma-light); border-color: rgba(220, 38, 38, 0.3);">
+        <h3 style="color: var(--daruma-red); font-size: 1.15rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.4rem;">
+          ⚠️ TripNG 埃吉桑姆漫步避坑警示
+        </h3>
+        <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.92rem; line-height: 1.7; color: #7f1d1d;">
+          <li><strong>埃吉桑姆同心圓路徑</strong>：村莊圍繞著中央城堡呈三層同心圓環狀同心街道，建議沿外圈「Rue du Rempart」順時針漫步，拍照角度最美且不會迷路。</li>
+          <li><strong>停車收費</strong>：村莊外圍停車場（Parking des Tuileries）採自動投幣/刷卡機收費（約 €3-5/次）。</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 3. 視覺化時間軸 -->
+    <section style="margin: 3rem 0 1.5rem;">
+      <h2 style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--primary); margin-bottom: 1.5rem;">
+        ⏱️ 當日精確時間表 (Schedule Timeline)
+      </h2>
+
+      <div class="timeline-section">
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">09:00 🚗 由科爾馬南下瑞士巴塞爾</span>
+              <div><span class="badge badge-alpine">跨國自駕 65 km</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub);">
+              沿法國 A35 快速道路南下，經聖路易邊境進入瑞士第三大城巴塞爾（Basel），車程約 50 分鐘。
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">10:00 🏦 國際清算銀行 (BIS) 總部外觀朝聖</span>
+              <div><span class="badge badge-wine">全球金融心臟</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub); margin-bottom: 0.5rem;">
+              抵達位於 Centralbahnplatz 的 <a href="https://maps.google.com/?q=Bank+for+International+Settlements+Basel" target="_blank" rel="noopener" class="text-map-link">國際清算銀行 (Bank for International Settlements, BIS)</a> 圓柱形總部大樓。
+            </p>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">
+              被譽為「央行的央行」，全球金融監管巴塞爾協定（Basel Accords）誕生地，在極具辨識度的幾何玻璃圓塔前合影留念。
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">11:00 ⛪ 巴塞爾大教堂 (Basler Münster) ✕ 萊茵河全景</span>
+              <div><span class="badge badge-gold">萊茵河畔</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub); margin-bottom: 0.5rem;">
+              漫步至建於高台上的紅砂岩 <a href="https://maps.google.com/?q=Basel+Minster" target="_blank" rel="noopener" class="text-map-link">巴塞爾大教堂</a>。
+            </p>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">
+              於教堂後方的普法爾茨（Pfalz）露台眺望滾滾萊茵河、穿梭的三國船隻與黑森林遠景。
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">13:00 🚗 返回法國亞爾薩斯 ➔ 埃吉桑姆</span>
+              <div><span class="badge badge-alpine">自駕 60 km</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub);">
+              跨過邊境北返，行駛約 45 分鐘抵達法國最美村莊埃吉桑姆（Eguisheim）。
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">14:00 🌸 同心圓最美村莊 埃吉桑姆 (Eguisheim) 漫步</span>
+              <div><span class="badge badge-forest">法國最美小鎮</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub); margin-bottom: 0.5rem;">
+              走進被票選為「法國人最喜愛的小鎮」之 <a href="https://maps.google.com/?q=Eguisheim+Village" target="_blank" rel="noopener" class="text-map-link">埃吉桑姆 (Eguisheim)</a>。
+            </p>
+            <ul style="font-size: 0.88rem; color: var(--text-muted); padding-left: 1.25rem; line-height: 1.6;">
+              <li>沿著外環鵝卵石路（Rue du Rempart）尋找經典明信片角落（Le Pigeonnier 鴿舍木屋）。</li>
+              <li>造訪中世紀酒莊品嚐特級園亞爾薩斯白酒與香料熱紅酒（Vin Chaud）。</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="timeline-step-card">
+            <div class="timeline-step-header">
+              <span class="timeline-time-badge">17:00 🏨 返回科爾馬 ✕ 法式晚宴</span>
+              <div><span class="badge badge-wine">酒鄉之夜</span></div>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-sub);">
+              返回科爾馬老城，於運河畔燭光餐廳享用亞爾薩斯燉肉鍋（Baeckeoffe）與精選甜點。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. POI 速查 -->
+    <section style="margin: 3.5rem 0 2rem;">
+      <h2 style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--primary); margin-bottom: 1.25rem;">
+        📍 今日景點與美食速查 (At-a-Glance)
+      </h2>
+      <div class="bento-grid">
+        <div class="bento-card bento-col-4">
+          <span class="badge badge-wine">🏦 央行之母</span>
+          <h4 style="margin: 0.5rem 0 0.25rem; color: var(--primary);">
+            <a href="https://maps.google.com/?q=Bank+for+International+Settlements+Basel" target="_blank" rel="noopener" class="text-map-link">國際清算銀行 (BIS)</a>
+          </h4>
+          <p style="font-size: 0.88rem; color: var(--text-sub); line-height: 1.6;">
+            瑞士巴塞爾地標圓柱形總部，全球金融監管中樞。
+          </p>
+        </div>
+
+        <div class="bento-card bento-col-4">
+          <span class="badge badge-forest">🌸 童話同心圓</span>
+          <h4 style="margin: 0.5rem 0 0.25rem; color: var(--primary);">
+            <a href="https://maps.google.com/?q=Eguisheim+Village" target="_blank" rel="noopener" class="text-map-link">埃吉桑姆 (Eguisheim)</a>
+          </h4>
+          <p style="font-size: 0.88rem; color: var(--text-sub); line-height: 1.6;">
+            被譽為亞爾薩斯童話搖籃，三層同心圓街道保存了 16 世紀純粹彩色木屋。
+          </p>
+        </div>
+
+        <div class="bento-card bento-col-4">
+          <span class="badge badge-gold">⛪ 萊茵高台</span>
+          <h4 style="margin: 0.5rem 0 0.25rem; color: var(--primary);">
+            <a href="https://maps.google.com/?q=Basel+Minster" target="_blank" rel="noopener" class="text-map-link">巴塞爾大教堂</a>
+          </h4>
+          <p style="font-size: 0.88rem; color: var(--text-sub); line-height: 1.6;">
+            紅白相間彩色琉璃瓦屋頂，後方露台飽覽三國交界萊茵河大轉彎壯景。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 導覽按鈕 -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin: 3.5rem 0 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
+      <a href="day-10.html" style="font-weight: 600; color: var(--primary); font-size: 0.95rem;">← 前一天：Day 10 科爾馬童話</a>
+      <a href="day-12.html" style="font-weight: 600; color: var(--primary); font-size: 0.95rem;">下一天：Day 12 黑森林 ➔ 加米許 →</a>
     </div>
+  </main>
+
+  <div class="mobile-dock">
+    <a href="index.html" class="dock-item"><span class="dock-icon">🏠</span><span>首頁</span></a>
+    <a href="day-11.html" class="dock-item active"><span class="dock-icon">⏱️</span><span>時間表</span></a>
+    <a href="blog/day-02-blog.html" class="dock-item"><span class="dock-icon">📖</span><span>遊記</span></a>
+    <a href="javascript:void(0)" class="dock-item btn-share"><span class="dock-icon">📤</span><span>分享</span></a>
   </div>
 
-  <section class="daily-schedule">
-    <div class="container">
-      <div class="schedule-header">
-        <h1>Day 11：亞爾薩斯童話雙城（長靴護航版）🏘️🍷</h1>
-        <p class="schedule-meta">📅 2026/2/5 (四) ｜ 🚗 來回僅 15 公里 / 約 20 分鐘 ｜ 🎨 童話小鎮深度遊</p>
-        <div class="schedule-info-bar">
-          <span class="hotel-badge">🏨 住宿：科爾馬 Hôtel Le Colombier</span>
-          <a href="guide-colmar.html" class="guide-link">📖 城市指南</a>
-        </div>
-      </div>
-
-      <div class="attraction-winter-note" style="margin-bottom:1.5rem;">
-        🌡️ <strong>冬季提醒：</strong>亞爾薩斯早晨濕冷，科爾馬與埃吉桑姆的石板路是「凸起圓石」類型，對長靴的鞋跟與腳掌心壓力極大。室內市集是重要的「解凍站」！
-      </div>
-
-      <h2>📸 冬季網美攻略</h2>
-      <div class="collapsible">
-        <div class="collapsible-header"><span class="collapsible-title">❄️ 亞爾薩斯童話雙城網美攻略（09:30 - 19:00）</span><span class="collapsible-icon">▼</span></div>
-        <div class="collapsible-body">
-          <p style="margin-bottom:1rem;">這份行程針對 <strong>避開「石板路長征」、分段自駕、以及室內解凍</strong>優化。採取「分段自駕」策略，早上在南部活動，中午回飯店拿車開往北側快閃。</p>
-          <table class="schedule-table">
-            <thead><tr><th>景點名稱</th><th>📸 網美拍照攻略</th><th>小提醒</th></tr></thead>
-            <tbody>
-              <tr><td>★ 小威尼斯</td><td>站在 Rue de la Poissonnerie 的橋上，由高往低拍運河與兩岸彩色屋</td><td>早上 10 點前光線最柔和，皮膚拍起來最白</td></tr>
-              <tr><td>★ 普菲斯泰屋</td><td>這是《霍爾的移動城堡》原型。建議拍仰角，把華麗的木造凸窗拍進去</td><td>周邊人多，讓女兒靠在對面牆邊拍全景最有氛圍</td></tr>
-              <tr><td>★ 埃吉桑姆 Y 字路</td><td>精確位置在 <strong>Rue du Rempart Sud</strong>。這是《美女與野獸》貝兒居住的村莊原形</td><td>穿長靴站在分岔路中間，背景的小塔樓就是最頂級的童話大片</td></tr>
-              <tr><td>★ 人頭屋</td><td>建築上有 105 個人頭雕塑。生科背景觀察：觀察這些雕塑的肌肉表現</td><td>與女兒討論一下 16 世紀的解剖美學</td></tr>
-            </tbody>
-          </table>
-
-          <div class="attraction-winter-note" style="margin-top:1.5rem;">
-            🩺 <strong>今日旅程小提醒（針對長靴女孩與專業老爸）</strong>
-          </div>
-          <ol style="margin-top:0.5rem;">
-            <li><strong>石板路的無形傷害：</strong>科爾馬與埃吉桑姆的石板路是「凸起圓石」類型，這對長靴的鞋跟與腳掌心壓力極大。爸爸神操作：在車上備一把折疊傘或防風外套，埃吉桑姆下午風大，拍完照立刻讓女兒披上。</li>
-            <li><strong>埃吉桑姆的「同心圓」迷思：</strong>雖然它是同心圓布局，但對於穿長靴的女生來說，繞完一圈其實很累。建議直接切入最核心的城堡廣場 (Place du Château)，然後拍完最美的 Rue du Rempart 即可。</li>
-            <li><strong>生科背景的飲食建議：</strong>亞爾薩斯的白葡萄酒（尤其是 Riesling 和 Gewürztraminer）酸度與果香層次分明。在品酒時，您可以跟女兒簡單聊聊亞爾薩斯特殊的「石灰岩與黏土」地質如何影響葡萄的二級代謝產物。</li>
-            <li><strong>冬季特產：</strong>2 月份的市集會有現烤的香料蛋糕 (Pain d'épices)。買一小塊給女兒，那是冬日裡最溫暖的熱量來源。</li>
-          </ol>
-        </div>
-      </div>
-
-      <h2>📋 當日時間表（長靴護航版）</h2>
-      <div class="collapsible">
-        <div class="collapsible-header"><span class="collapsible-title">09:30 小威尼斯 → 19:00 Winstub 晚餐慶祝</span><span class="collapsible-icon">▼</span></div>
-        <div class="collapsible-body">
-          <table class="schedule-table">
-            <thead><tr><th>時間</th><th>活動內容</th><th>交通/攝影&備註</th></tr></thead>
-            <tbody>
-              <tr><td class="schedule-time">08:30</td><td>飯店早餐</td><td>享用法式早餐</td></tr>
-              <tr><td class="schedule-time">09:30</td><td>小威尼斯 (Petite Venise)</td><td>🚶 從飯店步行 3 分鐘即達<br>趁人少拍運河倒影，上午光線最佳</td></tr>
-              <tr><td class="schedule-time">10:30</td><td>漁人碼頭 & 普菲斯泰屋</td><td>📸 沿著勞赫河拍彩色木筋屋<br>這是科爾馬最出片的地方</td></tr>
-              <tr><td class="schedule-time">11:30-13:00</td><td>室內市集 (Marché Couvert)</td><td>🏠 躲寒風：逛逛起司、臘腸<br>推薦午餐：火焰薄餅 (Tarte Flambée)，約 €10-15</td></tr>
-              <tr><td class="schedule-time">13:30</td><td>人頭屋 (Maison des Têtes)</td><td>🚗 回飯店取車，直接開往北側快閃拍照<br>省下 1 公里步行</td></tr>
-              <tr><td class="schedule-time">14:00</td><td>前往埃吉桑姆 (Eguisheim)</td><td>🚗 10 分鐘車程（7 公里）<br>戰利品直接丟車上，村莊入口有免費停車場</td></tr>
-              <tr><td class="schedule-time">14:15-15:15</td><td>最美村莊巡禮</td><td>📸 Rue du Rempart，那裡有經典的童話分岔路口<br>直接切入城堡廣場，不用繞完整圈</td></tr>
-              <tr><td class="schedule-time">15:30-16:30</td><td>酒莊品酒 (Dégustation)</td><td>🍷 找間酒莊品嚐 Gewürztraminer（瓊瑤漿）<br>感受發酵美學，品酒 €5-15</td></tr>
-              <tr><td class="schedule-time">17:00</td><td>返回科爾馬</td><td>🚗 剛好日落（約 17:30）<br>回飯店換下長靴，放鬆腳部壓力</td></tr>
-              <tr><td class="schedule-time">19:00</td><td>Winstub 晚餐慶祝</td><td>推薦：Winstub Brenner 或 La Krutenau<br>點一鍋亞爾薩斯酸菜燉肉（Choucroute）</td></tr>
-            </tbody>
-          </table>
-
-          <div class="attraction-winter-note" style="margin-top:1.5rem;">
-            💡 <strong>當日重點：</strong><br>
-            ✅ 科爾馬舊城區深度遊（小威尼斯、漁人碼頭、普菲斯泰屋）<br>
-            ✅ 室內市集品嚐亞爾薩斯美食<br>
-            ✅ 埃吉桑姆：法國最美村莊，美女與野獸原型<br>
-            ✅ 亞爾薩斯葡萄酒品酒<br>
-            ⚠️ 當日車程統計：僅 15 公里 / 約 20 分鐘（比弗萊堡方案省 105 公里！）
-          </div>
-        </div>
-      </div>
-
-      <section class="attractions">
-        <h2>📍 科爾馬舊城區景點詳情</h2>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">★ 小威尼斯 Petite Venise</h3>
-            <p class="attraction-desc">科爾馬最精華的區域！勞赫河 (Lauch) 在此流經，兩岸是色彩斑斕的半木造結構房屋，景色如畫。</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">📸</span><span>站在 Rue de la Poissonnerie 的橋上，由高往低拍</span></div>
-              <div class="attraction-info-item"><span class="icon">⏰</span><span>最佳拍照時間：早上 10 點前光線最柔和</span></div>
-              <div class="attraction-info-item"><span class="icon">🌙</span><span>夜晚燈光非常美</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 薄霧中的景色別有風情，石板路可能濕滑。冬季遊船班次減少需確認時間</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Petite+Venise+Colmar" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-              <a href="guide-colmar.html#colmar-petite-venise" class="btn btn-more">📖 了解更多</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">★ 普菲斯泰屋 Maison Pfister</h3>
-            <p class="attraction-desc">建於 1537 年，科爾馬最著名的地標建築之一，擁有華麗的凸窗、木製迴廊和聖經故事壁畫。這是《霍爾的移動城堡》原型！</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">💰</span><span>免費參觀外觀</span></div>
-              <div class="attraction-info-item"><span class="icon">📸</span><span>建議拍仰角，把華麗的木造凸窗拍進去</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 周邊人多，讓女兒靠在對面牆邊拍全景最有氛圍。冬季陽光下建築細節更清晰</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Maison+Pfister+Colmar" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-              <a href="guide-colmar.html#colmar-pfister" class="btn btn-more">📖 了解更多</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">★ 人頭屋 Maison des Têtes</h3>
-            <p class="attraction-desc">建築外牆上裝飾著超過 105 個表情各異的人頭或動物雕塑，風格非常獨特。現為一家五星級飯店。</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">💰</span><span>免費參觀外觀（飯店對外開放餐廳）</span></div>
-              <div class="attraction-info-item"><span class="icon">📸</span><span>觀察雕塑的肌肉表現，討論 16 世紀的解剖美學</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 距離核心景區稍有步行距離，建議開車快閃。飯店餐廳提供溫暖的用餐環境</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Maison+des+Tetes+Colmar" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">🐟 漁人碼頭 Quai de la Poissonnerie</h3>
-            <p class="attraction-desc">緊鄰小威尼斯，是過去漁夫和船夫居住的區域，建築風格比小威尼斯更質樸，遊客相對較少。</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">📸</span><span>沿著勞赫河拍彩色木筋屋，這是科爾馬最出片的地方</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 冬季遊人更少，可以享受寧靜，適合慢慢散步感受小鎮生活</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Quai+de+la+Poissonnerie+Colmar" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">🛒 室內市集 Marché Couvert</h3>
-            <p class="attraction-desc">一座磚石結構的歷史建築，內部是充滿活力的本地市集，販售新鮮蔬果、肉品、起司和亞爾薩斯特產。這是重要的「解凍站」！</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">⏰</span><span>營業時間：週二-週六 8:00-18:00</span></div>
-              <div class="attraction-info-item"><span class="icon">💰</span><span>午餐約 €10-15</span></div>
-              <div class="attraction-info-item"><span class="icon">🍕</span><span>推薦：火焰薄餅 (Tarte Flambée)</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 絕佳的室內避寒點！可品嚐熱食熱飲，購買當地冬季特產</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Marche+Couvert+Colmar" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="attractions">
-        <h2>📍 埃吉桑姆景點詳情</h2>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">★ 埃吉桑姆村莊 Eguisheim</h3>
-            <p class="attraction-desc">被評選為「法國最美村莊」之一，也是迪士尼《美女與野獸》的靈感來源！村莊呈同心圓佈局，色彩繽紛的半木造房屋排列成童話般的街景。</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">💰</span><span>免費參觀</span></div>
-              <div class="attraction-info-item"><span class="icon">🚗</span><span>從科爾馬僅 10 分鐘（7 公里）</span></div>
-              <div class="attraction-info-item"><span class="icon">🅿️</span><span>村莊入口免費停車，村莊內禁止車輛進入</span></div>
-              <div class="attraction-info-item"><span class="icon">📸</span><span>精確位置：Rue du Rempart Sud（Y 字型小徑路口）</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 冬季遊客極少，可享受寧靜氛圍。若有積雪更夢幻！日落較早，建議 15:00 前抵達</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Eguisheim+France" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-              <a href="guide-colmar.html#colmar-eguisheim" class="btn btn-more">📖 了解更多</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">⛪ 聖彼得與聖保羅教堂 Église Saints-Pierre-et-Paul</h3>
-            <p class="attraction-desc">位於村莊中心的古老教堂，擁有羅馬式鐘樓和哥德式內部裝飾，是村莊的精神中心。</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">💰</span><span>免費入場</span></div>
-              <div class="attraction-info-item"><span class="icon">📸</span><span>教堂前廣場 (Place du Château) 適合拍照</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 室內避寒，冬季較安靜。注意禮拜時間</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Eglise+Saints-Pierre-et-Paul+Eguisheim" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="attraction-card">
-          <div class="attraction-body">
-            <h3 class="attraction-name">🍷 亞爾薩斯葡萄酒莊</h3>
-            <p class="attraction-desc">埃吉桑姆周邊有多家葡萄酒莊，可品嚐著名的麗絲玲 (Riesling) 和瓊瑤漿 (Gewürztraminer) 白葡萄酒。</p>
-            <div class="attraction-info">
-              <div class="attraction-info-item"><span class="icon">💰</span><span>品酒 €5-15</span></div>
-              <div class="attraction-info-item"><span class="icon">📞</span><span>建議預約，冬季部分酒莊休息</span></div>
-              <div class="attraction-info-item"><span class="icon">🍷</span><span>推薦：Gewürztraminer（瓊瑤漿），感受發酵美學</span></div>
-            </div>
-            <div class="attraction-winter-note">❄️ 酒莊室內溫暖，品酒暖身。冬季葡萄園景色蕭瑟但寧靜</div>
-            <div class="attraction-actions">
-              <a href="https://www.google.com/maps/search/?api=1&query=Alsace+Winery+Eguisheim" target="_blank" rel="noopener" class="btn btn-navigate">📍 開啟導航</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="attractions">
-        <h2>🚗 科爾馬停車資訊</h2>
-        <div class="collapsible">
-          <div class="collapsible-header"><span class="collapsible-title">停車場位置、費用與建議</span><span class="collapsible-icon">▼</span></div>
-          <div class="collapsible-body">
-            <table class="schedule-table">
-              <thead><tr><th>停車場名稱</th><th>位置</th><th>費用</th><th>特色</th></tr></thead>
-              <tbody>
-                <tr><td>★ Parking de la Montagne Verte</td><td>舊城區西南側</td><td>約 €8-12/天</td><td>最推薦！大型便宜，步行 10 分鐘至小威尼斯</td></tr>
-                <tr><td>Parking Rapp</td><td>舊城區北側</td><td>約 €1.5-2/小時</td><td>靠近菩提樹下博物館，位置好</td></tr>
-                <tr><td>Parking Lacarre</td><td>舊城區東側</td><td>約 €1.5-2/小時</td><td>離小威尼斯最近，但車位較搶手</td></tr>
-              </tbody>
-            </table>
-            <p style="margin-top:1rem;">💡 <strong>停車建議：</strong>住宿飯店若有停車設施，建議直接停飯店。若外出遊覽，推薦 Parking de la Montagne Verte（按日計費較划算）。</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="attractions">
-        <h2>🍽️ 必吃美食</h2>
-        <div class="collapsible open">
-          <div class="collapsible-header"><span class="collapsible-title">亞爾薩斯特色料理與推薦餐廳</span><span class="collapsible-icon">▼</span></div>
-          <div class="collapsible-body">
-            <ul>
-              <li><strong>火焰薄餅 (Tarte Flambée)</strong> - 亞爾薩斯披薩，薄脆餅皮配酸奶油、洋蔥、培根</li>
-              <li><strong>酸菜燉肉 (Choucroute)</strong> - 酸菜配各式豬肉香腸，冬日暖胃首選</li>
-              <li><strong>亞爾薩斯白酒</strong> - 麗絲玲 (Riesling)、瓊瑤漿 (Gewürztraminer)</li>
-              <li><strong>香料蛋糕 (Pain d'épices)</strong> - 冬季特產，現烤的熱量來源</li>
-            </ul>
-            <div class="attraction-winter-note" style="margin-top:1rem;">
-              🍽️ <strong>推薦餐廳：</strong>Winstub Brenner（就在小威尼斯旁）或 La Krutenau。點一鍋亞爾薩斯酸菜燉肉慶祝！
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div class="day-nav">
-        <a href="day-10.html">← Day 10</a>
-        <a href="day-12.html">Day 12 →</a>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer"><div class="container"><p>2026 德國南部冬季自駕之旅 | 個人旅遊規劃</p></div></footer>
-  <script src="js/main.js"></script>
+  <script src="vendor/glightbox/glightbox.min.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
-
