@@ -291,7 +291,53 @@ button {
   border: none;
 }
 
-/* ---------- 7. Hero Banner ---------- */
+/* ---------- 7. Day Switcher Bar (1 ~ 15 天切換) ---------- */
+.day-nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  margin: 1.25rem 0 2rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+.day-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 38px;
+  height: 38px;
+  padding: 0 0.75rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-sub);
+  box-shadow: var(--shadow-xs);
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.day-nav-btn:hover {
+  color: var(--primary);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.day-nav-btn.active {
+  background: var(--primary-gradient);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 4px 12px rgba(15, 39, 68, 0.3);
+}
+
+/* ---------- 8. Hero Banner & Day Headers ---------- */
 .hero-bento {
   padding: 2.5rem 0 1.5rem;
 }
@@ -387,7 +433,20 @@ button {
   transform: translateY(-2px);
 }
 
-/* ---------- 8. Badges & Tags ---------- */
+/* Day Schedule Header Box */
+.schedule-hero-card {
+  background: var(--primary-gradient);
+  color: var(--text-white);
+  border-radius: var(--radius-xl);
+  padding: 2.25rem 2rem;
+  margin: 1.5rem 0 2rem;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ---------- 9. Badges & Tags ---------- */
 .badge {
   display: inline-flex;
   align-items: center;
@@ -405,7 +464,88 @@ button {
 .badge-trap { background: var(--daruma-light); color: var(--daruma-red); }
 .badge-glass { background: rgba(255, 255, 255, 0.15); color: #fff; border: 1px solid rgba(255, 255, 255, 0.25); }
 
-/* ---------- 9. Featured Story Cards (精選圖文遊記卡片) ---------- */
+/* ---------- 10. Vertical Timeline System (視覺化時間軸) ---------- */
+.timeline-section {
+  position: relative;
+  margin: 2rem 0 3rem;
+  padding-left: 2rem;
+}
+
+.timeline-section::before {
+  content: '';
+  position: absolute;
+  left: 11px;
+  top: 15px;
+  bottom: 15px;
+  width: 3px;
+  background: linear-gradient(to bottom, var(--accent) 0%, var(--alpine-ice) 50%, var(--primary) 100%);
+  border-radius: var(--radius-full);
+  opacity: 0.4;
+}
+
+.timeline-node {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.timeline-node::before {
+  content: '';
+  position: absolute;
+  left: -2rem;
+  top: 1.25rem;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 4px solid var(--accent);
+  box-shadow: 0 0 0 4px rgba(217, 119, 6, 0.2);
+  z-index: 2;
+  transition: transform var(--transition-fast);
+}
+
+.timeline-node:hover::before {
+  transform: scale(1.3);
+  border-color: var(--primary);
+  box-shadow: 0 0 0 6px rgba(15, 39, 68, 0.2);
+}
+
+.timeline-step-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.timeline-step-card:hover {
+  transform: translateX(4px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(217, 119, 6, 0.4);
+}
+
+.timeline-step-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px dashed var(--border-color);
+}
+
+.timeline-time-badge {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* ---------- 11. Featured Story Cards (精選圖文遊記卡片) ---------- */
 .featured-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -519,7 +659,7 @@ button {
   color: #fff;
 }
 
-/* ---------- 10. Base-Grouped Itinerary (五大基地時間軸) ---------- */
+/* ---------- 12. Base-Grouped Itinerary (五大基地時間軸) ---------- */
 .base-section {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
@@ -632,7 +772,7 @@ button {
   border-color: var(--accent);
 }
 
-/* ---------- 11. Google Maps Navigation Links & Audio Buttons ---------- */
+/* ---------- 13. Google Maps Navigation Links & Audio Buttons ---------- */
 .text-map-link,
 .map-link {
   color: inherit;
@@ -676,7 +816,7 @@ button {
   transform: scale(0.96);
 }
 
-/* ---------- 12. Blog Narrative, Hero & Photo Layouts ---------- */
+/* ---------- 14. Blog Narrative, Hero & Photo Layouts ---------- */
 .blog-article {
   max-width: 920px;
   margin: 0 auto;
@@ -796,6 +936,14 @@ button {
   .diptych-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
+  }
+  
+  .timeline-section {
+    padding-left: 1.5rem;
+  }
+  
+  .timeline-node::before {
+    left: -1.5rem;
   }
 }
 
@@ -934,7 +1082,7 @@ button {
   border-left: 5px solid var(--accent);
 }
 
-/* ---------- 13. Toast & Reading Progress ---------- */
+/* ---------- 15. Toast & Reading Progress ---------- */
 .toast-msg {
   position: fixed;
   bottom: calc(var(--dock-height) + 1.5rem);
