@@ -1,60 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600;700;900&family=Noto+Sans+TC:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap');
+
 /* ==========================================================================
    2026 德國南部・奧地利・法國・瑞士 15D14N 冬季自駕與圖文遊記 - 旗艦級設計系統
-   Design Philosophy: Bento Grid ✕ Mobile-First ✕ Glassmorphism ✕ Rich Aesthetics
+   Design Philosophy: Snaplog Editorial Style ✕ Bento Grid ✕ Mobile-First ✕ Travel OS
    ========================================================================== */
 
-/* ---------- 1. Design Tokens & Variables ---------- */
+/* ---------- 1. Design Tokens & Variables (Aligned with Snaplog) ---------- */
 :root {
-  /* Brand Palette (Bavarian Navy & Alpine Gold) */
-  --primary: #0f2744;          /* 德意志深海琉璃藍 (German Deep Navy) */
-  --primary-light: #1e3a5f;
-  --primary-gradient: linear-gradient(135deg, #0f2744 0%, #1e4570 100%);
-  --accent: #d97706;           /* 夕陽金琥珀 (Sunset Amber Gold) */
+  /* Snaplog 核心品牌色盤 (Warm Paper & Editorial Navy) */
+  --paper: #f7f5f0;            /* 溫潤棉紙白背景 (Paper Background) */
+  --ink: #252525;              /* 沉穩深墨灰文字 (Ink Typography) */
+  --navy: #243447;             /* 典雅深海藍標題與主強調色 (Editorial Navy) */
+  --blue-gray: #6e879a;        /* 雅緻藍灰次要資訊 / Kicker */
+  --sand: #efe8da;             /* 淺沙色卡片與模組底色 (Sand Bento Accent) */
+  --sand-light: #f5f0e6;       /* 柔和淺沙白 */
+  --caption: #6f6a61;          /* 暖灰圖說與引言文字 */
+  --line: #d9d3c7;             /* 細緻暖灰線條 (Subtle Warm Border) */
+  --terracotta: #b85d38;       /* 陶土暖褐 (強調色) */
+
+  /* 系統映射變數 (維持全站組件相容性) */
+  --primary: var(--navy);      /* #243447 */
+  --primary-light: #34495e;
+  --primary-gradient: linear-gradient(135deg, #243447 0%, #182330 100%);
+  --accent: #b45309;           /* 琥珀金 (保留高亮提示) */
   --accent-light: #fef3c7;
-  --accent-hover: #b45309;
-  --alpine-ice: #0284c7;       /* 阿爾卑斯冰晶青 (Alpine Ice Blue) */
-  --alpine-light: #e0f2fe;
-  --forest-pine: #15803d;      /* 黑森林冷杉綠 (Black Forest Pine Green) */
-  --forest-light: #dcfce7;
-  --wine-burgundy: #881337;    /* 亞爾薩斯/法蘭肯酒紅 (Wine Burgundy) */
-  --wine-light: #ffe4e6;
-  --daruma-red: #dc2626;       /* 警示與避坑朱紅 (Anti-Trap Red) */
-  --daruma-light: #fee2e2;
+  --accent-hover: #92400e;
+  --alpine-ice: #50768c;       /* 柔和藍灰 */
+  --alpine-light: #e8eef2;
+  --forest-pine: #3f6b4d;      /* 典雅冷杉綠 */
+  --forest-light: #e6efe8;
+  --wine-burgundy: #733238;    /* 溫潤酒紅 */
+  --wine-light: #f4e6e7;
+  --daruma-red: #b91c1c;       /* 警示朱紅 */
+  --daruma-light: #fbeae8;
 
   /* Surfaces & Backgrounds */
-  --bg-page: #f8fafc;
+  --bg-page: var(--paper);     /* #f7f5f0 */
   --bg-card: #ffffff;
-  --bg-card-glass: rgba(255, 255, 255, 0.94);
-  --bg-dark: #0f172a;
-  --border-color: #e2e8f0;
-  --border-glass: rgba(226, 232, 240, 0.8);
+  --bg-card-sand: var(--sand); /* #efe8da */
+  --bg-card-glass: rgba(247, 245, 240, 0.96);
+  --bg-dark: #18222d;
+  --border-color: var(--line); /* #d9d3c7 */
+  --border-glass: rgba(217, 211, 199, 0.85);
 
   /* Typography Colors */
-  --text-main: #0f172a;
-  --text-muted: #64748b;
-  --text-sub: #475569;
+  --text-main: var(--ink);     /* #252525 */
+  --text-muted: var(--caption);/* #6f6a61 */
+  --text-sub: #524e47;
   --text-white: #ffffff;
 
-  /* Typography Families */
-  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', Roboto, sans-serif;
-  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', sans-serif;
+  /* Typography Families (Snaplog: Noto Serif TC + Noto Sans TC) */
+  --font-family: 'Noto Sans TC', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --font-heading: 'Noto Serif TC', Songti TC, Georgia, serif;
 
-  /* Elevation Shadows */
-  --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.04);
-  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.08), 0 1px 2px rgba(15, 23, 42, 0.04);
-  --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.08), 0 2px 4px -2px rgba(15, 23, 42, 0.04);
-  --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -4px rgba(15, 23, 42, 0.04);
-  --shadow-xl: 0 20px 25px -5px rgba(15, 23, 42, 0.1), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
-  --shadow-glow: 0 0 20px rgba(217, 119, 6, 0.25);
+  /* Elevation Shadows (Soft & Subtle for Paper Texture) */
+  --shadow-xs: 0 1px 2px rgba(36, 52, 71, 0.04);
+  --shadow-sm: 0 1px 3px rgba(36, 52, 71, 0.06), 0 1px 2px rgba(36, 52, 71, 0.03);
+  --shadow-md: 0 4px 8px -1px rgba(36, 52, 71, 0.07), 0 2px 4px -2px rgba(36, 52, 71, 0.04);
+  --shadow-lg: 0 10px 18px -3px rgba(36, 52, 71, 0.07), 0 4px 6px -4px rgba(36, 52, 71, 0.03);
+  --shadow-xl: 0 20px 25px -5px rgba(36, 52, 71, 0.08), 0 8px 10px -6px rgba(36, 52, 71, 0.03);
+  --shadow-glow: 0 0 20px rgba(110, 135, 154, 0.25);
 
   /* Layout & Geometry */
   --max-width: 1240px;
   --header-height: 68px;
   --dock-height: 64px;
-  --radius-sm: 8px;
-  --radius-md: 14px;
-  --radius-lg: 20px;
-  --radius-xl: 28px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 22px;
   --radius-full: 9999px;
   --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -116,9 +130,9 @@ button {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(15, 39, 68, 0.95);
+  background: rgba(36, 52, 71, 0.96);
   backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(217, 211, 199, 0.25);
   box-shadow: var(--shadow-sm);
 }
 
@@ -140,14 +154,15 @@ button {
 }
 
 .brand-badge {
-  background: var(--accent);
-  color: #fff;
+  background: var(--sand);
+  color: var(--navy);
   font-size: 0.72rem;
-  font-weight: 800;
+  font-weight: 700;
   padding: 0.15rem 0.5rem;
   border-radius: var(--radius-full);
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  border: 1px solid rgba(217, 211, 199, 0.6);
 }
 
 .nav-links {
@@ -198,15 +213,15 @@ button {
   left: 0;
   right: 0;
   height: var(--dock-height);
-  background: rgba(15, 39, 68, 0.96);
+  background: rgba(36, 52, 71, 0.97);
   backdrop-filter: blur(16px);
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 1px solid rgba(217, 211, 199, 0.25);
   display: flex;
   align-items: center;
   justify-content: space-around;
   z-index: 1000;
   padding: 0 0.5rem;
-  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 -4px 16px rgba(36, 52, 71, 0.15);
 }
 
 .dock-item {
@@ -828,12 +843,12 @@ button {
   grid-template-columns: 5fr 7fr;
   gap: 2rem;
   align-items: center;
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
+  background: var(--sand);
+  border: 1px solid var(--line);
   border-radius: var(--radius-xl);
   padding: 1.75rem;
   margin: 1.5rem 0 2.5rem;
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-sm);
 }
 
 .split-hero-img-wrap {
@@ -841,6 +856,7 @@ button {
   overflow: hidden;
   aspect-ratio: 4 / 5;
   box-shadow: var(--shadow-sm);
+  background: var(--sand-light);
 }
 
 .split-hero-img-wrap img {
@@ -862,12 +878,12 @@ button {
 }
 
 .diptych-hero {
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
+  background: var(--sand);
+  border: 1px solid var(--line);
   border-radius: var(--radius-xl);
   padding: 1.75rem;
   margin: 1.5rem 0 2.5rem;
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-sm);
 }
 
 .diptych-grid {
@@ -883,6 +899,7 @@ button {
   overflow: hidden;
   aspect-ratio: 4 / 5;
   box-shadow: var(--shadow-sm);
+  background: var(--sand-light);
 }
 
 .diptych-frame img {
@@ -901,29 +918,31 @@ button {
   position: absolute;
   bottom: 0.85rem;
   left: 0.85rem;
-  background: rgba(15, 39, 68, 0.88);
+  background: rgba(36, 52, 71, 0.9);
   backdrop-filter: blur(8px);
   color: #fff;
   font-size: 0.82rem;
-  font-weight: 700;
+  font-weight: 600;
   padding: 0.3rem 0.75rem;
   border-radius: var(--radius-full);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
 }
 
-.diptych-tag-summer { background: rgba(21, 128, 61, 0.88); }
-.diptych-tag-winter { background: rgba(2, 132, 199, 0.88); }
+.diptych-tag-summer { background: rgba(63, 107, 77, 0.92); }
+.diptych-tag-winter { background: rgba(80, 118, 140, 0.92); }
 
 .diptych-quote {
-  background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
-  border-left: 4px solid var(--accent);
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--terracotta);
   padding: 1rem 1.25rem;
   border-radius: var(--radius-md);
   margin-top: 1rem;
-  color: #92400e;
-  font-weight: 600;
+  color: var(--navy);
+  font-weight: 500;
   font-size: 1.05rem;
+  line-height: 1.7;
 }
 
 @media (max-width: 768px) {
@@ -1070,15 +1089,16 @@ button {
 }
 
 .blog-narrative-card {
-  background: var(--bg-card);
+  background: #ffffff;
   border-radius: var(--radius-lg);
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--line);
   padding: 2rem 2.25rem;
   margin: 2rem 0;
-  line-height: 1.9;
+  line-height: 1.95;
   font-size: 1.05rem;
-  box-shadow: var(--shadow-sm);
-  border-left: 5px solid var(--accent);
+  color: var(--ink);
+  box-shadow: var(--shadow-xs);
+  border-left: 4px solid var(--blue-gray);
 }
 
 /* ---------- 15. Toast & Reading Progress ---------- */
