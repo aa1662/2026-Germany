@@ -10,6 +10,80 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600;700;900&family=Noto+Sans+TC:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../vendor/glightbox/glightbox.min.css">
+  <style>
+    /* 圖文遊記「看圖說故事」左右交錯排版規範 (Story-Split) */
+    .story-split {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin: 2rem 0 2.5rem;
+    }
+    .story-split.reverse {
+      flex-direction: row-reverse;
+    }
+    .story-split-text {
+      flex: 1 1 58%;
+      min-width: 0;
+    }
+    .story-split-text p {
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: var(--ink);
+      margin-bottom: 1rem;
+    }
+    .story-split-text p:last-child {
+      margin-bottom: 0;
+    }
+    .story-split-media {
+      flex: 1 1 42%;
+      max-width: 400px;
+      min-width: 260px;
+    }
+    .story-split-media img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      display: block;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .story-split-media img:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+    .fullwidth-landscape-wrap {
+      margin: 2rem 0;
+    }
+    .fullwidth-landscape-wrap img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      display: block;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .fullwidth-landscape-wrap img:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    @media (max-width: 768px) {
+      .story-split, .story-split.reverse {
+        flex-direction: column !important;
+        gap: 1.25rem;
+        margin: 1.5rem 0 2rem;
+      }
+      .story-split-media {
+        max-width: 100%;
+        width: 100%;
+        min-width: unset;
+      }
+      .story-split-media img {
+        max-height: 440px;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="reading-progress"></div>
@@ -44,7 +118,7 @@
       <!-- ========================================== -->
       <section class="split-hero">
         <div class="split-hero-img-wrap">
-          <a href="../images/day-08/18065731982249055.jpg" class="glightbox" data-gallery="day-08-gallery" data-title="Heidelberg Castle Window View · 2026/02/02 (1/7)">
+          <a href="../images/day-08/18065731982249055.jpg" class="glightbox" data-gallery="day-08-gallery" data-title="Heidelberg Castle Window View · 2026/02/02">
             <img src="../images/day-08/18065731982249055.jpg" alt="海德堡城堡拱窗俯瞰老城與聖靈教堂" style="object-position: center 20%;">
           </a>
         </div>
@@ -164,18 +238,28 @@
         <h3 style="font-family: var(--font-heading); font-size: 1.3rem; color: var(--primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
           <span>🍜</span> 一、老橋邊巧遇「亞洲酒家」中餐撫慰，夜幕下的老城石板路
         </h3>
-        <p style="font-size: 1.05rem; line-height: 1.85; color: var(--ink); margin-bottom: 1.25rem;">
-          行程來到第八天，連續幾天大口啃著烤豬腳、香腸與乾硬的德式麵包，整個亞洲胃早已在抗議邊緣。抵達海德堡的傍晚，當我們漫步走到著名的<a href="https://maps.google.com/?q=Alte+Bruecke+Heidelberg" target="_blank" rel="noopener" class="text-map-link">卡爾·特奧多老橋 (Alte Brücke)</a> 橋頭時，赫然看見內卡河畔的一棟典雅建築外掛著親切的四個大字——「亞洲酒家（China-Restaurant Asia）」。
-        </p>
-        <p style="font-size: 1.05rem; line-height: 1.85; color: var(--ink); margin-bottom: 1.25rem;">
-          沒有過多的猶豫便推門而入，當熱騰騰的白米飯、冒著鍋氣的熱炒與滾燙的湯品端上桌時，那份熟悉的滋味瞬間撫平了旅途的疲憊，這一餐吃得格外心滿意足。飽餐之後，迎著微涼的冬夜晚風，順著海德堡最熱鬧的<a href="https://maps.google.com/?q=Hauptstrasse+Heidelberg" target="_blank" rel="noopener" class="text-map-link">Hauptstraße 老街</a>信步漫走，兩旁典雅的巴洛克建築在暖黃路燈下靜靜矗立。隨後搭乘市區公車回到飯店，養足精神準備迎接隔天一整天的古堡探險。
-        </p>
 
         <!-- 4K 橫式全寬大圖 1: 亞洲酒家與老橋橋頭街景 -->
-        <div style="margin: 1.75rem 0;">
+        <div class="fullwidth-landscape-wrap">
           <a href="../images/day-08/20260201_171223.jpg" class="glightbox" data-gallery="day-08-gallery" data-title="China-Restaurant Asia & Neckar Riverfront · 2026/02/01">
-            <img src="../images/day-08/20260201_171223.jpg" alt="海德堡老橋頭亞洲酒家與內卡河畔街景" style="width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); aspect-ratio: 16/9; object-fit: cover;" loading="lazy">
+            <img src="../images/day-08/20260201_171223.jpg" alt="海德堡老橋頭亞洲酒家與內卡河畔街景" loading="lazy">
           </a>
+        </div>
+
+        <div class="story-split">
+          <div class="story-split-media">
+            <a href="../images/day-08/20260201_171937.jpg" class="glightbox" data-gallery="day-08-gallery" data-title="Alte Brücke Gate (Brückentor) · 2026/02/01">
+              <img src="../images/day-08/20260201_171937.jpg" alt="海德堡老橋雙塔城門與漫步人群" loading="lazy">
+            </a>
+          </div>
+          <div class="story-split-text">
+            <p>
+              行程來到第八天，連續幾天大口啃著烤豬腳、香腸與乾硬的德式麵包，整個亞洲胃早已在抗議邊緣。抵達海德堡的傍晚，當我們漫步走到著名的<a href="https://maps.google.com/?q=Alte+Bruecke+Heidelberg" target="_blank" rel="noopener" class="text-map-link">卡爾·特奧多老橋 (Alte Brücke)</a> 橋頭時，赫然看見內卡河畔的一棟典雅建築外掛著親切的四個大字——「亞洲酒家（China-Restaurant Asia）」。
+            </p>
+            <p>
+              沒有過多的猶豫便推門而入，當熱騰騰的白米飯、冒著鍋氣的熱炒與滾燙的湯品端上桌時，那份熟悉的滋味瞬間撫平了旅途的疲憊，這一餐吃得格外心滿意足。飽餐之後，迎著微涼的冬夜晚風，順著海德堡最熱鬧的<a href="https://maps.google.com/?q=Hauptstrasse+Heidelberg" target="_blank" rel="noopener" class="text-map-link">Hauptstraße 老街</a>信步漫走，穿過老橋巍峨的雙塔城門，兩旁典雅的巴洛克建築在暖黃路燈下靜靜矗立。隨後搭乘市區公車回到飯店，養足精神準備迎接隔天一整天的古堡探險。
+            </p>
+          </div>
         </div>
       </section>
 
@@ -184,18 +268,28 @@
         <h3 style="font-family: var(--font-heading); font-size: 1.3rem; color: var(--primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
           <span>🚠</span> 二、換票的小波折與貼心指引：搭乘齒軌纜車直登海德堡城堡
         </h3>
-        <p style="font-size: 1.05rem; line-height: 1.85; color: var(--ink); margin-bottom: 1.25rem;">
-          早晨出發前往海德堡的靈魂地標——<a href="https://maps.google.com/?q=Heidelberg+Castle" target="_blank" rel="noopener" class="text-map-link">海德堡城堡 (Schloss Heidelberg)</a>。行前買了套票，原本直覺以為只要到山腳下的纜車站（Kornmarkt）就能直接掃碼上山，到了現場才發現必須先前往當地的「旅客遊客中心（Tourist Information）」兌換實體套票！
-        </p>
-        <p style="font-size: 1.05rem; line-height: 1.85; color: var(--ink); margin-bottom: 1.25rem;">
-          雖然得特地再搭公車往前坐兩站去換票，流程稍微有些轉折，但遊客中心的服務人員態度極度親切友善，耐心地為我們解答並提供地圖指引，讓這段小插曲多了份人情溫暖。換好實體票券後折回穀物廣場（Kornmarkt），坐上古色古香的齒軌登山纜車（Bergbahn），沿著陡峭的王座山軌道緩緩爬升，眨眼間便登上了這座高踞半山腰的中世紀紅砂岩宮殿。
-        </p>
 
         <!-- 4K 橫式全寬大圖 2: 夕陽金光下的海德堡城堡長焦 -->
-        <div style="margin: 1.75rem 0;">
+        <div class="fullwidth-landscape-wrap">
           <a href="../images/day-08/20260201_171711.jpg" class="glightbox" data-gallery="day-08-gallery" data-title="Heidelberg Castle in Golden Glow · 2026/02/01">
-            <img src="../images/day-08/20260201_171711.jpg" alt="夕陽金光輝映下的海德堡城堡" style="width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); aspect-ratio: 16/9; object-fit: cover;" loading="lazy">
+            <img src="../images/day-08/20260201_171711.jpg" alt="夕陽金光輝映下的海德堡城堡" loading="lazy">
           </a>
+        </div>
+
+        <div class="story-split">
+          <div class="story-split-media">
+            <a href="../images/day-08/20260202_152220.jpg" class="glightbox" data-gallery="day-08-gallery" data-title="Heidelberg Funicular Railway (Bergbahn) · 2026/02/02">
+              <img src="../images/day-08/20260202_152220.jpg" alt="搭乘海德堡登山纜車車廂內景" loading="lazy">
+            </a>
+          </div>
+          <div class="story-split-text">
+            <p>
+              早晨出發前往海德堡的靈魂地標——<a href="https://maps.google.com/?q=Heidelberg+Castle" target="_blank" rel="noopener" class="text-map-link">海德堡城堡 (Schloss Heidelberg)</a>。行前買了套票，原本直覺以為只要到山腳下的纜車站（Kornmarkt）就能直接掃碼上山，到了現場才發現必須先前往當地的「旅客遊客中心（Tourist Information）」兌換實體套票！
+            </p>
+            <p>
+              雖然得特地再搭公車往前坐兩站去換票，流程稍微有些轉折，但遊客中心的服務人員態度極度親切友善，耐心地為我們解答並提供地圖指引，讓這段小插曲多了份人情溫暖。換好實體票券後折回穀物廣場（Kornmarkt），坐上古色古香的齒軌登山纜車（<button class="btn-audio" data-pronounce="Heidelberger Bergbahn" data-lang="de-DE">Bergbahn 🔊</button>），沿著陡峭的王座山軌道緩緩爬升。透過明亮的車窗望向窗外，山腰的森林與腳下紅瓦古城在眼前層層展開，眨眼間便登上了這座高踞半山腰的中世紀紅砂岩宮殿。
+            </p>
+          </div>
         </div>
       </section>
 
@@ -204,20 +298,103 @@
         <h3 style="font-family: var(--font-heading); font-size: 1.3rem; color: var(--primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
           <span>🍷</span> 三、世界最大木酒桶的震撼 ✕ 讓人駐足流連的「德國藥事博物館」
         </h3>
-        <p style="font-size: 1.05rem; line-height: 1.85; color: var(--ink); margin-bottom: 1.25rem;">
-          走進城堡巨大的地下酒窖，第一眼看見傳奇的世界最大木製葡萄酒桶（<button class="btn-audio" data-pronounce="Großes Fass" data-lang="de-DE">Großes Fass 🔊</button>），整座酒桶宛如一棟兩層樓高的木造建築，容量高達 221,726 公升！頂部甚至還設有木造舞池，令人不禁想像當年選帝侯舉辦盛大宴會時的奢華與狂歡。
-        </p>
-        <p style="font-size: 1.05rem; line-height: 1.85; color: var(--ink); margin-bottom: 1.25rem;">
-          而城堡內真正讓人驚豔且大呼過癮的，莫過於隱身在文藝復興廳舍中的<a href="https://maps.google.com/?q=German+Apothecary+Museum+Heidelberg" target="_blank" rel="noopener" class="text-map-link">德國藥事博物館 (Deutsches Apotheken-Museum)</a>。館內完整重現了 17 至 19 世紀歐洲藥局的魔幻樣貌——一整排深色胡桃木精雕藥櫃、貼滿拉丁文手寫標籤的小抽屜、晶瑩剔透的古老蒸餾燒瓶、煉金術研磨缽以及古董黃銅天平，精緻程度令人嘆為觀止。每一間展廳都散發著濃厚的歷史與探索氛圍，讓我們流連忘返，在裡面足足逛了很久，徹底忘卻了時間。
-        </p>
-        <p style="font-size: 1.05rem; line-height: 1.85; color: var(--ink); margin-bottom: 1.25rem;">
-          步出展館來到城堡的大露台，午後晴空下的海德堡全景在眼前霍然展開——錯落有致的紅瓦老城、莊嚴矗立的聖靈教堂，以及碧綠如玉的內卡河上橫跨的九孔古橋，視野壯麗開闊，美得令人屏息。
-        </p>
+
+        <!-- 圖文交錯 1: 站在大酒桶前仰望 -->
+        <div class="story-split">
+          <div class="story-split-media">
+            <a href="../images/day-08/20260202_140156.jpg" class="glightbox" data-gallery="day-08-gallery" data-title="World's Largest Wine Barrel (Großes Fass) · 2026/02/02">
+              <img src="../images/day-08/20260202_140156.jpg" alt="站在海德堡城堡世界最大木酒桶前仰望合影" loading="lazy">
+            </a>
+          </div>
+          <div class="story-split-text">
+            <p>
+              走進城堡幽暗巨大的地下酒窖，第一眼看見傳奇的世界最大木製葡萄酒桶（<button class="btn-audio" data-pronounce="Großes Fass" data-lang="de-DE">Großes Fass 🔊</button>），整座酒桶宛如一棟兩層樓高的龐大木造建築，容量高達驚人的 221,726 公升！
+            </p>
+            <p>
+              這座由 130 根巨大橡木精製而成的傳奇酒桶，正面雕刻著精美的皇家徽章。牆上則掛著酒桶守護神佩克歐（Perkeo）的雕像，傳說他是位千杯不醉的侏儒宮廷小丑，終生以酒代水，唯獨有一次誤飲了一杯清水便撒手人寰，為這座酒窖增添了許多浪漫與幽默的傳奇色彩。
+            </p>
+          </div>
+        </div>
+
+        <!-- 圖文交錯 2 (Reverse): 大酒桶木造旋轉階梯 -->
+        <div class="story-split reverse">
+          <div class="story-split-media">
+            <a href="../images/day-08/20260202_140756.jpg" class="glightbox" data-gallery="day-08-gallery" data-title="Fass Spiral Staircase & Dance Floor · 2026/02/02">
+              <img src="../images/day-08/20260202_140756.jpg" alt="站在大酒桶木造旋轉階梯扶手回眸微笑" loading="lazy">
+            </a>
+          </div>
+          <div class="story-split-text">
+            <p>
+              沿著酒桶旁古色古香的木造旋轉階梯拾級而上，每一步都彷彿踏在歷史的迴響中。酒桶頂部甚至特別鋪設了一整面寬敞的木造舞池，令人不禁閉上眼想像當年選帝侯舉辦盛大宴會時，樂聲悠揚、貴族們在酒桶頂端翩翩起舞的奢華與狂歡。
+            </p>
+            <p>
+              從階梯高處俯瞰整個地下酒窖，巨大的圓規製桶工具與歷史量測標記一覽無遺，深刻感受到 18 世紀德國極致的木工工藝與磅礴氣勢。
+            </p>
+          </div>
+        </div>
+
+        <!-- 4K 橫式全寬大圖: 德國藥事博物館巴洛克藥櫃全景 -->
+        <div class="fullwidth-landscape-wrap">
+          <a href="../images/day-08/20260202_141514.jpg" class="glightbox" data-gallery="day-08-gallery" data-title="German Apothecary Museum Baroque Cabinet · 2026/02/02">
+            <img src="../images/day-08/20260202_141514.jpg" alt="德國藥事博物館綠色巴洛克胡桃木藥櫃與古董天平全景" loading="lazy">
+          </a>
+        </div>
+
+        <!-- 圖文交錯 3: 藥事博物館特寫留影 -->
+        <div class="story-split">
+          <div class="story-split-media">
+            <a href="../images/day-08/20260202_141700.jpg" class="glightbox" data-gallery="day-08-gallery" data-title="Apothecary Museum Display & Vintage Scales · 2026/02/02">
+              <img src="../images/day-08/20260202_141700.jpg" alt="站在藥事博物館古典綠色藥櫃與古董天平前特寫留影" loading="lazy">
+            </a>
+          </div>
+          <div class="story-split-text">
+            <p>
+              而城堡內真正讓人驚豔且大呼過癮的，莫過於隱身在文藝復興廳舍中的<a href="https://maps.google.com/?q=German+Apothecary+Museum+Heidelberg" target="_blank" rel="noopener" class="text-map-link">德國藥事博物館 (Deutsches Apotheken-Museum)</a>。
+            </p>
+            <p>
+              館內完整重現了 17 至 19 世紀歐洲古老藥局的魔幻樣貌——一整排深綠色與胡桃木精雕的巴洛克藥櫃、貼滿手寫拉丁文標籤的小抽屜、排列整齊的陶瓷藥罐與黃銅古董天平。精緻優雅的木雕人像與華麗雕飾，讓人彷彿一秒走進了哈利波特的魔藥學教室。
+            </p>
+          </div>
+        </div>
+
+        <!-- 圖文交錯 4 (Reverse): 蒸餾設備與煉金術實驗室 -->
+        <div class="story-split reverse">
+          <div class="story-split-media">
+            <a href="../images/day-08/20260202_141823.jpg" class="glightbox" data-gallery="day-08-gallery" data-title="Vintage Brass Distillation Laboratory · 2026/02/02">
+              <img src="../images/day-08/20260202_141823.jpg" alt="藥事博物館內的古董銅製高壓蒸餾萃取設備" loading="lazy">
+            </a>
+          </div>
+          <div class="story-split-text">
+            <p>
+              穿過古典藥房展廳，後方展示著古老的製藥實驗室與煉金術裝備。巨型銅製高壓蒸餾釜、精密的壓力指針表、冷凝管與古老的研磨石臼，完整記錄了數百年來歐洲藥師如何從天然植物、礦物中提煉精油與藥劑的演進過程。
+            </p>
+            <p>
+              每一件銅器與玻璃燒瓶都在柔和的展館燈光下閃爍著溫潤的光澤，散發著中世紀以來嚴謹而神秘的科學探求氛圍。
+            </p>
+          </div>
+        </div>
+
+        <!-- 圖文交錯 5: 草藥互動體驗與微縮藥局模型 -->
+        <div class="story-split">
+          <div class="story-split-media">
+            <a href="../images/day-08/20260202_142150.jpg" class="glightbox" data-gallery="day-08-gallery" data-title="Herbal Scent Interactive Discovery · 2026/02/02">
+              <img src="../images/day-08/20260202_142150.jpg" alt="藥事博物館草藥體驗區聞香合影" loading="lazy">
+            </a>
+          </div>
+          <div class="story-split-text">
+            <p>
+              最令人驚喜的是館內的互動體驗區，遊客可以親手拿起透明的藥草體驗罐，嗅聞洋甘菊、迷迭香與薰衣草等天然乾燥藥草的芬芳清香。
+            </p>
+            <p>
+              展櫃中甚至還珍藏著 1880 年代前後製作的「袖珍微縮玩具藥局模型（Toy pharmacy）」，從幾公分高的迷你藥櫃、微型天平到比指甲還小的藥瓶一應俱全，細緻入微的德國匠人手藝令人嘆為觀止。每一間展廳都充滿了探索的樂趣，讓我們在裡面足足逛了很久，徹底忘卻了時間。
+            </p>
+          </div>
+        </div>
 
         <!-- 4K 橫式全寬大圖: 城堡大露台俯瞰海德堡老城與內卡河老橋全景 -->
-        <div style="margin: 1.75rem 0;">
-          <a href="../images/day-08/20260202_135702.jpg" class="glightbox" data-gallery="day-08-gallery" data-title="Heidelberg Castle Terrace Panorama · 2026/02/02">
-            <img src="../images/day-08/20260202_135702.jpg" alt="海德堡古堡露台俯瞰老城紅瓦與內卡河老橋全景" style="width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); aspect-ratio: 16/9; object-fit: cover;" loading="lazy">
+        <div class="fullwidth-landscape-wrap">
+          <a href="../images/day-08/20260202_135702.jpg" class="glightbox" data-gallery="day-08-gallery" data-title="Heidelberg Castle Grand Terrace Panorama · 2026/02/02">
+            <img src="../images/day-08/20260202_135702.jpg" alt="海德堡古堡露台俯瞰老城紅瓦與內卡河老橋全景" loading="lazy">
           </a>
         </div>
       </section>
@@ -227,17 +404,28 @@
         <h3 style="font-family: var(--font-heading); font-size: 1.3rem; color: var(--primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
           <span>❄️</span> 四、纜車登頂探險與「學生監獄」壓線飲恨的旅途遺憾
         </h3>
-        <p style="font-size: 1.05rem; line-height: 1.85; color: var(--ink); margin-bottom: 1.25rem;">
-          從藥事博物館出來後意猶未盡，發現纜車還可以繼續往更高的王座山頂（Königstuhl 方向）延伸搭乘一段。我們興致勃勃地坐上第二段古老木造纜車直抵山頂，結果下了車寒風刺骨，冬日的山頂白茫茫一片，左看看右看看並沒有太多開放的景點與設施，於是隨即再搭車返回山腰老城。
-        </p>
-        <p style="font-size: 1.05rem; line-height: 1.85; color: var(--ink); margin-bottom: 1.25rem;">
-          下山後沿著老城街道一路尋訪，原本滿懷期待要去參觀極具傳奇色彩的<a href="https://maps.google.com/?q=Studentenkarzer+Heidelberg" target="_blank" rel="noopener" class="text-map-link">學生監獄 (Studentenkarzer)</a>——探看 18、19 世紀海德堡大學生因夜半喧嘩、決鬥或惡作劇被關押時，在牆上留下的生動自畫像與詩句塗鴉。然而當我們在 15:30 抵達門口時，工作人員卻告知冬季雖然 16:00 閉館，但「最後入場時間（Last Admission）是閉館前半小時」，正好過了截止時限不再放行！雖然當下難免感到遺憾，但旅途中的未竟之美，正好成了下一次重返海德堡的最佳藉口。
-        </p>
+
+        <!-- 圖文交錯: 漫步走下古堡拱門石階 -->
+        <div class="story-split">
+          <div class="story-split-media">
+            <a href="../images/day-08/20260202_143325.jpg" class="glightbox" data-gallery="day-08-gallery" data-title="Castle Vaulted Stone Gateway · 2026/02/02">
+              <img src="../images/day-08/20260202_143325.jpg" alt="漫步走下藥事博物館古老拱門石階梯" loading="lazy">
+            </a>
+          </div>
+          <div class="story-split-text">
+            <p>
+              從藥事博物館走下厚實的古堡石階梯，走出古老拱門，心中的驚豔久久無法平息。發現登山纜車還可以繼續往更高的王座山頂（Königstuhl 方向）延伸搭乘第二段歷史木造纜車，我們興致勃勃地坐上纜車直抵山頂。
+            </p>
+            <p>
+              結果下了車寒風刺骨，冬日的山頂白茫茫一片，多數遊樂設施冬季並未開放，於是隨即再搭車返回山腰老城。下山後沿著老城街道一路尋訪，原本滿懷期待要去參觀極具傳奇色彩的<a href="https://maps.google.com/?q=Studentenkarzer+Heidelberg" target="_blank" rel="noopener" class="text-map-link">學生監獄 (Studentenkarzer)</a>——探看 18、19 世紀海德堡大學生被關押時留下的生動自畫像與詩句塗鴉。然而當我們在 15:30 抵達門口時，工作人員卻告知「最後入場時間是閉館前半小時」，正好過了截止時限不再放行！雖然當下難免感到遺憾，但旅途中的未竟之美，正好成了下一次重返海德堡的最佳藉口。
+            </p>
+          </div>
+        </div>
 
         <!-- 4K 橫式全寬大圖 3: 內卡河、老城與城堡全景遠眺 -->
-        <div style="margin: 1.75rem 0;">
+        <div class="fullwidth-landscape-wrap">
           <a href="../images/day-08/20260201_171722.jpg" class="glightbox" data-gallery="day-08-gallery" data-title="Neckar River, Old Town & Castle Panorama · 2026/02/01">
-            <img src="../images/day-08/20260201_171722.jpg" alt="內卡河、海德堡老城與城堡壯麗全景" style="width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); aspect-ratio: 16/9; object-fit: cover;" loading="lazy">
+            <img src="../images/day-08/20260201_171722.jpg" alt="內卡河、海德堡老城與城堡壯麗全景" loading="lazy">
           </a>
         </div>
       </section>
@@ -247,20 +435,43 @@
         <h3 style="font-family: var(--font-heading); font-size: 1.3rem; color: var(--primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
           <span>🐒</span> 五、漫步九孔老橋日落 ✕ 飯店旁「人體解剖博物館」的文化震撼
         </h3>
-        <p style="font-size: 1.05rem; line-height: 1.85; color: var(--ink); margin-bottom: 1.25rem;">
-          午後夕陽漸漸西斜，我們再次漫步走上海德堡地標老橋（Alte Brücke）。穿過高聳的白色雙塔城門（Brückentor），橋頭摸了摸著名銅猴手中的小銅鏡求個好財運，也摸了摸猴子手指期許未來能再度回到這座城市。冬日的金色夕陽斜斜灑在內卡河上，將對岸古堡與紅瓦屋頂鍍上一層夢幻的琥珀金色，波光粼粼，浪漫無比。
-        </p>
 
-        <!-- 4K 橫式全寬大圖 4: 老橋雙塔城門與遊客 -->
-        <div style="margin: 1.75rem 0;">
-          <a href="../images/day-08/20260201_171937.jpg" class="glightbox" data-gallery="day-08-gallery" data-title="Alte Brücke Gate (Brückentor) · 2026/02/01">
-            <img src="../images/day-08/20260201_171937.jpg" alt="海德堡老橋雙塔城門與漫步人群" style="width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); aspect-ratio: 16/9; object-fit: cover;" loading="lazy">
-          </a>
+        <!-- 圖文交錯 1: Hauptstrasse 老街漫步 -->
+        <div class="story-split">
+          <div class="story-split-media">
+            <a href="../images/day-08/20260202_163125.jpg" class="glightbox" data-gallery="day-08-gallery" data-title="Hauptstraße Pedestrian Street · 2026/02/02">
+              <img src="../images/day-08/20260202_163125.jpg" alt="海德堡老城 Hauptstraße 主街漫步與巴洛克建築街景" loading="lazy">
+            </a>
+          </div>
+          <div class="story-split-text">
+            <p>
+              午後夕陽漸漸西斜，我們漫步在海德堡最熱鬧的 Hauptstraße 老街。這條全長約 1.6 公里的行人徒步區，兩旁林立著典雅的巴洛克建築、咖啡館、藥妝店與百年老店。
+            </p>
+            <p>
+              街道上漫步的人群悠閒自在，我們穿梭在巷弄間，逛著雙人牌刀具店、採買德國百靈油與發泡錠，感受著這座歷史大學城獨有的繁華與知性氣息。
+            </p>
+          </div>
         </div>
 
-        <p style="font-size: 1.05rem; line-height: 1.85; color: var(--ink); margin-bottom: 1.25rem;">
-          天色全暗後搭乘公車返回住宿飯店，發現飯店旁邊竟然座落著世界著名的<a href="https://maps.google.com/?q=Koerperwelten+Museum+Heidelberg" target="_blank" rel="noopener" class="text-map-link">人體世界解剖博物館 (Körperwelten Museum / Body Worlds)</a>。這座由「塑化技術之父」剛特·馮·哈根斯創辦的常設展館，展示著各式各樣真實的人體骨骼、神經與肌肉標本。看著門口與櫥窗上海報的逼真照片，視覺震撼力十足且略帶驚悚感，我們笑著說這絕對是醫學系學生的朝聖寶地，對一般遊客如我們而言，還是敬謝不敏、趕緊回房泡熱茶休息才是上策！
-        </p>
+        <!-- 圖文交錯 2 (Reverse): 老街午後與老橋日落 -->
+        <div class="story-split reverse">
+          <div class="story-split-media">
+            <a href="../images/day-08/20260202_163139.jpg" class="glightbox" data-gallery="day-08-gallery" data-title="Hauptstraße Afternoon Stroll · 2026/02/02">
+              <img src="../images/day-08/20260202_163139.jpg" alt="海德堡老城 Hauptstraße 主街午後街景" loading="lazy">
+            </a>
+          </div>
+          <div class="story-split-text">
+            <p>
+              再次走上海德堡地標老橋（Alte Brücke），穿過高聳的白色雙塔城門（Brückentor）。橋頭摸了摸著名銅猴手中的小銅鏡求個好財運，也摸了摸猴子手指期許未來能再度回到這座城市。
+            </p>
+            <p>
+              冬日的金色夕陽斜斜灑在內卡河上，將對岸半山腰的古堡廢墟與老城紅瓦屋頂鍍上一層夢幻的琥珀金色，波光粼粼，浪漫無比。
+            </p>
+            <p>
+              天色全暗後搭乘公車返回住宿飯店，意外發現飯店旁邊竟然座落著世界著名的<a href="https://maps.google.com/?q=Koerperwelten+Museum+Heidelberg" target="_blank" rel="noopener" class="text-map-link">人體世界解剖博物館 (Körperwelten Museum / Body Worlds)</a>。這座由「塑化技術之父」剛特·馮·哈根斯創辦的常設展館，展示著各式真實的人體骨骼、神經與肌肉標本。看著門口櫥窗上海報的逼真照片，視覺震撼力十足且略帶驚悚感，我們笑著說這絕對是醫學系學生的朝聖寶地，對一般遊客如我們而言，還是敬謝不敏、趕緊回房泡熱茶休息才是上策！
+            </p>
+          </div>
+        </div>
       </section>
 
       <!-- ========================================== -->
@@ -328,8 +539,8 @@
         <a href="../index.html" style="color: var(--text-muted); text-decoration: none; font-size: 0.9rem;">
           🏠 回到 15 天首頁
         </a>
-        <a href="../day-09.html" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--primary); text-decoration: none; font-weight: 600;">
-          <strong>下一天：Day 09 哈瑙童話起點 ✕ 法蘭克福采爾大道 →</strong>
+        <a href="day-09-blog.html" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--primary); text-decoration: none; font-weight: 600;">
+          <strong>下一篇：Day 09 哈瑙童話起點 ✕ 法蘭克福采爾大道 →</strong>
         </a>
       </div>
     </article>
