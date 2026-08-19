@@ -4,12 +4,86 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="2026 德國冬季自駕遊記 Day 10 上篇：海德堡出發，順訪世界文化遺產史派爾大教堂 (Kaiserdom zu Speyer)，探索全歐最大羅曼式建築與神聖羅馬帝國皇帝長眠之地，跨越德法邊界進入亞爾薩斯。">
-  <title>Day 10 · 史派爾大教堂 ✕ 跨國亞爾薩斯轉移 | 2026 德南冬旅誌</title>
+  <title>Day 10 (上) · 史派爾大教堂 ✕ 跨國亞爾薩斯轉移 | 2026 德南冬旅誌</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;900&family=Outfit:wght@600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600;700;900&family=Noto+Sans+TC:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../vendor/glightbox/glightbox.min.css">
+  <style>
+    /* 圖文遊記「看圖說故事」左右交錯排版規範 (Story-Split) */
+    .story-split {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin: 2rem 0 2.5rem;
+    }
+    .story-split.reverse {
+      flex-direction: row-reverse;
+    }
+    .story-split-text {
+      flex: 1 1 58%;
+      min-width: 0;
+    }
+    .story-split-text p {
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: var(--ink);
+      margin-bottom: 1rem;
+    }
+    .story-split-text p:last-child {
+      margin-bottom: 0;
+    }
+    .story-split-media {
+      flex: 1 1 42%;
+      max-width: 400px;
+      min-width: 260px;
+    }
+    .story-split-media img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      display: block;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .story-split-media img:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+    .fullwidth-landscape-wrap {
+      margin: 2rem 0;
+    }
+    .fullwidth-landscape-wrap img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      display: block;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .fullwidth-landscape-wrap img:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    @media (max-width: 768px) {
+      .story-split, .story-split.reverse {
+        flex-direction: column !important;
+        gap: 1.25rem;
+        margin: 1.5rem 0 2rem;
+      }
+      .story-split-media {
+        max-width: 100%;
+        width: 100%;
+        min-width: unset;
+      }
+      .story-split-media img {
+        max-height: 440px;
+      }
+    }
+  </style>
 </head>
 <body>
   <!-- 閱讀進度條 -->
@@ -26,113 +100,80 @@
         <li><a href="../index.html">首頁</a></li>
         <li><a href="../index.html#itinerary">15天行程</a></li>
         <li><a href="../day-10.html">純時間表</a></li>
-        <li><a href="day-02-blog.html">精選遊記</a></li>
+        <li><a href="day-10-speyer-blog.html" class="active">深度遊記</a></li>
       </ul>
       <button class="nav-share-btn btn-share"><span>📤 分享</span></button>
     </div>
   </nav>
 
-  <main class="container" style="max-width: 960px; padding-top: 1.5rem; padding-bottom: 5rem;">
-    <!-- 麵包屑導航 -->
-    <nav class="breadcrumb-trail" aria-label="Breadcrumb">
-      <a href="../index.html">首頁</a>
-      <span class="breadcrumb-separator">/</span>
-      <a href="../index.html#itinerary">基地三：海德堡</a>
-      <span class="breadcrumb-separator">/</span>
-      <span class="breadcrumb-current">Day 10 (上) 史派爾大教堂</span>
-    </nav>
-
-    <!-- 封面 Hero：雜誌風 Split Hero -->
-    <header class="split-hero">
-      <div class="split-hero-media">
-        <a href="../images/day-10/20260204_122442.jpg" class="glightbox" data-gallery="day-10-speyer-hero" data-title="Kaiserdom zu Speyer Westwerk Façade · 2026/02/04">
-          <img src="../images/day-10/20260204_122442.jpg" alt="史派爾大教堂西面主立面與雙塔" loading="eager">
-        </a>
+  <main class="container">
+    <article class="blog-article">
+      <!-- 麵包屑導航 -->
+      <div style="margin: 1.5rem 0 0.5rem; font-size: 0.9rem; color: var(--text-muted);">
+        <a href="../index.html">首頁</a> <span style="margin: 0 0.4rem;">›</span> 
+        <a href="../index.html#itinerary">基地三：海德堡</a> <span style="margin: 0 0.4rem;">›</span> 
+        <span style="color: var(--primary); font-weight: 600;">Day 10 (上) 史派爾大教堂</span>
       </div>
-      <div class="split-hero-body">
-        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.5rem;">
-          <span class="badge badge-wine">🇩🇪 基地三 ➔ 基地四轉移</span>
-          <span class="badge badge-gold">🏛️ 1981 UNESCO 世界文化遺產</span>
-          <span class="badge badge-forest">🚗 自駕轉移 240 km</span>
-        </div>
-        <h1 class="split-hero-title">
-          史派爾大教堂 ✕ 羅曼式帝國千年震撼
-        </h1>
-        <div class="split-hero-route">
-          Heidelberg ➔ Speyer (Kaiserdom) ➔ Border Crossing ➔ Colmar
-        </div>
-        <p class="split-hero-quote">
-          「長達 134 公尺的中殿、紅白相間的粗獷砂岩柱列，神聖羅馬帝國八位帝王長眠於此。在告別德國、南下跨進法國亞爾薩斯前，這座全歐最大的羅曼式大教堂，給了我們最純粹而肅穆的歷史洗禮。」
-        </p>
-      </div>
-    </header>
-
-    <!-- 文章主體內容 -->
-    <article class="article-content">
 
       <!-- ========================================== -->
-      <!-- 【第 1 層：現場微光】現場實拍照片牆 -->
+      <!-- 🏆 雜誌風 Split Hero Header -->
       <!-- ========================================== -->
-      <div style="margin: 2.5rem 0 1rem;">
-        <h2 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--primary); display: flex; align-items: center; gap: 0.5rem;">
-          <span>📸</span> 現場微光：萊茵河畔的帝國皇室之城
+      <section class="split-hero">
+        <div class="split-hero-img-wrap">
+          <a href="../images/day-10/20260204_122442.jpg" class="glightbox" data-gallery="day-10-speyer-hero" data-title="Kaiserdom zu Speyer Westwerk Façade · 2026/02/04">
+            <img src="../images/day-10/20260204_122442.jpg" alt="史派爾大教堂西面主立面與雙塔" style="object-position: center 25%;">
+          </a>
+        </div>
+        <div class="split-hero-content">
+          <div class="hero-badge-group" style="margin-bottom: 0.75rem;">
+            <span class="badge badge-wine">🇩🇪 基地三 ➔ 基地四轉移</span>
+            <span class="badge badge-gold">🏛️ 1981 UNESCO 世界文化遺產</span>
+            <span class="badge badge-forest">🚗 自駕轉移 240 km</span>
+          </div>
+          <h1 style="font-family: var(--font-heading); font-size: 2.1rem; line-height: 1.3; color: var(--primary); margin: 0.75rem 0 0.5rem;">
+            Day 10 (上)：史派爾大教堂 ✕ 羅曼式帝國千年震撼
+          </h1>
+          <div class="diptych-quote" style="margin: 1rem 0;">
+            ✨ 「長達 134 公尺的中殿、紅白相間的粗獷砂岩柱列，神聖羅馬帝國八位帝王長眠於此。在告別德國、南下跨進法國亞爾薩斯前，這座全歐最大的羅曼式大教堂，給了我們最純粹而肅穆的歷史洗禮。」
+          </div>
+          <div style="font-size: 0.88rem; color: var(--text-muted); display: flex; gap: 1rem; margin-top: 1rem;">
+            <span>📍 德國 史派爾 (Speyer) ➔ 法國 科爾馬 (Colmar)</span>
+            <span>🚗 自駕約 240 km</span>
+          </div>
+          <div style="margin-top: 1.25rem;">
+            <a href="../day-10.html" class="badge badge-gold" style="font-size: 0.95rem; padding: 0.5rem 1rem; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem;">
+              ⏱️ 查看今日詳細時間表與跨境動線 →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- 【第 1 層：現場微光】現場實拍隨筆 -->
+      <!-- ========================================== -->
+      <div style="display: flex; align-items: center; justify-content: space-between; margin: 3rem 0 1rem;">
+        <h2 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--primary);">
+          📸 現場微光：萊茵河畔的帝國皇室之城
         </h2>
-        <div style="font-size: 0.95rem; color: var(--text-muted);">
-          Speyer Cathedral Photo Collection · 2026/02/04 中午現場實拍
-        </div>
+        <span class="badge badge-gold">現場真實記錄</span>
       </div>
 
-      <!-- IG 風格卡片 -->
-      <div class="ig-card-clean" style="margin-bottom: 3rem;">
-        <div class="ig-header-clean">
-          <div class="ig-avatar-clean">🏛️</div>
-          <div>
-            <div class="ig-user-clean">Speyer, Germany · Kaiserdom</div>
-            <div class="ig-date-clean">2026-02-04 12:30</div>
+      <!-- IG 風格隨筆卡片 -->
+      <div class="ig-post-card" style="margin-bottom: 3rem;">
+        <div class="ig-post-header">
+          <div class="ig-post-avatar">🏛️</div>
+          <div class="ig-post-meta">
+            <span class="ig-post-author">Speyer, Germany · Kaiserdom</span>
+            <span class="ig-post-date">2026-02-04 12:30</span>
           </div>
         </div>
-        <div class="ig-caption-clean">
-          🇩🇪 史派爾大教堂 Kaiserdom zu Speyer<br>
-          全歐洲現存規模最大的羅曼式建築，1981 年列入 UNESCO 世界文化遺產。<br>
+        <div class="ig-post-caption" style="font-size: 1.15rem; font-weight: 700; color: var(--primary); margin-bottom: 0.75rem; font-family: var(--font-heading);">
+          🇩🇪 史派爾大教堂 Kaiserdom zu Speyer
+        </div>
+        <p style="font-size: 0.96rem; color: var(--caption); margin-bottom: 0; line-height: 1.75;">
+          全歐洲現存規模最大的羅曼式建築，1981 年列入 UNESCO 世界文化遺產。<br><br>
           推開重達數噸的沉重青銅大門，走進埋葬著八位神聖羅馬帝國皇帝與國王的巨大中殿，紅白砂岩的質樸幾何美感令人屏息。
-        </div>
-
-        <!-- 6 張實拍精選網格 (雙拼 + 雙拼 + 雙拼) -->
-        <div class="portrait-trio" style="margin-top: 1rem;">
-          <div class="portrait-slot">
-            <a href="../images/day-10/20260204_122618.jpg" class="glightbox" data-gallery="speyer-grid" data-title="Kaiserdom zu Speyer Panoramic View · 2026/02/04">
-              <img src="../images/day-10/20260204_122618.jpg" alt="史派爾大教堂全景與冬霧前廣場" loading="lazy">
-            </a>
-          </div>
-          <div class="portrait-slot">
-            <a href="../images/day-10/20260204_121041.jpg" class="glightbox" data-gallery="speyer-grid" data-title="Statue of Rudolf von Habsburg · 2026/02/04">
-              <img src="../images/day-10/20260204_121041.jpg" alt="西前廊內哈布斯堡魯道夫一世皇帝雕像" loading="lazy">
-            </a>
-          </div>
-          <div class="portrait-slot">
-            <a href="../images/day-10/20260204_121109.jpg" class="glightbox" data-gallery="speyer-grid" data-title="Cathedral Bronze Portal Reliefs · 2026/02/04">
-              <img src="../images/day-10/20260204_121109.jpg" alt="推開重達數噸的青銅大門浮雕" loading="lazy">
-            </a>
-          </div>
-        </div>
-
-        <div class="portrait-trio" style="margin-top: 1rem;">
-          <div class="portrait-slot">
-            <a href="../images/day-10/20260204_121125.jpg" class="glightbox" data-gallery="speyer-grid" data-title="Grand Romanesque Nave & Cross Vaults · 2026/02/04">
-              <img src="../images/day-10/20260204_121125.jpg" alt="史派爾大教堂巨大的羅曼式中殿十字拱頂" loading="lazy">
-            </a>
-          </div>
-          <div class="portrait-slot">
-            <a href="../images/day-10/20260204_122329.jpg" class="glightbox" data-gallery="speyer-grid" data-title="Romanesque Concentric Arches & Golden Mosaics · 2026/02/04">
-              <img src="../images/day-10/20260204_122329.jpg" alt="同心圓羅曼式拱門與金色馬賽克鑲嵌畫" loading="lazy">
-            </a>
-          </div>
-          <div class="portrait-slot">
-            <a href="../images/day-10/20260204_122507.jpg" class="glightbox" data-gallery="speyer-grid" data-title="Domplatz Square in Winter · 2026/02/04">
-              <img src="../images/day-10/20260204_122507.jpg" alt="大教堂前 Domplatz 廣場與冬日林蔭" loading="lazy">
-            </a>
-          </div>
-        </div>
+        </p>
       </div>
 
       <!-- ========================================== -->
