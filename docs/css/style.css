@@ -1148,6 +1148,90 @@ button {
   border-left: 4px solid var(--blue-gray);
 }
 
+/* ---------- 14.1 看圖說故事：左右圖文交錯排版 (Story-Split Magazine Layout) ---------- */
+.story-split {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem 0 2.5rem;
+}
+
+.story-split.reverse {
+  flex-direction: row-reverse;
+}
+
+.story-split-text {
+  flex: 1 1 58%;
+  min-width: 0;
+}
+
+.story-split-text p {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--ink);
+  margin-bottom: 1rem;
+}
+
+.story-split-text p:last-child {
+  margin-bottom: 0;
+}
+
+.story-split-media {
+  flex: 1 1 42%;
+  max-width: 400px;
+  min-width: 260px;
+}
+
+.story-split-media img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  display: block;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.story-split-media img:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.fullwidth-landscape-wrap {
+  margin: 2rem 0;
+}
+
+.fullwidth-landscape-wrap img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  display: block;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.fullwidth-landscape-wrap img:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+@media (max-width: 768px) {
+  .story-split, .story-split.reverse {
+    flex-direction: column !important;
+    gap: 1.25rem;
+    margin: 1.5rem 0 2rem;
+  }
+  .story-split-media {
+    max-width: 100%;
+    width: 100%;
+    min-width: unset;
+  }
+  .story-split-media img {
+    max-height: 440px;
+  }
+}
+
 /* ---------- 15. Toast & Reading Progress ---------- */
 .toast-msg {
   position: fixed;

@@ -1,6 +1,6 @@
 # 🧭 德南冬季自駕遊記與旅遊規劃方法論 (Travel & Blog Methodology)
 
-> **版本**：v2.0.0  
+> **版本**：v2.1.0  
 > **核心概念**：結合「**3 層敘事網誌模型 (3-Layer Narrative Model)**」與「**Travel OS 自駕實戰工程 (TripQ & TripNG)**」，打造兼具文學共鳴與實戰價值的旗艦級歐洲自駕遊記。
 
 ---
@@ -14,10 +14,17 @@
                               │
   [Layer 1: 視覺與現場微光] ➔ Split / Diptych Hero ✕ IG 貼文卡片 ✕ 原生照片網格
                               │
-  [Layer 2: 旅人深度散文] ➔ 文化典故 ✕ 旅途對話 ✕ 旅後回甘反思 (故事主幹)
+  [Layer 2: 旅人深度散文] ➔ 看圖說故事 (Photo-Guided) ✕ 左右圖文交錯排版 (Story-Split) ✕ 旅後回甘
                               │
   [Layer 3: 隨文 Bento 資訊盒] ➔ 自駕停車 ✕ 拍照機位 ✕ 美食發音 ✕ 虛線地圖 ✕ 避坑警示
 ```
+
+### 1.1 散文「看圖說故事」核心法則 (Photo-Guided Storytelling)
+- **視覺錨點驅動**：深度散文嚴禁流水帳式純文字堆疊。每章節、每段落均以一張具體照片（或一組對比照片）為視覺錨點，由畫面的光影、人物動作、建築細節展開故事。
+- **雜誌風左右圖文交錯 (Alternating Story-Split Rhythm)**：
+  - 直式照片（4:5）採用「左圖右文 (`.story-split`)」與「右圖左文 (`.story-split.reverse`)」交替穿插，營造頂級雜誌般的節奏感。
+  - 橫式大景（16:9）採用「100% 全寬寬幅 (`.fullwidth-landscape-wrap`)」作為章節破題或場景轉換。
+  - 手機瀏覽時全自動響應式降級為「圖上文下」單欄流暢佈局，完全維持 CLS = 0。
 
 ---
 
@@ -110,7 +117,49 @@
 </div>
 ```
 
-### 2.4 Google Maps 虛線文字連結 (Osaka Dotted Link)
+### 2.4 看圖說故事：左右圖文交錯與全寬大圖 (Story-Split & Fullwidth Landscape)
+
+#### (1) 左右圖文並列（左圖右文 ✕ 右圖左文）
+```html
+<!-- 左圖右文 Normal -->
+<div class="story-split">
+  <div class="story-split-media">
+    <a href="../images/day-09/photo-left.jpg" class="glightbox" data-gallery="day-09-gallery" data-title="Schloss Philippsruhe · 2026/02/03">
+      <img src="../images/day-09/photo-left.jpg" alt="雪中漫步走入巴洛克宮殿" loading="lazy">
+    </a>
+  </div>
+  <div class="story-split-text">
+    <p>
+      清晨自海德堡出發，車輛沿著 A5 高速公路一路向北...（散文內文緊扣畫面）
+    </p>
+  </div>
+</div>
+
+<!-- 右圖左文 Reverse -->
+<div class="story-split reverse">
+  <div class="story-split-media">
+    <a href="../images/day-09/photo-right.jpg" class="glightbox" data-gallery="day-09-gallery" data-title="Snow Joy · 2026/02/03">
+      <img src="../images/day-09/photo-right.jpg" alt="宮殿前漫天飛雪中開懷甜笑" loading="lazy">
+    </a>
+  </div>
+  <div class="story-split-text">
+    <p>
+      站在宮殿宏偉的門廊前，迎著漫天大雪伸出雙手接住飄落的雪花...（散文內文緊扣畫面）
+    </p>
+  </div>
+</div>
+```
+
+#### (2) 100% 全寬寬幅大景 (Fullwidth Landscape)
+```html
+<div class="fullwidth-landscape-wrap">
+  <a href="../images/day-09/landscape.jpg" class="glightbox" data-gallery="day-09-gallery" data-title="Philippsruhe Palace Façade · 2026/02/03">
+    <img src="../images/day-09/landscape.jpg" alt="菲利普斯魯厄宮全景大圖" loading="lazy">
+  </a>
+</div>
+```
+
+### 2.5 Google Maps 虛線文字連結 (Osaka Dotted Link)
 ```html
 <li>
   <strong>薩爾斯堡停車場</strong>：導航請設 
