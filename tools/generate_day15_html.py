@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+import os
+
+html_code = """<!DOCTYPE html>
 <html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
@@ -530,3 +532,9 @@
   </script>
 </body>
 </html>
+"""
+
+with open("docs/blog/day-15-blog.html", "w", encoding="utf-8") as f:
+    f.write(html_code)
+
+print("Successfully written docs/blog/day-15-blog.html")
