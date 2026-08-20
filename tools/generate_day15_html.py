@@ -207,7 +207,7 @@ html_code = """<!DOCTYPE html>
       <!-- ========================================== -->
       <div style="margin: 3.5rem 0 1rem;">
         <h2 style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--primary);">
-          ✍️ 旅人深度散文：奔馳兩千公里的功勳勳章，在回家的客艙裡圓滿回甘
+          ✍️ 奔馳兩千公里的功勳勳章，在回家的客艙裡圓滿回甘
         </h2>
         <div style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 2rem;">
           Garmisch-Partenkirchen (GP Town) ➔ Munich Airport (Novotel) ➔ Taipei (BR072)
