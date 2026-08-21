@@ -1317,3 +1317,42 @@ img {
     color: #111111 !important;
   }
 }
+
+/* ---------- 18. 🎲 精選遊記「換一批」按鈕與平滑微動畫 ---------- */
+.btn-dice-random {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: var(--sand);
+  color: var(--primary);
+  border: 1px solid var(--line);
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--shadow-xs);
+  transition: all 0.25s ease;
+  vertical-align: middle;
+}
+.btn-dice-random:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  transform: translateY(-1px) scale(1.03);
+  box-shadow: var(--shadow-sm);
+}
+.btn-dice-random:active .dice-icon {
+  transform: rotate(180deg);
+}
+.dice-icon {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+.featured-grid {
+  transition: opacity 0.22s ease, transform 0.22s ease;
+}
+.featured-grid.fade-out {
+  opacity: 0;
+  transform: translateY(6px);
+}

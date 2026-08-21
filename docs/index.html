@@ -63,14 +63,17 @@
     <!-- 2. 📸 精選深度圖文遊記 (Featured Stories) -->
     <!-- ========================================== -->
     <section id="featured" style="margin: 3.5rem 0 1.5rem;">
-      <div style="display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 1.25rem;">
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 1.25rem; flex-wrap: wrap; gap: 0.75rem;">
         <div>
           <span class="badge badge-gold" style="margin-bottom: 0.5rem;">The Stories</span>
-          <h2 style="font-family: var(--font-heading); font-size: 1.85rem; color: var(--primary); margin: 0;">
-            📸 精選圖文遊記 (Featured Stories)
+          <h2 style="font-family: var(--font-heading); font-size: 1.85rem; color: var(--primary); margin: 0; display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+            <span>📸 精選圖文遊記 (Featured Stories)</span>
+            <button class="btn-dice-random" id="btnRandomStories" title="隨機換抽另外 3 篇精彩遊記">
+              <span class="dice-icon">🎲</span> 換一批精選
+            </button>
           </h2>
         </div>
-        <span style="font-size: 0.9rem; color: var(--text-muted);">真實心情 ✕ 實拍美圖 ✕ Travel OS 避坑</span>
+        <span style="font-size: 0.9rem; color: var(--text-muted);">真實心情 ✕ 實拍美圖 ✕ 16 篇隨機探索</span>
       </div>
 
       <div class="featured-grid">
