@@ -478,25 +478,17 @@
         </ul>
       </div>
 
-      <!-- 篇章導覽按鈕 -->
-      <div style="display: flex; justify-content: space-between; align-items: center; margin: 3.5rem 0 2rem; padding: 1.5rem; background: var(--sand); border: 1px solid var(--line); border-radius: var(--radius-lg); flex-wrap: wrap; gap: 1rem;">
-        <a href="day-14-blog.html" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--primary); text-decoration: none; font-weight: 600;">
-          ← <strong>上一篇：Day 14 帕特納赫峽谷冬季冰瀑奇景</strong>
-        </a>
-        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-          <a href="../index.html#itinerary" style="display: inline-flex; align-items: center; gap: 0.5rem; background: #fff; color: var(--primary); border: 1px solid var(--line); padding: 0.6rem 1.1rem; border-radius: var(--radius-md); text-decoration: none; font-weight: 600; box-shadow: var(--shadow-xs);">
-            🗺️ 15 天總行程回顧
-          </a>
-          <a href="../index.html" style="display: inline-flex; align-items: center; gap: 0.5rem; background: var(--primary); color: #fff; padding: 0.6rem 1.2rem; border-radius: var(--radius-md); text-decoration: none; font-weight: 600; box-shadow: var(--shadow-sm);">
-            🎉 回到首頁 · 德南冬旅誌圓滿達成
-          </a>
-        </div>
+            <!-- 篇章導覽按鈕 -->
+      <div style="display: flex; justify-content: space-between; align-items: center; margin: 3.5rem 0 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color); flex-wrap: wrap; gap: 1rem;">
+        <a href="day-14-blog.html" style="font-weight: 600; color: var(--primary); font-size: 0.95rem;">← 上一篇：Day 14 帕特納赫冰宮探秘</a>
+        <a href="../day-15.html" class="badge badge-gold" style="font-size: 0.9rem; padding: 0.5rem 1rem; text-decoration: none;">⏱️ 查看 Day 15 純時間表</a>
+        <a href="../index.html" style="font-weight: 600; color: var(--primary); font-size: 0.95rem;">🎉 15天德南冬旅圓滿完結 · 回首頁 →</a>
       </div>
     </article>
   </main>
 
   <!-- 手機底部 App-Like 導覽列 -->
-  <nav class="mobile-dock" aria-label="行動底部導覽">
+  <div class="mobile-dock">
     <a href="../index.html" class="dock-item">
       <span class="dock-icon">🏠</span>
       <span>首頁</span>
@@ -507,88 +499,15 @@
     </a>
     <a href="day-15-blog.html" class="dock-item active">
       <span class="dock-icon">📖</span>
-      <span>完結遊記</span>
+      <span>遊記</span>
     </a>
-    <a href="https://maps.google.com/?q=Munich+Airport" target="_blank" rel="noopener" class="dock-item">
-      <span class="dock-icon">📍</span>
-      <span>機場地圖</span>
+    <a href="javascript:void(0)" class="dock-item btn-share">
+      <span class="dock-icon">📤</span>
+      <span>分享</span>
     </a>
-  </nav>
+  </div>
 
-  <!-- GLightbox & Audio Scripts -->
   <script src="../vendor/glightbox/glightbox.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const lightbox = GLightbox({
-        selector: '.glightbox',
-        touchNavigation: true,
-        loop: true,
-        zoomable: true
-      });
-
-      // 語音發音按鈕
-      document.querySelectorAll('.btn-audio').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-          e.preventDefault();
-          const text = btn.getAttribute('data-pronounce');
-          const lang = btn.getAttribute('data-lang') || 'de-DE';
-          if ('speechSynthesis' in window) {
-            window.speechSynthesis.cancel();
-            document.querySelectorAll('.btn-audio').forEach(b => b.classList.remove('is-speaking'));
-            const utterance = new SpeechSynthesisUtterance(text);
-            utterance.lang = lang;
-            utterance.rate = 0.85;
-            utterance.onstart = () => btn.classList.add('is-speaking');
-            utterance.onend = () => btn.classList.remove('is-speaking');
-            utterance.onerror = () => btn.classList.remove('is-speaking');
-            window.speechSynthesis.speak(utterance);
-          }
-        });
-      });
-
-      // 分享按鈕
-      const shareBtns = document.querySelectorAll('.btn-share');
-      shareBtns.forEach(btn => {
-        btn.addEventListener('click', async () => {
-          if (navigator.share) {
-            try {
-              await navigator.share({
-                title: document.title,
-                url: window.location.href
-              });
-            } catch (err) {
-              if (err.name !== 'AbortError') {
-                copyToClipboard(window.location.href);
-              }
-            }
-          } else {
-            copyToClipboard(window.location.href);
-          }
-        });
-      });
-
-      function copyToClipboard(text) {
-        if (navigator.clipboard) {
-          navigator.clipboard.writeText(text).then(() => {
-            alert('網址已成功複製到剪貼簿！');
-          }).catch(() => {
-            alert('網址：' + text);
-          });
-        }
-      }
-
-      // 閱讀進度條
-      window.addEventListener('scroll', () => {
-        const h = document.documentElement, 
-              b = document.body,
-              st = 'scrollTop',
-              sh = 'scrollHeight';
-        const percent = (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100;
-        const bar = document.querySelector('.reading-progress');
-        if (bar) bar.style.width = percent + '%';
-      });
-    });
-  </script>
-
-
-</body></html>
+  <script src="../js/app.js?v=2.1"></script>
+</body>
+</html>

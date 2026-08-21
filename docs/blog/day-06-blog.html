@@ -422,22 +422,17 @@
       </section>
 
       <!-- 前後天數切換與延伸閱讀 -->
-      <div style="display: flex; justify-content: space-between; align-items: center; margin: 3.5rem 0 2rem; padding: 1.5rem; background: var(--sand); border: 1px solid var(--line); border-radius: var(--radius-lg); flex-wrap: wrap; gap: 1rem;">
-        <a href="day-05-blog.html" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--primary); text-decoration: none; font-weight: 600;">
-          ← <strong>上一篇：Day 05 紐倫堡皇帝堡與玩具之都</strong>
-        </a>
-        <a href="../index.html" style="color: var(--text-muted); text-decoration: none; font-size: 0.9rem;">
-          🏠 回到 15 天首頁
-        </a>
-        <a href="day-07-blog.html" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--primary); text-decoration: none; font-weight: 600;">
-          <strong>下一篇：Day 07 符茲堡主教宮與舊美茵橋 →</strong>
-        </a>
+            <!-- 篇章導覽按鈕 -->
+      <div style="display: flex; justify-content: space-between; align-items: center; margin: 3.5rem 0 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color); flex-wrap: wrap; gap: 1rem;">
+        <a href="day-05-blog.html" style="font-weight: 600; color: var(--primary); font-size: 0.95rem;">← 上一篇：Day 05 紐倫堡玩具之都</a>
+        <a href="../day-06.html" class="badge badge-gold" style="font-size: 0.9rem; padding: 0.5rem 1rem; text-decoration: none;">⏱️ 查看 Day 06 純時間表</a>
+        <a href="day-07-blog.html" style="font-weight: 600; color: var(--primary); font-size: 0.95rem;">下一篇：Day 07 符茲堡主教宮與舊美茵橋 →</a>
       </div>
     </article>
   </main>
 
-  <!-- 底部 Mobile Dock -->
-  <nav class="mobile-dock" aria-label="行動底部導覽">
+  <!-- 手機底部 App-Like 導覽列 -->
+  <div class="mobile-dock">
     <a href="../index.html" class="dock-item">
       <span class="dock-icon">🏠</span>
       <span>首頁</span>
@@ -450,68 +445,13 @@
       <span class="dock-icon">📖</span>
       <span>遊記</span>
     </a>
-    <a href="https://maps.google.com/?q=Rothenburg+ob+der+Tauber" target="_blank" rel="noopener" class="dock-item">
-      <span class="dock-icon">📍</span>
-      <span>導航</span>
+    <a href="javascript:void(0)" class="dock-item btn-share">
+      <span class="dock-icon">📤</span>
+      <span>分享</span>
     </a>
-  </nav>
+  </div>
 
-  <!-- GLightbox & Audio Scripts -->
   <script src="../vendor/glightbox/glightbox.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const lightbox = GLightbox({
-        selector: '.glightbox',
-        touchNavigation: true,
-        loop: true,
-        zoomable: true
-      });
-
-      // 德語語音發音按鈕
-      document.querySelectorAll('.btn-audio').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-          e.preventDefault();
-          const text = btn.getAttribute('data-pronounce');
-          const lang = btn.getAttribute('data-lang') || 'de-DE';
-          if ('speechSynthesis' in window) {
-            window.speechSynthesis.cancel();
-            const utterance = new SpeechSynthesisUtterance(text);
-            utterance.lang = lang;
-            utterance.rate = 0.85;
-            window.speechSynthesis.speak(utterance);
-          }
-        });
-      });
-
-      // 分享按鈕
-      document.querySelectorAll('.btn-share').forEach(btn => {
-        btn.addEventListener('click', async () => {
-          if (navigator.share) {
-            try {
-              await navigator.share({
-                title: document.title,
-                url: window.location.href
-              });
-            } catch (err) {}
-          } else {
-            navigator.clipboard.writeText(window.location.href);
-            alert('網址已複製到剪貼簿！');
-          }
-        });
-      });
-
-      // 閱讀進度條
-      window.addEventListener('scroll', () => {
-        const h = document.documentElement, 
-              b = document.body,
-              st = 'scrollTop',
-              sh = 'scrollHeight';
-        const percent = (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100;
-        const bar = document.querySelector('.reading-progress');
-        if (bar) bar.style.width = percent + '%';
-      });
-    });
-  </script>
-
-
-</body></html>
+  <script src="../js/app.js?v=2.1"></script>
+</body>
+</html>

@@ -208,62 +208,36 @@
         </div>
       </div>
 
-      <!-- 底部前後天導覽 -->
-      <div
-        style="display: flex; justify-content: space-between; align-items: center; margin: 4rem 0 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
-        <a href="day-02-blog.html" class="btn-day-action">
-          ← 上一篇：Day 02 哈修塔特漫遊
-        </a>
-        <a href="../day-03.html" class="btn-day-action">
-          ⏱️ 查看 Day 03 純時間表
-        </a>
-        <a href="day-04-blog.html" class="btn-day-action">
-          下一篇：Day 04 班堡煙燻啤酒 →
-        </a>
+      <!-- 篇章導覽按鈕 -->
+      <div style="display: flex; justify-content: space-between; align-items: center; margin: 3.5rem 0 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color); flex-wrap: wrap; gap: 1rem;">
+        <a href="day-02-blog.html" style="font-weight: 600; color: var(--primary); font-size: 0.95rem;">← 上一篇：Day 02 哈修塔特湖畔漫遊</a>
+        <a href="../day-03.html" class="badge badge-gold" style="font-size: 0.9rem; padding: 0.5rem 1rem; text-decoration: none;">⏱️ 查看 Day 03 純時間表</a>
+        <a href="day-04-blog.html" style="font-weight: 600; color: var(--primary); font-size: 0.95rem;">下一篇：Day 04 班堡煙燻啤酒走讀 →</a>
       </div>
     </article>
   </main>
 
   <!-- 手機底部 App-Like 導覽列 -->
   <div class="mobile-dock">
-    <a href="../index.html" class="dock-item"><span class="dock-icon">🏠</span><span>首頁</span></a>
-    <a href="../day-03.html" class="dock-item"><span class="dock-icon">⏱️</span><span>時間表</span></a>
-    <a href="day-03-blog.html" class="dock-item active"><span class="dock-icon">📖</span><span>遊記</span></a>
-    <a href="javascript:void(0)" class="dock-item btn-share"><span class="dock-icon">📤</span><span>分享</span></a>
+    <a href="../index.html" class="dock-item">
+      <span class="dock-icon">🏠</span>
+      <span>首頁</span>
+    </a>
+    <a href="../day-03.html" class="dock-item">
+      <span class="dock-icon">⏱️</span>
+      <span>時間表</span>
+    </a>
+    <a href="day-03-blog.html" class="dock-item active">
+      <span class="dock-icon">📖</span>
+      <span>遊記</span>
+    </a>
+    <a href="javascript:void(0)" class="dock-item btn-share">
+      <span class="dock-icon">📤</span>
+      <span>分享</span>
+    </a>
   </div>
 
   <script src="../vendor/glightbox/glightbox.min.js"></script>
-  <script src="../js/app.js"></script>
-  <script>
-    // 初始化 GLightbox
-    const lightbox = GLightbox({
-      selector: '.glightbox',
-      touchNavigation: true,
-      loop: true,
-      zoomable: true
-    });
-
-    // 點擊全域圖集快捷播放
-    function openDay03Gallery() {
-      const firstImage = document.querySelector('.glightbox');
-      if (firstImage) {
-        firstImage.click();
-      }
-    }
-
-    // 德語發音 Web Speech API
-    function playAudio(text) {
-      if ('speechSynthesis' in window) {
-        window.speechSynthesis.cancel();
-        const utterance = new SpeechSynthesisUtterance(text);
-        utterance.lang = 'de-DE';
-        utterance.rate = 0.9;
-        window.speechSynthesis.speak(utterance);
-      } else {
-        alert('您的瀏覽器不支援語音合成功能');
-      }
-    }
-  </script>
+  <script src="../js/app.js?v=2.1"></script>
 </body>
-
 </html>
