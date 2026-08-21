@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel OS · 視覺化圖文編輯器</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600;700;900&family=Noto+Sans+TC:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="vendor/glightbox/glightbox.min.css">
+  <style>
+    /* 編輯器專屬控制面板樣式 */
+    .editor-topbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #182330;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      border-bottom: 2px solid var(--accent);
+    }
+    .editor-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+    .editor-brand-badge {
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.75rem;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+    }
+    .editor-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .editor-select {
+      background: #243447;
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 0.45rem 0.85rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.92rem;
+      outline: none;
+      cursor: pointer;
+    }
+    .editor-select:focus {
+      border-color: var(--accent);
+    }
+    .btn-editor {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.45rem 1rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .btn-editor-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+    .btn-editor-primary:hover {
+      background: var(--accent-hover);
+      transform: translateY(-1px);
+    }
+    .btn-editor-secondary {
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .btn-editor-secondary:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+    .editor-status {
+      font-size: 0.85rem;
+      color: #94a3b8;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #22c55e;
+    }
+    .status-dot.dirty {
+      background: #eab308;
+    }
+
+    /* 編輯器容器與高亮標註 */
+    #editor-workspace {
+      min-height: calc(100vh - 60px);
+      padding-bottom: 5rem;
+    }
+    .editable-active [contenteditable="true"] {
+      outline: 1px dashed rgba(180, 83, 9, 0.3);
+      padding: 2px 4px;
+      border-radius: 3px;
+      transition: outline 0.2s ease, background 0.2s ease;
+    }
+    .editable-active [contenteditable="true"]:hover {
+      outline: 1px solid var(--accent);
+      background: rgba(254, 243, 199, 0.35);
+    }
+    .editable-active [contenteditable="true"]:focus {
+      outline: 2px solid var(--accent);
+      background: rgba(254, 243, 199, 0.6);
+    }
+
+    /* 圖片替換覆蓋按鈕 */
+    .img-edit-wrap {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+    }
+    .btn-swap-img {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(24, 35, 48, 0.88);
+      color: #fff;
+      backdrop-filter: blur(4px);
+      padding: 0.35rem 0.75rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.82rem;
+      font-weight: 600;
+      opacity: 0;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      cursor: pointer;
+      z-index: 50;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    .img-edit-wrap:hover .btn-swap-img {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .btn-swap-img:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    /* 圖片選擇抽屜/Modal */
+    .img-modal-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(4px);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+    .img-modal-backdrop.show {
+      display: flex;
+    }
+    .img-modal-content {
+      background: #fff;
+      width: 100%;
+      max-width: 800px;
+      max-height: 85vh;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-xl);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .img-modal-header {
+      padding: 1rem 1.5rem;
+      background: var(--bg-page);
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .img-modal-header h3 {
+      font-family: var(--font-heading);
+      color: var(--primary);
+      margin: 0;
+      font-size: 1.2rem;
+    }
+    .img-modal-grid {
+      padding: 1.25rem;
+      overflow-y: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 1rem;
+    }
+    .img-choice-card {
+      border: 2px solid transparent;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      background: var(--sand-light);
+      position: relative;
+    }
+    .img-choice-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    .img-choice-card img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      display: block;
+    }
+    .img-choice-meta {
+      padding: 0.4rem;
+      font-size: 0.75rem;
+      color: var(--caption);
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      background: #fff;
+    }
+
+    /* 頂部通知 Toast */
+    .editor-toast {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: var(--primary);
+      color: #fff;
+      padding: 0.85rem 1.5rem;
+      border-radius: var(--radius-md);
+      font-size: 0.92rem;
+      font-weight: 600;
+      box-shadow: var(--shadow-xl);
+      z-index: 3000;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.3s ease;
+      pointer-events: none;
+    }
+    .editor-toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="editable-active">
+  <!-- 頂部控制面板 -->
+  <header class="editor-topbar">
+    <div class="editor-brand">
+      <span>🇩🇪 Travel OS</span>
+      <span class="editor-brand-badge">Visual Editor</span>
+      <div class="editor-status">
+        <span class="status-dot" id="statusDot"></span>
+        <span id="statusText">已連線</span>
+      </div>
+    </div>
+
+    <div class="editor-controls">
+      <select class="editor-select" id="postSelect" aria-label="選擇編輯文章">
+        <option value="" disabled selected>載入文章列表中...</option>
+      </select>
+
+      <button class="btn-editor btn-editor-secondary" id="btnPreview" title="在前台新分頁開啟預覽">
+        <span>👁️ 前台預覽</span>
+      </button>
+
+      <button class="btn-editor btn-editor-secondary" id="btnRestore" title="還原至上次存檔前的備份">
+        <span>↩️ 還原備份</span>
+      </button>
+
+      <button class="btn-editor btn-editor-primary" id="btnSave" title="儲存當前修改 (Ctrl + S)">
+        <span>💾 儲存修改 (Ctrl+S)</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- 文章編輯工作區 -->
+  <div id="editor-workspace">
+    <div style="text-align: center; padding: 4rem; color: var(--text-muted);">
+      <h2>載入文章中，請稍候...</h2>
+    </div>
+  </div>
+
+  <!-- 換圖 Modal 選擇器 -->
+  <div class="img-modal-backdrop" id="imgModal">
+    <div class="img-modal-content">
+      <div class="img-modal-header">
+        <div>
+          <h3>🖼️ 選擇替換照片</h3>
+          <div style="font-size: 0.85rem; color: var(--text-muted);" id="imgModalSub">
+            點擊照片即可直接替換目前選定之區塊
+          </div>
+        </div>
+        <button style="font-size: 1.5rem; color: var(--text-muted);" id="btnModalClose">&times;</button>
+      </div>
+      <div class="img-modal-grid" id="imgModalGrid">
+        <!-- 圖片縮圖卡片動態渲染於此 -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast 通知 -->
+  <div class="editor-toast" id="editorToast">儲存成功！</div>
+
+  <!-- Scripts -->
+  <script src="vendor/glightbox/glightbox.min.js"></script>
+  <script>
+    let currentFile = '';
+    let currentDayFolder = 'day-15';
+    let targetImgElement = null;
+    let isDirty = false;
+
+    const postSelect = document.getElementById('postSelect');
+    const workspace = document.getElementById('editor-workspace');
+    const statusDot = document.getElementById('statusDot');
+    const statusText = document.getElementById('statusText');
+    const btnSave = document.getElementById('btnSave');
+    const btnPreview = document.getElementById('btnPreview');
+    const btnRestore = document.getElementById('btnRestore');
+    const imgModal = document.getElementById('imgModal');
+    const imgModalGrid = document.getElementById('imgModalGrid');
+    const imgModalSub = document.getElementById('imgModalSub');
+    const btnModalClose = document.getElementById('btnModalClose');
+    const toast = document.getElementById('editorToast');
+
+    // 1. 初始化載入文章列表
+    async function initEditor() {
+      try {
+        const res = await fetch('/api/list-posts');
+        const data = await res.json();
+        if (data.success) {
+          postSelect.innerHTML = '';
+          
+          const blogGroup = document.createElement('optgroup');
+          blogGroup.label = '📖 深度圖文遊記 (Blog Stories)';
+          data.blogs.forEach(b => {
+            const opt = document.createElement('option');
+            opt.value = b.file;
+            opt.textContent = `${b.name} 遊記 (${b.file})`;
+            blogGroup.appendChild(opt);
+          });
+          postSelect.appendChild(blogGroup);
+
+          const schedGroup = document.createElement('optgroup');
+          schedGroup.label = '⏱️ 純時間表 (Schedules)';
+          data.schedules.forEach(s => {
+            const opt = document.createElement('option');
+            opt.value = s.file;
+            opt.textContent = `${s.name} 時間表 (${s.file})`;
+            schedGroup.appendChild(opt);
+          });
+          postSelect.appendChild(schedGroup);
+
+          // 預設載入 Day 15 Blog 或第一個
+          const defaultPost = data.blogs.find(b => b.file.includes('day-15')) || data.blogs[0];
+          if (defaultPost) {
+            postSelect.value = defaultPost.file;
+            loadArticle(defaultPost.file);
+          }
+        }
+      } catch (err) {
+        showToast('無法連線至 Local Server，請確認已執行 python tools/server.py', true);
+      }
+    }
+
+    // 2. 載入文章內容至工作區
+    async function loadArticle(relFile) {
+      currentFile = relFile;
+      
+      // 推算當前關聯的圖片資料夾
+      const dayMatch = relFile.match(/day-(\d+)/i);
+      currentDayFolder = dayMatch ? `day-${dayMatch[1].padStart(2, '0')}` : 'day-01';
+
+      statusText.textContent = '載入中...';
+      try {
+        const res = await fetch(`/api/load-post?file=${encodeURIComponent(relFile)}`);
+        const data = await res.json();
+        if (data.success) {
+          parseAndRenderHtml(data.html);
+          btnRestore.style.display = data.has_backup ? 'inline-flex' : 'none';
+          markClean();
+        } else {
+          workspace.innerHTML = `<div style="text-align:center; padding:3rem; color:red;">${data.error}</div>`;
+        }
+      } catch (err) {
+        showToast('載入檔案失敗', true);
+      }
+    }
+
+    // 3. 解析 HTML 並啟用可視化編輯
+    function parseAndRenderHtml(fullHtml) {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(fullHtml, 'text/html');
+
+      // 提取 main 標籤或 body 內容
+      const mainContent = doc.querySelector('main') || doc.body;
+      workspace.innerHTML = mainContent.innerHTML;
+
+      // 為文字元素啟用 contenteditable
+      const textSelectors = 'h1, h2, h3, h4, p, blockquote, .diptych-quote, .badge, .day-item-desc, .recap-item span, .bento-card li, .ig-post-caption, .ig-post-date, figcaption';
+      workspace.querySelectorAll(textSelectors).forEach(el => {
+        el.setAttribute('contenteditable', 'true');
+        el.addEventListener('input', markDirty);
+      });
+
+      // 為所有圖片包裝換圖按鈕
+      workspace.querySelectorAll('img').forEach((img, index) => {
+        const wrap = document.createElement('div');
+        wrap.className = 'img-edit-wrap';
+        img.parentNode.insertBefore(wrap, img);
+        wrap.appendChild(img);
+
+        const btnSwap = document.createElement('button');
+        btnSwap.className = 'btn-swap-img';
+        btnSwap.innerHTML = '🔄 替換此圖';
+        btnSwap.type = 'button';
+        btnSwap.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          openImagePicker(img);
+        });
+        wrap.appendChild(btnSwap);
+      });
+
+      // 重新初始化 GLightbox
+      if (typeof GLightbox !== 'undefined') {
+        GLightbox({ selector: '.glightbox' });
+      }
+    }
+
+    // 4. 開啟換圖選擇盤
+    async function openImagePicker(imgEl) {
+      targetImgElement = imgEl;
+      imgModalSub.textContent = `目錄：docs/images/${currentDayFolder}/`;
+      imgModalGrid.innerHTML = '<div style="grid-column:1/-1; text-align:center;">載入圖片庫中...</div>';
+      imgModal.classList.add('show');
+
+      try {
+        const res = await fetch(`/api/list-images?folder=${encodeURIComponent(currentDayFolder)}`);
+        const data = await res.json();
+        if (data.success && data.images.length > 0) {
+          imgModalGrid.innerHTML = '';
+          data.images.forEach(imgData => {
+            const card = document.createElement('div');
+            card.className = 'img-choice-card';
+            card.innerHTML = `
+              <img src="${imgData.url}" alt="${imgData.filename}" loading="lazy">
+              <div class="img-choice-meta" title="${imgData.filename}">${imgData.filename} (${imgData.size_kb} KB)</div>
+            `;
+            card.addEventListener('click', () => {
+              swapImage(imgData.rel_path);
+            });
+            imgModalGrid.appendChild(card);
+          });
+        } else {
+          imgModalGrid.innerHTML = '<div style="grid-column:1/-1; text-align:center; color:var(--text-muted);">此資料夾尚無其他照片</div>';
+        }
+      } catch (err) {
+        imgModalGrid.innerHTML = '<div style="grid-column:1/-1; text-align:center; color:red;">無法取得圖片清單</div>';
+      }
+    }
+
+    // 5. 替換圖片
+    function swapImage(relImgPath) {
+      if (!targetImgElement) return;
+      const newSrc = currentFile.startsWith('blog/') ? `../${relImgPath}` : relImgPath;
+      targetImgElement.src = newSrc;
+
+      // 如果有外層 glightbox 連結，同步更新
+      const parentLink = targetImgElement.closest('a.glightbox');
+      if (parentLink) {
+        parentLink.href = newSrc;
+      }
+
+      markDirty();
+      imgModal.classList.remove('show');
+      showToast(`已更換圖片為：${relImgPath}`);
+    }
+
+    // 6. 儲存文章
+    async function saveArticle() {
+      if (!currentFile) return;
+
+      // 取得原始 HTML 樣板並替換 main 區塊
+      try {
+        const resOriginal = await fetch(`/api/load-post?file=${encodeURIComponent(currentFile)}`);
+        const dataOriginal = await resOriginal.json();
+        if (!dataOriginal.success) throw new Error(dataOriginal.error);
+
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(dataOriginal.html, 'text/html');
+
+        // 複製目前工作區內容並清理編輯器專用屬性
+        const clone = workspace.cloneNode(true);
+        clone.querySelectorAll('[contenteditable]').forEach(el => el.removeAttribute('contenteditable'));
+        clone.querySelectorAll('.btn-swap-img').forEach(btn => btn.remove());
+        clone.querySelectorAll('.img-edit-wrap').forEach(wrap => {
+          const img = wrap.querySelector('img');
+          if (img) wrap.parentNode.insertBefore(img, wrap);
+          wrap.remove();
+        });
+
+        // 將乾淨的 innerHTML 放回 doc 的 main 或 body
+        const targetContainer = doc.querySelector('main') || doc.body;
+        targetContainer.innerHTML = clone.innerHTML;
+
+        const cleanHtml = '<!DOCTYPE html>\n' + doc.documentElement.outerHTML;
+
+        // 呼叫 API 存檔
+        const saveRes = await fetch('/api/save-post', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ file: currentFile, html: cleanHtml })
+        });
+        const saveResult = await saveRes.json();
+
+        if (saveResult.success) {
+          markClean();
+          btnRestore.style.display = 'inline-flex';
+          showToast(saveResult.message || '🎉 儲存成功！已建立 .bak 備份');
+        } else {
+          showToast(saveResult.error || '儲存失敗', true);
+        }
+      } catch (err) {
+        showToast('儲存發生錯誤: ' + err.message, true);
+      }
+    }
+
+    // 7. 還原備份
+    async function restoreBackup() {
+      if (!confirm(`確定要還原 ${currentFile} 至上次儲存前的備份檔嗎？`)) return;
+      try {
+        const res = await fetch('/api/restore-backup', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ file: currentFile })
+        });
+        const data = await res.json();
+        if (data.success) {
+          parseAndRenderHtml(data.html);
+          markClean();
+          showToast('✅ 已成功從備份檔還原！');
+        } else {
+          showToast(data.error || '還原失敗', true);
+        }
+      } catch (err) {
+        showToast('還原發生錯誤', true);
+      }
+    }
+
+    function markDirty() {
+      isDirty = true;
+      statusDot.className = 'status-dot dirty';
+      statusText.textContent = '有未儲存變更';
+    }
+
+    function markClean() {
+      isDirty = false;
+      statusDot.className = 'status-dot';
+      const now = new Date();
+      statusText.textContent = `已儲存 (${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')})`;
+    }
+
+    function showToast(msg, isError = false) {
+      toast.textContent = msg;
+      toast.style.background = isError ? 'var(--daruma-red)' : 'var(--forest-pine)';
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 3000);
+    }
+
+    // 事件綁定
+    postSelect.addEventListener('change', (e) => {
+      if (isDirty && !confirm('您有未儲存的變更，切換頁面將遺失修改，確定切換嗎？')) {
+        postSelect.value = currentFile;
+        return;
+      }
+      loadArticle(e.target.value);
+    });
+
+    btnSave.addEventListener('click', saveArticle);
+    btnRestore.addEventListener('click', restoreBackup);
+    btnPreview.addEventListener('click', () => {
+      window.open(currentFile, '_blank');
+    });
+
+    btnModalClose.addEventListener('click', () => imgModal.classList.remove('show'));
+    imgModal.addEventListener('click', (e) => {
+      if (e.target === imgModal) imgModal.classList.remove('show');
+    });
+
+    // 快捷鍵 Ctrl + S / Cmd + S
+    window.addEventListener('keydown', (e) => {
+      if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+        e.preventDefault();
+        saveArticle();
+      }
+    });
+
+    // 啟動
+    initEditor();
+  </script>
+</body>
+</html>
