@@ -68,6 +68,48 @@
       transform: translateY(-2px);
       box-shadow: var(--shadow-md);
     }
+    /* 語音按鈕播放狀態 */
+    .btn-audio.is-speaking {
+      background-color: var(--accent) !important;
+      color: #fff !important;
+      transform: scale(0.97);
+    }
+    /* 15天足跡回顧雜誌風網格 (Milestone Recap Grid) */
+    .recap-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 0.75rem;
+      margin: 1.25rem 0 1.75rem;
+    }
+    .recap-item {
+      background: var(--bg-card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      padding: 0.65rem 0.9rem;
+      font-size: 0.93rem;
+      line-height: 1.6;
+      color: var(--ink);
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+      box-shadow: var(--shadow-xs);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+    .recap-item:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+      border-color: var(--accent);
+    }
+    .recap-tag {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      color: var(--primary);
+      white-space: nowrap;
+      font-size: 0.92rem;
+      background: var(--sand);
+      padding: 0.15rem 0.45rem;
+      border-radius: 4px;
+    }
     @media (max-width: 768px) {
       .story-split, .story-split.reverse {
         flex-direction: column !important;
@@ -82,12 +124,15 @@
       .story-split-media img {
         max-height: 440px;
       }
+      .recap-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
   <!-- 頂部閱讀進度條 -->
-  <div class="reading-progress"></div>
+  <div class="reading-progress" aria-hidden="true"></div>
 
   <!-- 頂部導覽列 -->
   <nav class="site-nav">
@@ -102,7 +147,7 @@
         <li><a href="../day-15.html">純時間表</a></li>
         <li><a href="day-15-blog.html" class="active">完結遊記</a></li>
       </ul>
-      <button class="nav-share-btn btn-share"><span>📤 分享</span></button>
+      <button class="nav-share-btn btn-share" aria-label="分享本篇遊記"><span>📤 分享</span></button>
     </div>
   </nav>
 
@@ -120,8 +165,8 @@
       <!-- ========================================== -->
       <section class="split-hero">
         <div class="split-hero-img-wrap">
-          <a href="../images/day-15/20260209_112152.jpg" class="glightbox" data-gallery="day-15-hero" data-title="EVA Air Cabin Flight Home, Munich to Taipei · 2026/02/09">
-            <img src="../images/day-15/20260209_112152.jpg" alt="長榮航空客艙內女兒笑意盈盈比剪刀手準備返台" style="object-position: center 30%;">
+          <a href="../images/day-15/20260208_172729.jpg" class="glightbox" data-gallery="day-15-hero" data-title="Munich Airport Magic Hour Twilight · 2026/02/08">
+            <img src="../images/day-15/20260208_172729.jpg" alt="慕尼黑機場傍晚 17:27 的粉藍交織魔幻暮色天際線" style="object-position: center 50%;" fetchpriority="high">
           </a>
         </div>
         <div class="split-hero-content">
@@ -293,42 +338,29 @@
         </div>
       </section>
 
-      <!-- 散文第三章：隔天一早 11 點長榮起飛 -->
+      <!-- 散文結語：十五天德南冬旅自駕回甘 -->
       <section style="margin-bottom: 3.5rem;">
         <h3 style="font-family: var(--font-heading); font-size: 1.3rem; color: var(--primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
-          <span>✈️</span> 三、隔天一早 11 點長榮起飛：最珍貴的風景，是陪妳看世界的時光
+          <span>✨</span> 三、十五天德南冬旅自駕回甘
         </h3>
-
-        <!-- 直式精緻人像大圖：女兒長榮客艙燦爛笑容（直式、完整無裁切、適中尺寸） -->
-        <div style="max-width: 420px; margin: 2rem auto 2.5rem; text-align: center;">
-          <a href="../images/day-15/20260209_112152.jpg" class="glightbox" data-gallery="day-15-narrative" data-title="Happy Smiles in EVA Air Cabin · 2026/02/09 (5/5)">
-            <img src="../images/day-15/20260209_112152.jpg" alt="長榮客艙內女兒笑意盈盈比剪刀手準備返台" style="width: 100%; height: auto; border-radius: var(--radius-md); box-shadow: var(--shadow-md); display: block;" loading="lazy">
-          </a>
-        </div>
 
         <div class="story-split-text" style="margin: 1.5rem 0 2rem;">
           <p>
-            隔天一早，我們悠閒地在 Novotel 享用早餐，隨後前往第二航廈辦理行李託運與登機手續。上午十一點，走進長榮航空班機的寬敞客艙，換上舒適的機上拖鞋，女兒坐在身旁的座椅上，笑意盈盈地面對鏡頭比出雙倍剪刀手（✌️✌️）。
-          </p>
-          <p>
-            身旁的置物板上擺著長榮航空優雅的綠色 MENU 菜單與標誌性的圖騰靠枕，機艙內溫暖的燈光與空服員親切的問候，讓人瞬間感受到回家的踏實與安心。
-          </p>
-          <p>
             回頭翻看這 15 天相機裡的三千多張照片：
           </p>
-          <ul style="margin: 1rem 0 1.5rem; padding-left: 1.5rem; line-height: 1.9; color: var(--ink);">
-            <li>在<strong>薩爾斯堡</strong>米拉貝爾花園重溫《真善美》的樂章；</li>
-            <li>在<strong>哈修塔特</strong>的晨霧中看天鵝劃破如鏡湖面；</li>
-            <li>在<strong>班堡</strong>品嚐煙燻啤酒的厚重歷史；</li>
-            <li>在<strong>羅騰堡</strong>童話小鎮尋找胡桃鉗與泰迪熊；</li>
-            <li>在<strong>符茲堡</strong>舊美茵橋舉杯敬這片葡萄酒之鄉；</li>
-            <li>在<strong>海德堡</strong>哲學家小徑俯瞰內卡河與古堡餘暉；</li>
-            <li>在<strong>科爾馬</strong>小威尼斯宛如走進霍爾的移動城堡；</li>
-            <li>在<strong>巴塞爾</strong>見證萊茵河畔三國交界的現代與古典；</li>
-            <li>在<strong>加米許 Das Graseck</strong> 享受被雪山包圍的露天無邊際溫泉；</li>
-            <li>在<strong>新天鵝堡</strong>坐著馬車踏雪圓了父女兩代的童話夢想；</li>
-            <li>在<strong>帕特納赫峽谷</strong>穿入八十米峭壁下的深藍冰宮……</li>
-          </ul>
+          <div class="recap-grid">
+            <div class="recap-item"><span class="recap-tag">Day 1–3 · 薩爾斯堡</span> <span>米拉貝爾花園重溫《真善美》的樂章</span></div>
+            <div class="recap-item"><span class="recap-tag">Day 4 · 哈修塔特</span> <span>晨霧中看天鵝劃破如鏡湖面</span></div>
+            <div class="recap-item"><span class="recap-tag">Day 5 · 班堡</span> <span>品嚐煙燻啤酒的厚重歷史</span></div>
+            <div class="recap-item"><span class="recap-tag">Day 6 · 羅騰堡</span> <span>童話小鎮尋找胡桃鉗與泰迪熊</span></div>
+            <div class="recap-item"><span class="recap-tag">Day 7 · 符茲堡</span> <span>舊美茵橋舉杯敬這片葡萄酒之鄉</span></div>
+            <div class="recap-item"><span class="recap-tag">Day 8 · 海德堡</span> <span>哲學家小徑俯瞰內卡河與古堡餘暉</span></div>
+            <div class="recap-item"><span class="recap-tag">Day 9–10 · 科爾馬</span> <span>小威尼斯宛如走進霍爾的移動城堡</span></div>
+            <div class="recap-item"><span class="recap-tag">Day 11 · 巴塞爾</span> <span>見證萊茵河畔三國交界的現代與古典</span></div>
+            <div class="recap-item"><span class="recap-tag">Day 12 · 加米許</span> <span>Das Graseck 享受雪山露天無邊際溫泉</span></div>
+            <div class="recap-item"><span class="recap-tag">Day 13 · 新天鵝堡</span> <span>坐著馬車踏雪圓了父女兩代的童話夢想</span></div>
+            <div class="recap-item"><span class="recap-tag">Day 14 · 帕特納赫</span> <span>穿入八十米峭壁下的深藍冰宮</span></div>
+          </div>
           <p>
             旅行的意義，從來不只是在地圖上標記走過多少地標，而是一家人在異鄉相互依偎、在雪地裡手牽著手、在每一個轉角共同驚嘆的陪伴時光。
           </p>
@@ -405,22 +437,22 @@
           <div class="bento-grid" style="margin: 0.5rem 0 0;">
             <div class="bento-col-3">
               <strong style="color: var(--primary);">慕尼黑機場</strong>
-              <button class="btn-audio" data-pronounce="Flughafen München" data-lang="de-DE">Flughafen München 🔊</button>
+              <button class="btn-audio" data-pronounce="Flughafen München" data-lang="de-DE" aria-label="聆聽德語發音：Flughafen München">Flughafen München 🔊</button>
               <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem;">巴伐利亞首府國際航空樞紐。</p>
             </div>
             <div class="bento-col-3">
               <strong style="color: var(--primary);">租車中心</strong>
-              <button class="btn-audio" data-pronounce="Mietwagenzentrum" data-lang="de-DE">Mietwagenzentrum 🔊</button>
+              <button class="btn-audio" data-pronounce="Mietwagenzentrum" data-lang="de-DE" aria-label="聆聽德語發音：Mietwagenzentrum">Mietwagenzentrum 🔊</button>
               <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem;">機場專屬集中還車室內中心。</p>
             </div>
             <div class="bento-col-3">
               <strong style="color: var(--primary);">再見 (德語)</strong>
-              <button class="btn-audio" data-pronounce="Auf Wiedersehen" data-lang="de-DE">Auf Wiedersehen 🔊</button>
+              <button class="btn-audio" data-pronounce="Auf Wiedersehen" data-lang="de-DE" aria-label="聆聽德語發音：Auf Wiedersehen">Auf Wiedersehen 🔊</button>
               <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem;">德語中最正式溫暖的道別。</p>
             </div>
             <div class="bento-col-3">
               <strong style="color: var(--primary);">巴伐利亞問候/道別</strong>
-              <button class="btn-audio" data-pronounce="Servus" data-lang="de-DE">Servus 🔊</button>
+              <button class="btn-audio" data-pronounce="Servus" data-lang="de-DE" aria-label="聆聽巴伐利亞問候語發音：Servus">Servus 🔊</button>
               <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem;">南德與奧地利專屬的親切問候語。</p>
             </div>
           </div>
@@ -444,9 +476,14 @@
         <a href="day-14-blog.html" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--primary); text-decoration: none; font-weight: 600;">
           ← <strong>上一篇：Day 14 帕特納赫峽谷冬季冰瀑奇景</strong>
         </a>
-        <a href="../index.html" style="display: inline-flex; align-items: center; gap: 0.5rem; background: var(--primary); color: #fff; padding: 0.6rem 1.2rem; border-radius: var(--radius-md); text-decoration: none; font-weight: 600; box-shadow: var(--shadow-sm);">
-          🎉 回到首頁 · 15天德南冬旅誌圓滿達成
-        </a>
+        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+          <a href="../index.html#itinerary" style="display: inline-flex; align-items: center; gap: 0.5rem; background: #fff; color: var(--primary); border: 1px solid var(--line); padding: 0.6rem 1.1rem; border-radius: var(--radius-md); text-decoration: none; font-weight: 600; box-shadow: var(--shadow-xs);">
+            🗺️ 15 天總行程回顧
+          </a>
+          <a href="../index.html" style="display: inline-flex; align-items: center; gap: 0.5rem; background: var(--primary); color: #fff; padding: 0.6rem 1.2rem; border-radius: var(--radius-md); text-decoration: none; font-weight: 600; box-shadow: var(--shadow-sm);">
+            🎉 回到首頁 · 德南冬旅誌圓滿達成
+          </a>
+        </div>
       </div>
     </article>
   </main>
@@ -490,9 +527,13 @@
           const lang = btn.getAttribute('data-lang') || 'de-DE';
           if ('speechSynthesis' in window) {
             window.speechSynthesis.cancel();
+            document.querySelectorAll('.btn-audio').forEach(b => b.classList.remove('is-speaking'));
             const utterance = new SpeechSynthesisUtterance(text);
             utterance.lang = lang;
             utterance.rate = 0.85;
+            utterance.onstart = () => btn.classList.add('is-speaking');
+            utterance.onend = () => btn.classList.remove('is-speaking');
+            utterance.onerror = () => btn.classList.remove('is-speaking');
             window.speechSynthesis.speak(utterance);
           }
         });
@@ -508,13 +549,26 @@
                 title: document.title,
                 url: window.location.href
               });
-            } catch (err) {}
+            } catch (err) {
+              if (err.name !== 'AbortError') {
+                copyToClipboard(window.location.href);
+              }
+            }
           } else {
-            navigator.clipboard.writeText(window.location.href);
-            alert('網址已複製到剪貼簿！');
+            copyToClipboard(window.location.href);
           }
         });
       });
+
+      function copyToClipboard(text) {
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(text).then(() => {
+            alert('網址已成功複製到剪貼簿！');
+          }).catch(() => {
+            alert('網址：' + text);
+          });
+        }
+      }
 
       // 閱讀進度條
       window.addEventListener('scroll', () => {
