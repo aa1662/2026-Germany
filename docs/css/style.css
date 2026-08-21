@@ -1264,3 +1264,56 @@ button {
   z-index: 200;
   transition: width 0.1s ease-out;
 }
+
+/* ---------- 16. Image Skeleton & Placeholder ---------- */
+img {
+  background-color: var(--sand-light);
+}
+
+.split-hero-img-wrap,
+.diptych-hero-item,
+.featured-img-wrap,
+.story-split-media,
+.fullwidth-landscape-wrap {
+  background: linear-gradient(110deg, #ece5d8 8%, #f5f0e6 18%, #ece5d8 33%);
+  background-size: 200% 100%;
+}
+
+/* ---------- 17. Print Optimization (A4 Clean Sheet) ---------- */
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #111111 !important;
+    font-size: 11pt;
+    line-height: 1.5;
+    padding-bottom: 0 !important;
+  }
+  .site-nav,
+  .mobile-dock,
+  .reading-progress,
+  .btn-share,
+  .btn-audio,
+  .hero-actions,
+  .day-nav-bar,
+  .nav-share-btn,
+  .toast-msg {
+    display: none !important;
+  }
+  .container {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+  .bento-card,
+  .schedule-hero-card,
+  .day-item-card,
+  .ig-post-card {
+    box-shadow: none !important;
+    border: 1px solid #cccccc !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  a {
+    text-decoration: none !important;
+    color: #111111 !important;
+  }
+}
