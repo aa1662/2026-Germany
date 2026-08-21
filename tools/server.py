@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 Travel OS - 本機動態伺服器與視覺化編輯 API
-Zero-dependency Python 3 HTTP Server with Visual Editing & Image Swapping APIs.
+Zero-dependency Python 3 Threaded HTTP Server with Visual Editing & Image Swapping APIs.
 """
 
 import os
@@ -10,18 +10,23 @@ import sys
 import json
 import shutil
 import urllib.parse
-from http.server import HTTPServer, SimpleHTTPRequestHandler
+from functools import partial
+from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 from pathlib import Path
 
 # 定位專案根目錄與 docs 資料夾
 BASE_DIR = Path(__file__).resolve().parent.parent
 DOCS_DIR = BASE_DIR / "docs"
-PORT = 8000
+PORT = 8080
 
 
 class TravelOSEditorHandler(SimpleHTTPRequestHandler):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, directory=str(DOCS_DIR), **kwargs)
+    def do_OPTIONS(self):
+        self.send_response(200, "ok")
+        self.send_header("Access-Control-Allow-Origin", "*")
+        self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
+        self.send_header("Access-Control-Allow-Headers", "Content-Type")
+        self.end_headers()
 
     def do_GET(self):
         parsed_url = urllib.parse.urlparse(self.path)
@@ -84,6 +89,7 @@ class TravelOSEditorHandler(SimpleHTTPRequestHandler):
         self.send_header("Content-Type", "application/json; charset=utf-8")
         self.send_header("Content-Length", str(len(body)))
         self.send_header("Access-Control-Allow-Origin", "*")
+        self.send_header("Cache-Control", "no-cache, no-store, must-revalidate")
         self.end_headers()
         self.wfile.write(body)
 
@@ -202,13 +208,15 @@ class TravelOSEditorHandler(SimpleHTTPRequestHandler):
 
 
 def main():
-    server_address = ("", PORT)
-    httpd = HTTPServer(server_address, TravelOSEditorHandler)
+    server_address = ("127.0.0.1", PORT)
+    handler_class = partial(TravelOSEditorHandler, directory=str(DOCS_DIR))
+    httpd = ThreadingHTTPServer(server_address, handler_class)
     print(f"============================================================")
     print(f"🇩🇪 Travel OS Local Server & Visual Editor Running!")
-    print(f"🌐 Website Preview : http://localhost:{PORT}/")
-    print(f"✏️ Visual Editor   : http://localhost:{PORT}/editor.html")
+    print(f"🌐 Website Preview : http://127.0.0.1:{PORT}/")
+    print(f"✏️ Visual Editor   : http://127.0.0.1:{PORT}/editor.html")
     print(f"============================================================")
+    sys.stdout.flush()
     try:
         httpd.serve_forever()
     except KeyboardInterrupt:
