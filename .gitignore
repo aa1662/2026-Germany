@@ -12,6 +12,10 @@ playwright-report/
 .DS_Store
 Thumbs.db
 *.tmp
+*.bak
+**/*.bak
+__pycache__/
+**/__pycache__/
 .augment/
 .vscode/
 .idea/
